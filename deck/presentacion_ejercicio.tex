@@ -153,6 +153,10 @@
 
 \AtBeginDocument{\footnotesize}
 \usepackage{etoolbox}
+\usepackage{colortbl}
+% Filete fino gris entre filas del cuerpo de las tablas;
+% lo inyecta row-rules.lua en la salida beamer.
+\newcommand{\lightrowrule}{\arrayrulecolor{black!25}\specialrule{0.4pt}{1pt}{1pt}\arrayrulecolor{black}}
 \AtBeginEnvironment{Highlighting}{\scriptsize}
 % Divisor de parte: contenido de una página plana que replica la
 % portada metropolis (título grande + filete naranja), distinta de
@@ -270,12 +274,13 @@ Resolución de 23 de junio de 2026 de la Universitat de València}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6250}}@{}}
 \toprule\noalign{}
 \endhead
-\textbf{Doctor en Economía} & Universitat de València, 1996 \\
-\textbf{Titular de Universidad} & desde 2005 \\
-\textbf{Acreditación a CU} & ANECA, octubre de 2024 \\
-\textbf{Áreas} & Economía Aplicada (1995) → Métodos Cuantitativos (curso
-2006/07) \\
 \bottomrule\noalign{}
+\endlastfoot
+\textbf{Doctor en Economía} & Universitat de València, 1996 \\ \lightrowrule
+\textbf{Titular de Universidad} & desde 2005 \\ \lightrowrule
+\textbf{Acreditación a CU} & ANECA, octubre de 2024 \\ \lightrowrule
+\textbf{Áreas} & Economía Aplicada (1995) → Métodos Cuantitativos (curso
+2006/07) \\ \lightrowrule
 \end{longtable}
 
 \textbf{Investigación} --- 4 sexenios de investigación + 1 de
@@ -315,24 +320,25 @@ Principales coautores
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Economía computacional} (1995--2003) & Capítulos en
 \emph{Mathematics with Vision} (CMP, 1995) e \emph{Innovations in
 Mathematics} (CMP, 1997) · Tesis doctoral ``Simulación y Detección de
 Caos Macroeconómico'' (1996) · \emph{Journal of Macroeconomics} (1998) &
-José V. Paz \\
+José V. Paz \\ \lightrowrule
 \textbf{Elección pública} (1998--2010) & Capítulos en \emph{Methods and
 Moral in Constitutional Economics. Essays in Honour of James M.
 Buchanan} (Springer, 2001) y en \emph{Constitutional Economics and
 Public Institutions} (Edward Elgar, 2013) · \emph{CIRIEC-España} (2000)
 · \emph{Constitutional Political Economy} (2001) · \emph{Computational
-Economics} (2003) & Miguel Puchades-Navarro · José Casas-Pardo \\
+Economics} (2003) & Miguel Puchades-Navarro · José Casas-Pardo \\ \lightrowrule
 \textbf{Economía de la cultura y consumo cultural} (2008--) & Transición
 vía propiedad intelectual \(\to\) participación cultural e industrias
 creativas y \emph{big data} : \emph{European Journal of Law and
 Economics} (2008) · \emph{Journal of Cultural Economics} (2011, 2018) ·
 \emph{Poetics} (2020, 2025) · \emph{Empirical Economics} (2023) & Manuel
-Cuadrado-García · María Caballer-Tarazona \\
-\bottomrule\noalign{}
+Cuadrado-García · María Caballer-Tarazona \\ \lightrowrule
 \end{longtable}
 
 \note{\textbf{Continuidad entre etapas} De los métodos computacionales y
@@ -377,8 +383,9 @@ Google Scholar
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
-246 citas · h = 8 & 332 citas · h = 8 & 807 citas · h = 14 · i10 = 19 \\
 \bottomrule\noalign{}
+\endlastfoot
+246 citas · h = 8 & 332 citas · h = 8 & 807 citas · h = 14 · i10 = 19 \\ \lightrowrule
 \end{longtable}
 
 \note{35 revisiones por pares verificadas (percentil 91) 2 citas en
@@ -419,33 +426,34 @@ Citas (WoS · Scopus · GS)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Live and prerecorded popular music consumption} (con Manuel
 Cuadrado-García) & \emph{J. of Cultural Economics}, 2011 & JCR
-\textbf{Q2} & 44 · 54 · 124 \\
+\textbf{Q2} & 44 · 54 · 124 \\ \lightrowrule
 \textbf{Religiosity and cultural consumption} (con Manuel
 Cuadrado-García) & \emph{Int. J. of Consumer Studies}, 2018 & JCR
-\textbf{Q1} (Business) & 23 · 27 · 40 \\
+\textbf{Q1} (Business) & 23 · 27 · 40 \\ \lightrowrule
 \textbf{From pirates to subscribers: 20 years of music consumption
 research} (con María Caballer-Tarazona y Manuel Cuadrado-García) &
 \emph{Int. J. of Consumer Studies}, 2021 & JCR \textbf{Q1} (Business) &
-20 · 25 · 37 \\
+20 · 25 · 37 \\ \lightrowrule
 \textbf{Analyzing online search patterns of music festival tourists}
 (con Manuel Cuadrado-García) & \emph{Tourism Economics}, 2021 & JCR
-\textbf{Q1} & 7 · 8 · 12 \\
+\textbf{Q1} & 7 · 8 · 12 \\ \lightrowrule
 \textbf{Music festivals as mediators and their influence on consumer
 awareness} (con Manuel Cuadrado-García) & \emph{Poetics}, 2020 & JCR
-\textbf{Q1} (Sociology) & 4 · 6 · 20 \\
+\textbf{Q1} (Sociology) & 4 · 6 · 20 \\ \lightrowrule
 \textbf{``Let's make lots of money'': performance in the recorded music
 sector} (con Manuel Cuadrado-García) & \emph{J. of Cultural Economics},
-2018 & JCR \textbf{Q2} & 6 · 7 · 15 \\
+2018 & JCR \textbf{Q2} & 6 · 7 · 15 \\ \lightrowrule
 \textbf{Assessing complementarities between live performances and
 YouTube video streaming} (con María Caballer-Tarazona y Manuel
 Cuadrado-García) & \emph{Empirical Economics}, 2023 & JCR \textbf{Q2} &
-2 · 3 · 8 \\
+2 · 3 · 8 \\ \lightrowrule
 \textbf{Arts and cultural consumption and diversity research: a
 bibliometric analysis} (con Manuel Cuadrado-García) & \emph{Poetics},
-2025 & JCR \textbf{Q1} (Sociology) & -- · 1 · 3 \\
-\bottomrule\noalign{}
+2025 & JCR \textbf{Q1} (Sociology) & -- · 1 · 3 \\ \lightrowrule
 \end{longtable}
 
 \note{La tabla no se lee fila a fila: comentar solo JCE 2011 (la más
@@ -482,31 +490,32 @@ Obra · editorial, año
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Evolution and learning in collective decision-making} (con José
 Casas-Pardo y Miguel Puchades-Navarro) & Homenaje a J. M. Buchanan
 (\emph{Methods and Moral in Constitutional Economics}) ·
-\textbf{Springer}, 2001 \\
+\textbf{Springer}, 2001 \\ \lightrowrule
 \textbf{Empirical insights into recorded music consumer behavior and
 copyright infringement} (con Manuel Cuadrado-García) & \emph{Music and
-Law} · \textbf{Emerald}, 2013 \\
+Law} · \textbf{Emerald}, 2013 \\ \lightrowrule
 \textbf{Regulator preferences and lobbying efforts in rent-seeking
 contest} & \emph{Constitutional Economics and Public Institutions} ·
-\textbf{Edward Elgar}, 2013 \\
+\textbf{Edward Elgar}, 2013 \\ \lightrowrule
 \textbf{Copyright infringement and cultural participation} (con Manuel
 Cuadrado-García y Miguel Puchades-Navarro) & \emph{Digital Piracy: A
-Global, Multidisciplinary Account} · \textbf{Routledge}, 2018 \\
+Global, Multidisciplinary Account} · \textbf{Routledge}, 2018 \\ \lightrowrule
 \textbf{Breaking the gender gap in Rap/Hip-Hop consumption} (con María
 Luisa Palma-Martos y Manuel Cuadrado-García) & \emph{Music as Intangible
-Cultural Heritage} · \textbf{Springer}, 2021 \\
+Cultural Heritage} · \textbf{Springer}, 2021 \\ \lightrowrule
 \textbf{Digital participation and audience enlargement in classical and
 popular music} (con Manuel Cuadrado-García) & \emph{Digital
 Transformation in the Cultural and Creative Industries} ·
-\textbf{Routledge}, 2021 \\
+\textbf{Routledge}, 2021 \\ \lightrowrule
 \textbf{Measuring customer multi-sensory experience in live music} (con
 Manuel Cuadrado-García y C. E. Goyes-Yepez) & \emph{The Oxford Handbook
 of Arts and Cultural Management} · \textbf{Oxford University Press},
-2022 \\
-\bottomrule\noalign{}
+2022 \\ \lightrowrule
 \end{longtable}
 
 Selección por editorial académica internacional · \textbf{29 capítulos y
@@ -583,19 +592,20 @@ Participación
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
-Teoría del caos: evolución, predicción y control de sistemas &
-Generalitat Valenciana (AE98-08) & 1998 & equipo \\
-Deficiencias en el funcionamiento de las instituciones democráticas &
-CICYT (SEC99-0592) & 1999--2003 & equipo \\
-Teoría del caos: autoorganización y control de sistemas complejos & MCyT
-(PGC2000-2390-E) & 2001--2002 & equipo \\
-Protección del cliente y eficiencia en el sistema financiero (Ley
-44/2002) & MCyT (SEC2003-05232) & 2003--2006 & equipo \\
-\textbf{MBA-TABSA · Transatlantic Business School Alliance} &
-\textbf{Comisión Europea (EACEA)} & \textbf{2010--2014} & \textbf{IP} \\
-La regulación de la economía colaborativa & Plan Estatal
-(DER2015-67613-R) & 2016--2019 & equipo \\
 \bottomrule\noalign{}
+\endlastfoot
+Teoría del caos: evolución, predicción y control de sistemas &
+Generalitat Valenciana (AE98-08) & 1998 & equipo \\ \lightrowrule
+Deficiencias en el funcionamiento de las instituciones democráticas &
+CICYT (SEC99-0592) & 1999--2003 & equipo \\ \lightrowrule
+Teoría del caos: autoorganización y control de sistemas complejos & MCyT
+(PGC2000-2390-E) & 2001--2002 & equipo \\ \lightrowrule
+Protección del cliente y eficiencia en el sistema financiero (Ley
+44/2002) & MCyT (SEC2003-05232) & 2003--2006 & equipo \\ \lightrowrule
+\textbf{MBA-TABSA · Transatlantic Business School Alliance} &
+\textbf{Comisión Europea (EACEA)} & \textbf{2010--2014} & \textbf{IP} \\ \lightrowrule
+La regulación de la economía colaborativa & Plan Estatal
+(DER2015-67613-R) & 2016--2019 & equipo \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -632,24 +642,25 @@ Años
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
-AVETID & Estudio de públicos del Festival Tercera Setmana & 2017--18 \\
-\textbf{Francachela Teatro} & \textbf{Plan de patrocinio y premios del
-festival (IP)} & 2018--19 \\
-AVETID & Estudio de públicos Tercera Setmana, 2ª edición & 2018--19 \\
-EXTREMUS Danza & Evaluación de proyecto artístico de inclusión social &
-2019--20 \\
-\textbf{Francachela Teatro} & \textbf{Plan de patrocinio y premios del
-festival (IP)} & 2020--21 \\
-\textbf{Olympia Metropolitana} & \textbf{Estudio de públicos en contexto
-teatral (IP)} & 2021--22 \\
-\textbf{A más Soluciones Culturales} & \textbf{Distribución en artes
-escénicas (IP)} & 2021--22 \\
-\textbf{Generalitat Valenciana} & \textbf{Perfil y experiencia del
-visitante del CCCC (IP)} & 2022--23 \\
-\textbf{ICOM International} & \textbf{SENTOMUS, museums visitors
-research (IP)} & 2023--24 \\
-BIOPARC València & Estudio de público & 2023--24 \\
 \bottomrule\noalign{}
+\endlastfoot
+AVETID & Estudio de públicos del Festival Tercera Setmana & 2017--18 \\ \lightrowrule
+\textbf{Francachela Teatro} & \textbf{Plan de patrocinio y premios del
+festival (IP)} & 2018--19 \\ \lightrowrule
+AVETID & Estudio de públicos Tercera Setmana, 2ª edición & 2018--19 \\ \lightrowrule
+EXTREMUS Danza & Evaluación de proyecto artístico de inclusión social &
+2019--20 \\ \lightrowrule
+\textbf{Francachela Teatro} & \textbf{Plan de patrocinio y premios del
+festival (IP)} & 2020--21 \\ \lightrowrule
+\textbf{Olympia Metropolitana} & \textbf{Estudio de públicos en contexto
+teatral (IP)} & 2021--22 \\ \lightrowrule
+\textbf{A más Soluciones Culturales} & \textbf{Distribución en artes
+escénicas (IP)} & 2021--22 \\ \lightrowrule
+\textbf{Generalitat Valenciana} & \textbf{Perfil y experiencia del
+visitante del CCCC (IP)} & 2022--23 \\ \lightrowrule
+\textbf{ICOM International} & \textbf{SENTOMUS, museums visitors
+research (IP)} & 2023--24 \\ \lightrowrule
+BIOPARC València & Estudio de público & 2023--24 \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -697,19 +708,20 @@ Periodo
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
-Center for Study of Public Choice / J. Buchanan Center, George Mason
-Univ. (EE. UU.) & Generalitat Valenciana & 1998 · 6 m \\
-HEC, Université de Montréal (Canadá) & Universitat de València & 1999 ·
-1 m \\
-CREED, Universiteit van Amsterdam (Países Bajos) & Generalitat
-Valenciana & 2001 · 4 m \\
-HEC, Université de Montréal (Canadá) & Generalitat Valenciana & 2007 · 2
-m \\
-London School of Economics (Reino Unido) & Universitat de València &
-2007 · 2 m \\
-Institut für Kulturmanagement, Univ. für Musik und Darstellende Kunst
-Wien (Austria) & Universitat de València & 2013 · 3 m \\
 \bottomrule\noalign{}
+\endlastfoot
+Center for Study of Public Choice / J. Buchanan Center, George Mason
+Univ. (EE. UU.) & Generalitat Valenciana & 1998 · 6 m \\ \lightrowrule
+HEC, Université de Montréal (Canadá) & Universitat de València & 1999 ·
+1 m \\ \lightrowrule
+CREED, Universiteit van Amsterdam (Países Bajos) & Generalitat
+Valenciana & 2001 · 4 m \\ \lightrowrule
+HEC, Université de Montréal (Canadá) & Generalitat Valenciana & 2007 · 2
+m \\ \lightrowrule
+London School of Economics (Reino Unido) & Universitat de València &
+2007 · 2 m \\ \lightrowrule
+Institut für Kulturmanagement, Univ. für Musik und Darstellende Kunst
+Wien (Austria) & Universitat de València & 2013 · 3 m \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -756,22 +768,23 @@ Observaciones
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \emph{Segmentación y exhibición cinematográfica: un análisis del mercado
 español basado en clases latentes} & Desamparados Lluch Tormos & CEU &
 2017 & Sobresaliente \emph{cum laude} · Tesis doctoral con mención
-internacional · \textbf{Premio Fundación SGAE de Investigación 2018} \\
+internacional · \textbf{Premio Fundación SGAE de Investigación 2018} \\ \lightrowrule
 \emph{Analyzing the effect of the expanded servicescape on visitors'
 satisfaction and loyalty in museums} & Piergiacomo Mion Dalle Carbonare
 & Università Bocconi & 2022 & Sobresaliente \emph{cum laude} · Tesis
-doctoral con mención internacional \\
+doctoral con mención internacional \\ \lightrowrule
 \emph{Estudio de los determinantes, percepción y valoración del
 consumidor de música clásica: una aproximación multidisciplinar} &
 Ariadna Martin Alfaro & Conservatorio Profesional de Música de Las
-Palmas de Gran Canaria & en curso & --- \\
+Palmas de Gran Canaria & en curso & --- \\ \lightrowrule
 \emph{Consumer engagement and market structuring in the contemporary art
 ecosystem: visitor behavior and responses to citywide interventions} &
-Giuliano Picchi & MIT & en curso & --- \\
-\bottomrule\noalign{}
+Giuliano Picchi & MIT & en curso & --- \\ \lightrowrule
 \end{longtable}
 
 \note{Ambas tesis en el programa de doctorado en Marketing (mención de
@@ -809,21 +822,22 @@ IP en contratos: §2.4 (6 marcados).}
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Economía Política (1997)} & Economía Política y Hacienda Pública
 (castellano y valenciano) · Economía (Lic. en CC. y Técnicas
 Estadísticas) · Estadística e Informática (CC. Empresariales) & Docencia
-impartida en Castellano y Valenciano \\
+impartida en Castellano y Valenciano \\ \lightrowrule
 \textbf{Métodos Cuantitativos · Modelización e Inferencia Estadística
 (2006/07)} & Estadística I y II, Estadística Básica, Introducción a la
 Inferencia Estadística & Integración de troncales en el grupo
-internacional (ARA) con docencia impartida en inglés \\
+internacional (ARA) con docencia impartida en inglés \\ \lightrowrule
 \textbf{Métodos Cuantitativos · Aprendizaje Estadístico (2019)} & Grado
 BIA: Datos No Estructurados, Técnicas Avanzadas de Predicción · Máster
 CD: Inferencia Causal y Aprendizaje Máquina, Ciencia de Datos en Negocio
 · Máster iMBA: Inteligencia de Negocios · Máster Economía: Big Data en
 Economía & Aumento de la participación como docente en programas de
-máster \\
-\bottomrule\noalign{}
+máster \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -877,27 +891,28 @@ Descripción
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Docencia en centros internacionales} & State University of New
 York at Albany · London School of Economics · University of
 Hertfordshire · University of North Florida · University of North
 Carolina at Wilmington · Universidad de Buenos Aires · Hochschule Bremen
-e International Graduate Center \\
+e International Graduate Center \\ \lightrowrule
 \textbf{Gestión de la internacionalización} en la Facultat d'Economia:
 programas académicos, dobles titulaciones e intercambios & Coordinador
 del título Graduado Europeo en Dirección de Empresas (2010--2014) ·
-Comisión de Intercambio de la Facultat d'Economia (2010--2014) \\
+Comisión de Intercambio de la Facultat d'Economia (2010--2014) \\ \lightrowrule
 \textbf{Gestión de la internacionalización} en la Facultat d'Economia:
 redes y convenios & Representante de la Facultat d'Economia en la red
 \emph{TransAtlantic Business Schools Alliance} (TABSA) · Obtención y
 gestión de la ayuda EU-US ATLANTIS · Responsable del convenio con
-Hofstra University (Nueva York) \\
+Hofstra University (Nueva York) \\ \lightrowrule
 \textbf{Gestión de la internacionalización} en la Universitat de
 València & Miembro de las comisiones de la Universitat: Comisión de
 Intercambio de Estudiantes de la UV (2010--2012) y Comisión de
 Relaciones Internacionales de la UV (2012--2014) · Coordinador de
 intercambios de dobles titulaciones ADE-GEDE y grado en International
-Business (2010--14) \\
-\bottomrule\noalign{}
+Business (2010--14) \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -954,25 +969,26 @@ Descripción
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Grupo de innovación} & Grupo ``Multi-aprendizaje,
 transversalidad y creatividad'' --- co-responsable · Mención de grupo
 consolidado en 2023 (renovada en 2026) · Continuidad del grupo ``Innova
-multidisciplinar'' (2009--2012). \\
+multidisciplinar'' (2009--2012). \\ \lightrowrule
 \textbf{Proyectos dirigidos} & Proyectos dirigidos como IP: MBA-TABSA
 (2010--2014) · ``Jornada docente transversal y solidaria'' (2021/22) ·
 ``Investigación b-smart y aprendizaje basado en un proyecto en un centro
-cultural'' (2022/23) · ``Danza, salud e investigación'' (2024/25). \\
+cultural'' (2022/23) · ``Danza, salud e investigación'' (2024/25). \\ \lightrowrule
 \textbf{Comunicaciones} & Comunicaciones (28): series recurrentes CIDUI
 (2006--2012) · Trobades/Jornades d'Innovació Educativa UV (2010--2022) ·
 Xarxes--REDES-INNOVAESTIC (2009--2021) · WCES (2010, 2012) · Congreso
-Internacional de Innovación Docente (2022). \\
+Internacional de Innovación Docente (2022). \\ \lightrowrule
 \textbf{Publicaciones} & Publicaciones: Procedia --- Social and
 Behavioral Sciences (2010 --- derivada del piloto en línea con la LSE y
 la más citada del perfil, 223 citas GS --- y 2012) · Rev.~Iberoamericana
 de Educación (2010) · World J. on Educational Technology (2013) · RIEJS
 (2022) · capítulo en Experiencias de Innovación Docente en Estadística
-(2011). \\
-\bottomrule\noalign{}
+(2011). \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -1039,26 +1055,27 @@ Periodo
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Coordinador de título} Graduado Europeo en Dirección de Empresas
-& 2010--14 & Facultat d'Economia: titulación internacional \\
+& 2010--14 & Facultat d'Economia: titulación internacional \\ \lightrowrule
 \textbf{Representante} en la Transatlantic Bussines School Alliance &
-2010--14 & Facultat d'Economia: redes internacionales \\
+2010--14 & Facultat d'Economia: redes internacionales \\ \lightrowrule
 \textbf{Coordinador de intercambios} del grado ADE-GEDE & 2010--14 &
 Vicerrectorado de Relaciones Internacionales y Cooperación, Universitat
-de València: dobles titulaciones \\
+de València: dobles titulaciones \\ \lightrowrule
 \textbf{Coordinador de intercambios} del grado en Negocios
 Internacionales/International Business & 2011--14 & Vicerrectorado de
 Relaciones Internacionales y Cooperación, Universitat de València:
-dobles titulaciones \\
+dobles titulaciones \\ \lightrowrule
 \textbf{Miembro de la Comisión de Intecambio de Estudiantes} & 2010--12
 & Vicerrectorado de Relaciones Internacionales y Cooperación,
-Universitat de València: política de internacionalización \\
+Universitat de València: política de internacionalización \\ \lightrowrule
 \textbf{Miembro de la Comisión de Relaciones Internacionales} & 2012--14
 & Vicerrectorado de Relaciones Internacionales y Cooperación,
-Universitat de València: política de internacionalización \\
+Universitat de València: política de internacionalización \\ \lightrowrule
 \textbf{Miembro de la CCA} del Máster en Ciencia de Datos & 2021-- &
-Escola Tècnica Superior d'Enginyeria: posgrado en datos \\
-\bottomrule\noalign{}
+Escola Tècnica Superior d'Enginyeria: posgrado en datos \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -1085,28 +1102,29 @@ intercambio de la Facultat, l. 3064 y 3091): el recuento real es 17.
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
 \toprule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Grupo de investigación} & \textbf{Dirección de CREAMARKT}
 (GIUV2020-47) desde 2022 · Grupo reconocido desde 2020 · colaboraciones
 con HEC Montréal y el Institut für Kulturmanagement (Viena) · Sucesor
-del grupo OTRI \textbf{Arts Management and Marketing} (2010) \\
+del grupo OTRI \textbf{Arts Management and Marketing} (2010) \\ \lightrowrule
 \textbf{Asociaciones} & Fundador, miembro de la junta y
 \textbf{vicepresidente de IMBRA} (International Music Business Research
 Association, Viena) · \textbf{Miembro de ACEI} · \textbf{Miembro de
-AIMAC} \\
+AIMAC} \\ \lightrowrule
 \textbf{Edición científica} & \textbf{Editor invitado} del número
 especial ``Arts Consumption, Diversity and Inclusion'', \emph{Int. J. of
-Arts Management} 25(3), 2023 (JCR/SSCI) \\
+Arts Management} 25(3), 2023 (JCR/SSCI) \\ \lightrowrule
 \textbf{Comités científicos} & \textbf{Copresidencia del comité
 científico AIMAC 2007} (València) · Presidencia de la sesión plenaria de
 apertura de AIMAC 2007 · Participación paneles de evaluación en 11
 ediciones de AIMAC (2005--2026) · Miembro en \textbf{I y II Workshop en
 Economía y Gestión de la Cultura} (Sevilla 2009 · València 2010) y
 \textbf{8th International Congress on Public and Nonprofit Marketing}
-(IAPNM 2009, València) \\
+(IAPNM 2009, València) \\ \lightrowrule
 \textbf{Evaluación científica} & \textbf{35 revisiones verificadas} para
 15 revistas (percentil 91) · reconocimiento de \emph{Poetics} (Q1) a la
-actividad evaluadora (2026) \\
-\bottomrule\noalign{}
+actividad evaluadora (2026) \\ \lightrowrule
 \end{longtable}
 
 \note{CREAMARKT: cuatro líneas (big data e industrias creativas,
@@ -1134,23 +1152,24 @@ Association on Public and Nonprofit Marketing (IAPNM 2009, València,
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
 \toprule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Proyectos docentes} & \textbf{IP de 4 proyectos docentes y de
-innovación} \\
+innovación} \\ \lightrowrule
 \textbf{Coordinación de titulación} & \textbf{Graduado Europeo en
-Dirección de Empresas} (2010--2014), cargo académico unipersonal \\
+Dirección de Empresas} (2010--2014), cargo académico unipersonal \\ \lightrowrule
 \textbf{Internacionalización} & Obtención y gestión de las ayudas
 \textbf{EU-US ATLANTIS} (2011--2014) · Coordinador responsable del
 convenio con la Zarb School of Business, \textbf{Hofstra University}
 (Nueva York, 2014--2019) · Coordinación de los intercambios de dobles
-titulaciones (ADE-GEDE e International Business) \\
+titulaciones (ADE-GEDE e International Business) \\ \lightrowrule
 \textbf{Coordinación docente} & Unidad Docente de Estadística del área
 de Métodos Cuantitativos (2020/21) · Comisión delegada para la reforma
 de la Estadística introductoria (2016/17) · Coordinador docente del
 programa MOTIVEM (2021) · Coordinación de guías docentes de grado y
-posgrado \\
+posgrado \\ \lightrowrule
 \textbf{Grupo de innovación} & Co-responsable del grupo consolidado
-\textbf{GCID23-2575334} (mención 2023, renovada 2026) \\
-\bottomrule\noalign{}
+\textbf{GCID23-2575334} (mención 2023, renovada 2026) \\ \lightrowrule
 \end{longtable}
 
 \note{Este slide agrupa el liderazgo de perfil docente en el mismo
@@ -1173,36 +1192,37 @@ la vida universitaria}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
 \toprule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Premios} & \textbf{Premio Fundación SGAE de Investigación 2018}
 (tesis presentada por Desamparados Lluch) · finalista a mejor ponencia,
-AIMAC 2013 (Universidad de los Andes, Bogotá) \\
+AIMAC 2013 (Universidad de los Andes, Bogotá) \\ \lightrowrule
 \textbf{Reconocimientos} & Reconocimiento de \textbf{\emph{Poetics}}
 (JCR Q1) a la actividad evaluadora (2026) · Mención de \textbf{grupo
-consolidado} de innovación docente (2023, renovada 2026) \\
+consolidado} de innovación docente (2023, renovada 2026) \\ \lightrowrule
 \textbf{Conferencias y seminarios por invitación} & Seminario en
 \textbf{CREED}, Universiteit van Amsterdam (2001) · London School of
 Economics (2007) · Institut für Kulturmanagement, Universität für Musik
 Wien (2013) · panel ``Double Degrees'' (University of North Florida,
 2013) · Universidad de Buenos Aires y Museo Nacional de Bellas Artes
 (2013) · BIME Pro (2018) · Universidad de Oviedo (2026) · Curso de
-verano UCLM-Almagro (2026) \\
+verano UCLM-Almagro (2026) \\ \lightrowrule
 \textbf{Evaluación externa} & Proyectos de tesis en \textbf{Télécom
 ParisTech} (2013), \textbf{University of Applied Sciences Berlin} (2015)
 y \textbf{Stockholm University} (2020) · TFM en \textbf{Hannover
 University of Music, Drama and Media} (2013) · Tesis en la
-\textbf{Universitat de Girona} (2022) \\
+\textbf{Universitat de Girona} (2022) \\ \lightrowrule
 \textbf{Tribunales y comisiones} & 3 tribunales de tesis doctorales · 3
 comisiones de plazas de profesorado (UPV/EHU 2011, U. de Valladolid
-2013, CEU 2019) \\
+2013, CEU 2019) \\ \lightrowrule
 \textbf{Jornadas académico-profesionales} & Organización de \textbf{5
 jornadas} con el sector cultural: ``Nuevas Fórmulas de Gestión en Artes
 Escénicas: los festivales'' (2015) · ``Marketing y Festivales de Artes
 Escénicas en Valencia'' (2016) · ``Diversidad, Artes Escénicas y
 Gestión'' (2019) · ``El show de Liz Dust: Diversidad y mucho más''
-(2020) · ``Identidad, Creación y Gestión'' (2021) \\
+(2020) · ``Identidad, Creación y Gestión'' (2021) \\ \lightrowrule
 \textbf{Divulgación} & Observatorio Social de ``la Caixa'' (2019) ·
-EconomistsTalkArt (2018, 2025) \\
-\bottomrule\noalign{}
+EconomistsTalkArt (2018, 2025) \\ \lightrowrule
 \end{longtable}
 
 \note{Slide de recapitulación (\textasciitilde1 min): no leer la tabla;
@@ -1244,15 +1264,16 @@ Negocios}\label{tuxe9cnicas-avanzadas-de-predicciuxf3n-en-negocios}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6250}}@{}}
 \toprule\noalign{}
 \endhead
-\textbf{Centro} & Facultat d'Economia \\
-\textbf{Duración} & 4 cursos · 240 ECTS \\
-\textbf{Acceso} & 50 plazas \\
-\textbf{Modalidad} & Presencial \\
-\textbf{Materias} & 30 \\
-\textbf{Asignaturas} & 44 \\
-\textbf{Campo de estudio} & Ciencias Económicas, Administración y
-Dirección de Empresas, MarKeting, Comercio, Contabilidad y Turismo \\
 \bottomrule\noalign{}
+\endlastfoot
+\textbf{Centro} & Facultat d'Economia \\ \lightrowrule
+\textbf{Duración} & 4 cursos · 240 ECTS \\ \lightrowrule
+\textbf{Acceso} & 50 plazas \\ \lightrowrule
+\textbf{Modalidad} & Presencial \\ \lightrowrule
+\textbf{Materias} & 30 \\ \lightrowrule
+\textbf{Asignaturas} & 44 \\ \lightrowrule
+\textbf{Campo de estudio} & Ciencias Económicas, Administración y
+Dirección de Empresas, MarKeting, Comercio, Contabilidad y Turismo \\ \lightrowrule
 \end{longtable}
 \end{column}
 
@@ -1278,7 +1299,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, leftrule=.75mm, breakable, titlerule=0mm, toptitle=1mm, title={Herramientas y Técnicas del Análisis de Datos}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, coltitle=black, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, colframe=quarto-callout-note-color-frame, colback=white, opacityback=0, rightrule=.15mm, toprule=.15mm, breakable, coltitle=black, arc=.35mm, title={Herramientas y Técnicas del Análisis de Datos}, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, leftrule=.75mm, toptitle=1mm, bottomrule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1317,23 +1338,24 @@ Aportación principal
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Minería de Datos en Negocios & 2 (1) & Exploración & Segmentación,
-reducción de dimensión, reglas de asociación y árboles \\
+reducción de dimensión, reglas de asociación y árboles \\ \lightrowrule
 Muestreo y Encuestas & 3 (2) & Obtención de información & Diseño
-muestral, cuestionarios, sesgos, datos faltantes e imputación \\
+muestral, cuestionarios, sesgos, datos faltantes e imputación \\ \lightrowrule
 Predicción con Datos Transversales & 2 (1) & Predicción & Regresión,
-GLM, no linealidad, validación, regularización y KNN \\
+GLM, no linealidad, validación, regularización y KNN \\ \lightrowrule
 Predicción con Datos Temporales & 2 (2) & Predicción & Componentes,
-alisado, ARIMA y evaluación por horizonte \\
+alisado, ARIMA y evaluación por horizonte \\ \lightrowrule
 \textbf{Técnicas Avanzadas de Predicción en Negocios} & \textbf{3 (1)} &
 \textbf{Predicción} & \textbf{Ensambles, redes neuronales, SVM y efectos
-causales} \\
+causales} \\ \lightrowrule
 Datos Espaciales y Espacio-Temporales & 3 (2) & Modelización espacial &
 Exploración espacial, \emph{kriging}, modelos espaciales y predicción
-con incertidumbre \\
+con incertidumbre \\ \lightrowrule
 Datos No Estructurados & 4 (1) & Analítica de datos no tabulares &
-Captura web y redes sociales, texto, imágenes, NLP y recomendación \\
-\bottomrule\noalign{}
+Captura web y redes sociales, texto, imágenes, NLP y recomendación \\ \lightrowrule
 \end{longtable}
 \end{frame}
 
@@ -1349,14 +1371,15 @@ Negocios}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6000}}@{}}
 \toprule\noalign{}
 \endhead
-\textbf{Código} & 36520 \\
-\textbf{Carácter} & obligatoria \\
-\textbf{Curso} & 3.º · primer cuatrimestre \\
-\textbf{Materia} & Herramientas y Técnicas de Análisis de Datos \\
-\textbf{Carga} & 6 ECTS · 150 h \\
-\textbf{Docencia} & 15 h teoría · 45 h aula informática \\
-\textbf{Trabajo no presencial} & 90 h \\
 \bottomrule\noalign{}
+\endlastfoot
+\textbf{Código} & 36520 \\ \lightrowrule
+\textbf{Carácter} & obligatoria \\ \lightrowrule
+\textbf{Curso} & 3.º · primer cuatrimestre \\ \lightrowrule
+\textbf{Materia} & Herramientas y Técnicas de Análisis de Datos \\ \lightrowrule
+\textbf{Carga} & 6 ECTS · 150 h \\ \lightrowrule
+\textbf{Docencia} & 15 h teoría · 45 h aula informática \\ \lightrowrule
+\textbf{Trabajo no presencial} & 90 h \\ \lightrowrule
 \end{longtable}
 \end{column}
 
@@ -1396,7 +1419,7 @@ negocio.
 \end{columns}
 \end{frame}
 
-\begin{frame}[fragile,shrink]{Contenidos y planificación}
+\begin{frame}[shrink]{Contenidos y planificación}
 \phantomsection\label{contenidos-y-planificaciuxf3n}
 ~
 
@@ -1414,26 +1437,27 @@ negocio.
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
-1 & 1. Fundamentos & Entorno de trabajo reproducible \\
+\bottomrule\noalign{}
+\endlastfoot
+1 & 1. Fundamentos & Entorno de trabajo reproducible \\ \lightrowrule
 2--3 & 2. Selección y evaluación & Validación cruzada e hiperparámetros
-· S2: grupos y dataset del proyecto \\
+· S2: grupos y dataset del proyecto \\ \lightrowrule
 4--5 & 3. Modelo lineal generalizado con regularización & Modelo base:
 GLM sobre conjunto de datos de referencia · S4: EDA · S5: modelo base
-del proyecto \\
+del proyecto \\ \lightrowrule
 6--8 & 4. Ensambles: RF, XGBoost y \emph{stacking} & Competición contra
-el modelo base · S8: ensambles del proyecto \\
+el modelo base · S8: ensambles del proyecto \\ \lightrowrule
 9 & 5. Máquinas de vectores de soporte (SVM) & Comparación transversal
-de modelos · S9: SVM \\
+de modelos · S9: SVM \\ \lightrowrule
 10--12 & 6. Redes neuronales y aprendizaje profundo & Keras · S12:
-revisión y retroalimentación \\
+revisión y retroalimentación \\ \lightrowrule
 \textbf{13--14} & \textbf{7. Predicción y efectos causales} &
 \textbf{Simulación de sesgos + workflow \texttt{DoubleML} · S14:
-extensión causal} \\
-15 & Evaluación & S15: defensa oral del proyecto \\
-\bottomrule\noalign{}
+extensión causal} \\ \lightrowrule
+15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, leftrule=.75mm, breakable, titlerule=0mm, toptitle=1mm, title={El conjunto de datos de referencia}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, coltitle=black, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, colframe=quarto-callout-note-color-frame, colback=white, opacityback=0, rightrule=.15mm, toprule=.15mm, breakable, coltitle=black, arc=.35mm, title={El conjunto de datos de referencia}, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, leftrule=.75mm, toptitle=1mm, bottomrule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1466,17 +1490,18 @@ Horas totales
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
-\textbf{Presencial} & Teoría: presentación del problema, conceptos y
-discusión & 1 h & 15 h \\
-\textbf{Presencial} & Práctica: notebook guiado, trabajo autónomo y
-entregas & 3 h & 45 h \\
-\textbf{No presencial} & Trabajos individuales/grupo & 2 h 20 min & 35
-h \\
-\textbf{No presencial} & Estudio y trabajo autónomo & 2 h 20 min & 35
-h \\
-\textbf{No presencial} & Resolución de casos & 1 h & 15 h \\
-\textbf{No presencial} & Preparación de la evaluación & 20 min & 5 h \\
 \bottomrule\noalign{}
+\endlastfoot
+\textbf{Presencial} & Teoría: presentación del problema, conceptos y
+discusión & 1 h & 15 h \\ \lightrowrule
+\textbf{Presencial} & Práctica: notebook guiado, trabajo autónomo y
+entregas & 3 h & 45 h \\ \lightrowrule
+\textbf{No presencial} & Trabajos individuales/grupo & 2 h 20 min & 35
+h \\ \lightrowrule
+\textbf{No presencial} & Estudio y trabajo autónomo & 2 h 20 min & 35
+h \\ \lightrowrule
+\textbf{No presencial} & Resolución de casos & 1 h & 15 h \\ \lightrowrule
+\textbf{No presencial} & Preparación de la evaluación & 20 min & 5 h \\ \lightrowrule
 \end{longtable}
 
 ~
@@ -1515,27 +1540,28 @@ Uso
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Software y bibliotecas} & \texttt{Python},
 \texttt{scikit-learn}, \texttt{Keras} y \texttt{DoubleML} &
-Implementación y comparación de métodos \\
+Implementación y comparación de métodos \\ \lightrowrule
 \textbf{Entornos de trabajo} & \texttt{Jupyter}, Google Colab, IDE y
 entorno \texttt{conda} versionado & Desarrollo, acceso y ejecución
-reproducible \\
+reproducible \\ \lightrowrule
 \textbf{Materiales expositivos} & Notas, presentaciones y ejemplos de
-código & Introducción y explicación de los contenidos \\
+código & Introducción y explicación de los contenidos \\ \lightrowrule
 \textbf{Materiales prácticos} & Notebooks guiados, ejercicios y datos
-reales & Aplicación progresiva de los métodos \\
+reales & Aplicación progresiva de los métodos \\ \lightrowrule
 \textbf{Recursos interactivos} & Simulaciones y visualizaciones &
 Exploración de concepts: p.e. sesgo, incertidumbre y variabilidad, o
-entrenamiento de redes neuronales \\
+entrenamiento de redes neuronales \\ \lightrowrule
 \textbf{Recursos para la evaluación} & Cuestionarios breves y
-actividades de autoevaluación & Seguimiento y retroalimentación \\
+actividades de autoevaluación & Seguimiento y retroalimentación \\ \lightrowrule
 \textbf{Recursos para la reproducibilidad} & Repositorio de la
-asignatura y plantillas & Organización, documentación y reutilización \\
+asignatura y plantillas & Organización, documentación y reutilización \\ \lightrowrule
 \textbf{Bibliografía} & James et al., \textbf{ISLP} (2023) + lecturas
 específicas y documentación de bibliotecas & Fundamentación y ampliación
-de contenidos \\
-\bottomrule\noalign{}
+de contenidos \\ \lightrowrule
 \end{longtable}
 
 \note{\textbf{¿Por qué \texttt{Python}?}
@@ -1630,27 +1656,28 @@ evaluación.}
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Formulación y datos (10\%)} & Pregunta relevantes, dataset, EDA
 & pregunta orientada a toma decisiones susceptible de respuesta
 empírica; limitaciones de los datos discutidas & Pregunta clara, EDA
-correcto & Dataset sin justificar; pregunta ambigua; EDA ausente \\
+correcto & Dataset sin justificar; pregunta ambigua; EDA ausente \\ \lightrowrule
 \textbf{Pipeline reproducible (20\%)} & Repositorio, entorno, ejecución
 & reproduce todo desde datos crudos, entorno versionado & Reproducible
 con intervención menor documentada & No reproduce; preprocesado fuera
-del pipeline (fuga) \\
+del pipeline (fuga) \\ \lightrowrule
 \textbf{Modelización (25\%)} & Baseline → ensambles → SVM → DL;
 comparación & Comparación honesta en test común; selección justificada &
 \(\geq\) 3 familias comparadas correctamente & Sin baseline; métricas
-elegidas a posteriori \\
+elegidas a posteriori \\ \lightrowrule
 \textbf{Interpretación y comunicación (15\%)} & Memoria, figuras,
 lectura de resultados & Resultados traducidos a decisión de negocio;
 incorpora incertidumbre & Interpretación correcta de métricas y efectos
-& Lectura mecánica o errónea de las salidas \\
+& Lectura mecánica o errónea de las salidas \\ \lightrowrule
 \textbf{Defensa oral individual (30\%)} & 10' grupo + preguntas
 individuales & Cada miembro explica y modifica en vivo cualquier parte
 del código & Cada miembro explica las partes que firmó & Un miembro no
-sabe explicar código propio \\
-\bottomrule\noalign{}
+sabe explicar código propio \\ \lightrowrule
 \end{longtable}
 \end{frame}
 
@@ -1748,7 +1775,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, leftrule=.75mm, breakable, titlerule=0mm, toptitle=1mm, title={Experimentos aleatorios controlados: el patrón de referencia}, bottomtitle=1mm, colframe=quarto-callout-note-color-frame, coltitle=black, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, colframe=quarto-callout-note-color-frame, colback=white, opacityback=0, rightrule=.15mm, toprule=.15mm, breakable, coltitle=black, arc=.35mm, title={Experimentos aleatorios controlados: el patrón de referencia}, colbacktitle=quarto-callout-note-color!10!white, titlerule=0mm, leftrule=.75mm, toptitle=1mm, bottomrule=.15mm, bottomtitle=1mm, opacitybacktitle=0.6]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -1783,13 +1810,14 @@ Efecto
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Seleccionar el 40\% de los clientes con mayor \textbf{riesgo} (problema
 predictivo) & ¿Quién es más probable que abandone? & \textbf{-1.9
-puntos} \\
+puntos} \\ \lightrowrule
 Seleccionar el 40\% de los clientes con mayor \textbf{sensibilidad a la
 intervención} (problema inferencia causal) & ¿En quién reduce la campaña
-el abandono? & \textbf{-6,0 puntos} \\
-\bottomrule\noalign{}
+el abandono? & \textbf{-6,0 puntos} \\ \lightrowrule
 \end{longtable}
 
 La diferencia entre ambos criterios fue de \textbf{4,1 puntos

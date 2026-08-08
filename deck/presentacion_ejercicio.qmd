@@ -105,6 +105,10 @@ format:
       text: |
         \AtBeginDocument{\footnotesize}
         \usepackage{etoolbox}
+        \usepackage{colortbl}
+        % Filete fino gris entre filas del cuerpo de las tablas;
+        % lo inyecta row-rules.lua en la salida beamer.
+        \newcommand{\lightrowrule}{\arrayrulecolor{black!25}\specialrule{0.4pt}{1pt}{1pt}\arrayrulecolor{black}}
         \AtBeginEnvironment{Highlighting}{\scriptsize}
         % Divisor de parte: contenido de una página plana que replica la
         % portada metropolis (título grande + filete naranja), distinta de
@@ -117,6 +121,12 @@ format:
           \vspace{0.5em}
           {\color{mLightBrown}\rule{\textwidth}{0.05em}}
           \vfill}
+# row-rules.lua debe correr DESPUÉS de los filtros internos de Quarto
+# (centinela `quarto`): si corre antes, serializa las tablas sin procesar
+# tbl-colwidths y aparecen captions espurios y desbordes de columna.
+filters:
+  - quarto
+  - row-rules.lua
 execute:
   eval: false
   echo: false
