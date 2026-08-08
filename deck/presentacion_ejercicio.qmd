@@ -1,0 +1,156 @@
+---
+title: "Concurso de méritos plaza 573 código de concurso 78/2026"
+subtitle: "Candidato: Juan de Dios Montoro Pons"
+author:
+  - name: "Juan de Dios Montoro Pons"
+    affiliations: "Departament d'Economia Aplicada · Universitat de València"
+date: 24 septiembre 2026
+date-format: "DD MMMM YYYY"
+lang: es
+format:
+  revealjs:
+    theme: [default, _theme.scss]
+    include-after-body: title-slide.js
+    include-in-header:
+      text: |
+        <style>
+        /* Escala tipográfica única para las diapositivas de contenido. */
+        .reveal .slides section:not(#title-slide) p,
+        .reveal .slides section:not(#title-slide) li,
+        .reveal .slides section:not(#title-slide) blockquote,
+        .reveal .slides section:not(#title-slide) table {font-size: 0.86em;}
+
+        /* Excepción semántica para diapositivas de densidad extraordinaria. */
+        .reveal .slides section.compact:not(#title-slide) p,
+        .reveal .slides section.compact:not(#title-slide) li,
+        .reveal .slides section.compact:not(#title-slide) blockquote,
+        .reveal .slides section.compact:not(#title-slide) table {font-size: 0.72em;}
+
+        /* Evita el escalado compuesto en listas y citas con párrafos internos. */
+        .reveal .slides section:not(#title-slide) li > p,
+        .reveal .slides section:not(#title-slide) blockquote > p {font-size: 1em;}
+
+        /* Divisores de parte: réplica del estilo de la portada
+           (título grande + filete coral), con eyebrow "PARTE N DE 3". */
+        .reveal .slides section.part-divider h1 {
+          font-size: 2.5em;
+          line-height: 1.1;
+        }
+        .reveal .slides section.part-divider h1::after {
+          content: "";
+          display: block;
+          width: 100%;
+          margin-top: 0.4em;
+          border-bottom: 4px solid #C44536;
+        }
+        .reveal .slides section.part-divider h1 .part-eyebrow {
+          display: block;
+          font-size: 0.42em;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+          color: #2D6A7A;
+          margin-bottom: 0.6em;
+        }
+        </style>
+    title-slide-attributes:
+      data-footer: "false"
+    width: 1920
+    height: 1080
+    echo: false
+    incremental: false
+    code-overflow: wrap
+    highlight-style: solarized
+    embed-resources: true
+    footer: "Concurso de méritos 78/2026 · Juan de Dios Montoro Pons"
+    transition: fade
+    transition-speed: fast
+    fig-align: center
+  beamer:
+    theme: metropolis
+    colortheme: default
+    fonttheme: professionalfonts
+    slide-level: 2
+    aspectratio: 169
+    fontsize: 8pt
+    keep-tex: true
+    fig-align: center
+    include-in-header:
+      text: |
+        \AtBeginDocument{\footnotesize}
+        \usepackage{etoolbox}
+        \AtBeginEnvironment{Highlighting}{\scriptsize}
+        % Divisor de parte: contenido de una página plana que replica la
+        % portada metropolis (título grande + filete naranja), distinta de
+        % las páginas de sección. Se usa dentro de \begin{frame}[plain].
+        \newcommand{\partdividercontent}[2]{%
+          \vfill
+          {\color{mDarkTeal}\scriptsize\bfseries\MakeUppercase{#1}\par}
+          \vspace{0.7em}
+          {\usebeamerfont{title}\usebeamercolor[fg]{title}#2\par}
+          \vspace{0.5em}
+          {\color{mLightBrown}\rule{\textwidth}{0.05em}}
+          \vfill}
+execute:
+  eval: false
+  echo: false
+  warning: false
+  message: false
+---
+
+::: {.content-visible when-format="revealjs"}
+
+# [Parte 1 de 3]{.part-eyebrow} Currículum {.part-divider .center}
+
+:::
+
+::: {.content-visible when-format="beamer"}
+
+---
+
+```{=latex}
+\partdividercontent{Parte 1 de 3}{Currículum}
+```
+
+:::
+
+{{< include _parte1_cv.qmd >}}
+
+::: {.content-visible when-format="revealjs"}
+
+# [Parte 2 de 3]{.part-eyebrow} Propuesta docente {.part-divider .center}
+
+:::
+
+::: {.content-visible when-format="beamer"}
+
+---
+
+```{=latex}
+\partdividercontent{Parte 2 de 3}{Propuesta docente}
+```
+
+:::
+
+{{< include _parte2_docente.qmd >}}
+
+<!-- PLACEHOLDER: sustituir la slide bajo Parte 3 por el deck de la propuesta investigadora -->
+
+::: {.content-visible when-format="revealjs"}
+
+# [Parte 3 de 3]{.part-eyebrow} Propuesta investigadora {.part-divider .center}
+
+:::
+
+::: {.content-visible when-format="beamer"}
+
+---
+
+```{=latex}
+\partdividercontent{Parte 3 de 3}{Propuesta investigadora}
+```
+
+:::
+
+## Propuesta investigadora {.center}
+
+*En preparación.*

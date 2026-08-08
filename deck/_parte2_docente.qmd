@@ -1,0 +1,885 @@
+# La asignatura {background-color="#2D6A7A"}
+
+## Grado en Inteligencia y Analítica de Negocios {.shrink}
+
+&nbsp; 
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+| | |
+|---|-----|
+| **Centro** | Facultat d'Economia |
+| **Duración** | 4 cursos · 240 ECTS |
+| **Acceso** | 50 plazas |
+| **Modalidad** | Presencial |
+| **Materias** | 30 |
+| **Asignaturas** |  44  |
+| **Campo de estudio** | Ciencias Económicas, Administración y Dirección de Empresas, MarKeting, Comercio, Contabilidad y Turismo |
+
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="65%"}
+
+**Objetivo**: Formar profesionales en tecnologías de datos capaces de aplicarlas creativamente a las necesidades empresariales y a los retos de la economía digital.
+
+Para ello integra tres ámbitos:
+
+- **Empresa:** estrategia, finanzas, contabilidad y marketing;
+- **Métodos cuantitativos:** matemáticas, estadística y aprendizaje estadístico, 
+y  econometría;
+- **Tecnología:** programación, gestión de datos y comunicación de resultados.
+
+
+:::{.callout-note icon="false"}
+# Herramientas y Técnicas del Análisis de Datos 
+La asignatura **Técnicas Avanzadas de Predicción en Negocios**  (dentro de la materia **Herramientas y Técnicas del Análisis de Datos**) se apoya en los tres ámbitos: incorpora en el curriculum modelos predictivos avanzados en un entorno computacional junto con herramientas para valorar su utilidad en la toma de decisiones empresariales.
+
+La asignatura busca formar profesionales con conocimientos de métodos computacionales y modelos predictivos aplicados a economía y negocios tanto para predecir como para  explicar, con práctica real y uso crítico de la IA.
+
+
+:::
+:::
+::::
+
+
+
+## Herramientas y Técnicas de Análisis de Datos {.shrink}
+
+&nbsp;
+
+
+| Asignatura | Curso (cuatr.) | Ámbito | Aportación principal |
+|---------|:-:|----|---------|
+| Minería de Datos en Negocios | 2 (1)| Exploración | Segmentación, reducción de dimensión, reglas de asociación y árboles |
+| Muestreo y Encuestas | 3 (2) | Obtención de información | Diseño muestral, cuestionarios, sesgos, datos faltantes e imputación |
+| Predicción con Datos Transversales | 2 (1) | Predicción | Regresión, GLM, no linealidad, validación, regularización y KNN |
+| Predicción con Datos Temporales | 2 (2) | Predicción | Componentes, alisado, ARIMA y evaluación por horizonte |
+| **Técnicas Avanzadas de Predicción en Negocios** | **3 (1)** |**Predicción** | **Ensambles, redes neuronales, SVM y efectos causales** |
+| Datos Espaciales y Espacio-Temporales | 3 (2) | Modelización espacial | Exploración espacial, *kriging*, modelos espaciales y predicción con incertidumbre |
+| Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP, sentimiento y recomendación |
+
+
+
+## Técnicas Avanzadas de Predicción en Negocios {.shrink}
+
+&nbsp;
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+:::: {tbl-colwidths="[40,60]"}
+| | |
+|---|---|
+| **Código** | 36520 |
+| **Carácter** | obligatoria |
+| **Curso** | 3.º · primer cuatrimestre |
+| **Materia** | Herramientas y Técnicas de Análisis de Datos |
+| **Carga** | 6 ECTS · 150 h |
+| **Docencia** | 15 h teoría · 45 h aula informática |
+| **Trabajo no presencial** | 90 h |
+::::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+
+
+**El alumnado llega con**
+
+- Análisis exploratorio y minería de datos, inferencia,  y técnicas de predicción transversal y temporal
+- Uso continuado de `R` en análisis estadístico, minería y predicción
+- Fundamentos de programación y algoritmia con `Python`
+
+**Objetivos**
+
+- Implementar y comparar métodos avanzados de aprendizaje automático
+- Selección de modelos; interpretación de resultados y límites
+- Distinguir preguntas predictivas y explicativas
+
+El **Tema 7** desarrolla el último objetivo mediante un caso de negocio.
+:::
+
+::::
+
+
+## Contenidos y planificación {.shrink}
+
+&nbsp;
+
+| **Semanas** | **Tema** | **Práctica / hito del proyecto** |
+|:-:|--------|-----------|
+| 1 | 1. Fundamentos | Entorno de trabajo reproducible |
+| 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros · S2: grupos y dataset del proyecto |
+| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA · S5: modelo base del proyecto |
+| 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S8: ensambles del proyecto |
+| 9 | 5. Máquinas de vectores de soporte (SVM)  | Comparación transversal de modelos · S9: SVM |
+| 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras · S12: revisión y retroalimentación |
+| **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` · S14: extensión causal** |
+| 15 | Evaluación | S15: defensa oral del proyecto |
+
+::: {.callout-note icon="false"}
+# El conjunto de datos de referencia
+A lo largo de la asignatura utilizamos un mismo conjunto de datos como caso de estudio transversal, sobre el que aplicamos las diferentes técnicas. Esto permite comparar los modelos en un contexto común, analizar sus fortalezas y limitaciones, y comprender qué métodos resultan más adecuados según el objetivo empresarial y las características de los datos.
+:::
+
+::: {.content-hidden}
+
+## Metodología docente
+
+&nbsp;
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+
+**Carga de trabajo**
+
+---
+
+**Presencial: 4 horas/semana**
+
+- **Teoría (1h):** presentación del problema, conceptos y discusión.
+- **Práctica (3h):** notebook guiado, trabajo autónomo y entrega.
+
+---
+
+**No presencial: 90 horas (6 horas/semana)**
+
+- Trabajos individuales/grupo: 35 h.
+- Estudio y trabajo autónomo: 35 h.
+- Resolución de casos: 15 h.
+- Preparación de la evaluación: 5 h.
+
+---
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+
+&nbsp;
+
+**Secuencia de aprendizaje**: narrativa → visual → código → formal  
+
+::: {style="margin-left: 1.4em;"}
+1. Plantear una pregunta de negocio.  
+2. Explorarla con datos, gráficos y simulación.  
+3. Codificar y comparar soluciones.  
+4. Formalizar el método y revisar sus supuestos.  
+5. Interpretar el resultado y justificar una decisión.  
+:::
+
+Las sesiones prácticas desarrollan los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
+:::
+
+::::
+
+::: {.notes}
+[Sources]
+- Guía docente 36520, curso 2026-27: volumen de trabajo y metodología docente.
+:::
+
+:::
+
+## Metodología docente: carga de trabajo
+
+&nbsp;
+
+| Modalidad | Actividad | Horas semanales | Horas totales |
+|---|---|---|---|
+| **Presencial** | Teoría: presentación del problema, conceptos y discusión | 1 h | 15 h |
+| **Presencial** | Práctica: notebook guiado, trabajo autónomo y entregas | 3 h | 45 h  | 
+| **No presencial** | Trabajos individuales/grupo | 2 h 20 min | 35 h |
+| **No presencial** | Estudio y trabajo autónomo | 2 h 20 min | 35 h | 
+| **No presencial** | Resolución de casos | 1 h | 15 h |
+| **No presencial** | Preparación de la evaluación | 20 min | 5 h | 
+
+&nbsp;
+
+Carga total 150 h · 60 h presenciales · 90 h no presenciales
+
+## Metodología docente: secuencia de aprendizaje
+
+&nbsp; 
+
+![](figures/fig_metodologia.svg){width="64%" fig-alt="Estructura de evaluación: proyecto 35%, entregas 30%, participación 10%, examen 25% con mínimo 5/10; el 75% es evaluación continua"}
+
+
+
+
+
+Las sesiones prácticas desarrollan los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
+
+::: {.notes}
+[Sources]
+- Guía docente 36520, curso 2026-27: volumen de trabajo y metodología docente.
+:::
+
+::: {.content-hidden}
+
+## Recursos didácticos {.shrink}
+
+&nbsp;
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+---
+
+ **¿Por qué `Python`?**  
+
+- Librerías de referencia para métodos avanzados 
+- Herramienta habitual en la industria de datos 
+- Acceso a Colab  sin instalación local
+- Permite transferir conocimientos acumulados en `R`: cambia la herramienta, no el concepto
+
+---
+
+**Entorno de trabajo** 
+
+- Librerías `scikit-learn`, `Keras` y `DoubleML` 
+- `Jupyter` en local o Google Colab 
+- Entorno `conda` versionado 
+
+---
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+
+&nbsp;
+
+- Materiales didácticos digitales (notas, presentaciones, ejemplos de código).
+- Herramientas de desarrollo (IDE).
+- Repositorio de la asignatura.
+- Notebooks guiados y ejercicios con datos reales;
+- Otros recursos digitales (p.e. simulaciones para visualizar sesgo, incertidumbre y variabilidad);
+- Cuestionarios breves de seguimiento y autoevaluación;
+- Repositorios y plantillas reproducibles;
+- Bibliografía
+  - Básica: James et al., **ISLP** (2023), y Hastie et al., *ESL*;   
+  - Específica por temas. (Tema 7: Ahrens et al. "An Introduction to Double/Debiased Machine Learning”  (JEL, 2026); documentación de la biblioteca `DoubleML`).
+:::
+
+::::
+
+::: {.notes}
+[Sources]
+- Guía docente 36520, curso 2026-27, bibliografía.
+- Fernández-Villaverde y Nuño (2023), Machine Learning for Economists, bloque 1.
+:::
+:::
+
+## Recursos didácticos
+
+&nbsp;
+
+::: {.smaller}
+
+| Tipo de recurso | Elementos | Uso |
+|:--|:----|:----|
+| **Software y bibliotecas** | `Python`, `scikit-learn`, `Keras` y `DoubleML` | Implementación y comparación de métodos |
+| **Entornos de trabajo** | `Jupyter`, Google Colab, IDE y entorno `conda` versionado | Desarrollo, acceso y ejecución reproducible |
+| **Materiales expositivos** | Notas, presentaciones y ejemplos de código | Introducción y explicación de los contenidos |
+| **Materiales prácticos** | Notebooks guiados, ejercicios y datos reales | Aplicación progresiva de los métodos |
+| **Recursos interactivos** | Simulaciones y visualizaciones | Exploración de concepts: p.e. sesgo, incertidumbre y variabilidad, o entrenamiento de redes neuronales |
+| **Recursos para la evaluación** | Cuestionarios breves y actividades de autoevaluación | Seguimiento y retroalimentación |
+| **Recursos para la reproducibilidad** | Repositorio de la asignatura y plantillas | Organización, documentación y reutilización |
+| **Bibliografía** | James et al., **ISLP** (2023) + lecturas específicas y documentación de bibliotecas | Fundamentación y ampliación de contenidos |
+
+:::
+
+:::{.notes}
+ **¿Por qué `Python`?**  
+
+- Librerías de referencia para métodos avanzados 
+- Herramienta habitual en la industria de datos 
+- Acceso a Colab  sin instalación local
+- Permite transferir conocimientos acumulados en `R`: cambia la herramienta, no el concepto
+
+:::
+
+## Evaluación
+
+&nbsp;
+
+![](figures/fig_evaluacion.svg){width="50%" fig-align="center" fig-alt="Estructura de evaluación: proyecto 35%, entregas 30%, participación 10%, examen 25% con mínimo 5/10; el 75% es evaluación continua"}
+
+- **Proyecto (35%)**: aplicación integrada de los contenidos y defensa oral.
+- **Entregas (30%) y participación (10%)**: seguimiento del trabajo individual durante el curso.
+- **Examen (25%)**: preguntas teóricas y aplicadas; se exige un mínimo de **5/10**.
+
+Los pesos, las rúbricas y las condiciones de recuperación se publican al inicio del curso.
+
+
+::: {.notes}
+[Sources]
+- Guía docente 36520, curso 2026-27, apartado de evaluación.
+:::
+# Proyecto final {background-color="#2D6A7A"}
+
+## Proyecto del cuatrimestre
+
+&nbsp;
+
+![](figures/fig_timeline_proyecto.svg){width="88%" fig-alt="Línea temporal del proyecto: grupos y dataset en la semana 2, EDA en la 4, baseline GLM en la 5, ensambles en la 8, hito intermedio con retroalimentación en la 12, extensión causal con DoubleML en la 14 y defensa oral en la 15"}
+
+- Grupos de 3--4 alumnos, dataset y problema propios elegidos en la semana 2; cada hito utiliza el contenido desarrollado durante esas semanas
+- El hito de la S14 permite formular una pregunta causal sobre los propios datos y responderla con `DoubleML` (o justificar por qué los supuestos no lo permiten, respuesta igual de valiosa)
+- Entrega final: **repositorio reproducible + memoria + defensa oral** 
+
+## Rúbrica del proyecto {.compact .shrink}
+
+&nbsp;
+
+| **Dimensión (peso)** | **Qué se observa** | **Excelente (9–10)** | **Apto (5–6)** | **No apto** |
+|---|---|---|---|---|
+| **Formulación y datos (10%)** | Pregunta relevantes, dataset, EDA | pregunta orientada a toma decisiones susceptible de respuesta empírica; limitaciones de los datos discutidas | Pregunta clara, EDA correcto | Dataset sin justificar; pregunta ambigua; EDA ausente |
+| **Pipeline reproducible (20%)** | Repositorio, entorno, ejecución | reproduce todo desde datos crudos, entorno versionado | Reproducible con intervención menor documentada | No reproduce; preprocesado fuera del pipeline (fuga) |
+| **Modelización (25%)** | Baseline → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente | Sin baseline; métricas elegidas a posteriori |
+| **Interpretación y comunicación (15%)** | Memoria, figuras, lectura de resultados | Resultados traducidos a decisión de negocio; incorpora incertidumbre  | Interpretación correcta de métricas y efectos | Lectura mecánica o errónea de las salidas |
+| **Defensa oral individual (30%)** | 10' grupo + preguntas individuales | Cada miembro explica y modifica en vivo cualquier parte del código | Cada miembro explica las partes que firmó | Un miembro no sabe explicar código propio |
+
+
+
+::: {.content-hidden}
+
+## Calificación individual
+
+&nbsp;
+
+
+
+**Componentes**
+
+- Nota de grupo = suma ponderada de las cuatro primeras dimensiones de la rúbrica (70%)
+- Defensa oral individual = el 30% restante, evaluada con sus propios descriptores
+- Factor individual corrige por contribución y autoría verificada ---multiplica  la parte de grupo. La defensa no se modifica (ya es individual) y mide *nivel*. Sin doble cómputo
+
+
+:::{.callout-note icon="false"}
+# Nota individual del proyecto
+$$
+\min (10\times 0.70 \times\text{grupo} \times f_i 
++0.30 \times \text{defensa}_i)
+$$
+
+$\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad$ con $f_i \in [0.8,\, 1.2]$
+:::
+
+:::{.notes}
+**Observaciones**
+
+- **Retroalimentación a lo largo del curso:** hito intermedio (S12) con la rúbrica provisional aplicada sin nota; defensa final (S15) con la definitiva
+- **Penalizaciones** (publicadas): entrega tardía -1 punto/día; fuga de información detectada → dimensión de modelización a no apto
+- **Condición previa**:  compromiso con las entregas de acuerdo con planificación; caso contrario  la nota máxima del proyecto es 4/10
+
+:::
+:::
+
+## Uso de inteligencia artificial {.shrink}
+
+&nbsp;
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+---
+
+**Tres verificaciones (que la IA no suplanta)**
+
+---
+
+- **Defensa oral individual** con modificación de código en vivo
+- **10% de participación en aula** (presencialidad verificada)
+- **Examen presencial** (25%) con mínimo de 5/10
+
+---
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+
+&nbsp;
+
+**Política de IA: permitida, declarada, auditada**
+
+- Uso libre de asistentes para código, depuración y redacción (favoreciendo uso crítico y responsable)
+- **Obligatorio:** el registro completo de prompts se entrega como apéndice del proyecto y de las entregas relevantes — no una selección
+- Evaluado sobre los prompts: el log se cruza con el código y la memoria buscando coherencia prompts $\leftrightarrow$ producto; la transparencia se premia. Un producto que excede con mucho lo que su log explica es señal de alerta
+
+
+:::
+
+::::
+
+# Estimación de parámetros estructurales mediante técnicas predictivas (tema 7) {.compact background-color="#2D6A7A"}
+
+## Riesgo de abandono y estrategia de retención de clientes {.compact .shrink}
+
+&nbsp;
+
+:::: {.columns}
+::: {.column width="30%"}
+
+---
+
+**Decisión de negocio**: estimación del riesgo de 
+abandono (*churn*) y estrategia retención de clientes. 
+Analizamos dos reglas de priorización
+
+- **RISK:** actuar sobre quienes tienen mayor probabilidad de abandonar.  
+- **LIFT:** actuar sobre quienes más reducen su probabilidad de abandono **por la intervención** (sensibilidad a la intervención).
+
+---
+
+La predicción del riesgo de abandono no responde por sí sola a la cuestión de gestión **qué clientes deberían ser objeto de una campaña**. Esta decisión requiere estimar el efecto causal de la intervención.
+
+---
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+
+:::{.callout-note icon="false"}
+# Experimentos aleatorios controlados: el patrón de referencia
+
+Ascarza (2018). “Retention Futility: Targeting High-Risk Customers Might Be Ineffective”, *Journal of Marketing Research*, 55(1), 80–98. DOI: 10.1509/jmr.16.0163.
+
+Un operador de telefonía móvil de prepago de Oriente Medio asignó al azar a 12.137 clientes que habían recargado entre una y cuatro semanas antes y no habían realizado llamadas durante la última semana. El grupo tratado recibió un SMS con crédito adicional si recargaba una cantidad determinada en los tres días siguientes. Se observó si la línea seguía activa 30 días después.
+
+Con los resultados derivados de los datos experimentales se estima qué impacto tendría una campaña de retención sobre un subconjunto de los clientes (40%) usando reglas de priorización alternativas: RISK o LIFT.
+
+:::
+
+&nbsp;
+
+| Criterio de selección | Pregunta que responde | Efecto  |
+|---------|---------|:---:|
+| Seleccionar el 40% de los clientes con mayor **riesgo** (problema predictivo) | ¿Quién es más probable que abandone? | **-1.9 puntos** |
+| Seleccionar el 40% de los clientes con mayor **sensibilidad a la intervención** (*problema inferencia causal*) | ¿En quién reduce la campaña el abandono? | **-6,0 puntos** |
+
+La diferencia entre ambos criterios fue de **4,1 puntos porcentuales**.
+
+:::
+:::
+
+::: {.content-hidden}
+
+## Riesgo de abandono y estrategia de retención de clientes {.compact .shrink}
+
+&nbsp;
+
+Dos reglas a considerar  
+
+:::: {.columns}
+::: {.column width="30%"}
+- **RISK:** actuar sobre quienes tienen mayor probabilidad de abandonar.  
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+- **LIFT:** actuar sobre quienes más reducen su probabilidad de abandono **por la intervención** (sensibilidad a la intervención).
+:::
+::::
+
+:::: {.columns}
+::: {.column width="30%"}
+:::{.callout-note}
+# Experimentos aleatorios controlados: el patrón de referencia
+**Experimento 2**
+
+Una organización norteamericana que ofrece a sus asociados servicios *online* y presenciales y descuentos para asistir a eventos asignó al azar a **2.100 clientes** próximos a renovar: carta de renovación sola o la misma carta con un **regalo de agradecimiento**, enviado antes de conocer la decisión de renovación. El artículo no especifica el objeto regalado.
+
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+Con los resultados derivados de los datos experimentales se estima qué impacto tendría una campaña de retención sobre un subconjunto de los clientes (40%) usando reglas de priorización alternativas: RISK o LIFT.
+
+| Criterio de selección | Pregunta que responde | Efecto de la campaña sobre el abandono |
+|---------|---------|:---:|
+| Mayor **riesgo** (*problema predictivo*) | ¿Quién es más probable que abandone? | **+4,4 puntos** |
+| Mayor **sensibilidad a la intervención** (*problema inferencia causal*) | ¿En quién reduce la campaña el abandono? | **-4,3 puntos** |
+
+La diferencia entre ambos criterios fue de **8,7 puntos porcentuales**.
+:::
+::::
+
+::: {.takeaway}
+La predicción del riesgo de abandono no responde por sí sola a la cuestión de gestión **qué clientes deberían ser objeto de una campaña**. Esta decisión requiere estimar el efecto causal de la intervención.
+:::
+
+:::
+
+## Aprendizaje automático para la estimación de efectos causales {.shrink}
+
+&nbsp;
+
+
+:::: {.columns}
+::: {.column width="30%"}
+
+---
+
+**Objetivo**: estimar el parámetro $\tau$ para la expresión:
+$$y=\tau D+g(X)+\epsilon$$
+
+---
+
+Con **datos observacionales** $\to$ posible confusión en $X$:
+
+$$D= m(X)+\eta$$
+
+---
+
+:::
+
+::: {.column width="5%"}
+
+:::
+::: {.column width="65%"}
+![](figures/fig_dag_confusion_sin_ecuacion.svg){width="72%" fig-alt="DAG del modelo parcialmente lineal: X confunde a D y a Y mediante m(X) y g(X); el efecto causal tau va de D a Y"}
+
+**¿Por qué aprendizaje automático?**
+
+- Elevada dimensionalidad de $X$.
+- Datos no tabulares (p.e. texto o imágenes).
+- Flexibilidad para aproximar $g$ y $m$.
+
+
+:::
+
+::::
+
+
+:::{.content-hidden}
+
+## Aplicación *naive* de métodos de aprendizaje automático
+
+&nbsp;
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+---
+
+**Problema 1**
+
+Los modelos de aprendizaje automático regularizan (de forma explícita o implícita) los predictores, introduciendo el denominado *sesgo de regularización*.
+
+---
+
+
+
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+Aproximación ingenua para la estimación de $\tau$ en
+$$y=\tau D+g(X)+\epsilon,$$
+
+1. Ajustar un modelo LASSO de $y$ sobre $X$ (o cualquier modelo que implemente selección de predictores);
+2. Dada una regularización óptima (por CV) determinar el subconjunto de predictores $X'$ no nulos;
+3. Estimar la regresión de $y$ sobre $(D,X')$ mediante cualquier técnica paramétrica para recuperar $\tau$.
+
+**Problema**: LASSO selecciona variables por su capacidad para **predecir $y$** pudiendo eliminar un control $x^*$ poco correlacionado con $y$ (y que sea muy relevante para explicar $D$). En este caso el modelo de segunda etapa atribuye parte de la relación de $x^*$ con $D$  a $\tau$: aparece **sesgo de variable omitida**.
+
+
+:::
+
+::::
+:::
+
+
+## Aplicación *naive* de métodos de aprendizaje automático
+
+&nbsp;
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+---
+
+**Problema 1**
+
+Los modelos de aprendizaje automático regularizan (de forma explícita o implícita) los predictores, introduciendo el denominado *sesgo de regularización*.
+
+---
+
+**Problema 2**
+
+Utilizar el mismo conjunto de datos para estimar una función y realizar predicciones introduce *sesgo por sobreajuste*.
+
+---
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+Aproximación ingenua para la estimación de $\tau$ en
+$$y=\tau D+g(X)+\epsilon,$$
+
+1. Aprender de los datos un modelo flexible $\hat{g}$;
+2. Obtener una versión residualizada de la respuesta 
+$\tilde{y}=y-\hat{g}(X)$;
+3. Recuperar el efecto $\tau$ por la regresión de $\tilde{y}$ sobre $D$.
+
+**Sesgo de regularización**: la estimación $\hat{g}$   selecciona variables $X$ por su capacidad para **predecir $y$** pudiendo atenuar/eliminar un control $x^*$ poco correlacionado con $y$ (y que sea muy relevante para explicar $D$). En este caso el modelo de segunda etapa atribuirá parte de la relación de $x^*$ con $D$  a $\tau$: se trata de un tipo de **sesgo por variable omitida**.
+
+**Sesgo por sobreajuste**: entrenamiento y predicción sobre las mismas observaciones atenúa parte del efecto causal (lo absorben los residuos de $y$) y aumenta la varianza resiual del tratamiento (la estimación de $\tau$ y su error estándar deja de ser fiable).
+
+:::
+
+::::
+
+## Double (Debiased) Machine Learning {.shrink}
+
+&nbsp;
+
+:::{.columns}
+:::{.column width="30%"}
+
+---
+
+Estimador de efecto causal en dos etapas
+
+- Primera etapa
+  1. Entrenar funciones $\hat{g}$ y $\hat{m}$ para respuesta y tratamiento. 
+  2. Generar versiones residualizadas  
+  $\tilde{y}=y-\hat{g}(X)$ y $\tilde{D}=D-\hat{m}(X)$ (separar entrenamiento/predicción)
+- Segunda etapa: estimar la regresión $\tilde{y}=\tau \tilde{D}+\epsilon$
+
+---
+
+:::
+
+:::{.column width="5%"}
+:::
+
+:::{.column width="65%"}
+![](figures/fig_esquema_dml.svg){width="80%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
+:::
+:::
+
+
+
+
+:::{.content-hidden}
+## Ortogonalización
+
+&nbsp;
+
+
+
+![](figures/fig_sesgo_regularizacion.svg){width="72%" fig-alt="Distribución de tau estimado en 200 simulaciones: el enfoque naive con selección LASSO queda sesgado a la mitad del valor real 0,5; la ortogonalización FWL centra la distribución cerca del valor real"}
+
+::: {.takeaway}
+Con $\tau=0{,}5$, el enfoque directo obtiene una media de 0,24. Al residualizar $y$ y $D$ respecto de $X$, la media sube a 0,44:
+
+$$y-\hat g(X)=\tau\,[D-\hat m(X)]+\epsilon$$
+:::
+
+
+
+
+## Sobreajuste y cross-fitting 
+
+&nbsp;
+
+::: {.columns}
+
+::: {.column width="30%"}
+![](figures/fig_crossfitting.svg){width="88%" fig-alt="Esquema de cross-fitting con 5 folds: en cada iteración se entrena en 4 folds y se predice en el fold restante"}
+
+**Cross-fitting (K = 5):** cada residuo se calcula con modelos entrenados **sin esa observación** — predicciones *out-of-fold*, exactamente el gesto que el estudiante repite desde el Tema 2 en validación cruzada.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+Si $\hat g$ y $\hat m$ se entrenan y predicen sobre las mismas observaciones:
+
+- los residuos de $y$ pueden absorber parte del efecto causal;
+- la varianza residual de $D$ puede quedar distorsionada;
+- la estimación de $\tau$ y de su error estándar deja de ser fiable.
+
+$$\text{Var}(\hat{\tau}) = \frac{\sigma^2_\eta}{\,n \cdot \text{Var}(\tilde{D})\,}$$
+
+::: {.emphasis-box}
+La ortogonalización reduce el sesgo de regularización. El *cross-fitting* separa entrenamiento y predicción.
+:::
+:::
+
+:::
+
+
+## Resultados del cross-fitting 
+
+&nbsp;
+
+![](figures/fig_montecarlo_dml.svg){width="78%" fig-alt="Distribución de tau estimado en 200 simulaciones Monte Carlo: sin cross-fitting la media queda por debajo del valor real 2 (atenuación); con cross-fitting de 5 folds la distribución se centra en el valor real"}
+
+::: {.takeaway}
+Con $\tau=2$, la media pasa de 1,70 sin *cross-fitting* a 1,92 con predicciones *out-of-fold*. El RMSE baja de 0,41 a 0,11. La cobertura mejora, aunque sigue por debajo del 95% nominal con $n=300$.
+:::
+
+## Double (Debiased) Machine Learning {.shrink}
+
+&nbsp;
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](figures/fig_esquema_dml.svg){width="92%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+**Dos especificaciones**
+
+| | PLM | IRM |
+|---|---|---|
+| **Supuesto** | efecto constante | efecto interactúa con $X$ |
+| **Tratamiento** | continuo o binario | binario |
+| **Nuisance** | 2 modelos | 3 modelos |
+| **Cuándo** | muestra pequeña, ATE | muestra grande, efectos heterogéneos |
+
+::: {.takeaway}
+El IRM permite estimar efectos por segmento. Es la estructura necesaria para comparar riesgo de abandono y respuesta a la campaña en el caso de Ascarza.
+:::
+
+::: {.source-cite}
+Contenidos desarrollados en materiales propios del curso (notebooks y slides, 2025-26).
+:::
+:::
+
+::::
+
+:::
+
+
+
+## Práctica con datos reales {.shrink}
+
+&nbsp;
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**Workflow con `DoubleML`**
+
+```python
+from doubleml import DoubleMLData, \
+   DoubleMLPLR
+from sklearn.ensemble import \
+   RandomForestRegressor
+
+datos = DoubleMLData(df, y_col="gasto",
+                     d_cols="email",
+                     x_cols=covariables)
+
+regresor = RandomForestRegressor()
+
+dml = DoubleMLPLR(datos,
+                  ml_l=regresor,
+                  ml_m=regresor,
+                  n_folds=5)
+dml.fit()
+print(dml.summary)
+dml.sensitivity_analysis()
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+**Decisión: ¿a quién enviar la campaña?**
+
+- Los [datos públicos de Hillstrom](https://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv) incluyen 64.000 clientes asignados al azar a tres grupos: email de productos de hombre, email de productos de mujer y control sin email. Durante dos semanas se observan visitas, compras y gasto.
+- El estudiante compara dos reglas: seleccionar por probabilidad de compra o por efecto estimado de la campaña.
+- Una segunda parte introduce selección observacional y valida `DoubleML` frente al resultado experimental.
+
+**Salida del workflow:** los modelos de primera etapa se evalúan con validación cruzada; `dml` devuelve el efecto estimado, su intervalo de confianza y la sensibilidad a confusión residual.
+
+:::
+
+::::
+
+::: {.notes}
+[Sources]
+- Hillstrom, K. (2008), *The MineThatData E-Mail Analytics And Data Mining Challenge*: https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html
+- TensorFlow Datasets, `hillstrom`: https://www.tensorflow.org/datasets/catalog/hillstrom
+:::
+
+## Nivel y alcance del Tema 7
+
+&nbsp;
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**El límite**
+
+No se evalúan demostraciones asintóticas ni el desarrollo formal de la ortogonalidad de Neyman.
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+**Lo que sí se evalúa**
+
+- distinguir predicción e intervención;
+- reconocer los dos sesgos mediante simulación;
+- aplicar ortogonalización y *cross-fitting*;
+- estimar un efecto y leer su intervalo de confianza;
+- discutir supuestos y límites.
+:::
+
+::::
+
+<!-- Generado por scripts/sync_partes.py desde propuesta_docente.qmd — NO EDITAR;
+     editar el deck fuente y re-sincronizar. -->

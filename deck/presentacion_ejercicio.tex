@@ -1,0 +1,1988 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+  aspectratio=169,
+  spanish,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{metropolis}
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+\AtBeginDocument{\footnotesize}
+\usepackage{etoolbox}
+\AtBeginEnvironment{Highlighting}{\scriptsize}
+% Divisor de parte: contenido de una página plana que replica la
+% portada metropolis (título grande + filete naranja), distinta de
+% las páginas de sección. Se usa dentro de \begin{frame}[plain].
+\newcommand{\partdividercontent}[2]{%
+  \vfill
+  {\color{mDarkTeal}\scriptsize\bfseries\MakeUppercase{#1}\par}
+  \vspace{0.7em}
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}#2\par}
+  \vspace{0.5em}
+  {\color{mLightBrown}\rule{\textwidth}{0.05em}}
+  \vfill}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Concurso de méritos plaza 573 código de concurso 78/2026},
+  pdfauthor={Juan de Dios Montoro Pons},
+  pdflang={es},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Concurso de méritos plaza 573 código de concurso 78/2026}
+\subtitle{Candidato: Juan de Dios Montoro Pons}
+\author{Juan de Dios Montoro Pons}
+\date{24 septiembre 2026}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}
+\partdividercontent{Parte 1 de 3}{Currículum}
+\end{frame}
+
+\begin{frame}{Trayectoria académica: evolución}
+\phantomsection\label{trayectoria-acaduxe9mica-evoluciuxf3n}
+~
+
+\includegraphics[width=0.96\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_timeline.pdf}
+
+\note{\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3750}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6250}}@{}}
+\toprule\noalign{}
+\endhead
+\textbf{Doctor en Economía} & Universitat de València, 1996 \\
+\textbf{Titular de Universidad} & desde 2005 \\
+\textbf{Acreditación a CU} & ANECA, octubre de 2024 \\
+\textbf{Áreas} & Economía Aplicada (1995) → Métodos Cuantitativos (curso
+2006/07) \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\textbf{Investigación} --- 4 sexenios de investigación + 1 de
+transferencia · 46 artículos, 36 en revistas indexadas · más de 800
+citas (Google Scholar, h = 14)
+
+~
+
+\textbf{Docencia} --- 5 quinquenios · DOCENTIA \textbf{EXCELENTE,
+200/200} · tres décadas de docencia en 13 titulaciones y 7 centros
+
+~
+
+\textbf{Dirección y liderazgo} --- dirección del grupo de investigación
+CREAMARKT · 2 tesis doctorales \emph{cum laude} · coordinación de
+titulación internacional}
+\end{frame}
+
+\section{Investigación y
+transferencia}\label{investigaciuxf3n-y-transferencia}
+
+\begin{frame}[shrink]{Trayectoria investigadora}
+\phantomsection\label{trayectoria-investigadora}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2273}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4545}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3182}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Etapa
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Trabajos representativos
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Principales coautores
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Economía computacional} (1995--2003) & Capítulos en
+\emph{Mathematics with Vision} (CMP, 1995) e \emph{Innovations in
+Mathematics} (CMP, 1997) · Tesis doctoral ``Simulación y Detección de
+Caos Macroeconómico'' (1996) · \emph{Journal of Macroeconomics} (1998) &
+José V. Paz \\
+\textbf{Elección pública} (1998--2010) & Capítulos en \emph{Methods and
+Moral in Constitutional Economics. Essays in Honour of James M.
+Buchanan} (Springer, 2001) y en \emph{Constitutional Economics and
+Public Institutions} (Edward Elgar, 2013) · \emph{CIRIEC-España} (2000)
+· \emph{Constitutional Political Economy} (2001) · \emph{Computational
+Economics} (2003) & Miguel Puchades-Navarro · José Casas-Pardo \\
+\textbf{Economía de la cultura y consumo cultural} (2008--) & Transición
+vía propiedad intelectual \(\to\) participación cultural, industrias
+creativas, y \emph{big data} : \emph{European Journal of Law and
+Economics} (2008) · \emph{Journal of Cultural Economics} (2011, 2018) ·
+\emph{Poetics} (2020, 2025) · \emph{Empirical Economics} (2023) & Manuel
+Cuadrado-García · María Caballer-Tarazona \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{\textbf{Continuidad entre etapas} De los métodos computacionales y
+la elección pública al análisis económico de las artes y la cultura: una
+línea \textbf{acumulativa}, no una sucesión de temas.
+
+Mencionar oralmente el paralelismo con Bruno Frey y Tyler Cowen (public
+choice → cultural economics), que el propio Resumen del CV señala. Las
+estancias de esa etapa (George Mason 1998; CREED, Univ. van Amsterdam
+2001) se citan oralmente si procede.
+
+«JCEC» en la revisión = \emph{Journal of Cultural Economics} (confirmado
+por el candidato el 04-08-2026; l. 258, 278).
+
+Columna «Principales coautores» por indicación del candidato
+(04-08-2026); coherente con las autorías de §2.1--2.2: J. V. Paz (l.
+222, 318, 320), M. Puchades-Navarro y J. Casas-Pardo (l. 230--236, 330),
+M. Cuadrado-García y M. Caballer-Tarazona (l. 242 en adelante).
+
+{[}Sources{]} CV\_final.qmd, Resumen actividad investigadora (l.
+114--120); capítulos: §2.2 (l. 318, 320, 330, 359); artículos: §2.1 (l.
+224, 258, 278, 288, 300, 310).}
+\end{frame}
+
+\begin{frame}{Producción científica en cifras}
+\phantomsection\label{producciuxf3n-cientuxedfica-en-cifras}
+~
+
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_articulos_etapas.pdf}
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Web of Science
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Scopus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Google Scholar
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+246 citas · h = 8 & 332 citas · h = 8 & 807 citas · h = 14 · i10 = 19 \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{35 revisiones por pares verificadas (percentil 91) 2 citas en
+documentos de política pública más del 90\% de las citas WoS son
+externas 59\% de las citas de Google Scholar recibidas desde 2021
+
+La distribución temporal muestra continuidad (sin huecos largos) y una
+concentración creciente en economía de la cultura. La serie de citas es
+ascendente: la mayoría se ha recibido en los últimos cinco años.
+
+Scopus verificado en vivo el 04-08-2026 (sesión UV): 332 citas de 311
+documentos · h = 8 · 33 documentos · FWCI 1,048 (2016--2025).
+
+{[}Sources{]} Figura: scripts/fig\_articulos\_etapas.py, datos de
+CV\_final.qmd §2.1 (l. 222--312). Métricas: data/metricas\_perfiles.md
+(WoS 03-08-2026; Scopus y GS en vivo 04-08-2026); indicadores del CV (l.
+139--187).}
+\end{frame}
+
+\begin{frame}[shrink]{Publicaciones seleccionadas}
+\phantomsection\label{publicaciones-seleccionadas}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4444}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2593}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0741}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Trabajo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Revista, año
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Indicios
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Citas (WoS · Scopus · GS)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Live and prerecorded popular music consumption} (con Manuel
+Cuadrado-García) & \emph{J. of Cultural Economics}, 2011 & JCR
+\textbf{Q2} & 44 · 54 · 124 \\
+\textbf{Religiosity and cultural consumption} (con Manuel
+Cuadrado-García) & \emph{Int. J. of Consumer Studies}, 2018 & JCR
+\textbf{Q1} (Business) & 23 · 27 · 40 \\
+\textbf{From pirates to subscribers: 20 years of music consumption
+research} (con María Caballer-Tarazona y Manuel Cuadrado-García) &
+\emph{Int. J. of Consumer Studies}, 2021 & JCR \textbf{Q1} (Business) &
+20 · 25 · 37 \\
+\textbf{Analyzing online search patterns of music festival tourists}
+(con Manuel Cuadrado-García) & \emph{Tourism Economics}, 2021 & JCR
+\textbf{Q1} & 7 · 8 · 12 \\
+\textbf{Music festivals as mediators and their influence on consumer
+awareness} (con Manuel Cuadrado-García) & \emph{Poetics}, 2020 & JCR
+\textbf{Q1} (Sociology) & 4 · 6 · 20 \\
+\textbf{``Let's make lots of money'': performance in the recorded music
+sector} (con Manuel Cuadrado-García) & \emph{J. of Cultural Economics},
+2018 & JCR \textbf{Q2} & 6 · 7 · 15 \\
+\textbf{Assessing complementarities between live performances and
+YouTube video streaming} (con María Caballer-Tarazona y Manuel
+Cuadrado-García) & \emph{Empirical Economics}, 2023 & JCR \textbf{Q2} &
+2 · 3 · 8 \\
+\textbf{Arts and cultural consumption and diversity research: a
+bibliometric analysis} (con Manuel Cuadrado-García) & \emph{Poetics},
+2025 & JCR \textbf{Q1} (Sociology) & -- · 1 · 3 \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{La tabla no se lee fila a fila: comentar solo JCE 2011 (la más
+citada del área), Poetics 2020/2025 (Q1) e IJCS 2021 (review de 20
+años); el resto, señalar. Coautores entre paréntesis según las autorías
+de §2.1 (en Poetics 2025 el primer autor es M. Cuadrado-García). «--» =
+sin citas aún. Citas: WoS a 03-08-2026; Scopus y GS a 04-08-2026
+(perfiles en vivo). Cuartiles: los documentados en el expediente
+(Poetics Q1 Sociología; IJCS Q2 Business, 42/154); el Q1 de
+\emph{Tourism Economics} es indicación del candidato (referencia
+completa facilitada el 04-08-2026) --- ojo: el candidato y el CV citan
+pp.~276--300, pero Scopus registra 27(6), pp.~1276--1300. Si se pregunta
+por la publicación más citada del perfil: es la derivada del piloto
+docente con la LSE (Procedia 2010, 223 citas GS y 118 Scopus; se
+presenta en el bloque de docencia) --- esta tabla selecciona solo
+investigación del área.
+
+{[}Sources{]} CV\_final.qmd §2.1 (l. 258, 282, 288, 290, 292, 278, 300,
+310); data/metricas\_perfiles.md (03/04-08-2026).}
+\end{frame}
+
+\begin{frame}[shrink]{Capítulos de libro}
+\phantomsection\label{capuxedtulos-de-libro}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5714}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4286}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Capítulo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Obra · editorial, año
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+Evolution and learning in collective decision-making (con J. Casas-Pardo
+y M. Puchades-Navarro) & Homenaje a J. M. Buchanan (\emph{Methods and
+Moral in Constitutional Economics}) · \textbf{Springer}, 2001 \\
+Empirical insights into recorded music consumer behavior and copyright
+infringement (con M. Cuadrado-García) & \emph{Music and Law} ·
+\textbf{Emerald}, 2013 \\
+Regulator preferences and lobbying efforts in rent-seeking contest
+(autoría única) & \emph{Constitutional Economics and Public
+Institutions} · \textbf{Edward Elgar}, 2013 \\
+Copyright infringement and cultural participation (con M.
+Cuadrado-García y M. Puchades-Navarro) & \emph{Digital Piracy: A Global,
+Multidisciplinary Account} · \textbf{Routledge}, 2018 \\
+Breaking the gender gap in Rap/Hip-Hop consumption (con M. L.
+Palma-Martos y M. Cuadrado-García) & \emph{Music as Intangible Cultural
+Heritage} · \textbf{Springer}, 2021 \\
+Digital participation and audience enlargement in classical and popular
+music (con M. Cuadrado-García) & \emph{Digital Transformation in the
+Cultural and Creative Industries} · \textbf{Routledge}, 2021 \\
+Measuring customer multi-sensory experience in live music (con M.
+Cuadrado-García y C. E. Goyes-Yepez) & \textbf{\emph{The Oxford Handbook
+of Arts and Cultural Management}} · \textbf{Oxford University Press},
+2022 \\
+\bottomrule\noalign{}
+\end{longtable}
+
+Selección por editorial académica internacional; \textbf{29 capítulos y
+libros} en total, incluidos 4 casos docentes en el manual
+\emph{Marketing Culture and the Arts} (HEC Montréal) y sus ediciones
+francesas.
+
+\note{Destacar oralmente solo el Oxford Handbook (2022) como cierre de
+la serie. Los 4 casos del manual de HEC Montréal conectan con la
+transferencia (Cabanyal Íntim, FIB). Coautores entre paréntesis según
+las autorías de §2.2; el capítulo de Edward Elgar 2013 es de autoría
+única (l. 359).
+
+Cautelas: el ISBN que el CV asigna al capítulo de \emph{Digital
+Transformation\ldots{}} (978-3-030-\ldots) tiene prefijo Springer, no
+Routledge --- verificar antes de la defensa. La mención del autoinforme
+a «Managing the Cultural Business (Routledge, 2020)» (l. 136) no tiene
+entrada en §2.2 y se ha retirado del deck.
+
+{[}Sources{]} CV\_final.qmd §2.2 (l. 316--376; en particular l. 330,
+357, 359, 369, 371, 373, 376).}
+\end{frame}
+
+\begin{frame}{Comunicaciones en congresos}
+\phantomsection\label{comunicaciones-en-congresos}
+~
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_congresos_series.pdf}
+
+Un total de 125 ponencias presentadas a congresos de los cuales 96 son
+internacionales
+
+\note{Señalar tres cosas: la recurrencia en las series de referencia
+(AIMAC desde 2005 sin interrupción, ACEI, IMBRA desde su fundación), el
+relevo temático que replica la trayectoria investigadora (EPCS
+1999--2011 → series del área cultural desde 2004) y la vigencia (AIMAC
+2026). El alcance geográfico se comenta oralmente: cinco continentes, de
+Kyoto a Melbourne, Bogotá y Río de Janeiro (mapa disponible en la
+reserva R4).
+
+«125 ponencias, 96 internacionales» es la cifra del Resumen (l. 126);
+§2.5 lista 118 ítems (92 internacionales) --- defender la cifra del
+Resumen si se pregunta; la figura usa el recuento literal de §2.5.
+Partición de las 118 por series (verificada el 04-08-2026 sobre la
+entidad organizadora de cada ítem): AIMAC 16 (las dos de 2026, «The 18th
+International Conference», son AIMAC Río) · EPCS 12 · Workshop en
+Economía y Gestión de la Cultura 12 (incluye sus ediciones como
+«Workshop on Cultural Economics and Management», Oporto 2015 y Meknés
+2019) · ACEI 11 · IMBRA 8 · congresos de marketing 10 · innovación
+docente 28 · otros 21.
+
+{[}Sources{]} CV\_final.qmd §2.5 (l. 697--1890). Figura:
+scripts/fig\_congresos\_series.py, datos data/ponencias\_series.csv
+(agregado serie-año, 04-08-2026).}
+\end{frame}
+
+\begin{frame}{Proyectos de investigación}
+\phantomsection\label{proyectos-de-investigaciuxf3n}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4167}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1667}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Proyecto
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Convocatoria
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Años
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Participación
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+Teoría del caos: evolución, predicción y control de sistemas &
+Generalitat Valenciana (AE98-08) & 1998 & equipo \\
+Deficiencias en el funcionamiento de las instituciones democráticas &
+CICYT (SEC99-0592) & 1999--2003 & equipo \\
+Teoría del caos: autoorganización y control de sistemas complejos & MCyT
+(PGC2000-2390-E) & 2001--2002 & equipo \\
+Protección del cliente y eficiencia en el sistema financiero (Ley
+44/2002) & MCyT (SEC2003-05232) & 2003--2006 & equipo \\
+MBA-TABSA · Transatlantic Business School Alliance & Comisión Europea
+(EACEA) & 2010--2014 & IP (UV) \\
+La regulación de la economía colaborativa & Plan Estatal
+(DER2015-67613-R) & 2016--2019 & equipo \\
+\bottomrule\noalign{}
+\end{longtable}
+
+Continuidad en la participación en proyectos (1998--2019)
+
+\note{No leer la tabla: señalar la continuidad (1998--2019) y detenerse
+solo en MBA-TABSA (movilidad transatlántica; gestión compartida con la
+Hochschule Bremen).
+
+«Seis proyectos» es la cifra del Resumen (l. 122): los cinco de §2.3 +
+MBA-TABSA, que el CV lista en §4.3/§3.4 como proyecto europeo de
+innovación --- explicar el criterio si se pregunta.
+
+{[}Sources{]} CV\_final.qmd §2.3 (l. 379--455), MBA-TABSA §4.3 (l.
+3238--3246), Resumen (l. 122).}
+\end{frame}
+
+\begin{frame}[shrink]{Contratos y convenios de transferencia}
+\phantomsection\label{contratos-y-convenios-de-transferencia}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7273}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2727}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Entidad · objeto (participación)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Años
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+AVETID · estudio de públicos del Festival Tercera Setmana & 2017--18 \\
+\textbf{Francachela Teatro · plan de patrocinio y premios del festival
+(IP)} & 2018--19 \\
+AVETID · estudio de públicos Tercera Setmana, 2ª edición & 2018--19 \\
+EXTREMUS Danza · evaluación de proyecto artístico de inclusión social &
+2019--20 \\
+\textbf{Francachela Teatro · plan de patrocinio y premios del festival
+(IP)} & 2020--21 \\
+\textbf{Olympia Metropolitana · estudio de públicos en contexto teatral
+(IP)} & 2021--22 \\
+\textbf{A más Soluciones Culturales · distribución en artes escénicas
+(IP)} & 2021--22 \\
+\textbf{Generalitat Valenciana · perfil y experiencia del visitante del
+CCCC (IP)} & 2022--23 \\
+\textbf{ICOM International · SENTOMUS, museums visitors research (IP)} &
+2023--24 \\
+BIOPARC València · estudio de público & 2023--24 \\
+\bottomrule\noalign{}
+\end{longtable}
+
+16 contratos/convenios (art. 83 LOU / 60 LOSU) con el tejido cultural
+desde 2012 · IP en 6 · \textbf{Transferencia} reconocida con el
+\textbf{sexenio de transferencia} (2012--2017)
+
+\note{\textbf{La transferencia no es actividad aparte: los convenios
+generan datos y preguntas que acaban en publicaciones indexadas.}
+Resultados de vuelta al ámbito académico: caso «Cabanyal Íntim» en
+\emph{Marketing Culture and the Arts} (2018) · artículo en \emph{Journal
+of Homosexuality} (2022, JCR Q2) con origen convenio con Francachela.
+
+Subrayar relación estable con el sector y los 6 como IP. La tabla
+muestra los 10 contratos más recientes (desde AVETID · Tercera Setmana
+2017--18); los 6 anteriores (Cadena SER 2012--13 → Francachela 2017--18,
+todos como equipo) están en la reserva de transferencia.
+
+La línea «dirección de M. Cuadrado-García con co-dirección del
+candidato» es indicación del candidato (04-08-2026) y se refiere al
+conjunto de los contratos; el CV (§2.4) marca al candidato como IP en 6
+de ellos --- si el tribunal pregunta, aclarar que «IP» es la
+responsabilidad formal del contrato art. 83 y la co-dirección describe
+el reparto real del trabajo en el equipo. La columna Participación se
+eliminó el 04-08-2026 (decisión del usuario): el papel va ahora entre
+paréntesis en la primera columna.}
+\end{frame}
+
+\begin{frame}{Dirección de tesis doctorales}
+\phantomsection\label{direcciuxf3n-de-tesis-doctorales}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2885}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1731}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0385}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2692}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Título
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Autor
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Afiliación
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Año
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Observaciones
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\emph{Segmentación y exhibición cinematográfica: un análisis del mercado
+español basado en clases latentes} & Desamparados Lluch Tormos & CEU &
+2017 & Sobresaliente \emph{cum laude} · Tesis doctoral con mención
+internacional · \textbf{Premio Fundación SGAE de Investigación 2018} \\
+\emph{Analyzing the effect of the expanded servicescape on visitors'
+satisfaction and loyalty in museums} & Piergiacomo Mion Dalle Carbonare
+& Università Bocconi & 2022 & Sobresaliente \emph{cum laude} · Tesis
+doctoral con mención internacional \\
+\emph{Estudio de los determinantes, percepción y valoración del
+consumidor de música clásica: una aproximación multidisciplinar} &
+Ariadna Martin Alfaro & Conservatorio Profesional de Música de Las
+Palmas de Gran Canaria & en curso & --- \\
+\emph{Consumer engagement and market structuring in the contemporary art
+ecosystem: visitor behavior and responses to citywide interventions} &
+Giuliano Picchi & MIT & en curso & --- \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{Ambas tesis en el programa de doctorado en Marketing (mención de
+calidad). El doctorando en curso G. Picchi coautoriza una de las
+ponencias aceptadas en AIMAC 2026 --- señal de que la línea sigue
+produciendo.
+
+Las universidades entre paréntesis son la afiliación de cada doctorando,
+indicada por el candidato (04-08-2026); no constan en el CV, que
+registra las cuatro tesis en la Facultat d'Economia de la Universitat de
+València. Pendiente de confirmar la afiliación de A. Martin Alfaro (el
+candidato no la recordaba).
+
+{[}Sources{]} CV\_final.qmd §4.4 (l. 3293--3335), §4.2, Resumen (l. 89);
+IP en contratos: §2.4 (6 marcados).}
+\end{frame}
+
+\section{Docencia}\label{docencia}
+
+\begin{frame}{Trayectoria docente}
+\phantomsection\label{trayectoria-docente}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Etapa}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Asignaturas}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Observaciones}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Economía Política (1995)} & Economía Política y Hacienda Pública
+(Derecho, castellano y valenciano) · Economía (Lic. en CC. y Técnicas
+Estadísticas) · Estadística e Informática (CC. Empresariales) & Docencia
+impartida en Castellano y Valenciano \\
+\textbf{Métodos Cuantitativos · Modelización e Inferencia Estadística
+(2006/07)} & Estadística I y II, Estadística Básica, Introducción a la
+Inferencia Estadística & integración de troncales en el grupo
+internacional (ARA) con docencia impartida en inglés \\
+\textbf{Métodos Cuantitativos · Aprendizaje Estadístico (2019)} & Grado
+BIA: Datos No Estructurados, Técnicas Avanzadas de Predicción · Máster
+CD: Inferencia Causal y Aprendizaje Máquina, Ciencia de Datos en Negocio
+· Máster iMBA: Inteligencia de Negocios · Máster Economía: Big Data en
+Economía & Aumento de la presencia de docencia en máster \\
+\bottomrule\noalign{}
+\end{longtable}
+
+Docencia en: 7 centros · 13 titulaciones · 18 asignaturas distintas (32
+con formación no reglada) · docencia en castellano, inglés (C2) y
+valenciano (C1) · 50\% de la docencia total es en inglés
+
+\note{Línea secundaria estable en gestión cultural: Licenciatura en
+Humanidades (en valenciano) y Máster Interuniversitario en Gestión
+Cultural (Música y Espectáculo Contemporáneo).
+
+Nombres exactos de asignaturas según §3.2: «Big Data en Economía» (no
+\emph{Big Data in Economics}; se imparte en inglés), «Ciencia de Datos
+en Negocio» (§3.2; el Resumen dice «en Negocios»), «Inteligencia de
+Negocios» (M.U. en Gestión de Negocios Internacionales).
+
+{[}Sources{]} CV\_final.qmd, Resumen actividad docente (l. 91--95), §3.1
+(l. 1958--2040), §3.2 (l. 2042--2329; Economía en CC. y Técnicas
+Estadísticas: l. 2111--2138; másteres: l. 2271--2327).}
+\end{frame}
+
+\begin{frame}{Docencia reglada}
+\phantomsection\label{docencia-reglada}
+~
+
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_docencia_diversidad.pdf}
+
+\note{La figura se lee como el espejo docente de la trayectoria
+investigadora: los rótulos superiores reproducen los tres bloques de la
+slide anterior y las guías marcan las dos transiciones (2006/07 y
+2019/20). Subrayar la superposición: nunca se abandona una etapa del
+todo (Estadística II de Economía sigue hasta 2024/25).
+
+{[}Sources{]} Figura: scripts/fig\_docencia\_diversidad.py, datos de
+CV\_final.qmd §3.2 (l. 2042--2329).}
+\end{frame}
+
+\begin{frame}{Internacionalización docente}
+\phantomsection\label{internacionalizaciuxf3n-docente}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Mérito
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descripción
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Docencia en centros internacionales} & State University of New
+York at Albany · London School of Economics · University of
+Hertfordshire · University of North Florida · University of North
+Carolina at Wilmington · Universidad de Buenos Aires · Hochschule Bremen
+e International Graduate Center \\
+\textbf{Gestión de la internacionalización} en la Facultat d'Economia
+(cargos) & Coordinador del título Graduado Europeo en Dirección de
+Empresas (2010--2014) y de los intercambios de dobles titulaciones
+(ADE-GEDE \(\to\) grado en International Business) \\
+\textbf{Gestión de la internacionalización} en la Facultat d'Economia ()
+& Representante de la Facultat d'Economia en la red TransAtlantic
+Business Schools Alliance (TABSA) · obtención y gestión de la ayuda
+EU-US ATLANTIS · responsable del convenio con Hofstra University (Nueva
+York) \\
+\textbf{Gestión de la internacionalización} en la Universitat de
+València & Miembro de las comisiones de la Universitat: Comisión de
+Intercambio de Estudiantes de la UV (2010--2012) y Comisión de
+Relaciones Internacionales de la UV (2010--2014) · Comisión de
+Intercambio de la Facultat d'Economia (2010--2014) \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\textbf{Grupo ARA} \textasciitilde2 décadas de docencia en inglés ·
+\textbf{Estancias docentes}: 8 estancias oficiales · Docencia en
+\textbf{programas} grado y posgrado
+
+\note{Invitación al panel «Double Degrees --- An Emerging Trend in
+Business Education Globally» (International Business Conference, Univ.
+of North Florida, 2013).
+
+Fechas de GEDE unificadas en 2010--2014 (cargo unipersonal desde
+26/02/2010, l. 3103; la prosa del Resumen dice «2009» --- divergencia
+anotada). Comisiones: Intercambio de Estudiantes UV
+14/01/2010--22/12/2012 (l. 3055); Relaciones Internacionales UV
+23/12/2010--25/09/2014 (l. 3128); intercambio de la Facultat
+14/01/2010--31/08/2014 (l. 3062, duplicada en l. 3089).
+
+{[}Sources{]} CV\_final.qmd, Resumen (l. 85), §3.3.2, §3.7, §4.1 (l.
+3046--3131).}
+\end{frame}
+
+\begin{frame}{Evaluación de la docencia}
+\phantomsection\label{evaluaciuxf3n-de-la-docencia}
+~
+
+\includegraphics[width=0.92\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_docentia.pdf}
+
+\textbf{5 quinquenios} (29 cursos con evaluación positiva) · serie de
+valoraciones ascendente, estable por encima de \textbf{4,3} desde 2017
+(máximo 4,78 en 2023-24).
+
+\note{Los 5 quinquenios cubren 29 cursos evaluados. DOCENTIA 2017/21:
+nivel básico 100/100; nivel avanzado 100/100 (dedicación 18,5/20 ·
+planificación 25/25 · desarrollo 35/35 · resultados 26,76/30).
+
+{[}Sources{]} CV\_final.qmd §3.5.1--3.5.2 (l. 2740--2788), §4.6 (l.
+3527--3538).}
+\end{frame}
+
+\begin{frame}[shrink]{Innovación docente}
+\phantomsection\label{innovaciuxf3n-docente}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Tipo de Actividad
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Descripción
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Grupo de investigación} & Grupo «Multi-aprendizaje,
+transversalidad y creatividad» --- co-responsable; mención de grupo
+consolidado (2023, renovada 2026); continuidad del grupo «Innova
+multidisciplinar» (2009--2012). \\
+\textbf{Proyectos dirigidos} & Proyectos dirigidos como IP: MBA-TABSA
+(2010--2014) · ``Jornada docente transversal y solidaria'' (2021/22) ·
+``Investigación b-smart y aprendizaje basado en un proyecto en un centro
+cultural'' (2022/23) · ``Danza, salud e investigación'' (2024/25). \\
+\textbf{Comunicaciones} & Comunicaciones (28): series recurrentes CIDUI
+(2006--2012) · Trobades/Jornades d'Innovació Educativa UV (2010--2022) ·
+Xarxes--REDES-INNOVAESTIC (2009--2021) · WCES (2010, 2012) · Congreso
+Internacional de Innovación Docente (2022). \\
+\textbf{Publicaciones} & Publicaciones: Procedia --- Social and
+Behavioral Sciences (2010 --- derivada del piloto en línea con la LSE y
+la más citada del perfil, 223 citas GS --- y 2012) · Rev.~Iberoamericana
+de Educación (2010) · World J. on Educational Technology (2013) · RIEJS
+(2022) · capítulo en Experiencias de Innovación Docente en Estadística
+(2011). \\
+\bottomrule\noalign{}
+\end{longtable}
+
+~
+
+14 \textbf{proyectos} (4 como IP) · Co-director de \textbf{grupo
+consolidado} (mención 2023, renovada 2026) · 28 \textbf{comunicaciones}
+en congresos y jornadas · \textbf{Publicaciones}: 5 artículos + 1
+capítulo
+
+\note{Código del grupo consolidado: GCID23-2575334 (mención 06/03/2023,
+renovada 02/02/2026). El piloto con la LSE (2009/10) fue financiado por
+el MICINN.
+
+Las 28 comunicaciones salen del recuento verificado de §2.5
+(04-08-2026), con criterio explícito: comunicaciones presentadas en
+congresos y jornadas de educación e innovación docente (CIDUI 2006 ×3 y
+2008 y 2012; Trobades/Jornades d'Innovació Educativa UV 2010, 2011,
+2013, 2020, 2021, 2022; Xarxes/Redes 2009, 2011, 2015; REDES-INNOVAESTIC
+2020, 2021; WCES 2010, 2012; Jornada Nacional d'Estudis Universitaris
+2009, 2011; FECIES 2011; UNIVEST 2011; Jornadas de Innovación Educativa
+en Estadística 2010; Unitat d'Innovació Educativa UV 2011; Regent's
+College 2012 ×2; Congreso Internacional de Innovación Docente 2022 ×2).
+La cifra «18» de la v2 no era trazable y se ha sustituido.
+
+Publicaciones de innovación docente: Procedia SBS 2010 (l. 252) y 2012
+(l. 260), Rev.~Iberoamericana de Educación 2010 (l. 254), World J. on
+Educational Technology 2013 (l. 264), RIEJS 2022 (l. 294), capítulo en
+Experiencias de Innovación Docente en Estadística 2011 (l. 353). El
+Resumen menciona \emph{Revista de Educación} (l. 88) pero no hay entrada
+en §2.1 --- no citarla.
+
+Cautela: el CV no documenta ningún rol como evaluador DOCENTIA ni en
+paneles de evaluación docente --- no atribuirse esa función. Fechas del
+proyecto 2021/22 divergen entre §3.4 (l. 2701) y §4.3 (l. 3254).
+
+Los trabajos dirigidos (TFG/TFM) se trasladaron a la slide «Otras
+actividades de liderazgo y participación en la vida universitaria»
+(decisión del usuario, 04-08-2026).
+
+{[}Sources{]} CV\_final.qmd §3.4 (l. 2551--2735), §4.3 (l. 3232--3286;
+IP y co-IP verificados 04-08-2026), grupo consolidado (l. 3571--3583),
+comunicaciones de innovación §2.5, publicaciones §2.1 (l. 252--264, 294)
+y §2.2 (l. 353), trabajos §4.7.6 (l. 3996--4035); citas del proyecto
+LSE: data/metricas\_perfiles.md (Procedia 2010).}
+\end{frame}
+
+\section{Dirección y liderazgo}\label{direcciuxf3n-y-liderazgo}
+
+\begin{frame}{Gestión académica}
+\phantomsection\label{gestiuxf3n-acaduxe9mica}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4211}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1053}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4737}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Cargo}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Periodo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Ámbito}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Coordinador de título} Graduado Europeo en Dirección de Empresas
+& 2010--14 & Facultat d'Economia: titulación internacional \\
+\textbf{Representante} en la Transatlantic Bussines School Alliance &
+2010--14 & Facultat d'Economia: redes internacionales \\
+\textbf{Coordinador de intercambios} del grado ADE-GEDE & 2010--14 &
+Vicerrectorado de Relaciones Internacionales y Cooperación, Universitat
+de València: dobles titulaciones \\
+\textbf{Coordinador de intercambios} del grado en Negocios
+Internacionales/International Business & 2011--14 & Vicerrectorado de
+Relaciones Internacionales y Cooperación, Universitat de València:
+dobles titulaciones \\
+\textbf{Miembro de la Comisión de Intecambio de Estudiantes} & 2012--14
+& Vicerrectorado de Relaciones Internacionales y Cooperación,
+Universitat de València: política de internacionalización \\
+\textbf{Miembro de la Comisión de Relaciones Internacionales} & 2012--14
+& Vicerrectorado de Relaciones Internacionales y Cooperación,
+Universitat de València: política de internacionalización \\
+\textbf{Miembro de la CCA} del Máster en Ciencia de Datos & 2021-- &
+Escola Tècnica Superior d'Inginyeria: posgrado en datos \\
+\bottomrule\noalign{}
+\end{longtable}
+
+~
+
+De un total de \textbf{17 cargos y tareas de gestión} la gestión se ha
+concentrado mayoritariamente en el área de
+\textbf{internacionalización}.
+
+\note{Slide breve (\textasciitilde45 segundos): no leer la tabla;
+subrayar solo la frase de los dos ejes.
+
+§4.1 lista 18 ítems pero dos son el mismo cargo duplicado (comisión de
+intercambio de la Facultat, l. 3064 y 3091): el recuento real es 17.
+
+{[}Sources{]} CV\_final.qmd §4.1 (l. 2986--3153).}
+\end{frame}
+
+\begin{frame}{Liderazgo investigador}
+\phantomsection\label{liderazgo-investigador}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
+\toprule\noalign{}
+\endhead
+\textbf{Grupo de investigación} & \textbf{Dirección de CREAMARKT}
+(GIUV2020-47) desde 2022; grupo reconocido desde 2010; colaboraciones
+con HEC Montréal y el Institut für Kulturmanagement (Viena) \\
+\textbf{Asociaciones} & Fundador, miembro de la junta y
+\textbf{vicepresidente de IMBRA} (International Music Business Research
+Association, Viena) · Miembro de ACEI · Miembro de AIMAC \\
+\textbf{Edición científica} & \textbf{Editor invitado} del número
+especial «Arts Consumption, Diversity and Inclusion», \emph{Int. J. of
+Arts Management} 25(3), 2023 (JCR/SSCI) \\
+\textbf{Comités científicos} & Copresidencia del comité científico y
+presidencia de la sesión plenaria de apertura de \textbf{AIMAC 2007}
+(València); paneles de evaluación en 11 ediciones de AIMAC (2005--2026)
+· \textbf{I y II Workshop en Economía y Gestión de la Cultura} (Sevilla
+2009 · València 2010) · \textbf{8th International Congress on Public and
+Nonprofit Marketing} (IAPNM 2009, València) \\
+\textbf{Evaluación científica} & \textbf{35 revisiones verificadas} para
+15 revistas (percentil 91) · reconocimiento de \emph{Poetics} (Q1) a la
+actividad evaluadora (2026) \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{CREAMARKT: cuatro líneas (big data e industrias creativas,
+microeconometría de la participación cultural, consumidor 2.0,
+diversidad en mercados culturales); dirección desde el 11/11/2022.
+IMBRA: vicepresidente 2015--2019, junta ejecutiva 2019--2023.
+
+Comités científicos según §4.5.2: AIMAC 2007 (copresidencia del comité y
+presidencia de la sesión plenaria de apertura), I Workshop en Economía y
+Gestión de la Cultura (Sevilla, 25/11/2009), II Workshop (València,
+4-5/11/2010) y 8th International Congress of the International
+Association on Public and Nonprofit Marketing (IAPNM 2009, València,
+17-19/06/2009) --- el CV no recoge más comités científicos.
+
+{[}Sources{]} CV\_final.qmd §4.7.1 (l. 3597--3615), §4.5 (l.
+3345--3415), §4.7.3 (l. 3756--3812), reconocimiento Poetics (l. 3563).}
+\end{frame}
+
+\begin{frame}{Liderazgo docente e internacionalización}
+\phantomsection\label{liderazgo-docente-e-internacionalizaciuxf3n}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
+\toprule\noalign{}
+\endhead
+\textbf{Proyectos docentes} & \textbf{IP de 4 proyectos docentes y de
+innovación}, incluido el europeo \textbf{MBA-TABSA} \\
+\textbf{Coordinación de titulación} & \textbf{Graduado Europeo en
+Dirección de Empresas} (2010--2014), cargo académico unipersonal;
+coordinación de los intercambios de dobles titulaciones (ADE-GEDE →
+International Business) \\
+\textbf{Internacionalización} & Obtención y gestión de las ayudas
+\textbf{EU-US ATLANTIS} (2011--2014) · coordinador responsable del
+convenio con la Zarb School of Business, \textbf{Hofstra University}
+(Nueva York, 2014--2019) \\
+\textbf{Coordinación docente} & Unidad Docente de Estadística del área
+de Métodos Cuantitativos (2020/21) · comisión delegada para la reforma
+de la Estadística introductoria (2016/17) · coordinador docente del
+programa MOTIVEM (2021) · coordinación de guías docentes de grado y
+posgrado \\
+\textbf{Grupo de innovación} & Co-responsable del grupo consolidado
+\textbf{GCID23-2575334} (mención 2023, renovada 2026) \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{Este slide agrupa el liderazgo de perfil docente en el mismo
+formato de tabla que el investigador (slide anterior). Evitar repetir el
+detalle de GEDE/ATLANTIS si ya se ha comentado en internacionalización
+docente: aquí se enuncia como responsabilidad de dirección.
+
+{[}Sources{]} CV\_final.qmd §4.3 (l. 3232--3286), §4.1 (l. 3100--3128),
+§4.7.7 (l. 4063--4084), §4.7.5 (l. 3884--3993), grupo consolidado (l.
+3571--3583).}
+\end{frame}
+
+\begin{frame}[shrink]{Otras actividades de liderazgo y participación en
+la vida universitaria}
+\phantomsection\label{otras-actividades-de-liderazgo-y-participaciuxf3n-en-la-vida-universitaria}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
+\toprule\noalign{}
+\endhead
+\textbf{Premios} & \textbf{Premio Fundación SGAE de Investigación 2018}
+(tesis presentada por Desamparados Lluch) · finalista a mejor ponencia,
+AIMAC 2013 (Universidad de los Andes, Bogotá) \\
+\textbf{Reconocimientos} & Reconocimiento de \textbf{\emph{Poetics}}
+(JCR Q1) a la actividad evaluadora (2026) · mención de \textbf{grupo
+consolidado} de innovación docente (2023, renovada 2026) \\
+\textbf{Conferencias y seminarios por invitación} & Seminario en
+\textbf{CREED}, Universiteit van Amsterdam (2001) · London School of
+Economics (2007) · Institut für Kulturmanagement, Universität für Musik
+Wien (2013) · panel «Double Degrees» (University of North Florida, 2013)
+· Universidad de Buenos Aires y Museo Nacional de Bellas Artes (2013) ·
+BIME Pro (2018) · Universidad de Oviedo (2026) · Curso de verano
+UCLM-Almagro (2026) \\
+\textbf{Evaluación externa} & Proyectos de tesis en \textbf{Télécom
+ParisTech} (2013), University f Applied Sciences Berlin (2015) y
+\textbf{Stockholm University} (2020) · dos TFM en Hannover University of
+Music, Drama and Media (2013) · Tesis en la Universitat de Girona
+(2022) \\
+\textbf{Tribunales y comisiones} & 3 tribunales de tesis doctorales · 3
+comisiones de plazas de profesorado (UPV/EHU 2011, U. de Valladolid
+2013, CEU 2019) \\
+\textbf{Jornadas académico-profesionales} & Organización de \textbf{5
+jornadas} con el sector cultural: «Nuevas Fórmulas de Gestión en Artes
+Escénicas: los festivales» (2015) · «Marketing y Festivales de Artes
+Escénicas en Valencia» (2016) · «Diversidad, Artes Escénicas y Gestión»
+(2019) · «El show de Liz Dust: Diversidad y mucho más» (2020) ·
+«Identidad, Creación y Gestión» (2021) \\
+\textbf{Divulgación} & Observatorio Social de ``la Caixa'' (2019) ·
+EconomistsTalkArt (2018, 2025) \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{Slide de recapitulación (\textasciitilde1 min): no leer la tabla;
+premios y reconocimientos ya presentados no se desarrollan. De «otras
+actividades», subrayar la selección orientada a la comisión:
+internacionalización (invitaciones y evaluación externa), servicio al
+sistema (tribunales, comisiones de plazas) y proyección social (jornadas
+y divulgación). Las invitaciones de 2026 (Oviedo: métodos de aprendizaje
+automático; Almagro: mesa redonda) muestran vigencia en las dos líneas
+del perfil.
+
+Seminario CREED: ponencia invitada «On rent-seeking correlated
+equilibria», CREED Seminars, Universiteit van Amsterdam, 01/06/2001
+(§4.7.2, l. 3629--3633). Jornadas: nombres literales de §4.7.8 (l.
+4102--4108). La fila «Trabajos dirigidos» se traslada aquí desde la
+slide de innovación docente (decisión del usuario, 04-08-2026; §4.7.6,
+l. 3996--4035).
+
+{[}Sources{]} CV\_final.qmd §4.6 (l. 3505--3587), §4.7.2 (l.
+3629--3740), §4.7.4 (l. 3824--3874), §4.5.2--4.5.3 (l. 3454--3499),
+§4.7.6 (l. 3996--4035), §4.7.8 (l. 4094--4142).}
+\end{frame}
+
+\begin{frame}
+\partdividercontent{Parte 2 de 3}{Propuesta docente}
+\end{frame}
+
+\section{La asignatura}\label{la-asignatura}
+
+\begin{frame}[shrink]{Grado en Inteligencia y Analítica de Negocios}
+\phantomsection\label{grado-en-inteligencia-y-analuxedtica-de-negocios}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3750}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6250}}@{}}
+\toprule\noalign{}
+\endhead
+\textbf{Centro} & Facultat d'Economia \\
+\textbf{Duración} & 4 cursos · 240 ECTS \\
+\textbf{Acceso} & 50 plazas \\
+\textbf{Modalidad} & Presencial \\
+\textbf{Materias} & 30 \\
+\textbf{Asignaturas} & 44 \\
+\textbf{Campo de estudio} & Ciencias Económicas, Administración y
+Dirección de Empresas, MarKeting, Comercio, Contabilidad y Turismo \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\textbf{Objetivo}: Formar profesionales en tecnologías de datos capaces
+de aplicarlas creativamente a las necesidades empresariales y a los
+retos de la economía digital.
+
+Para ello integra tres ámbitos:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Empresa:} estrategia, finanzas, contabilidad y marketing;
+\item
+  \textbf{Métodos cuantitativos:} matemáticas, estadística y aprendizaje
+  estadístico, y econometría;
+\item
+  \textbf{Tecnología:} programación, gestión de datos y comunicación de
+  resultados.
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, left=2mm, toptitle=1mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, colback=white, colframe=quarto-callout-note-color-frame, arc=.35mm, breakable, opacityback=0, title={Herramientas y Técnicas del Análisis de Datos}, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm]
+
+La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
+(dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
+Datos}) se apoya en los tres ámbitos: incorpora en el curriculum modelos
+predictivos avanzados en un entorno computacional junto con herramientas
+para valorar su utilidad en la toma de decisiones empresariales.
+
+La asignatura busca formar profesionales con conocimientos de métodos
+computacionales y modelos predictivos aplicados a economía y negocios
+tanto para predecir como para explicar, con práctica real y uso crítico
+de la IA.
+
+\end{tcolorbox}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[shrink]{Herramientas y Técnicas de Análisis de Datos}
+\phantomsection\label{herramientas-y-tuxe9cnicas-de-anuxe1lisis-de-datos}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3600}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1600}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3600}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Asignatura
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Curso (cuatr.)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ámbito
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aportación principal
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+Minería de Datos en Negocios & 2 (1) & Exploración & Segmentación,
+reducción de dimensión, reglas de asociación y árboles \\
+Muestreo y Encuestas & 3 (2) & Obtención de información & Diseño
+muestral, cuestionarios, sesgos, datos faltantes e imputación \\
+Predicción con Datos Transversales & 2 (1) & Predicción & Regresión,
+GLM, no linealidad, validación, regularización y KNN \\
+Predicción con Datos Temporales & 2 (2) & Predicción & Componentes,
+alisado, ARIMA y evaluación por horizonte \\
+\textbf{Técnicas Avanzadas de Predicción en Negocios} & \textbf{3 (1)} &
+\textbf{Predicción} & \textbf{Ensambles, redes neuronales, SVM y efectos
+causales} \\
+Datos Espaciales y Espacio-Temporales & 3 (2) & Modelización espacial &
+Exploración espacial, \emph{kriging}, modelos espaciales y predicción
+con incertidumbre \\
+Datos No Estructurados & 4 (1) & Analítica de datos no tabulares &
+Captura web y redes sociales, texto, imágenes, NLP, sentimiento y
+recomendación \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{frame}
+
+\begin{frame}[fragile,shrink]{Técnicas Avanzadas de Predicción en
+Negocios}
+\phantomsection\label{tuxe9cnicas-avanzadas-de-predicciuxf3n-en-negocios}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6000}}@{}}
+\toprule\noalign{}
+\endhead
+\textbf{Código} & 36520 \\
+\textbf{Carácter} & obligatoria \\
+\textbf{Curso} & 3.º · primer cuatrimestre \\
+\textbf{Materia} & Herramientas y Técnicas de Análisis de Datos \\
+\textbf{Carga} & 6 ECTS · 150 h \\
+\textbf{Docencia} & 15 h teoría · 45 h aula informática \\
+\textbf{Trabajo no presencial} & 90 h \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\textbf{El alumnado llega con}
+
+\begin{itemize}
+\tightlist
+\item
+  Análisis exploratorio y minería de datos, inferencia, y técnicas de
+  predicción transversal y temporal
+\item
+  Uso continuado de \texttt{R} en análisis estadístico, minería y
+  predicción
+\item
+  Fundamentos de programación y algoritmia con \texttt{Python}
+\end{itemize}
+
+\textbf{Objetivos}
+
+\begin{itemize}
+\tightlist
+\item
+  Implementar y comparar métodos avanzados de aprendizaje automático
+\item
+  Selección de modelos; interpretación de resultados y límites
+\item
+  Distinguir preguntas predictivas y explicativas
+\end{itemize}
+
+El \textbf{Tema 7} desarrolla el último objetivo mediante un caso de
+negocio.
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile,shrink]{Contenidos y planificación}
+\phantomsection\label{contenidos-y-planificaciuxf3n}
+~
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3636}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{Semanas}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Tema}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Práctica / hito del proyecto}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+1 & 1. Fundamentos & Entorno de trabajo reproducible \\
+2--3 & 2. Selección y evaluación & Validación cruzada e hiperparámetros
+· S2: grupos y dataset del proyecto \\
+4--5 & 3. Modelo lineal generalizado con regularización & Modelo base:
+GLM sobre conjunto de datos de referencia · S4: EDA · S5: modelo base
+del proyecto \\
+6--8 & 4. Ensambles: RF, XGBoost y \emph{stacking} & Competición contra
+el modelo base · S8: ensambles del proyecto \\
+9 & 5. Máquinas de vectores de soporte (SVM) & Comparación transversal
+de modelos · S9: SVM \\
+10--12 & 6. Redes neuronales y aprendizaje profundo & Keras · S12:
+revisión y retroalimentación \\
+\textbf{13--14} & \textbf{7. Predicción y efectos causales} &
+\textbf{Simulación de sesgos + workflow \texttt{DoubleML} · S14:
+extensión causal} \\
+15 & Evaluación & S15: defensa oral del proyecto \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, left=2mm, toptitle=1mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, colback=white, colframe=quarto-callout-note-color-frame, arc=.35mm, breakable, opacityback=0, title={El conjunto de datos de referencia}, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm]
+
+A lo largo de la asignatura utilizamos un mismo conjunto de datos como
+caso de estudio transversal, sobre el que aplicamos las diferentes
+técnicas. Esto permite comparar los modelos en un contexto común,
+analizar sus fortalezas y limitaciones, y comprender qué métodos
+resultan más adecuados según el objetivo empresarial y las
+características de los datos.
+
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Metodología docente: carga de trabajo}
+\phantomsection\label{metodologuxeda-docente-carga-de-trabajo}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Modalidad
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Actividad
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Horas semanales
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Horas totales
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Presencial} & Teoría: presentación del problema, conceptos y
+discusión & 1 h & 15 h \\
+\textbf{Presencial} & Práctica: notebook guiado, trabajo autónomo y
+entregas & 3 h & 45 h \\
+\textbf{No presencial} & Trabajos individuales/grupo & 2 h 20 min & 35
+h \\
+\textbf{No presencial} & Estudio y trabajo autónomo & 2 h 20 min & 35
+h \\
+\textbf{No presencial} & Resolución de casos & 1 h & 15 h \\
+\textbf{No presencial} & Preparación de la evaluación & 20 min & 5 h \\
+\bottomrule\noalign{}
+\end{longtable}
+
+~
+
+Carga total 150 h · 60 h presenciales · 90 h no presenciales
+\end{frame}
+
+\begin{frame}{Metodología docente: secuencia de aprendizaje}
+\phantomsection\label{metodologuxeda-docente-secuencia-de-aprendizaje}
+~
+
+\includegraphics[width=0.64\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_metodologia.pdf}
+
+Las sesiones prácticas desarrollan los contenidos de la teoría y
+producen evidencias de aprendizaje durante todo el cuatrimestre.
+
+\note{{[}Sources{]} - Guía docente 36520, curso 2026-27: volumen de
+trabajo y metodología docente.}
+\end{frame}
+
+\begin{frame}[fragile]{Recursos didácticos}
+\phantomsection\label{recursos-diduxe1cticos-1}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3846}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3846}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Tipo de recurso
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Elementos
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Uso
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Software y bibliotecas} & \texttt{Python},
+\texttt{scikit-learn}, \texttt{Keras} y \texttt{DoubleML} &
+Implementación y comparación de métodos \\
+\textbf{Entornos de trabajo} & \texttt{Jupyter}, Google Colab, IDE y
+entorno \texttt{conda} versionado & Desarrollo, acceso y ejecución
+reproducible \\
+\textbf{Materiales expositivos} & Notas, presentaciones y ejemplos de
+código & Introducción y explicación de los contenidos \\
+\textbf{Materiales prácticos} & Notebooks guiados, ejercicios y datos
+reales & Aplicación progresiva de los métodos \\
+\textbf{Recursos interactivos} & Simulaciones y visualizaciones &
+Exploración de concepts: p.e. sesgo, incertidumbre y variabilidad, o
+entrenamiento de redes neuronales \\
+\textbf{Recursos para la evaluación} & Cuestionarios breves y
+actividades de autoevaluación & Seguimiento y retroalimentación \\
+\textbf{Recursos para la reproducibilidad} & Repositorio de la
+asignatura y plantillas & Organización, documentación y reutilización \\
+\textbf{Bibliografía} & James et al., \textbf{ISLP} (2023) + lecturas
+específicas y documentación de bibliotecas & Fundamentación y ampliación
+de contenidos \\
+\bottomrule\noalign{}
+\end{longtable}
+
+\note{\textbf{¿Por qué \texttt{Python}?}
+
+\begin{itemize}
+\tightlist
+\item
+  Librerías de referencia para métodos avanzados
+\item
+  Herramienta habitual en la industria de datos
+\item
+  Acceso a Colab sin instalación local
+\item
+  Permite transferir conocimientos acumulados en \texttt{R}: cambia la
+  herramienta, no el concepto
+\end{itemize}}
+\end{frame}
+
+\begin{frame}{Evaluación}
+\phantomsection\label{evaluaciuxf3n}
+~
+
+\begin{center}
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_evaluacion.pdf}
+\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Proyecto (35\%)}: aplicación integrada de los contenidos y
+  defensa oral.
+\item
+  \textbf{Entregas (30\%) y participación (10\%)}: seguimiento del
+  trabajo individual durante el curso.
+\item
+  \textbf{Examen (25\%)}: preguntas teóricas y aplicadas; se exige un
+  mínimo de \textbf{5/10}.
+\end{itemize}
+
+Los pesos, las rúbricas y las condiciones de recuperación se publican al
+inicio del curso.
+
+\note{{[}Sources{]} - Guía docente 36520, curso 2026-27, apartado de
+evaluación.}
+\end{frame}
+
+\section{Proyecto final}\label{proyecto-final}
+
+\begin{frame}[fragile]{Proyecto del cuatrimestre}
+\phantomsection\label{proyecto-del-cuatrimestre}
+~
+
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_timeline_proyecto.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Grupos de 3--4 alumnos, dataset y problema propios elegidos en la
+  semana 2; cada hito utiliza el contenido desarrollado durante esas
+  semanas
+\item
+  El hito de la S14 permite formular una pregunta causal sobre los
+  propios datos y responderla con \texttt{DoubleML} (o justificar por
+  qué los supuestos no lo permiten, respuesta igual de valiosa)
+\item
+  Entrega final: \textbf{repositorio reproducible + memoria + defensa
+  oral}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[shrink]{Rúbrica del proyecto}
+\phantomsection\label{ruxfabrica-del-proyecto}
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Dimensión (peso)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Qué se observa}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Excelente (9--10)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Apto (5--6)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{No apto}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\textbf{Formulación y datos (10\%)} & Pregunta relevantes, dataset, EDA
+& pregunta orientada a toma decisiones susceptible de respuesta
+empírica; limitaciones de los datos discutidas & Pregunta clara, EDA
+correcto & Dataset sin justificar; pregunta ambigua; EDA ausente \\
+\textbf{Pipeline reproducible (20\%)} & Repositorio, entorno, ejecución
+& reproduce todo desde datos crudos, entorno versionado & Reproducible
+con intervención menor documentada & No reproduce; preprocesado fuera
+del pipeline (fuga) \\
+\textbf{Modelización (25\%)} & Baseline → ensambles → SVM → DL;
+comparación & Comparación honesta en test común; selección justificada &
+\(\geq\) 3 familias comparadas correctamente & Sin baseline; métricas
+elegidas a posteriori \\
+\textbf{Interpretación y comunicación (15\%)} & Memoria, figuras,
+lectura de resultados & Resultados traducidos a decisión de negocio;
+incorpora incertidumbre & Interpretación correcta de métricas y efectos
+& Lectura mecánica o errónea de las salidas \\
+\textbf{Defensa oral individual (30\%)} & 10' grupo + preguntas
+individuales & Cada miembro explica y modifica en vivo cualquier parte
+del código & Cada miembro explica las partes que firmó & Un miembro no
+sabe explicar código propio \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{frame}
+
+\begin{frame}[shrink]{Uso de inteligencia artificial}
+\phantomsection\label{uso-de-inteligencia-artificial}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Tres verificaciones (que la IA no suplanta)}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Defensa oral individual} con modificación de código en vivo
+\item
+  \textbf{10\% de participación en aula} (presencialidad verificada)
+\item
+  \textbf{Examen presencial} (25\%) con mínimo de 5/10
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+~
+
+\textbf{Política de IA: permitida, declarada, auditada}
+
+\begin{itemize}
+\tightlist
+\item
+  Uso libre de asistentes para código, depuración y redacción
+  (favoreciendo uso crítico y responsable)
+\item
+  \textbf{Obligatorio:} el registro completo de prompts se entrega como
+  apéndice del proyecto y de las entregas relevantes --- no una
+  selección
+\item
+  Evaluado sobre los prompts: el log se cruza con el código y la memoria
+  buscando coherencia prompts \(\leftrightarrow\) producto; la
+  transparencia se premia. Un producto que excede con mucho lo que su
+  log explica es señal de alerta
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Estimación de parámetros estructurales mediante técnicas
+predictivas (tema
+7)}\label{estimaciuxf3n-de-paruxe1metros-estructurales-mediante-tuxe9cnicas-predictivas-tema-7}
+
+\begin{frame}[shrink]{Riesgo de abandono y estrategia de retención de
+clientes}
+\phantomsection\label{riesgo-de-abandono-y-estrategia-de-retenciuxf3n-de-clientes}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Decisión de negocio}: estimación del riesgo de abandono
+(\emph{churn}) y estrategia retención de clientes. Analizamos dos reglas
+de priorización
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{RISK:} actuar sobre quienes tienen mayor probabilidad de
+  abandonar.\\
+\item
+  \textbf{LIFT:} actuar sobre quienes más reducen su probabilidad de
+  abandono \textbf{por la intervención} (sensibilidad a la
+  intervención).
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+La predicción del riesgo de abandono no responde por sí sola a la
+cuestión de gestión \textbf{qué clientes deberían ser objeto de una
+campaña}. Esta decisión requiere estimar el efecto causal de la
+intervención.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, left=2mm, toptitle=1mm, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, leftrule=.75mm, colback=white, colframe=quarto-callout-note-color-frame, arc=.35mm, breakable, opacityback=0, title={Experimentos aleatorios controlados: el patrón de referencia}, bottomtitle=1mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm]
+
+Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
+Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
+80--98. DOI: 10.1509/jmr.16.0163.
+
+Un operador de telefonía móvil de prepago de Oriente Medio asignó al
+azar a 12.137 clientes que habían recargado entre una y cuatro semanas
+antes y no habían realizado llamadas durante la última semana. El grupo
+tratado recibió un SMS con crédito adicional si recargaba una cantidad
+determinada en los tres días siguientes. Se observó si la línea seguía
+activa 30 días después.
+
+Con los resultados derivados de los datos experimentales se estima qué
+impacto tendría una campaña de retención sobre un subconjunto de los
+clientes (40\%) usando reglas de priorización alternativas: RISK o LIFT.
+
+\end{tcolorbox}
+
+~
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3913}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3913}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2174}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Criterio de selección
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Pregunta que responde
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Efecto
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+Seleccionar el 40\% de los clientes con mayor \textbf{riesgo} (problema
+predictivo) & ¿Quién es más probable que abandone? & \textbf{-1.9
+puntos} \\
+Seleccionar el 40\% de los clientes con mayor \textbf{sensibilidad a la
+intervención} (\emph{problema inferencia causal}) & ¿En quién reduce la
+campaña el abandono? & \textbf{-6,0 puntos} \\
+\bottomrule\noalign{}
+\end{longtable}
+
+La diferencia entre ambos criterios fue de \textbf{4,1 puntos
+porcentuales}.
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[shrink]{Aprendizaje automático para la estimación de
+efectos causales}
+\phantomsection\label{aprendizaje-automuxe1tico-para-la-estimaciuxf3n-de-efectos-causales}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Objetivo}: estimar el parámetro \(\tau\) para la expresión:
+\[y=\tau D+g(X)+\epsilon\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Con \textbf{datos observacionales} \(\to\) posible confusión en \(X\):
+
+\[D= m(X)+\eta\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_dag_confusion_sin_ecuacion.pdf}
+
+\textbf{¿Por qué aprendizaje automático?}
+
+\begin{itemize}
+\tightlist
+\item
+  Elevada dimensionalidad de \(X\).
+\item
+  Datos no tabulares (p.e. texto o imágenes).
+\item
+  Flexibilidad para aproximar \(g\) y \(m\).
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Aplicación \emph{naive} de métodos de aprendizaje
+automático}
+\phantomsection\label{aplicaciuxf3n-naive-de-muxe9todos-de-aprendizaje-automuxe1tico-1}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problema 1}
+
+Los modelos de aprendizaje automático regularizan (de forma explícita o
+implícita) los predictores, introduciendo el denominado \emph{sesgo de
+regularización}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Problema 2}
+
+Utilizar el mismo conjunto de datos para estimar una función y realizar
+predicciones introduce \emph{sesgo por sobreajuste}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+Aproximación ingenua para la estimación de \(\tau\) en
+\[y=\tau D+g(X)+\epsilon,\]
+
+\begin{enumerate}
+\tightlist
+\item
+  Aprender de los datos un modelo flexible \(\hat{g}\);
+\item
+  Obtener una versión residualizada de la respuesta
+  \(\tilde{y}=y-\hat{g}(X)\);
+\item
+  Recuperar el efecto \(\tau\) por la regresión de \(\tilde{y}\) sobre
+  \(D\).
+\end{enumerate}
+
+\textbf{Sesgo de regularización}: la estimación \(\hat{g}\) selecciona
+variables \(X\) por su capacidad para \textbf{predecir \(y\)} pudiendo
+atenuar/eliminar un control \(x^*\) poco correlacionado con \(y\) (y que
+sea muy relevante para explicar \(D\)). En este caso el modelo de
+segunda etapa atribuirá parte de la relación de \(x^*\) con \(D\) a
+\(\tau\): se trata de un tipo de \textbf{sesgo por variable omitida}.
+
+\textbf{Sesgo por sobreajuste}: entrenamiento y predicción sobre las
+mismas observaciones atenúa parte del efecto causal (lo absorben los
+residuos de \(y\)) y aumenta la varianza resiual del tratamiento (la
+estimación de \(\tau\) y su error estándar deja de ser fiable).
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[shrink]{Double (Debiased) Machine Learning}
+\phantomsection\label{double-debiased-machine-learning}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Estimador de efecto causal en dos etapas
+
+\begin{itemize}
+\tightlist
+\item
+  Primera etapa
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    Entrenar funciones \(\hat{g}\) y \(\hat{m}\) para respuesta y
+    tratamiento.
+  \item
+    Generar versiones residualizadas\\
+    \(\tilde{y}=y-\hat{g}(X)\) y \(\tilde{D}=D-\hat{m}(X)\) (separar
+    entrenamiento/predicción)
+  \end{enumerate}
+\item
+  Segunda etapa: estimar la regresión
+  \(\tilde{y}=\tau \tilde{D}+\epsilon\)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_esquema_dml.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile,shrink]{Práctica con datos reales}
+\phantomsection\label{pruxe1ctica-con-datos-reales}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\textbf{Workflow con \texttt{DoubleML}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ doubleml }\ImportTok{import}\NormalTok{ DoubleMLData, }\OperatorTok{\textbackslash{}}
+\NormalTok{   DoubleMLPLR}
+\ImportTok{from}\NormalTok{ sklearn.ensemble }\ImportTok{import} \OperatorTok{\textbackslash{}}
+\NormalTok{   RandomForestRegressor}
+
+\NormalTok{datos }\OperatorTok{=}\NormalTok{ DoubleMLData(df, y\_col}\OperatorTok{=}\StringTok{"gasto"}\NormalTok{,}
+\NormalTok{                     d\_cols}\OperatorTok{=}\StringTok{"email"}\NormalTok{,}
+\NormalTok{                     x\_cols}\OperatorTok{=}\NormalTok{covariables)}
+
+\NormalTok{regresor }\OperatorTok{=}\NormalTok{ RandomForestRegressor()}
+
+\NormalTok{dml }\OperatorTok{=}\NormalTok{ DoubleMLPLR(datos,}
+\NormalTok{                  ml\_l}\OperatorTok{=}\NormalTok{regresor,}
+\NormalTok{                  ml\_m}\OperatorTok{=}\NormalTok{regresor,}
+\NormalTok{                  n\_folds}\OperatorTok{=}\DecValTok{5}\NormalTok{)}
+\NormalTok{dml.fit()}
+\BuiltInTok{print}\NormalTok{(dml.summary)}
+\NormalTok{dml.sensitivity\_analysis()}
+\end{Highlighting}
+\end{Shaded}
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\textbf{Decisión: ¿a quién enviar la campaña?}
+
+\begin{itemize}
+\tightlist
+\item
+  Los
+  \href{https://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv}{datos
+  públicos de Hillstrom} incluyen 64.000 clientes asignados al azar a
+  tres grupos: email de productos de hombre, email de productos de mujer
+  y control sin email. Durante dos semanas se observan visitas, compras
+  y gasto.
+\item
+  El estudiante compara dos reglas: seleccionar por probabilidad de
+  compra o por efecto estimado de la campaña.
+\item
+  Una segunda parte introduce selección observacional y valida
+  \texttt{DoubleML} frente al resultado experimental.
+\end{itemize}
+
+\textbf{Salida del workflow:} los modelos de primera etapa se evalúan
+con validación cruzada; \texttt{dml} devuelve el efecto estimado, su
+intervalo de confianza y la sensibilidad a confusión residual.
+\end{column}
+\end{columns}
+
+\note{{[}Sources{]} - Hillstrom, K. (2008), \emph{The MineThatData
+E-Mail Analytics And Data Mining Challenge}:
+https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html
+- TensorFlow Datasets, \texttt{hillstrom}:
+https://www.tensorflow.org/datasets/catalog/hillstrom}
+\end{frame}
+
+\begin{frame}{Nivel y alcance del Tema 7}
+\phantomsection\label{nivel-y-alcance-del-tema-7}
+~
+
+\begin{columns}[T]
+\begin{column}{0.3\linewidth}
+\textbf{El límite}
+
+No se evalúan demostraciones asintóticas ni el desarrollo formal de la
+ortogonalidad de Neyman.
+\end{column}
+
+\begin{column}{0.05\linewidth}
+\end{column}
+
+\begin{column}{0.65\linewidth}
+\textbf{Lo que sí se evalúa}
+
+\begin{itemize}
+\tightlist
+\item
+  distinguir predicción e intervención;
+\item
+  reconocer los dos sesgos mediante simulación;
+\item
+  aplicar ortogonalización y \emph{cross-fitting};
+\item
+  estimar un efecto y leer su intervalo de confianza;
+\item
+  discutir supuestos y límites.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\partdividercontent{Parte 3 de 3}{Propuesta investigadora}
+\end{frame}
+
+\begin{frame}{Propuesta investigadora}
+\phantomsection\label{propuesta-investigadora}
+\emph{En preparación.}
+\end{frame}
+
+
+
+
+\end{document}

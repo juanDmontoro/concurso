@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="782.673569pt" height="385.326937pt" viewBox="0 0 782.673569 385.326937" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-04T17:17:17.003755</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 385.326937 
+L 782.673569 385.326937 
+L 782.673569 0 
+L 0 0 
+L 0 385.326937 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 77.973569 362.016 
+L 775.473569 362.016 
+L 775.473569 7.2 
+L 77.973569 7.2 
+L 77.973569 362.016 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m35f6107e63" d="M 0 0 
+L 0 3.5 
+" style="stroke: #6c757d; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m35f6107e63" x="312.42735" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="312.42735" y="376.156625" transform="rotate(-0 312.42735 376.156625)">1995/96</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m35f6107e63" x="385.694157" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="385.694157" y="376.156625" transform="rotate(-0 385.694157 376.156625)">2000/01</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m35f6107e63" x="458.960964" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="458.960964" y="376.156625" transform="rotate(-0 458.960964 376.156625)">2005/06</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m35f6107e63" x="532.22777" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="532.22777" y="376.156625" transform="rotate(-0 532.22777 376.156625)">2010/11</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m35f6107e63" x="605.494577" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="605.494577" y="376.156625" transform="rotate(-0 605.494577 376.156625)">2015/16</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m35f6107e63" x="678.761384" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="678.761384" y="376.156625" transform="rotate(-0 678.761384 376.156625)">2020/21</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m35f6107e63" x="752.028191" y="362.016" style="fill: #6c757d; stroke: #6c757d; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #6c757d; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="752.028191" y="376.156625" transform="rotate(-0 752.028191 376.156625)">2025/26</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_8">
+    <path d="M 473.614325 362.016 
+L 473.614325 7.2 
+" clip-path="url(#pcd8d36875c)" style="fill: none; stroke-dasharray: 3.6,2.7; stroke-dashoffset: 0; stroke: #6c757d; stroke-opacity: 0.55; stroke-width: 0.9"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 664.108023 362.016 
+L 664.108023 7.2 
+" clip-path="url(#pcd8d36875c)" style="fill: none; stroke-dasharray: 3.6,2.7; stroke-dashoffset: 0; stroke: #6c757d; stroke-opacity: 0.55; stroke-width: 0.9"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 77.973569 362.016 
+L 775.473569 362.016 
+" style="fill: none; stroke: #6c757d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 297.773989 37.4544 
+L 312.42735 37.4544 
+L 312.42735 27.6336 
+L 297.773989 27.6336 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 297.773989 53.2944 
+L 312.42735 53.2944 
+L 312.42735 43.4736 
+L 297.773989 43.4736 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 400.347518 53.2944 
+L 415.00088 53.2944 
+L 415.00088 43.4736 
+L 400.347518 43.4736 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #81b29a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 312.42735 69.1344 
+L 327.080712 69.1344 
+L 327.080712 59.3136 
+L 312.42735 59.3136 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 327.080712 84.9744 
+L 341.734073 84.9744 
+L 341.734073 75.1536 
+L 327.080712 75.1536 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 341.734073 100.8144 
+L 488.267686 100.8144 
+L 488.267686 90.9936 
+L 341.734073 90.9936 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #4f8577; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 415.00088 116.6544 
+L 473.614325 116.6544 
+L 473.614325 106.8336 
+L 415.00088 106.8336 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 444.307602 132.4944 
+L 473.614325 132.4944 
+L 473.614325 122.6736 
+L 444.307602 122.6736 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 458.960964 148.3344 
+L 488.267686 148.3344 
+L 488.267686 138.5136 
+L 458.960964 138.5136 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 488.267686 148.3344 
+L 532.22777 148.3344 
+L 532.22777 138.5136 
+L 488.267686 138.5136 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 473.614325 164.1744 
+L 532.22777 164.1744 
+L 532.22777 154.3536 
+L 473.614325 154.3536 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #81b29a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 473.614325 180.0144 
+L 488.267686 180.0144 
+L 488.267686 170.1936 
+L 473.614325 170.1936 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 502.921048 195.8544 
+L 546.881132 195.8544 
+L 546.881132 186.0336 
+L 502.921048 186.0336 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 532.22777 211.6944 
+L 620.147939 211.6944 
+L 620.147939 201.8736 
+L 532.22777 201.8736 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 649.454661 211.6944 
+L 664.108023 211.6944 
+L 664.108023 201.8736 
+L 649.454661 201.8736 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 546.881132 227.5344 
+L 708.068107 227.5344 
+L 708.068107 217.7136 
+L 546.881132 217.7136 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 561.534493 243.3744 
+L 590.841216 243.3744 
+L 590.841216 233.5536 
+L 561.534493 233.5536 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 590.841216 259.2144 
+L 752.028191 259.2144 
+L 752.028191 249.3936 
+L 590.841216 249.3936 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 664.108023 275.0544 
+L 737.374829 275.0544 
+L 737.374829 265.2336 
+L 664.108023 265.2336 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 693.414745 290.8944 
+L 722.721468 290.8944 
+L 722.721468 281.0736 
+L 693.414745 281.0736 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 708.068107 306.7344 
+L 752.028191 306.7344 
+L 752.028191 296.9136 
+L 708.068107 296.9136 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 722.721468 322.5744 
+L 766.681552 322.5744 
+L 766.681552 312.7536 
+L 722.721468 312.7536 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 737.374829 338.4144 
+L 766.681552 338.4144 
+L 766.681552 328.5936 
+L 737.374829 328.5936 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #c44536; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 752.028191 354.2544 
+L 766.681552 354.2544 
+L 766.681552 344.4336 
+L 752.028191 344.4336 
+z
+" clip-path="url(#pcd8d36875c)" style="fill: #2d6a7a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_8">
+    <text style="fill: #6c757d; font: italic 9.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="301.437329" y="14.775594" transform="rotate(-0 301.437329 14.775594)">Economía Política</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #6c757d; font: italic 9.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(477.277665 14.775594)">Métodos Cuantitativos ·</text>
+    <text style="fill: #6c757d; font: italic 9.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(477.277665 24.787703)">Modelización e Inferencia Estadística</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #6c757d; font: italic 9.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(667.771363 14.775594)">Métodos Cuantitativos ·</text>
+    <text style="fill: #6c757d; font: italic 9.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(667.771363 25.425391)">Aprendizaje Estadístico</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="292.645313" y="35.408844" transform="rotate(-0 292.645313 35.408844)">Informática aplicada a las CC. Sociales II · varias tit.</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="292.645313" y="51.188687" transform="rotate(-0 292.645313 51.188687)">Informática aplicada a la gestión de la empresa · Dipl. CC. Emp.</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="307.298674" y="67.088844" transform="rotate(-0 307.298674 67.088844)">Estadística I · Dipl. CC. Empresariales</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="321.952035" y="82.928844" transform="rotate(-0 321.952035 82.928844)">Estadística II · Dipl. CC. Empresariales</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="336.605397" y="98.718844" transform="rotate(-0 336.605397 98.718844)">Economía Política y Hacienda Pública · Lic. Derecho</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="409.872203" y="114.558844" transform="rotate(-0 409.872203 114.558844)">Economía · Lic. CC. y Técnicas Estadísticas</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="439.178926" y="130.448844" transform="rotate(-0 439.178926 130.448844)">Conceptos básicos de economía política · libre elección</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="453.832287" y="146.009156" transform="rotate(-0 453.832287 146.009156)">Estadística I · Lic. ADE</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="468.485649" y="162.068687" transform="rotate(-0 468.485649 162.068687)">Estrategias, técnicas y métodos de la gestión cultural · Lic. Humanidades</text>
+   </g>
+   <g id="text_20">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="468.485649" y="177.918844" transform="rotate(-0 468.485649 177.918844)">Música y espectáculo contemporáneo · M.U. Gestión Cultural</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="497.792371" y="193.529156" transform="rotate(-0 497.792371 193.529156)">Estadística II · Lic. ADE / Economía</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="527.099094" y="209.369156" transform="rotate(-0 527.099094 209.369156)">Estadística Básica · Grado ADE</text>
+   </g>
+   <g id="text_23">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="541.752455" y="225.209156" transform="rotate(-0 541.752455 225.209156)">Introducción a la Inferencia Estadística · Grado ADE</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="556.405817" y="241.268687" transform="rotate(-0 556.405817 241.268687)">Estadística · Grado Negocios Internacionales</text>
+   </g>
+   <g id="text_25">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="585.712539" y="256.889156" transform="rotate(-0 585.712539 256.889156)">Estadística II · Grado Economía</text>
+   </g>
+   <g id="text_26">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="658.979346" y="272.948687" transform="rotate(-0 658.979346 272.948687)">Inteligencia de Negocios · M.U. Gestión Negocios Internacionales</text>
+   </g>
+   <g id="text_27">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="688.286069" y="288.593375" transform="rotate(-0 688.286069 288.593375)">Ciencia de Datos en Negocio · M.U. Ciencia de Datos</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="702.93943" y="304.628687" transform="rotate(-0 702.93943 304.628687)">Datos No Estructurados · Grado Intelig. y Analítica de Negocios</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="717.592791" y="320.478844" transform="rotate(-0 717.592791 320.478844)">Inferencia Causal y Aprendizaje Máquina · M.U. Ciencia de Datos</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="732.246153" y="336.308687" transform="rotate(-0 732.246153 336.308687)">Big Data en Economía · M.U. Economía</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #1a1a2e; font: 10px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="746.899514" y="352.148687" transform="rotate(-0 746.899514 352.148687)">Técnicas Avanzadas de Predicción en Negocios · Grado BIA</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_28">
+     <path d="M 90.911069 298.132727 
+L 103.511069 298.132727 
+L 103.511069 290.782727 
+L 90.911069 290.782727 
+z
+" style="fill: #2d6a7a"/>
+    </g>
+    <g id="text_32">
+     <text style="fill: #1a1a2e; font: 10.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="111.911069" y="298.132727" transform="rotate(-0 111.911069 298.132727)">castellano</text>
+    </g>
+    <g id="patch_29">
+     <path d="M 90.911069 312.949211 
+L 103.511069 312.949211 
+L 103.511069 305.599211 
+L 90.911069 305.599211 
+z
+" style="fill: #81b29a"/>
+    </g>
+    <g id="text_33">
+     <text style="fill: #1a1a2e; font: 10.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="111.911069" y="312.949211" transform="rotate(-0 111.911069 312.949211)">valenciano</text>
+    </g>
+    <g id="patch_30">
+     <path d="M 90.911069 327.765696 
+L 103.511069 327.765696 
+L 103.511069 320.415696 
+L 90.911069 320.415696 
+z
+" style="fill: #4f8577"/>
+    </g>
+    <g id="text_34">
+     <text style="fill: #1a1a2e; font: 10.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="111.911069" y="327.765696" transform="rotate(-0 111.911069 327.765696)">castellano y valenciano</text>
+    </g>
+    <g id="patch_31">
+     <path d="M 90.911069 343.274524 
+L 103.511069 343.274524 
+L 103.511069 335.924524 
+L 90.911069 335.924524 
+z
+" style="fill: #c44536"/>
+    </g>
+    <g id="text_35">
+     <text style="fill: #1a1a2e; font: 10.5px 'Helvetica Neue', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="111.911069" y="343.274524" transform="rotate(-0 111.911069 343.274524)">inglés</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcd8d36875c">
+   <rect x="77.973569" y="7.2" width="697.5" height="354.816"/>
+  </clipPath>
+ </defs>
+</svg>
