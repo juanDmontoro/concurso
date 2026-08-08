@@ -1,4 +1,4 @@
-# La asignatura {background-color="#2D6A7A"}
+# Técnicas Avanzadas de Predicción en Negocios {background-color="#2D6A7A"}
 
 ## Grado en Inteligencia y Analítica de Negocios {.shrink}
 
@@ -60,7 +60,7 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 | Predicción con Datos Temporales | 2 (2) | Predicción | Componentes, alisado, ARIMA y evaluación por horizonte |
 | **Técnicas Avanzadas de Predicción en Negocios** | **3 (1)** |**Predicción** | **Ensambles, redes neuronales, SVM y efectos causales** |
 | Datos Espaciales y Espacio-Temporales | 3 (2) | Modelización espacial | Exploración espacial, *kriging*, modelos espaciales y predicción con incertidumbre |
-| Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP, sentimiento y recomendación |
+| Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP y recomendación |
 
 
 
@@ -196,7 +196,7 @@ Las sesiones prácticas desarrollan los contenidos de la teoría y producen evid
 &nbsp;
 
 | Modalidad | Actividad | Horas semanales | Horas totales |
-|---|---|---|---|
+|---|-----------|---:|---:|
 | **Presencial** | Teoría: presentación del problema, conceptos y discusión | 1 h | 15 h |
 | **Presencial** | Práctica: notebook guiado, trabajo autónomo y entregas | 3 h | 45 h  | 
 | **No presencial** | Trabajos individuales/grupo | 2 h 20 min | 35 h |
@@ -447,8 +447,8 @@ $\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad$ con $f_i \in [0.8,\, 1.2
 abandono (*churn*) y estrategia retención de clientes. 
 Analizamos dos reglas de priorización
 
-- **RISK:** actuar sobre quienes tienen mayor probabilidad de abandonar.  
-- **LIFT:** actuar sobre quienes más reducen su probabilidad de abandono **por la intervención** (sensibilidad a la intervención).
+- **RISK:** actuar sobre quienes tienen mayor probabilidad de abandono.  
+- **LIFT:** actuar sobre quienes la intervención produce una mayor reducción de la probabilidad de abandono (sensibilidad a la intervención).
 
 ---
 
@@ -479,7 +479,7 @@ Con los resultados derivados de los datos experimentales se estima qué impacto 
 | Criterio de selección | Pregunta que responde | Efecto  |
 |---------|---------|:---:|
 | Seleccionar el 40% de los clientes con mayor **riesgo** (problema predictivo) | ¿Quién es más probable que abandone? | **-1.9 puntos** |
-| Seleccionar el 40% de los clientes con mayor **sensibilidad a la intervención** (*problema inferencia causal*) | ¿En quién reduce la campaña el abandono? | **-6,0 puntos** |
+| Seleccionar el 40% de los clientes con mayor **sensibilidad a la intervención** (problema inferencia causal) | ¿En quién reduce la campaña el abandono? | **-6,0 puntos** |
 
 La diferencia entre ambos criterios fue de **4,1 puntos porcentuales**.
 
@@ -839,8 +839,8 @@ dml.sensitivity_analysis()
 **Decisión: ¿a quién enviar la campaña?**
 
 - Los [datos públicos de Hillstrom](https://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv) incluyen 64.000 clientes asignados al azar a tres grupos: email de productos de hombre, email de productos de mujer y control sin email. Durante dos semanas se observan visitas, compras y gasto.
-- El estudiante compara dos reglas: seleccionar por probabilidad de compra o por efecto estimado de la campaña.
-- Una segunda parte introduce selección observacional y valida `DoubleML` frente al resultado experimental.
+- Se estima el efecto promedio de la intervención y se comparan dos reglas de priorización: selección por probabilidad de respuesta positiva o por efecto estimado de la campaña.
+- En una etapa final se introduce selección observacional y valida `DoubleML` frente al resultado experimental.
 
 **Salida del workflow:** los modelos de primera etapa se evalúan con validación cruzada; `dml` devuelve el efecto estimado, su intervalo de confianza y la sensibilidad a confusión residual.
 

@@ -1,14 +1,14 @@
 ---
-title: "Concurso de méritos plaza 573 código de concurso 78/2026"
-subtitle: "Candidato: Juan de Dios Montoro Pons"
+title: "Concurso de acceso a Catedrático de Universidad"
 author:
-  - name: "Juan de Dios Montoro Pons"
+  - name: "Candidato: Juan de Dios Montoro Pons"
     affiliations: "Departament d'Economia Aplicada · Universitat de València"
 date: 24 septiembre 2026
 date-format: "DD MMMM YYYY"
 lang: es
 format:
   revealjs:
+    subtitle: 'Área de conocimiento: Métodos Cuantitativos para la Economía y la Empresa<br>[Plaza 573 · Código 78/2026 · Resolución de 23 de junio de 2026 de la Universitat de València]{.subtitle-detail}'
     theme: [default, _theme.scss]
     include-after-body: title-slide.js
     include-in-header:
@@ -30,10 +30,36 @@ format:
         .reveal .slides section:not(#title-slide) li > p,
         .reveal .slides section:not(#title-slide) blockquote > p {font-size: 1em;}
 
+        /* Escala tipográfica de portada, divisores y secciones.
+           Jerarquía: portada/divisores (1.7em) > secciones (1.6em) >
+           títulos de slide h2 (1.5em, del tema). Sobrescribe el 2.5em
+           del tema con selectores de mayor especificidad. */
+        .reveal .slides #title-slide h1 {
+          font-size: 1.7em;
+          line-height: 1.15;
+        }
+        .reveal .slides #title-slide p.subtitle {
+          font-size: 1.15em;
+          line-height: 1.35;
+        }
+        .reveal .slides #title-slide p.subtitle .subtitle-detail {
+          display: block;
+          font-size: 0.7em;
+          color: #6c757d;
+          margin-top: 0.55em;
+        }
+        /* Quarto marca las slides de sección con .title-slide y las
+           dimensiona con .reveal[data-navigation-mode="linear"]
+           .title-slide h1 (2.5em): hace falta superar esa especificidad. */
+        .reveal .slides section h1,
+        .reveal .slides section.title-slide h1 {
+          font-size: 1.6em;
+        }
+
         /* Divisores de parte: réplica del estilo de la portada
            (título grande + filete coral), con eyebrow "PARTE N DE 3". */
         .reveal .slides section.part-divider h1 {
-          font-size: 2.5em;
+          font-size: 1.7em;
           line-height: 1.1;
         }
         .reveal .slides section.part-divider h1::after {
@@ -66,6 +92,7 @@ format:
     transition-speed: fast
     fig-align: center
   beamer:
+    subtitle: 'Área de conocimiento: Métodos Cuantitativos para la Economía y la Empresa \newline \footnotesize Plaza 573 · Código 78/2026 · Resolución de 23 de junio de 2026 de la Universitat de València'
     theme: metropolis
     colortheme: default
     fonttheme: professionalfonts
