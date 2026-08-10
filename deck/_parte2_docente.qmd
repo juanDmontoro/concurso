@@ -1,6 +1,6 @@
-# Técnicas Avanzadas de Predicción en Negocios {background-color="#2D6A7A"}
+# Técnicas avanzadas de predicción en negocios {background-color="#2D6A7A"}
 
-## Grado en Inteligencia y Analítica de Negocios {.shrink}
+## Grado en inteligencia y analítica de negocios {.shrink}
 
 &nbsp; 
 
@@ -16,7 +16,7 @@
 | **Modalidad** | Presencial |
 | **Materias** | 30 |
 | **Asignaturas** |  44  |
-| **Campo de estudio** | Ciencias Económicas, Administración y Dirección de Empresas, MarKeting, Comercio, Contabilidad y Turismo |
+| **Campo de estudio** | Ciencias Económicas, Administración y Dirección de Empresas, Marketing, Comercio, Contabilidad y Turismo |
 
 
 :::
@@ -47,7 +47,7 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 
 
 
-## Herramientas y Técnicas de Análisis de Datos {.shrink}
+## Herramientas y técnicas de análisis de datos {.shrink}
 
 &nbsp;
 
@@ -64,7 +64,7 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 
 
 
-## Técnicas Avanzadas de Predicción en Negocios {.shrink}
+## Técnicas avanzadas de predicción en negocios {.shrink}
 
 &nbsp;
 
@@ -91,7 +91,7 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 ::: {.column width="65%"}
 
 
-**El alumnado llega con**
+**Conocimientos previos**
 
 - Análisis exploratorio y minería de datos, inferencia,  y técnicas de predicción transversal y temporal
 - Uso continuado de `R` en análisis estadístico, minería y predicción
@@ -207,6 +207,7 @@ Las sesiones prácticas desarrollan los contenidos de la teoría y producen evid
 &nbsp;
 
 Carga total 150 h · 60 h presenciales · 90 h no presenciales
+
 
 ## Metodología docente: secuencia de aprendizaje
 
@@ -432,7 +433,7 @@ $\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad$ con $f_i \in [0.8,\, 1.2
 
 ::::
 
-# Estimación de parámetros estructurales mediante técnicas predictivas (tema 7) {.compact background-color="#2D6A7A"}
+# Tema 7. Predicción y efectos causales {.compact background-color="#2D6A7A"}
 
 ## Riesgo de abandono y estrategia de retención de clientes {.compact .shrink}
 
@@ -761,7 +762,7 @@ La ortogonalización reduce el sesgo de regularización. El *cross-fitting* sepa
 Con $\tau=2$, la media pasa de 1,70 sin *cross-fitting* a 1,92 con predicciones *out-of-fold*. El RMSE baja de 0,41 a 0,11. La cobertura mejora, aunque sigue por debajo del 95% nominal con $n=300$.
 :::
 
-## Double (Debiased) Machine Learning {.shrink}
+## Double (debiased) machine learning {.shrink}
 
 &nbsp;
 
@@ -872,11 +873,11 @@ No se evalúan demostraciones asintóticas ni el desarrollo formal de la ortogon
 ::: {.column width="65%"}
 **Lo que sí se evalúa**
 
-- distinguir predicción e intervención;
-- reconocer los dos sesgos mediante simulación;
-- aplicar ortogonalización y *cross-fitting*;
-- estimar un efecto y leer su intervalo de confianza;
-- discutir supuestos y límites.
+- Distinguir predicción e intervención
+- Reconocer los dos sesgos mediante simulación
+- Aplicar ortogonalización y *cross-fitting*
+- Estimar un efecto y leer su intervalo de confianza
+- Discutir supuestos y límites
 :::
 
 ::::

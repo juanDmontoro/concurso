@@ -44,9 +44,23 @@ format:
         }
         .reveal .slides #title-slide p.subtitle .subtitle-detail {
           display: block;
-          font-size: 0.7em;
+          /* 0.78 × 1.15em ≈ 0.9em: iguala el detalle de la plaza con el
+             departamento (afiliación, 0.9em). */
+          font-size: 0.78em;
           color: #6c757d;
           margin-top: 0.55em;
+        }
+        /* Jerarquía interna de la portada: área de conocimiento = nombre
+           del candidato (1.15em) > plaza = departamento (0.9em) > fecha
+           (0.85em, por debajo del nombre). */
+        .reveal .slides #title-slide .quarto-title-author-name {
+          font-size: 1.15em !important;
+        }
+        .reveal .slides #title-slide .quarto-title-affiliation {
+          font-size: 0.9em !important;
+        }
+        .reveal .slides #title-slide p.date {
+          font-size: 0.85em;
         }
         /* Quarto marca las slides de sección con .title-slide y las
            dimensiona con .reveal[data-navigation-mode="linear"]
@@ -145,7 +159,7 @@ execute:
 ---
 
 ```{=latex}
-\partdividercontent{Parte 1 de 3}{Currículum}
+\partdividercontent{Parte 1 de 3}{Currículum Vitae}
 ```
 
 :::
