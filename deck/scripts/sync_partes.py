@@ -1,9 +1,12 @@
-"""Sincroniza el deck unificado del ejercicio con sus dos decks fuente.
+"""Sincroniza el deck unificado del ejercicio con sus tres decks fuente.
 
-Extrae el cuerpo (sin YAML) de presentacion_cv.qmd y propuesta_docente.qmd
-a _parte1_cv.qmd y _parte2_docente.qmd, y copia a esta carpeta las figuras
-referenciadas, _theme.scss y title-slide.js. Los decks fuente son de solo
-lectura: este script solo lee de ellos.
+Extrae el cuerpo (sin YAML) de presentacion_cv.qmd, propuesta_docente.qmd y
+propuesta_investigacion.qmd (este último vía el enlace de solo lectura
+external/jcr_presentation -> investigacion/Spoti_API/2026_jcr/presentation)
+a _parte1_cv.qmd, _parte2_docente.qmd y _parte3_investigacion.qmd, y copia a
+esta carpeta las figuras referenciadas (SVG con su gemelo PDF si existe, o
+PNG), _theme.scss y title-slide.js. Los decks fuente son de solo lectura:
+este script solo lee de ellos.
 
 Ejecutar desde 0_ejercicio/deck/:  python scripts/sync_partes.py
 """
@@ -18,11 +21,14 @@ DECK = Path(__file__).resolve().parent.parent
 FUENTES = [
     (DECK.parent / "cv" / "deck" / "presentacion_cv.qmd", "_parte1_cv.qmd"),
     (DECK.parent / "propuesta_docente" / "sol" / "propuesta_docente.qmd", "_parte2_docente.qmd"),
+    # DECK.parent.parent = raíz de catedra; external/ está git-ignorado.
+    (DECK.parent.parent / "external" / "jcr_presentation" / "propuesta_investigacion.qmd", "_parte3_investigacion.qmd"),
 ]
 
 ASSETS_DIR = DECK.parent / "cv" / "deck"  # _theme.scss y title-slide.js (bit-idénticos en ambos decks)
 
-FIG_RE = re.compile(r"\]\((figures/[^)\s]+\.svg)\)")
+# Figuras SVG (con gemelo PDF para beamer) o PNG (un solo archivo para ambos formatos).
+FIG_RE = re.compile(r"\]\((figures/[^)\s]+\.(?:svg|png))\)")
 
 
 def extraer_cuerpo(texto: str, origen: Path) -> str:
@@ -44,16 +50,18 @@ def sincronizar_figuras(cuerpo: str, origen_dir: Path) -> tuple[list[str], list[
     destino.mkdir(exist_ok=True)
     copiadas, sin_pdf = [], []
     for ref in sorted(set(FIG_RE.findall(cuerpo))):
-        svg = origen_dir / ref
-        if not svg.exists():
-            sys.exit(f"ERROR: figura referenciada inexistente: {svg}")
-        shutil.copy2(svg, destino / svg.name)
-        copiadas.append(svg.name)
-        pdf = svg.with_suffix(".pdf")
+        fig = origen_dir / ref
+        if not fig.exists():
+            sys.exit(f"ERROR: figura referenciada inexistente: {fig}")
+        shutil.copy2(fig, destino / fig.name)
+        copiadas.append(fig.name)
+        if fig.suffix != ".svg":
+            continue  # el gemelo PDF solo aplica a los SVG
+        pdf = fig.with_suffix(".pdf")
         if pdf.exists():
             shutil.copy2(pdf, destino / pdf.name)
         else:
-            sin_pdf.append(svg.name)
+            sin_pdf.append(fig.name)
     return copiadas, sin_pdf
 
 

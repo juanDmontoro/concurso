@@ -30,6 +30,13 @@ format:
         .reveal .slides section:not(#title-slide) li > p,
         .reveal .slides section:not(#title-slide) blockquote > p {font-size: 1em;}
 
+        /* Tablas completas de coeficientes (slides de detalle con ~40 filas,
+           Parte 3): escala propia y celdas compactas para caber en 1080 px. */
+        .reveal .slides section.tblfull:not(#title-slide) p,
+        .reveal .slides section.tblfull:not(#title-slide) table {font-size: 0.42em; line-height: 1.2;}
+        .reveal .slides section.tblfull:not(#title-slide) table td,
+        .reveal .slides section.tblfull:not(#title-slide) table th {padding: 0.08em 0.5em;}
+
         /* Escala tipográfica de portada, divisores y secciones.
            Jerarquía: portada/divisores (1.7em) > secciones (1.6em) >
            títulos de slide h2 (1.5em, del tema). Sobrescribe el 2.5em
@@ -120,6 +127,11 @@ format:
         \AtBeginDocument{\footnotesize}
         \usepackage{etoolbox}
         \usepackage{colortbl}
+        % Glifo prima (′, Parte 3) ausente en la fuente de metropolis.
+        % unicode-math hace math-activo el carácter en begin-document,
+        % así que su redefinición debe ir también en AtBeginDocument.
+        \usepackage{newunicodechar}
+        \AtBeginDocument{\newunicodechar{′}{\ensuremath{{}^{\prime}}}}
         % Filete fino gris entre filas del cuerpo de las tablas;
         % lo inyecta row-rules.lua en la salida beamer.
         \newcommand{\lightrowrule}{\arrayrulecolor{black!25}\specialrule{0.4pt}{1pt}{1pt}\arrayrulecolor{black}}
@@ -184,8 +196,6 @@ execute:
 
 {{< include _parte2_docente.qmd >}}
 
-<!-- PLACEHOLDER: sustituir la slide bajo Parte 3 por el deck de la propuesta investigadora -->
-
 ::: {.content-visible when-format="revealjs"}
 
 # [Parte 3 de 3]{.part-eyebrow} Propuesta investigadora {.part-divider .center}
@@ -202,6 +212,4 @@ execute:
 
 :::
 
-## Propuesta investigadora {.center}
-
-*En preparación.*
+{{< include _parte3_investigacion.qmd >}}
