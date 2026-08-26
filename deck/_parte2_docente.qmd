@@ -45,6 +45,14 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 :::
 ::::
 
+::: {.notes}
+Paso a presentar la propuesta docente que abarca la asignatura Técnicas Avanzadas de Predicción en Negocios, obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios. La exposición tiene tres partes: la asignatura y su organización; el proyecto del cuatrimestre, que es el eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, que muestra la manera de trabajar del curso.
+
+En la diapositiva muestro  la ficha resumida del grado (Facultat d'Economia, cuatro cursos y doscientos cuarenta créditos, cincuenta plazas de nueva entrada), su principal objetivo que integra tres ámbitos (economía y empresa,  métodos cuantitativos y tecnología).
+
+La asignatura, dentro de la materia Herramientas y Técnicas del Análisis de Datos se orienta al uso de métodos computacionales y modelos predictivos tanto para predecir como para explicar.
+:::
+
 
 
 ## Herramientas y técnicas de análisis de datos {.shrink}
@@ -61,6 +69,14 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 | **Técnicas Avanzadas de Predicción en Negocios** | **3 (1)** |**Predicción** | **Ensambles, redes neuronales, SVM y efectos causales** |
 | Datos Espaciales y Espacio-Temporales | 3 (2) | Modelización espacial | Exploración espacial, *kriging*, modelos espaciales y predicción con incertidumbre |
 | Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP y recomendación |
+
+::: {.notes}
+La tabla presenta las siete asignaturas de la materia, junto a su información básica.
+
+Es en tercer curso cuando los estudiantes llegan a Técnicas Avanzadas de Predicción en Negocios (tras haber cursado en segundo curso Minería de Datos en Negocios y las dos asignaturas de predicción, con datos transversales y temporales). El curso cubre diversos estimadores (ensambles, máquinas de vectores de soporte, redes neuronales) y diferencia entre predicción y explicación con una introducción a efectos causales.
+
+Señalar la ubicación de la asignatura que llega tras explorar datos y predecir con modelos sencillos, y aplia el catálogo predictivo con métodos más flexibles y su utilización para predecir y estimar parámetros estructurales.
+:::
 
 
 
@@ -108,6 +124,16 @@ El **Tema 7** desarrolla el último objetivo mediante un caso de negocio.
 
 ::::
 
+::: {.notes}
+La ficha de la asignatura concreta ese punto de partida, y muestra
+
+1. Por un lado los datos formales: carácter, ubicación, y carga docente y de trabajo.
+
+2.  Por otro lado lo que la signatura asume y lo que ofrece. 
+
+Quizá es ese tercer objetivo lo que diferencia el enfoque de la asignatura: predecir bien no responde por sí solo a la pregunta del negocio, que muchas veces conlleva una afirmación de tipo  causal, y el estudiante tiene que saber reconocer cuándo lo es. El Tema 7 lo desarrolla con un caso de negocio, al final de la exposición.
+:::
+
 
 ## Contenidos y planificación {.shrink}
 
@@ -117,16 +143,24 @@ El **Tema 7** desarrolla el último objetivo mediante un caso de negocio.
 |:-:|--------|-----------|
 | 1 | 1. Fundamentos | Entorno de trabajo reproducible |
 | 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros · S2: grupos y dataset del proyecto |
-| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA · S5: modelo base del proyecto |
+| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA · S6: modelo base del proyecto |
 | 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S8: ensambles del proyecto |
 | 9 | 5. Máquinas de vectores de soporte (SVM)  | Comparación transversal de modelos · S9: SVM |
-| 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras · S12: revisión y retroalimentación |
-| **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` · S14: extensión causal** |
+| 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras · S10: revisión y retroalimentación |
+| **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` · S13: extensión causal** |
 | 15 | Evaluación | S15: defensa oral del proyecto |
 
 ::: {.callout-note icon="false"}
 # El conjunto de datos de referencia
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como caso de estudio transversal, sobre el que aplicamos las diferentes técnicas. Esto permite comparar los modelos en un contexto común, analizar sus fortalezas y limitaciones, y comprender qué métodos resultan más adecuados según el objetivo empresarial y las características de los datos.
+:::
+
+::: {.notes}
+La tabla muestra la distribución de los siete temas de la asignatura en las quince semanas del cuatrimestre; la tercera columna vincula cada tema con su práctica y con los hitos de un proyecto en equipos que los estudiantes desarrollan.
+
+El recorrido va de lo simple a lo flexible: fundamentos y entorno de trabajo reproducible en la primera semana; selección y evaluación de modelos en la dos y la tres, cuando se forman los grupos del proyecto; el modelo lineal generalizado con regularización, que es el modelo base del curso y del proyecto; después los ensambles, las máquinas de vectores de soporte y las redes neuronales, con la revisión intermedia del proyecto; y las semanas trece y catorce son el Tema 7, con la simulación de los sesgos, el flujo de trabajo con DoubleML y una posible extensión causal en el proyecto, antes de la defensa oral en la quince.
+
+Una decisión de diseño aplicable a toda la tabla: durante las prácticas, la asignatura usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas. Eso permite comparar los modelos en un contexto común y ver qué método conviene según el objetivo del negocio.
 :::
 
 ::: {.content-hidden}
@@ -208,6 +242,14 @@ Las sesiones prácticas desarrollan los contenidos de la teoría y producen evid
 
 Carga total 150 h · 60 h presenciales · 90 h no presenciales
 
+::: {.notes}
+La tabla desglosa las ciento cincuenta horas del estudiante por actividades, con su carga semanal y total: sesenta horas presenciales y noventa no presenciales.
+
+La semana tipo tiene cuatro horas presenciales: una de teoría, en la que se presenta el problema, los conceptos y la discusión, y tres de práctica en aula informática, con un notebook guiado, trabajo autónomo y entregas. 
+
+La proporción refleja el carácter de la asignatura: tres cuartas partes del tiempo presencial transcurren implementado soluciones estadísticas a preguntas de negocios, y la teoría ocupa una hora para plantear el problema y discutir y comparar los estimadores. El notebook guiado es el punto de partida de cada sesión; lo que cuenta son las evidencias de aprendizaje que salen de esa práctica cada semana y alimentan las entregas y el proyecto. Dentro de cada tema, ese trabajo sigue siempre la misma secuencia.
+:::
+
 
 ## Metodología docente: secuencia de aprendizaje
 
@@ -222,8 +264,11 @@ Carga total 150 h · 60 h presenciales · 90 h no presenciales
 Las sesiones prácticas desarrollan los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
 
 ::: {.notes}
-[Sources]
-- Guía docente 36520, curso 2026-27: volumen de trabajo y metodología docente.
+La secuencia que sigue cada tema se puede reumir en cinco pasos: pregunta, exploración, comparación, formalización y decisión. Es un recorrido que va de la narrativa a lo visual, de lo visual al código y del código a lo formal.
+
+Primero se plantea un problema de negocio; después se explora con datos, gráficos y simulaciones; en tercer lugar se codifican, evalúan y comparan soluciones; solo entonces se formaliza el método y se revisan sus supuestos; y al final se interpreta el resultado y se justifica una elección. El orden es deliberado: el formalismo llega cuando el estudiante ya ha visto el problema, ha manipulado los datos y ha comparado modelos, de modo que las fórmulas responden a preguntas que ya se ha hecho. 
+
+Las sesiones prácticas desarrollan así los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
 :::
 
 ::: {.content-hidden}
@@ -305,14 +350,10 @@ Las sesiones prácticas desarrollan los contenidos de la teoría y producen evid
 
 :::
 
-:::{.notes}
- **¿Por qué `Python`?**  
+::: {.notes}
+Los recursos didácticos se agrupan en ocho tipos: software y entornos de trabajo, materiales expositivos y prácticos, recursos interactivos, recursos para la evaluación y para la reproducibilidad, y bibliografía.
 
-- Librerías de referencia para métodos avanzados 
-- Herramienta habitual en la industria de datos 
-- Acceso a Colab  sin instalación local
-- Permite transferir conocimientos acumulados en `R`: cambia la herramienta, no el concepto
-
+El software es Python con librerías scikit-learn, Keras y DoubleML. ¿Por qué Python si los alumnos llegan con conocimientos amplios de R?  Python ofrece  librerías de referencia para  métodos avanzados, es la herramienta habitual en la industria de datos, se puede usar en la nube a través de Colab sin instalación local y, sobre todo, permite transferir los conocimientos: cambia la herramienta, no el concepto. Los entornos, Jupyter, Colab y un entorno conda versionado, hacen que el trabajo sea reproducible desde el primer día.
 :::
 
 ## Evaluación
@@ -329,8 +370,11 @@ Los pesos, las rúbricas y las condiciones de recuperación se publican al inici
 
 
 ::: {.notes}
-[Sources]
-- Guía docente 36520, curso 2026-27, apartado de evaluación.
+La práctica y la evluación continua tienen un peso sutantivo en la evaluación en una barra: un treinta y cinco por ciento corresponde al proyecto final con su defensa oral; un treinta por ciento las entregas individuales en aula y un diez por ciento la participación. El veinticinco por ciento restante corresponde al examen final escrito (exige un mínimo de coinco sobre diez). 
+
+El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través del proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y el mínimo evita que una buena nota de proyecto compense la falta de esa base.
+
+El proyecto es la pieza central de esa evaluación y el segundo bloque de la exposición.
 :::
 # Proyecto final {background-color="#2D6A7A"}
 
@@ -338,11 +382,15 @@ Los pesos, las rúbricas y las condiciones de recuperación se publican al inici
 
 &nbsp;
 
-![](figures/fig_timeline_proyecto.svg){width="88%" fig-alt="Línea temporal del proyecto: grupos y dataset en la semana 2, EDA en la 4, baseline GLM en la 5, ensambles en la 8, hito intermedio con retroalimentación en la 12, extensión causal con DoubleML en la 14 y defensa oral en la 15"}
+![](figures/fig_timeline_proyecto.svg){width="88%" fig-alt="Línea temporal del proyecto: grupos y dataset en la semana 2, EDA en la 4, baseline GLM en la 6, ensambles en la 8, hito intermedio con retroalimentación en la 10, extensión causal con DoubleML en la 13 y defensa oral en la 15"}
 
 - Grupos de 3--4 alumnos, dataset y problema propios elegidos en la semana 2; cada hito utiliza el contenido desarrollado durante esas semanas
-- El hito de la S14 permite formular una pregunta causal sobre los propios datos y responderla con `DoubleML` (o justificar por qué los supuestos no lo permiten, respuesta igual de valiosa)
+- El hito de la S13 permite formular una pregunta causal sobre los propios datos y responderla con `DoubleML` (o justificar por qué los supuestos no lo permiten, respuesta igual de valiosa)
 - Entrega final: **repositorio reproducible + memoria + defensa oral** 
+
+::: {.notes}
+El desarrollo del proyecto se organiza a lo largo de una serie de entregas parciales o hitos durante el cuatrimestre. Los grupos, de tres o cuatro estudiantes, eligen en la semana dos su propio conjunto de datos y su propio problema; después entregan el análisis exploratorio y el pipeline de preprocesado, el modelo base, un GLM regularizado, y los ensambles; hacia la mitad del cuatrimestre hay una  entrega con retroalimentación; en la semana trece, como aspecto opcional, se puede formular una extensión causal al modelo predictivo; y en la quince, la memoria, el repositorio y la defensa oral. Cada hito usa el contenido desarrollado en las semanas anteriores, de manera que el proyecto avanza con el temario. Durante todo el recorrido el uso de inteligencia artificial está permitido, declarado y auditado. La entrega final, repositorio reproducible, memoria y defensa oral, se califica con una rúbrica.
+:::
 
 ## Rúbrica del proyecto {.compact .shrink}
 
@@ -355,6 +403,14 @@ Los pesos, las rúbricas y las condiciones de recuperación se publican al inici
 | **Modelización (25%)** | Baseline → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente | Sin baseline; métricas elegidas a posteriori |
 | **Interpretación y comunicación (15%)** | Memoria, figuras, lectura de resultados | Resultados traducidos a decisión de negocio; incorpora incertidumbre  | Interpretación correcta de métricas y efectos | Lectura mecánica o errónea de las salidas |
 | **Defensa oral individual (30%)** | 10' grupo + preguntas individuales | Cada miembro explica y modifica en vivo cualquier parte del código | Cada miembro explica las partes que firmó | Un miembro no sabe explicar código propio |
+
+::: {.notes}
+Ésta tiene cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Importante mencionar que la defensa oral individual pesa un treinta por ciento.
+
+Más que los pesos, importa qué premia y qué penaliza. Premia una pregunta orientada a la toma de decisiones y susceptible de respuesta empírica, un repositorio que reproduce todo desde los datos crudos con un entorno versionado, la comparación de los modelos en un test común y la traducción de los resultados a una decisión de negocio que incorpore la incertidumbre. Y es explícita en los no aptos: una fuga de información, elegir las métricas a posteriori o que un miembro del grupo no sepa explicar su propio código. El nivel excelente de la defensa exige que cada miembro explique y modifique en vivo cualquier parte del código.
+
+La última pieza del proyecto es la política de uso de inteligencia artificial.
+:::
 
 
 
@@ -386,7 +442,7 @@ $\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad$ con $f_i \in [0.8,\, 1.2
 :::{.notes}
 **Observaciones**
 
-- **Retroalimentación a lo largo del curso:** hito intermedio (S12) con la rúbrica provisional aplicada sin nota; defensa final (S15) con la definitiva
+- **Retroalimentación a lo largo del curso:** hito intermedio (S10) con la rúbrica provisional aplicada sin nota; defensa final (S15) con la definitiva
 - **Penalizaciones** (publicadas): entrega tardía -1 punto/día; fuga de información detectada → dimensión de modelización a no apto
 - **Condición previa**:  compromiso con las entregas de acuerdo con planificación; caso contrario  la nota máxima del proyecto es 4/10
 
@@ -432,6 +488,12 @@ $\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad$ con $f_i \in [0.8,\, 1.2
 :::
 
 ::::
+
+::: {.notes}
+La política de inteligencia artificial se resume en tres conceptos: la IA está permitida, debe ser declarada y es auditada. Los estudiantes pueden usar libremente asistentes para programar, depurar y redactar, con un uso crítico y responsable. A cambio hay una obligación: el registro completo de los prompts, no una selección, se entrega como apéndice del proyecto y de las entregas relevantes. Y ese registro se evalúa: se cruza con el código y con la memoria buscando coherencia entre lo que se preguntó y lo que se entregó. La transparencia se premia; un producto que excede con mucho lo que su registro explica es una señal de alerta.
+
+Además, hay tres verificaciones que la inteligencia artificial no puede suplantar: la defensa oral individual, el diez por ciento de participación en el aula, que exige presencialidad, y el examen presencial, con su veinticinco por ciento y el mínimo de cinco. En lugar de prohibir una herramienta que muy probablemente van a usar en su trabajo, la asignatura permite usarla, exige declararla y comprueba en persona que el estudiante domina lo que entrega.
+:::
 
 # Tema 7. Predicción y efectos causales {.compact background-color="#2D6A7A"}
 
@@ -485,6 +547,18 @@ Con los resultados derivados de los datos experimentales se estima qué impacto 
 La diferencia entre ambos criterios fue de **4,1 puntos porcentuales**.
 
 :::
+:::
+
+::: {.notes}
+Finalizo la propuesta docente presntando brevemente el Tema 7, que empieza con una decisión de negocio: los alumnos están famliariazdos con el concepto de churn (o abandono) y su predicción (riesgo de abandono). En este tema comenzamos con una pregunta práctica: a quién dirigir una campaña de retención de clientes. 
+
+Formulamos dos reglas de priorización: la regla RISK actúa sobre los clientes con mayor probabilidad de abandonar, un problema predictivo; la regla LIFT, sobre aquellos en los que la intervención produce una mayor reducción de esa probabilidad, un problema de inferencia causal.
+
+El experimento de Ascarza, de 2018, permite compararlas: un operador de telefonía móvil de prepago asignó al azar a doce mil clientes inactivos un SMS con crédito adicional condicionado a una recarga, y observó si la línea seguía activa treinta días después. Se trata de un experimento aleatorio controlado.
+
+Con los datos del mismo, la autora simula una campaña dirigida al cuarenta por ciento de los clientes con cada regla y observa el resultado en términos de disminución del abandono. Seleccionar por riesgo reduce el abandono en uno con nueve puntos; seleccionar por sensibilidad a la intervención lo reduce en seis: cuatro con uno puntos porcentuales de diferencia.
+
+La lección: predecir el riesgo de abandono no responde por sí solo a la pregunta de gestión, a qué clientes nos dirigimos; para eso hay que estimar el efecto causal de la intervención. La pregunta que sigue es cómo estimar ese efecto sin experimento, con datos observacionales.
 :::
 
 ::: {.content-hidden}
@@ -580,6 +654,15 @@ $$D= m(X)+\eta$$
 
 ::::
 
+::: {.notes}
+Traducimos el contexto a un modelo: el objetivo es estimar el efecto de la intervención $D$ sobre la respuesta (parámetro $\tau$): la respuesta y además depende de un conjunto de variables
+X; asumimos que esa dependencia puede ser compleja, de ahí proponer una forma funcional flexible $g$. Además, es importante incidir que con datos observacionales los controles pueden confundir la relación, si la elección del tratamiento se ve afectada $X$ necesitamos incorporar el proceso a través de la función $m$.
+
+El grafo visualiza el mecanismo generador de datos.
+
+**El objetivo del tema es incorporar técnicas de aprendizaje máquina para la estimación de tau** ¿Por qué? Tres razones: elevada dimensionalidad de X  (p.e. inclusión de datos no tabulares como texto o imágenes); posible complejidad de $g$ o $m$ que podemos aproximar a través de modelos flexibles sin que tengamos que especificarlos.
+:::
+
 
 :::{.content-hidden}
 
@@ -670,6 +753,14 @@ $\tilde{y}=y-\hat{g}(X)$;
 
 ::::
 
+::: {.notes}
+El enfoque ingenuo tiene dos problemas, que son los que Double Machine Learning corrige. El procedimiento de la derecha parece razonable: aprender de los datos un modelo flexible para g, residualizar la respuesta restando esa predicción y recuperar tau con la regresión del residuo sobre el tratamiento.
+
+El primer problema es el sesgo de regularización. Los modelos de aprendizaje automático regularizan los predictores, de forma explícita o implícita, y seleccionan las variables por su capacidad para predecir y. Un control poco correlacionado con y pero muy relevante para explicar el tratamiento puede quedar atenuado o fuera del modelo, y entonces la segunda etapa atribuye a tau parte de la relación de ese control con D: un sesgo de variable omitida. 
+
+El segundo es el sesgo por sobreajuste: si entrenamos g y predecimos sobre las mismas observaciones, los residuos de y absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona, de modo que la estimación de tau y su error estándar dejan de ser fiables.
+:::
+
 ## Double (Debiased) Machine Learning {.shrink}
 
 &nbsp;
@@ -697,6 +788,19 @@ Estimador de efecto causal en dos etapas
 :::{.column width="65%"}
 ![](figures/fig_esquema_dml.svg){width="80%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
 :::
+:::
+
+::: {.notes}
+Double Machine Learning es un estimador en dos etapas que permite corregir los sesgos de regularización y sobreajuste. 
+
+En la primera etapa se entrenan dos funciones, g para la respuesta y m para el tratamiento, y se generan  versiones residualizadas de ambos (respuesta y tratamiento). El proceso separa las observaciones con las que se entrena de aquellas sobre las que se predice. 
+
+En la segunda etapa se estima la regresión del residuo de y sobre el residuo de D: la pendiente es tau.
+
+El esquema de la derecha ordena la lógica completa. De la aplicación
+del enfoque ML ingenuo surgen dos problemas: el sesgo de regularización (omisión de predictores débiles de lam respuesta que son relevantes para el tratamiento) y el sesgo de sobreajuste (uso de los mismos datos para entrenar y para predecir). Cada uno tiene su solución: la ortogonalización o regresión de residuos sobre residuos o Frisch–Waugh–Lovell con modelos flexibles para el primero, y el cross-fitting, predicciones fuera de la muestra de entrenamiento, para el segundo. La combinación de ambas constituye Double Machine Learning: un estimador raíz de n consistente con inferencia válida.
+
+Todo esto se pone en práctica con datos reales.
 :::
 
 
@@ -850,9 +954,11 @@ dml.sensitivity_analysis()
 ::::
 
 ::: {.notes}
-[Sources]
-- Hillstrom, K. (2008), *The MineThatData E-Mail Analytics And Data Mining Challenge*: https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html
-- TensorFlow Datasets, `hillstrom`: https://www.tensorflow.org/datasets/catalog/hillstrom
+La práctica del Tema 7 tiene un flujo de trabajo simple para los estudiantes ya familiarizados con Python+scikit-learn.
+
+La práctica (a quién enviar una campaña de emailing) parte de datos públicos (Hillstrom): sesenta y cuatro mil clientes asignados al azar a un email de productos de hombre, un email de productos de mujer o un control sin email, con visitas, compras y gasto observados durante dos semanas. Los estudiantes estiman el efecto promedio de la intervención y comparan dos reglas de priorización, por probabilidad de respuesta positiva o por efecto estimado de la campaña, las reglas del caso de Ascarza con otros datos. En la etapa final introducimos selección observacional en la asignación y validamos DoubleML frente al resultado experimental, que aquí conocemos.
+
+La salida es la que pide el objetivo del tema: los modelos de primera etapa se evalúan con validación cruzada, y dml devuelve el efecto estimado, su intervalo de confianza y la sensibilidad a confusión residual.
 :::
 
 ## Nivel y alcance del Tema 7
@@ -881,6 +987,14 @@ No se evalúan demostraciones asintóticas ni el desarrollo formal de la ortogon
 :::
 
 ::::
+
+::: {.notes}
+Cierro con el nivel y el alcance del Tema 7, porque conviene ser explícito sobre qué se pide a estudiantes de tercero de grado. El límite: no se evalúan demostraciones asintóticas ni el desarrollo formal de la ortogonalidad de Neyman. 
+
+Lo que sí se evalúa: distinguir predicción e intervención; reconocer los dos sesgos mediante simulación; aplicar ortogonalización y cross-fitting; estimar un efecto y leer su intervalo de confianza; y discutir supuestos y límites.
+
+Ese nivel es coherente con todo lo anterior: el de una asignatura forma profesionales capaces de usar métodos computacionales y modelos predictivos en economía y negocios tanto para predecir como para explicar, con práctica sobre datos reales, trabajo reproducible y un uso crítico de la inteligencia artificial.
+:::
 
 <!-- Generado por scripts/sync_partes.py desde propuesta_docente.qmd — NO EDITAR;
      editar el deck fuente y re-sincronizar. -->

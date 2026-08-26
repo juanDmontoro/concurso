@@ -30,24 +30,13 @@
 :::
 
 ::: {.notes}
+Buenos días. Con la venia de la comisión, comienzo la presentación del currículum con la línea temporal, que resume treinta años en la Universitat de València, desde la finalización de la licenciatura en Ciencias Económicas y Empresariales en 1991 hasta la acreditación a catedrático de universidad por la ANECA en octubre de 2024. 
 
-| | |
-|---|-----|
-| **Doctor en Economía** | Universitat de València, 1996 |
-| **Titular de Universidad** | desde 2005 |
-| **Acreditación a CU** | ANECA, octubre de 2024 |
-| **Áreas** | Economía Aplicada (1995) → Métodos Cuantitativos (curso 2006/07) |
+La primera etapa es la de formación y estabilización: tesis doctoral en 1996, plaza de ayudante en 1997 en el área de Economía Aplicada, titularidad de escuela en 2002, habilitación nacional en la universidad de Alcalá de Henares en 2004 que me permite acceder a la plaza de titular de universidad en 2005. La segunda, de internacionalización,  arranca con la adscripción al área de Métodos Cuantitativos en 2007 y concentra la coordinación del título de ADE/GEDE, el proyecto ATLANTIS de la UE y la fundación y vicepresidencia de IMBRA. La tercera, desde 2016, de consolidación, con la evaluación positiva del sexenio de transferencia y tercer y cuarto sexenios de investigación, la dirección del grupo de investigación CREAMARKT y la codirección del grupo consolidado de innovación docente.
 
-**Investigación** --- 4 sexenios de investigación + 1 de transferencia · 46 artículos, 36 en revistas indexadas · más de 800 citas (Google Scholar, h = 14)
+En cifras: cuatro sexenios de investigación y uno de transferencia, cuarenta y seis artículos, treinta y seis en revistas indexadas, más de ochocientas citas; cinco quinquenios y una evaluación DOCENTIA excelente, doscientos sobre doscientos; la dirección de un grupo de investigación, dos tesis con cum laude y la coordinación de una titulación internacional.
 
-&nbsp;
-
-**Docencia** --- 5 quinquenios · DOCENTIA **EXCELENTE, 200/200** · tres décadas de docencia en 13 titulaciones y 7 centros
-
-&nbsp;
-
-**Dirección y liderazgo** --- dirección del grupo de investigación CREAMARKT · 2 tesis doctorales *cum laude* · coordinación de titulación internacional
-
+La exposición sigue el orden del currículum: investigación y transferencia, docencia, y dirección y liderazgo. Empiezo por la investigación.
 :::
 
 
@@ -114,17 +103,13 @@ CV_final.qmd: títulos (l. 4205–4226), acreditación CU (l. 4231–4257), sexe
 
 
 ::: {.notes}
-**Continuidad entre etapas**
-De los métodos computacionales y la elección pública al análisis económico de las artes y la cultura: una línea **acumulativa**, no una sucesión de temas.
+La tabla ordena la trayectoria investigadora en tres etapas, con los trabajos representativos y los principales coautores. La leo como una línea acumulativa donde cada etapa toma métodos y preguntas de la anterior.
 
-Mencionar oralmente el paralelismo con Bruno Frey y Tyler Cowen (public choice → cultural economics), que el propio Resumen del CV señala. Las estancias de esa etapa (George Mason 1998; CREED, Univ. van Amsterdam 2001) se citan oralmente si procede.
+La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico (dirigida por José Vicente Paz) que da lugar a dos capítulos en Computational Mechanics Publications y un artículo en el Journal of Macroeconomics en 1998. 
 
-"JCEC" en la revisión = *Journal of Cultural Economics* (confirmado por el candidato el 04-08-2026; l. 258, 278).
+La segunda, de 1998 a 2010, se centra en la elección pública con diversos trabajos junto a Miguel Puchades-Navarroy José Casas-Pardo: artículos en CIRIEC-España, Constitutional Political Economy, Computational Economics y  capítulos en el homenaje al nobel James Buchanan de Springer y en una monografía en Edward Elgar en 2013. 
 
-Columna "Principales coautores" por indicación del candidato (04-08-2026); coherente con las autorías de §2.1–2.2: J. V. Paz (l. 222, 318, 320), M. Puchades-Navarro y J. Casas-Pardo (l. 230–236, 330), M. Cuadrado-García y M. Caballer-Tarazona (l. 242 en adelante).
-
-[Sources]
-CV_final.qmd, Resumen actividad investigadora (l. 114–120); capítulos: §2.2 (l. 318, 320, 330, 359); artículos: §2.1 (l. 224, 258, 278, 288, 300, 310).
+La tercera, desde 2008, centrada en la economía de la cultura y el consumo cultural: la transición entre estas dos últimas viene del trabajo sobre propiedad intelectual, con el artículo de 2008 en el European Journal of Law and Economics. Los trabajos se realizan junto a Manuel Cuadrado-García, y más recientemente con María Caballer-Tarazona y María Luisa Palma-Martos, y se exploran diversos aspectos  siguió de la participación cultural, las industrias creativas y el big data, en publicaciones como el Journal of Cultural Economics, Poetics y Empirical Economics.
 :::
 
 
@@ -145,19 +130,11 @@ interfaz (sin faceta SDG). Si se quiere la línea, obtenerla vía SciVal o
 etiquetas ODS de cada documento. -->
 
 ::: {.notes}
+La diapositiva  cuantifica la producción científica agrupada por año y categoría y muestra  una producción continua desde 1998 con una concentración creciente en economía de la cultura a partir de 2008.
 
-35 revisiones por pares verificadas (percentil 91)
-2 citas en documentos de política pública 
-más del 90% de las citas WoS son externas
-59% de las citas de Google Scholar recibidas desde 2021
+Los titulares de los principales índices bibliométricos se complementan con información que los cualifica: una serie ascendente de citas (cerca del sesenta por ciento de las citas de Google Scholar se ha recibido desde 2021) y más del noventa por ciento de las de Web of Science son externas y dos citas en documentos de política pública. Añado dos datos que no caben en la tabla: treinta y cinco revisiones por pares verificadas, en el percentil 91.
 
-
-La distribución temporal muestra continuidad (sin huecos largos) y una concentración creciente en economía de la cultura. La serie de citas es ascendente: la mayoría se ha recibido en los últimos cinco años.
-
-Scopus verificado en vivo el 04-08-2026 (sesión UV): 332 citas de 311 documentos · h = 8 · 33 documentos · FWCI 1,048 (2016–2025).
-
-[Sources]
-Figura: scripts/fig_articulos_etapas.py, datos de CV_final.qmd §2.1 (l. 222–312). Métricas: data/metricas_perfiles.md (WoS 03-08-2026; Scopus y GS en vivo 04-08-2026); indicadores del CV (l. 139–187).
+De ese conjunto selecciono ocho publicaciones por su relevancia.
 :::
 
 
@@ -177,10 +154,13 @@ Figura: scripts/fig_articulos_etapas.py, datos de CV_final.qmd §2.1 (l. 222–3
 | **Arts and cultural consumption and diversity research: a bibliometric analysis**  | *Poetics*, 2025 | JCR **Q1** (Sociology) | -- · 1 · 3 |
 
 ::: {.notes}
-La tabla no se lee fila a fila: comentar solo JCE 2011 (la más citada del área), Poetics 2020/2025 (Q1) e IJCS 2021 (review de 20 años); el resto, señalar. Coautores entre paréntesis según las autorías de §2.1 (en Poetics 2025 el primer autor es M. Cuadrado-García). "--" = sin citas aún. Citas: WoS a 03-08-2026; Scopus y GS a 04-08-2026 (perfiles en vivo). Cuartiles: los documentados en el expediente (Poetics Q1 Sociología; IJCS Q2 Business, 42/154); el Q1 de *Tourism Economics* es indicación del candidato (referencia completa facilitada el 04-08-2026) — ojo: el candidato y el CV citan pp. 276–300, pero Scopus registra 27(6), pp. 1276–1300. Si se pregunta por la publicación más citada del perfil: es la derivada del piloto docente con la LSE (Procedia 2010, 223 citas GS y 118 Scopus; se presenta en el bloque de docencia) — esta tabla selecciona solo investigación del área.
+De las ocho, me detengo en tres bloques.
 
-[Sources]
-CV_final.qmd §2.1 (l. 258, 282, 288, 290, 292, 278, 300, 310); data/metricas_perfiles.md (03/04-08-2026).
+El primero es el artículo de 2011 en el Journal of Cultural Economics sobre consumo de música en vivo y grabada, el más citado del área en mi perfil: cuarenta y cuatro citas en Web of Science, cincuenta y cuatro en Scopus y ciento veinticuatro en Google Scholar. 
+
+El segundo bloque son los dos artículos en Poetics, primer cuartil de sociología: el de 2020, sobre los festivales de música como mediadores, y el de 2025, un análisis bibliométrico de la investigación sobre consumo cultural y diversidad. 
+
+El tercero es la revisión de veinte años de investigación sobre consumo de música en el International Journal of Consumer Studies, de 2021, (y primer cuartil de business) que supone una sistematización de la investigación en el campo generada hasta el momento y permite definir la agenda de investigación en adelante.
 :::
 
 
@@ -201,12 +181,13 @@ CV_final.qmd §2.1 (l. 258, 282, 288, 290, 292, 278, 300, 310); data/metricas_pe
 Selección por editorial académica internacional · **29 capítulos y libros** en total · 4 casos docentes en el manual *Marketing Culture and the Arts* (HEC Montréal) y sus ediciones francesas.
 
 ::: {.notes}
-Destacar oralmente solo el Oxford Handbook (2022) como cierre de la serie. Los 4 casos del manual de HEC Montréal conectan con la transferencia (Cabanyal Íntim, FIB). Coautores entre paréntesis según las autorías de §2.2; el capítulo de Edward Elgar 2013 es de autoría única (l. 359).
+Junto a los artículos, la otra vía de publicación han sido los capítulos de libro.
 
-Cautelas: el ISBN que el CV asigna al capítulo de *Digital Transformation…* (978-3-030-…) tiene prefijo Springer, no Routledge — verificar antes de la defensa. La mención del autoinforme a "Managing the Cultural Business (Routledge, 2020)" (l. 136) no tiene entrada en §2.2 y se ha retirado del deck.
+Esta tabla recoge siete capítulos seleccionados por la relevancia de la editorial, Springer, Emerald, Edward Elgar, Routledge y Oxford University Press, entre 2001 y 2022, de los veintinueve capítulos y libros que constan en el currículum.
 
-[Sources]
-CV_final.qmd §2.2 (l. 316–376; en particular l. 330, 357, 359, 369, 371, 373, 376).
+La serie acompaña a la trayectoria investigadora: un capítulo eminentemente computacional en 2001 sobre evolución y aprendizaje en modelos de decisión colectiva, o el capítulo de Edward Elgar que modifica los modelos teóricos de búsqueda de rentas, de autoría única, cierra la etapa de elección pública. La mayor parte de la producción, en economía de la cultura, abarca consumo de música grabada e infracción de derechos de autor y piratería digital o participación cultural desde la doble perspectiva en vivo y digital.
+
+Esta producción se ha presentado y discutido de forma continuada en congresos.
 :::
 
 
@@ -220,12 +201,9 @@ CV_final.qmd §2.2 (l. 316–376; en particular l. 330, 357, 359, 369, 371, 373,
 Total: 118 ponencias · 92 de carácter internacional
 
 ::: {.notes}
-Señalar tres cosas: la recurrencia en las series de referencia (AIMAC desde 2005 sin interrupción, ACEI, IMBRA desde su fundación), el relevo temático que replica la trayectoria investigadora (EPCS 1999–2011 → series del área cultural desde 2004) y la vigencia (AIMAC 2026). El alcance geográfico se comenta oralmente: cinco continentes, de Kyoto a Melbourne, Bogotá y Río de Janeiro (mapa disponible en la reserva R4).
+La figura ordena las comunicaciones a congresos, la mayor parte internacionales, por serie y por año. Tres hechos sobresalen.
 
-"125 ponencias, 96 internacionales" es la cifra del Resumen (l. 126); §2.5 lista 118 ítems (92 internacionales) — defender la cifra del Resumen si se pregunta; la figura usa el recuento literal de §2.5. Partición de las 118 por series (verificada el 04-08-2026 sobre la entidad organizadora de cada ítem): AIMAC 16 (las dos de 2026, "The 18th International Conference", son AIMAC Río) · EPCS 12 · Workshop en Economía y Gestión de la Cultura 12 (incluye sus ediciones como "Workshop on Cultural Economics and Management", Oporto 2015 y Meknés 2019) · ACEI 11 · IMBRA 8 · congresos de marketing 10 · innovación docente 28 · otros 21.
-
-[Sources]
-CV_final.qmd §2.5 (l. 697–1890). Figura: scripts/fig_congresos_series.py, datos data/ponencias_series.csv (agregado serie-año, 04-08-2026).
+La primera es la recurrencia en las series de referencia del ámbito de economía de la cultura: comunicaciones en AIMAC, ACEI,  IMBRA o el Workshop en Economía y Gestión de la Cultura. La segunda es el relevo temático, que reproduce la trayectoria investigadora: la participación en la sociedad europea de elección pública la sustituyen las series del área cultural. La tercera es la vigencia: el último punto de AIMAC está en 2026, con dos comunicaciones presentandas en Río de Janeiro. El círculo rojo marca AIMAC 2007 en València, donde copresidí el comité científico; las veintiocho comunicaciones de innovación docente las recupero en el bloque de docencia.
 :::
 
 ## Proyectos de I+D+i en convocatoria pública
@@ -247,13 +225,13 @@ CV_final.qmd §2.5 (l. 697–1890). Figura: scripts/fig_congresos_series.py, dat
 
 
 ::: {.notes}
+La actividad investigadora se ha apoyado en dos pilares: por un lado los proyectos financiados en convocatoria pública.
 
-No leer la tabla: señalar la continuidad (1998–2019) y detenerse solo en MBA-TABSA (movilidad transatlántica; gestión compartida con la Hochschule Bremen).
+La tabla lista los proyectos en convocatoria pública, con la entidad financiadora, los años y mi participación. Cabe subrayar la continuidad, de 1998 a 2019, y los tres niveles de convocatoria: autonómica, nacional y europea.
 
-"Seis proyectos" es la cifra del Resumen (l. 122): los cinco de §2.3 + MBA-TABSA, que el CV lista en §4.3/§3.4 como proyecto europeo de innovación — explicar el criterio si se pregunta.
+Los primeros siguen la trayectoria que he contado: los dos proyectos sobre teoría del caos, el de la CICYT sobre el funcionamiento de las instituciones democráticas y el de protección del cliente en el sistema financiero; después, la colaboración virtual entre universidades europeas, en 2008 y 2009, y la regulación de la economía colaborativa, de 2016 a 2019.
 
-[Sources]
-CV_final.qmd §2.3 (l. 379–455), MBA-TABSA §4.3 (l. 3238–3246), Resumen (l. 122).
+Me detengo en el MBA-TABSA financiado por la Comisión Europea entre 2010 y 2014, proyecto que dirigí: se trata de un proyecto transatlántico que combina el análisis del impacto de la movilidad del alumnado entre instituciones con el de la creación de vinculos entre investigadores (gestionado junto con la Hochschule Bremen).
 :::
 
 
@@ -280,12 +258,13 @@ Total: 16 contratos/convenios  con el tejido cultural desde 2012 · IP en 6 · A
 
 
 ::: {.notes}
+La segunda fuente de financiación, y de datos, para l aactividad investigadora ha sido la transferencia con el sector cultural.
 
-**La transferencia no es actividad aparte: los convenios generan datos y preguntas que acaban en publicaciones indexadas.**  Resultados de vuelta al ámbito académico: caso "Cabanyal Íntim" en *Marketing Culture and the Arts* (2018) · artículo en *Journal of Homosexuality* (2022, JCR Q2) con origen convenio con Francachela.
+Esta tabla recoge los diez contratos y convenios más recientes con el tejido cultural, desde el estudio de públicos del festival Tercera Setmana con AVETID en 2017. En total son dieciséis desde 2012, seis como investigador principal, una actividad que está reconocida con el sexenio de transferencia del periodo 2012–2017.
 
-Subrayar relación estable con el sector y los 6 como IP. La tabla muestra los 10 contratos más recientes (desde AVETID · Tercera Setmana 2017–18); los 6 anteriores (Cadena SER 2012–13 → Francachela 2017–18, todos como equipo) están en la reserva de transferencia.
+Es importante transmitir que la transferencia forma parte de la investigación: los convenios generan datos y preguntas que acaban en publicaciones. Un ejemplo: el  convenio con Francachela Teatro ha dado lugar al artículo de 2022 en el Journal of Homosexuality, segundo cuartil JCR. Además cabe señalar que La relación con el sector es estable, de las asociaciones de artes escénicas a la Generalitat, ICOM o BIOPARC.
 
-La línea "dirección de M. Cuadrado-García con co-dirección del candidato" es indicación del candidato (04-08-2026) y se refiere al conjunto de los contratos; el CV (§2.4) marca al candidato como IP en 6 de ellos — si el tribunal pregunta, aclarar que "IP" es la responsabilidad formal del contrato art. 83 y la co-dirección describe el reparto real del trabajo en el equipo. La columna Participación se eliminó el 04-08-2026 (decisión del usuario): el papel va ahora entre paréntesis en la primera columna.
+En todos ellos el trabajo se hace en equipo, bajo la dirección de Manuel Cuadrado-García y, en varios de ellos, con mi codirección.
 :::
 
 
@@ -307,12 +286,11 @@ La línea "dirección de M. Cuadrado-García con co-dirección del candidato" es
 6 estancias oficiales · 5 países · ≈18 meses acumulados · Todas con financiación competitiva (Generalitat Valenciana / Universitat de València)
 
 ::: {.notes}
-**Las estancias dibujan el mismo arco que la trayectoria investigadora**: public choice (Center for Study of Public Choice, el centro de Buchanan, 1998) → economía experimental (CREED, 2001) → economía de la cultura y gestión cultural (Viena, 2013). Las dos estancias en HEC Montréal conectan con la vertiente de marketing de las artes.
+Un aApecto final de la dimensión investigadora son las estancias.
 
-Duraciones redondeadas a meses desde las fechas exactas del CV (GMU 04/03–25/08/1998; HEC 09/07–03/08/1999; CREED 01/05–31/08/2001; HEC 24/07–11/09/2007; LSE 29/10–22/12/2007; Viena 09/04–07/06/2013).
+La tabla lista las seis estancias oficiales de investigación, con la financiación y el periodo: seis estancias en cinco países, unos dieciocho meses acumulados y todas con financiación competitiva, de la Generalitat Valenciana o de la Universitat de València.
 
-[Sources]
-CV_final.qmd §2.6 (l. 1892–1950).
+Describen el mismo perfil que la trayectoria investigadora. En 1998, seis meses en el Center for Study of Public Choice de George Mason, el centro de Buchanan. En 2001, cuatro meses en el CREED de la Universidad de Ámsterdam, el centro de economía experimental, donde presenté un seminario. Y en 2013, tres meses en el Institut für Kulturmanagement de la Universidad de Música y Artes Escénicas de Viena, ya en economía y gestión de la cultura. Las dos estancias en HEC Montréal, en 1999 y 2007, conectan con la vertiente de marketing de las artes, la de los casos docentes y de buena parte de los coautores, y la de la London School of Economics en 2007 está en el origen del proyecto docente que presento después.
 :::
 
 
@@ -331,12 +309,13 @@ CV_final.qmd §2.6 (l. 1892–1950).
 
 
 ::: {.notes}
-Ambas tesis en el programa de doctorado en Marketing (mención de calidad). El doctorando en curso G. Picchi coautoriza una de las ponencias aceptadas en AIMAC 2026 — señal de que la línea sigue produciendo.
+Cierro este bloque con la dirección de tesis doctorales. En la tabla se recogen cuatro tesis, dos leídas y dos en curso, con el doctorando, su afiliación actual, el año y las observaciones.
 
-Las universidades entre paréntesis son la afiliación de cada doctorando, indicada por el candidato (04-08-2026); no constan en el CV, que registra las cuatro tesis en la Facultat d'Economia de la Universitat de València. Pendiente de confirmar la afiliación de A. Martin Alfaro (el candidato no la recordaba).
+Las dos tesis leídas lo fueron en el programa de doctorado en Marketing, con mención de calidad, y las dos obtuvieron sobresaliente cum laude. La de Desamparados Lluch, de 2017, sobre segmentación y exhibición cinematográfica en el mercado español con modelos de clases latentes, recibió además el Premio Fundación SGAE de Investigación de 2018. La de Piergiacomo Mion Dalle Carbonare, de 2022, analiza el efecto del entorno de servicio ampliado sobre la satisfacción y la lealtad de los visitantes de museos.
 
-[Sources]
-CV_final.qmd §4.4 (l. 3293–3335), §4.2, Resumen (l. 89); IP en contratos: §2.4 (6 marcados).
+Las dos en curso siguen la misma línea: la de Ariadna Martin Alfaro, sobre el consumidor de música clásica, y la de Giuliano Picchi, en el MIT, sobre el comportamiento del visitante y las intervenciones urbanas en el arte contemporáneo. Picchi coautoriza una de las comunicaciones aceptadas en AIMAC 2026, mientras que con Martin tenemos un JCR en revisión, señal de que la línea sigue produciendo.
+
+Con esto cierro investigación y transferencia y paso al bloque de docencia.
 :::
 
 
@@ -359,12 +338,9 @@ Docencia en: 7 centros  ·   13 titulaciones · 18 asignaturas distintas (32 con
 50% de la docencia total es en inglés 
 
 ::: {.notes}
-Línea secundaria estable en gestión cultural: Licenciatura en Humanidades (en valenciano) y Máster Interuniversitario en Gestión Cultural (Música y Espectáculo Contemporáneo).
+La tabla organiza treinta años de docencia en tres etapas, por área, con las asignaturas. En términos agregados la docencia se distribuye en siete centros, trece titulaciones, dieciocho asignaturas distintas y docencia en castellano,  valenciano (en la actualidad acredito un nivel C1 de la lengua propian de la universitat de València) e inglés (que representa la mitad de la docencia total).
 
-Nombres exactos de asignaturas según §3.2: "Big Data en Economía" (no *Big Data in Economics*; se imparte en inglés), "Ciencia de Datos en Negocio" (§3.2; el Resumen dice "en Negocios"), "Inteligencia de Negocios" (M.U. en Gestión de Negocios Internacionales).
-
-[Sources]
-CV_final.qmd, Resumen actividad docente (l. 91–95), §3.1 (l. 1958–2040), §3.2 (l. 2042–2329; Economía en CC. y Técnicas Estadísticas: l. 2111–2138; másteres: l. 2271–2327).
+La primera etapa, desde 1997, en Economía Política, con docencia en castellano y en valenciano. La segunda empieza con el cambio de área en el curso 2006-2007 y es la de la estadística introductoria e inferencial, con la integración de esas troncales en el grupo de alto rendimiento académico, en inglés. La tercera, desde 2019, cubre mayoritariamente aprendizaje estadístico: Datos No Estructurados y Técnicas Avanzadas de Predicción en el grado en Inteligencia y Analítica de Negocios y cuatro asignaturas de máster, entre ellas Inferencia Causal y Aprendizaje Máquina en el máster en Ciencia de Datos y Big Data en Economía en el máster en Economía, con un peso creciente del posgrado.
 :::
 
 
@@ -377,10 +353,9 @@ CV_final.qmd, Resumen actividad docente (l. 91–95), §3.1 (l. 1958–2040), §
 
 
 ::: {.notes}
-La figura se lee como el espejo docente de la trayectoria investigadora: los rótulos superiores reproducen los tres bloques de la slide anterior y las guías marcan las dos transiciones (2006/07 y 2019/20). Subrayar la superposición: nunca se abandona una etapa del todo (Estadística II de Economía sigue hasta 2024/25).
+Esta figura refleja la trayectoria temporal de mi experiencia docente, distribuida en cada uno de los tres bloques mencionados y codificada por idioma en el que se imparte la docencia  agrupada .
 
-[Sources]
-Figura: scripts/fig_docencia_diversidad.py, datos de CV_final.qmd §3.2 (l. 2042–2329).
+Subrayar la superposición en las diferentes etapas (que no se sustituyen de forma abrupta sino que se solapan) y el peso del inglés desde 2007, que se corresponde a mi integración en  la docencia en el grupo internacional, una apuesta por el equipo directivo de la Facultat d'Economia dirijida por la decana Trinidad Casasús Estellés, para  profundizar la internacionalización del centro.
 :::
 
 ## Docencia internacional
@@ -405,7 +380,9 @@ Figura: scripts/fig_docencia_diversidad.py, datos de CV_final.qmd §3.2 (l. 2042
 **Estancias docentes**: 8 estancias oficiales · Docencia en **programas** grado y posgrado
 
 ::: {.notes}
-Datos de CV_final.qmd: estancias oficiales de docencia §3.7 (l. 2876–2977; 8 estancias: LSE 2007, Hertfordshire 2011, North Florida 2013, UNC Wilmington 2013, Buenos Aires 2013, Hochschule Bremen 2018, IGC Bremen 2018 y 2019); SUNY Albany desde §3.3.2 (l. 2439–2453, curso 2000 con la UPV, no computa como estancia oficial). Statistik I (HB) y Global Economics (IGC) impartidas en inglés.
+Esa docencia en inglés tiene su prolongación fuera de la Universitat, en la participación en la docencia y las estancias docentes que la tabla muestra: siete estancias docentes oficiales, en grado y posgrado, entre 2000 y 2019.
+
+Para instituciones de Estados Unidos, imparto dos cursos de grado en la State University of New York en Albany en el año 2000, dentro de un programa con la Politècnica de València, y en 2013 Econometrics en la University of North Florida y Statistics e International Marketing en la University of North Carolina en Wilmington. En el Reino Unido, el seminario sobre economía y música en la London School of Economics en 2007, que coincide con la estancia de investigación, y un curso sobre la gestión de la pequeña empresa en la industria musical en Hertfordshire en 2011. En Buenos Aires, en 2013, un seminario de maestría sobre información y toma de decisiones en gestión cultural. Y en Bremen, Statistik I en la Hochschule en 2018 y Global Economics en el MBA del International Graduate Center en 2018 y 2019, las dos en inglés.
 :::
 
 ::: {.content-hidden}
@@ -445,10 +422,11 @@ CV_final.qmd, Resumen (l. 85), §3.3.2, §3.7, §4.1 (l. 3046–3131).
 **5 quinquenios** (29 cursos con evaluación positiva) · serie de valoraciones ascendente, estable por encima de **4,3** desde 2017 (máximo 4,78 en 2023-24).
 
 ::: {.notes}
-Los 5 quinquenios cubren 29 cursos evaluados. DOCENTIA 2017/21: nivel básico 100/100; nivel avanzado 100/100 (dedicación 18,5/20 · planificación 25/25 · desarrollo 35/35 · resultados 26,76/30).
+La diapositiva reúne las dos evaluaciones externas de la docencia. A la izquierda, el programa DOCENTIA del periodo 2017–2021, nivel avanzado, con la calificación de excelente y doscientos puntos sobre doscientos.
 
-[Sources]
-CV_final.qmd §3.5.1–3.5.2 (l. 2740–2788), §4.6 (l. 3527–3538).
+A la derecha, la valoración media del alumnado por curso, en una escala de uno a cinco, desde 1996 hasta 2024: una serie ascendente, estable por encima de cuatro con tres desde 2017, con el máximo de cuatro con setenta y ocho en el curso 2023-24.
+
+Quiero pensar que parte de esa evaluación está vinculada a la innovación docente.
 :::
 
 
@@ -471,18 +449,9 @@ CV_final.qmd §3.5.1–3.5.2 (l. 2740–2788), §4.6 (l. 3527–3538).
 
 
 ::: {.notes}
-Código del grupo consolidado: GCID23-2575334 (mención 06/03/2023, renovada 02/02/2026). El piloto con la LSE (2009/10) fue financiado por el MICINN.
+Innovación docente que queda resumida en catorce proyectos, tres como investigador principal, la codirección de un grupo de innovación consolidado, veintiocho comunicaciones y cinco artículos más un capítulo de libro.
 
-Las 28 comunicaciones salen del recuento verificado de §2.5 (04-08-2026), con criterio explícito: comunicaciones presentadas en congresos y jornadas de educación e innovación docente (CIDUI 2006 ×3 y 2008 y 2012; Trobades/Jornades d'Innovació Educativa UV 2010, 2011, 2013, 2020, 2021, 2022; Xarxes/Redes 2009, 2011, 2015; REDES-INNOVAESTIC 2020, 2021; WCES 2010, 2012; Jornada Nacional d'Estudis Universitaris 2009, 2011; FECIES 2011; UNIVEST 2011; Jornadas de Innovación Educativa en Estadística 2010; Unitat d'Innovació Educativa UV 2011; Regent's College 2012 ×2; Congreso Internacional de Innovación Docente 2022 ×2). La cifra "18" de la v2 no era trazable y se ha sustituido.
-
-Publicaciones de innovación docente: Procedia SBS 2010 (l. 252) y 2012 (l. 260), Rev. Iberoamericana de Educación 2010 (l. 254), World J. on Educational Technology 2013 (l. 264), RIEJS 2022 (l. 294), capítulo en Experiencias de Innovación Docente en Estadística 2011 (l. 353). El Resumen menciona *Revista de Educación* (l. 88) pero no hay entrada en §2.1 — no citarla.
-
-Cautela: el CV no documenta ningún rol como evaluador DOCENTIA ni en paneles de evaluación docente — no atribuirse esa función. Fechas del proyecto 2021/22 divergen entre §3.4 (l. 2701) y §4.3 (l. 3254).
-
-Los trabajos dirigidos (TFG/TFM) se trasladaron a la slide "Otras actividades de liderazgo y participación en la vida universitaria" (decisión del usuario, 04-08-2026).
-
-[Sources]
-CV_final.qmd §3.4 (l. 2551–2735), §4.3 (l. 3232–3286; IP y co-IP verificados 04-08-2026), grupo consolidado (l. 3571–3583), comunicaciones de innovación §2.5, publicaciones §2.1 (l. 252–264, 294) y §2.2 (l. 353), trabajos §4.7.6 (l. 3996–4035); citas del proyecto LSE: data/metricas_perfiles.md (Procedia 2010).
+El grupo de innovación, que canaliza los proyectos de innovación docente, es multiaprendizaje, transversalidad y creatividad (continúa al grupo Innova multidisciplinar de 2009 a 2012) y obtuvo la mención de grupo consolidado en 2023, renovada en 2026. He dirigido tres proyectos  recientemente y he presentado veintiocho comunicaciones que se reparten en las series de referencia de la innovación: CIDUI, las jornadas de innovación educativa de la Universitat, las redes INNOVAESTIC, WCES y el congreso internacional de innovación docente de 2022. Gran parte de esta actividad en innovación se h atraducido en publicaciones en diversas revistas y/o monografías.
 :::
 
 
@@ -510,12 +479,9 @@ De un total de **17 cargos y tareas de gestión** la gestión se ha concentrado 
 
 
 ::: {.notes}
-Slide breve (~45 segundos): no leer la tabla; subrayar solo la frase de los dos ejes.
+En lo que respecta a liderazgo y gestión, la tabla lista los cargos de gestión con  periodo y  ámbito, que se resumen en diecisiete cargos y tareas de gestión, donde la mayoría se concentra en la internacionalización.
 
-§4.1 lista 18 ítems pero dos son el mismo cargo duplicado (comisión de intercambio de la Facultat, l. 3064 y 3091): el recuento real es 17.
-
-[Sources]
-CV_final.qmd §4.1 (l. 2986–3153).
+Entre 2010 y 2014 siendo coordinador de intercambios de las dobles titulaciones de ADE-GEDE y de International Business, fui el representé de la Facultat d'Economia (por delegaciónde la vicedecana Delfina Soria Bonet) en la Transatlantic Business School Alliance y ; en el mismo periodo fui miembro de la Comisión de Intercambio de Estudiantes y de la Comisión de Relaciones Internacionales de la Universitat, y de la comisión de intercambio de la Facultat. En otro orden de cosas, desde 2021 formo parte de la comisión de coordinación académica del máster en Ciencia de Datos.
 :::
 
 ## Liderazgo docente e internacionalización
@@ -534,10 +500,7 @@ CV_final.qmd §4.1 (l. 2986–3153).
 : {tbl-colwidths="[22,78]"}
 
 ::: {.notes}
-Este slide agrupa el liderazgo de perfil docente en el mismo formato de tabla que el investigador (slide anterior). Evitar repetir el detalle de GEDE/ATLANTIS si ya se ha comentado en internacionalización docente: aquí se enuncia como responsabilidad de dirección.
-
-[Sources]
-CV_final.qmd §4.3 (l. 3232–3286), §4.1 (l. 3100–3128), §4.7.7 (l. 4063–4084), §4.7.5 (l. 3884–3993), grupo consolidado (l. 3571–3583).
+El liderazgo de perfil docente se materializa en la dirección de cuatro proyectos docentes y de innovación. Además, he coordinado  el Graduado Europeo en Dirección de Empresas, titulación propia de la Universitat, entre 2010 y 2014, un cargo académico unipersonal. He sido coordinador de la unidad docente de Estadística del área en el curso 2020-21, formé parte de la comisión delegada para la reforma de la estadística introductoria en 2016-17, coordiné un grupo de estudiantes compitiendo en el programa MOTIVEM en 2021 así como guías docentes de grado y posgrado. Y en internacionalización he sido coordinador responsable del convenio con la Zarb School of Business de Hofstra University, en Nueva York, de 2014 a 2019, y de los intercambios de las dobles titulaciones de la Facultat d'Economia hasta 2014.
 :::
 
 
@@ -557,12 +520,15 @@ CV_final.qmd §4.3 (l. 3232–3286), §4.1 (l. 3100–3128), §4.7.7 (l. 4063–
 : {tbl-colwidths="[22,78]"}
 
 ::: {.notes}
-CREAMARKT: cuatro líneas (big data e industrias creativas, microeconometría de la participación cultural, consumidor 2.0, diversidad en mercados culturales); dirección desde el 11/11/2022. IMBRA: vicepresidente 2015–2019, junta ejecutiva 2019–2023.
+El liderazgo investigador se materializa en cinco vertientes. La primera es el grupo de investigación CREAMARKT, que dirijo desde noviembre de 2022 centrado en cuatro líneas de investigación: big data aplicado a las industrias creativas, microeconometría de la participación cultural, consumidor 2.0 y diversidad en los mercados culturales.
 
-Comités científicos según §4.5.2: AIMAC 2007 (copresidencia del comité y presidencia de la sesión plenaria de apertura), I Workshop en Economía y Gestión de la Cultura (Sevilla, 25/11/2009), II Workshop (València, 4-5/11/2010) y 8th International Congress of the International Association on Public and Nonprofit Marketing (IAPNM 2009, València, 17-19/06/2009) — el CV no recoge más comités científicos.
+La segunda es mi participación en  asociaciones científicas: fundador de IMBRA, la International Music Business Research Association, y su vicepresidente entre 2015 y 2019 y miembro de la junta ejecutiva hasta 2023, y miembro de ACEI y de AIMAC. 
 
-[Sources]
-CV_final.qmd §4.7.1 (l. 3597–3615), §4.5 (l. 3345–3415), §4.7.3 (l. 3756–3812), reconocimiento Poetics (l. 3563).
+La tercera, la labor editorial: he sido co-editor invitado del número especial sobre consumo de las artes, diversidad e inclusión del International Journal of Arts Management en 2023. 
+
+La cuarta, participación en comités: copresidí el comité científico de AIMAC 2007 en València, he participado en los paneles de evaluación de once ediciones de AIMAC y formé parte de los comités de los dos primeros Workshop en Economía y Gestión de la Cultura y del congreso de marketing público y no lucrativo de 2009. 
+
+La quinta, la evaluación científica: treinta y cinco revisiones verificadas para quince revistas, percentil 91, y el reconocimiento de Poetics a esa actividad en 2026.
 :::
 
 
@@ -584,12 +550,15 @@ CV_final.qmd §4.7.1 (l. 3597–3615), §4.5 (l. 3345–3415), §4.7.3 (l. 3756�
 : {tbl-colwidths="[22,78]"}
 
 ::: {.notes}
-Slide de recapitulación (~1 min): no leer la tabla; premios y reconocimientos ya presentados no se desarrollan. De "otras actividades", subrayar la selección orientada a la comisión: internacionalización (invitaciones y evaluación externa), servicio al sistema (tribunales, comisiones de plazas) y proyección social (jornadas y divulgación). Las invitaciones de 2026 (Oviedo: métodos de aprendizaje automático; Almagro: mesa redonda) muestran vigencia en las dos líneas del perfil.
+Cierro la presentación del curriculum con una recapitulación de la que destaco tres grupos de actividades.
 
-Seminario CREED: ponencia invitada "On rent-seeking correlated equilibria", CREED Seminars, Universiteit van Amsterdam, 01/06/2001 (§4.7.2, l. 3629–3633). Jornadas: nombres literales de §4.7.8 (l. 4102–4108). La fila "Trabajos dirigidos" se traslada aquí desde la slide de innovación docente (decisión del usuario, 04-08-2026; §4.7.6, l. 3996–4035).
+El primero es la proyección internacional: las conferencias y seminarios por invitación, del CREED de Ámsterdam en 2001 a la London School of Economics, Viena o Buenos Aires, y la evaluación externa de tesis y trabajos en Télécom ParisTech, Berlín, Hannover, Estocolmo y Girona. 
 
-[Sources]
-CV_final.qmd §4.6 (l. 3505–3587), §4.7.2 (l. 3629–3740), §4.7.4 (l. 3824–3874), §4.5.2–4.5.3 (l. 3454–3499), §4.7.6 (l. 3996–4035), §4.7.8 (l. 4094–4142).
+El segundo es el servicio al sistema universitario: tres tribunales de tesis y tres comisiones de plazas de profesorado, en el País Vasco, Valladolid y el CEU. 
+
+El tercero es la proyección social: cinco jornadas académico-profesionales con el sector cultural entre 2015 y 2021 y la divulgación en el Observatorio Social de la Caixa y en EconomistsTalkArt. Las invitaciones de 2026, en la Universidad de Oviedo sobre aprendizaje automático y en el curso de verano de Almagro, muestran que las dos líneas del perfil siguen activas.
+
+El balance es el del resumen del currículum: una investigación consolidada con una estructura estable e internacional, liderazgo editorial y asociativo en el área, una docencia evaluada como excelente, internacional y una transferencia sostenida al sector cultural.
 :::
 
 <!-- ============ RESERVAS (ocultas en ambos formatos) ============ -->
