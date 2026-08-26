@@ -98,6 +98,13 @@ format:
           color: #2D6A7A;
           margin-bottom: 0.6em;
         }
+
+        /* Cierre «Agradecimientos»: sección invertida (teal de las
+           secciones de parte) con el tamaño de los divisores (1.7em),
+           un punto por encima de las secciones (1.6em). */
+        .reveal .slides section.closing-thanks h1 {
+          font-size: 1.7em;
+        }
         </style>
     title-slide-attributes:
       data-footer: "false"
@@ -147,6 +154,16 @@ format:
           \vspace{0.5em}
           {\color{mLightBrown}\rule{\textwidth}{0.05em}}
           \vfill}
+<<<<<<< HEAD
+=======
+        % Cierre «Agradecimientos»: fondo teal a página completa vía TikZ
+        % dentro de un frame [plain] normal. No se usa el [standout] de
+        % metropolis: con la plantilla beamer de Quarto su \begingroup
+        % queda sin cerrar (\end occurred inside a group) y el lienzo
+        % oscuro contamina los frames posteriores.
+        \usepackage{tikz}
+        \definecolor{SlateTealDeck}{HTML}{2D6A7A}
+>>>>>>> 232ccaa (Version preliminar para exponer)
 # row-rules.lua debe correr DESPUÉS de los filtros internos de Quarto
 # (centinela `quarto`): si corre antes, serializa las tablas sin procesar
 # tbl-colwidths y aparecen captions espurios y desbordes de columna.
@@ -213,3 +230,62 @@ execute:
 :::
 
 {{< include _parte3_investigacion.qmd >}}
+<<<<<<< HEAD
+=======
+
+::: {.content-visible when-format="revealjs"}
+
+# Agradecimientos {background-color="#2D6A7A" .center .closing-thanks}
+
+```{=html}
+<script>
+// Portada final: clona la portada generada por Quarto y la añade como
+// última slide. Conserva la id #title-slide para heredar todos sus
+// estilos (portada y clon comparten reglas; getElementById y la
+// navegación por hash siguen resolviendo a la portada original).
+window.addEventListener("load", function () {
+  var deck = window.Reveal;
+  var slides = document.querySelector(".reveal .slides");
+  var title = document.getElementById("title-slide");
+  if (!deck || !slides || !title) return;
+  var append = function () {
+    var clone = title.cloneNode(true);
+    // Limpiar el estado de Reveal heredado al clonar y marcar el clon
+    // como «future»: al insertarse es siempre la última slide, y sin
+    // esa clase quedaría visible superpuesto a la slide actual. La
+    // navegación posterior reasigna past/present/future normalmente.
+    clone.classList.remove("past", "present");
+    clone.classList.add("future");
+    clone.removeAttribute("hidden");
+    clone.setAttribute("aria-hidden", "true");
+    clone.style.display = "none";
+    slides.appendChild(clone);
+    deck.sync();
+    deck.layout();
+  };
+  if (deck.isReady && deck.isReady()) { append(); } else { deck.on("ready", append); }
+});
+</script>
+```
+
+:::
+
+::: {.content-visible when-format="beamer"}
+
+## {.plain}
+
+```{=latex}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[SlateTealDeck] (current page.south west) rectangle (current page.north east);
+  \node at (current page.center) {\usebeamerfont{title}\color{white}Agradecimientos};
+\end{tikzpicture}
+```
+
+---
+
+```{=latex}
+\titlepage
+```
+
+:::
+>>>>>>> 232ccaa (Version preliminar para exponer)

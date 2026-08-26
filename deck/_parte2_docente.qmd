@@ -143,8 +143,13 @@ Quizá es ese tercer objetivo lo que diferencia el enfoque de la asignatura: pre
 |:-:|--------|-----------|
 | 1 | 1. Fundamentos | Entorno de trabajo reproducible |
 | 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros · S2: grupos y dataset del proyecto |
+<<<<<<< HEAD
 | 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA · S6: modelo base del proyecto |
 | 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S8: ensambles del proyecto |
+=======
+| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA  |
+| 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S6: modelo base del proyecto · S8: ensambles del proyecto |
+>>>>>>> 232ccaa (Version preliminar para exponer)
 | 9 | 5. Máquinas de vectores de soporte (SVM)  | Comparación transversal de modelos · S9: SVM |
 | 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras · S10: revisión y retroalimentación |
 | **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` · S13: extensión causal** |
@@ -396,11 +401,11 @@ El desarrollo del proyecto se organiza a lo largo de una serie de entregas parci
 
 &nbsp;
 
-| **Dimensión (peso)** | **Qué se observa** | **Excelente (9–10)** | **Apto (5–6)** | **No apto** |
+| **Dimensión (peso)** | **Qué se evalúa** | **Excelente (9–10)** | **Apto (5–6)** | **No apto** |
 |---|---|---|---|---|
 | **Formulación y datos (10%)** | Pregunta relevantes, dataset, EDA | pregunta orientada a toma decisiones susceptible de respuesta empírica; limitaciones de los datos discutidas | Pregunta clara, EDA correcto | Dataset sin justificar; pregunta ambigua; EDA ausente |
 | **Pipeline reproducible (20%)** | Repositorio, entorno, ejecución | reproduce todo desde datos crudos, entorno versionado | Reproducible con intervención menor documentada | No reproduce; preprocesado fuera del pipeline (fuga) |
-| **Modelización (25%)** | Baseline → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente | Sin baseline; métricas elegidas a posteriori |
+| **Modelización (25%)** | Baseline → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente; métricas incompletas | Sin baseline; métricas elegidas a posteriori |
 | **Interpretación y comunicación (15%)** | Memoria, figuras, lectura de resultados | Resultados traducidos a decisión de negocio; incorpora incertidumbre  | Interpretación correcta de métricas y efectos | Lectura mecánica o errónea de las salidas |
 | **Defensa oral individual (30%)** | 10' grupo + preguntas individuales | Cada miembro explica y modifica en vivo cualquier parte del código | Cada miembro explica las partes que firmó | Un miembro no sabe explicar código propio |
 
@@ -481,8 +486,8 @@ $\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad$ con $f_i \in [0.8,\, 1.2
 **Política de IA: permitida, declarada, auditada**
 
 - Uso libre de asistentes para código, depuración y redacción (favoreciendo uso crítico y responsable)
-- **Obligatorio:** el registro completo de prompts se entrega como apéndice del proyecto y de las entregas relevantes — no una selección
-- Evaluado sobre los prompts: el log se cruza con el código y la memoria buscando coherencia prompts $\leftrightarrow$ producto; la transparencia se premia. Un producto que excede con mucho lo que su log explica es señal de alerta
+- **Obligatorio:** el registro completo de prompts se entrega como apéndice del proyecto y de las entregas relevantes
+- Evaluado sobre los prompts: el registro se cruza con el código y la memoria buscando coherencia prompts $\leftrightarrow$ trabajo; se valora la transparencia. Alerta si resultado excede lo que el registro explica
 
 
 :::
@@ -721,13 +726,13 @@ $$y=\tau D+g(X)+\epsilon,$$
 
 **Problema 1**
 
-Los modelos de aprendizaje automático regularizan (de forma explícita o implícita) los predictores, introduciendo el denominado *sesgo de regularización*.
+Los modelos de aprendizaje automático regularizan (de forma explícita o implícita) los predictores $\to$ *sesgo de regularización*.
 
 ---
 
 **Problema 2**
 
-Utilizar el mismo conjunto de datos para estimar una función y realizar predicciones introduce *sesgo por sobreajuste*.
+Utilizar el mismo conjunto de datos para estimar una función y realizar predicciones $\to$ *sesgo por sobreajuste*.
 
 ---
 
@@ -745,9 +750,9 @@ $$y=\tau D+g(X)+\epsilon,$$
 $\tilde{y}=y-\hat{g}(X)$;
 3. Recuperar el efecto $\tau$ por la regresión de $\tilde{y}$ sobre $D$.
 
-**Sesgo de regularización**: la estimación $\hat{g}$   selecciona variables $X$ por su capacidad para **predecir $y$** pudiendo atenuar/eliminar un control $x^*$ poco correlacionado con $y$ (y que sea muy relevante para explicar $D$). En este caso el modelo de segunda etapa atribuirá parte de la relación de $x^*$ con $D$  a $\tau$: se trata de un tipo de **sesgo por variable omitida**.
+**Sesgo de regularización**: la estimación $\hat{g}$   selecciona variables $X$ por su capacidad para **predecir $y$** pudiendo atenuar/eliminar un control $x^*$ poco correlacionado con $y$ (pero muy relevante para explicar $D$). En este caso el modelo de segunda etapa atribuirá parte de la relación de $x^*$ con $D$  a $\tau$  $\to$ **sesgo por variable omitida**.
 
-**Sesgo por sobreajuste**: entrenamiento y predicción sobre las mismas observaciones atenúa parte del efecto causal (lo absorben los residuos de $y$) y aumenta la varianza resiual del tratamiento (la estimación de $\tau$ y su error estándar deja de ser fiable).
+**Sesgo por sobreajuste**: entrenamiento y predicción sobre las mismas observaciones atenúa parte del efecto causal (lo absorben los residuos de $y$) y aumenta la varianza resiual del tratamiento $\to$ la estimación de $\tau$ y su error estándar dejan de ser fiables.
 
 :::
 
@@ -775,7 +780,7 @@ Estimador de efecto causal en dos etapas
 - Primera etapa
   1. Entrenar funciones $\hat{g}$ y $\hat{m}$ para respuesta y tratamiento. 
   2. Generar versiones residualizadas  
-  $\tilde{y}=y-\hat{g}(X)$ y $\tilde{D}=D-\hat{m}(X)$ (separar entrenamiento/predicción)
+  $\tilde{y}=y-\hat{g}(X)$ y $\tilde{D}=D-\hat{m}(X)$ (separando entrenamiento/predicción)
 - Segunda etapa: estimar la regresión $\tilde{y}=\tau \tilde{D}+\epsilon$
 
 ---
