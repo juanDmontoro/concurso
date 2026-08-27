@@ -62,13 +62,13 @@ La asignatura, dentro de la materia Herramientas y Técnicas del Análisis de Da
 
 | Asignatura | Curso (cuatr.) | Ámbito | Aportación principal |
 |---------|:-:|----|---------|
-| Minería de Datos en Negocios | 2 (1)| Exploración | Segmentación, reducción de dimensión, reglas de asociación y árboles |
+| Minería de Datos en Negocios | 2 (1)| Exploración | Segmentación, reducción de dimensión, reglas de asociación, árboles |
 | Muestreo y Encuestas | 3 (2) | Obtención de información | Diseño muestral, cuestionarios, sesgos, datos faltantes e imputación |
-| Predicción con Datos Transversales | 2 (1) | Predicción | Regresión, GLM, no linealidad, validación, regularización y KNN |
-| Predicción con Datos Temporales | 2 (2) | Predicción | Componentes, alisado, ARIMA y evaluación por horizonte |
-| **Técnicas Avanzadas de Predicción en Negocios** | **3 (1)** |**Predicción** | **Ensambles, redes neuronales, SVM y efectos causales** |
-| Datos Espaciales y Espacio-Temporales | 3 (2) | Modelización espacial | Exploración espacial, *kriging*, modelos espaciales y predicción con incertidumbre |
-| Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP y recomendación |
+| Predicción con Datos Transversales | 2 (1) | Predicción | Regresión, GLM, no linealidad, validación, regularización, KNN |
+| Predicción con Datos Temporales | 2 (2) | Predicción | Componentes, alisado, ARIMA, evaluación por horizonte |
+| **Técnicas Avanzadas de Predicción en Negocios** | **3 (1)** |**Predicción** | **Ensambles, redes neuronales, SVM, predicción vs. explicación** |
+| Datos Espaciales y Espacio-Temporales | 3 (2) | Modelización espacial | Exploración espacial, *kriging*, modelos espaciales, predicción con incertidumbre |
+| Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP, recomendación |
 
 ::: {.notes}
 La tabla presenta las siete asignaturas de la materia, junto a su información básica.
@@ -142,12 +142,12 @@ Quizá es ese tercer objetivo lo que diferencia el enfoque de la asignatura: pre
 | **Semanas** | **Tema** | **Práctica / hito del proyecto** |
 |:-:|--------|-----------|
 | 1 | 1. Fundamentos | Entorno de trabajo reproducible |
-| 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros · S2: grupos y dataset del proyecto |
-| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA  |
-| 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S6: modelo base del proyecto · S8: ensambles del proyecto |
-| 9 | 5. Máquinas de vectores de soporte (SVM)  | Comparación transversal de modelos · S9: SVM |
-| 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras · S10: revisión y retroalimentación |
-| **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` · S13: extensión causal** |
+| 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros / S2: grupos y dataset del proyecto |
+| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia / S4: EDA  |
+| 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base / S6: modelo base del proyecto · S8: ensambles del proyecto |
+| 9 | 5. Máquinas de vectores de soporte (SVM)  | Comparación transversal de modelos / S9: SVM |
+| 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras / S10: revisión y retroalimentación |
+| **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` / S13: extensión causal** |
 | 15 | Evaluación | S15: defensa oral del proyecto |
 
 ::: {.callout-note icon="false"}
@@ -400,7 +400,7 @@ El desarrollo del proyecto se organiza a lo largo de una serie de entregas parci
 |---|---|---|---|---|
 | **Formulación y datos (10%)** | Pregunta relevantes, dataset, EDA | pregunta orientada a toma decisiones susceptible de respuesta empírica; limitaciones de los datos discutidas | Pregunta clara, EDA correcto | Dataset sin justificar; pregunta ambigua; EDA ausente |
 | **Pipeline reproducible (20%)** | Repositorio, entorno, ejecución | reproduce todo desde datos crudos, entorno versionado | Reproducible con intervención menor documentada | No reproduce; preprocesado fuera del pipeline (fuga) |
-| **Modelización (25%)** | Baseline → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente; métricas incompletas | Sin baseline; métricas elegidas a posteriori |
+| **Modelización (25%)** | Modelo base → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente; métricas incompletas | Sin modelo base; métricas elegidas a posteriori |
 | **Interpretación y comunicación (15%)** | Memoria, figuras, lectura de resultados | Resultados traducidos a decisión de negocio; incorpora incertidumbre  | Interpretación correcta de métricas y efectos | Lectura mecánica o errónea de las salidas |
 | **Defensa oral individual (30%)** | 10' grupo + preguntas individuales | Cada miembro explica y modifica en vivo cualquier parte del código | Cada miembro explica las partes que firmó | Un miembro no sabe explicar código propio |
 
