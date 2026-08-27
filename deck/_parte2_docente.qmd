@@ -143,13 +143,8 @@ Quizá es ese tercer objetivo lo que diferencia el enfoque de la asignatura: pre
 |:-:|--------|-----------|
 | 1 | 1. Fundamentos | Entorno de trabajo reproducible |
 | 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros · S2: grupos y dataset del proyecto |
-<<<<<<< HEAD
-| 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA · S6: modelo base del proyecto |
-| 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S8: ensambles del proyecto |
-=======
 | 4–5 | 3. Modelo lineal generalizado con regularización | Modelo base: GLM sobre conjunto de datos de referencia · S4: EDA  |
 | 6–8 | 4. Ensambles: RF, XGBoost y *stacking* | Competición contra el modelo base · S6: modelo base del proyecto · S8: ensambles del proyecto |
->>>>>>> 232ccaa (Version preliminar para exponer)
 | 9 | 5. Máquinas de vectores de soporte (SVM)  | Comparación transversal de modelos · S9: SVM |
 | 10–12 | 6. Redes neuronales y aprendizaje profundo | Keras · S10: revisión y retroalimentación |
 | **13–14** | **7. Predicción y efectos causales** | **Simulación de sesgos + workflow `DoubleML` · S13: extensión causal** |

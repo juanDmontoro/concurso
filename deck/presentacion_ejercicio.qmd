@@ -154,8 +154,6 @@ format:
           \vspace{0.5em}
           {\color{mLightBrown}\rule{\textwidth}{0.05em}}
           \vfill}
-<<<<<<< HEAD
-=======
         % Cierre «Agradecimientos»: fondo teal a página completa vía TikZ
         % dentro de un frame [plain] normal. No se usa el [standout] de
         % metropolis: con la plantilla beamer de Quarto su \begingroup
@@ -163,7 +161,6 @@ format:
         % oscuro contamina los frames posteriores.
         \usepackage{tikz}
         \definecolor{SlateTealDeck}{HTML}{2D6A7A}
->>>>>>> 232ccaa (Version preliminar para exponer)
 # row-rules.lua debe correr DESPUÉS de los filtros internos de Quarto
 # (centinela `quarto`): si corre antes, serializa las tablas sin procesar
 # tbl-colwidths y aparecen captions espurios y desbordes de columna.
@@ -230,8 +227,6 @@ execute:
 :::
 
 {{< include _parte3_investigacion.qmd >}}
-<<<<<<< HEAD
-=======
 
 ::: {.content-visible when-format="revealjs"}
 
@@ -288,4 +283,3 @@ window.addEventListener("load", function () {
 ```
 
 :::
->>>>>>> 232ccaa (Version preliminar para exponer)
