@@ -96,9 +96,9 @@ CV_final.qmd: títulos (l. 4205–4226), acreditación CU (l. 4231–4257), sexe
 
 | Etapa | Trabajos representativos | Principales coautores |
 |-----|----------|-------|
-| **Economía computacional** (1995–2003) | Capítulos en *Mathematics with Vision* (CMP, 1995) e *Innovations in Mathematics* (CMP, 1997) · Tesis doctoral "Simulación y Detección de Caos Macroeconómico" (1996) · *Journal of Macroeconomics* (1998) | José V. Paz-García |
-| **Elección pública** (1998–2010) | Capítulos en *Methods and Moral in Constitutional Economics. Essays in Honour of James M. Buchanan* (Springer, 2001) y en *Constitutional Economics and Public Institutions* (Edward Elgar, 2013) · *CIRIEC-España* (2000) · *Constitutional Political Economy* (2001) · *Computational Economics* (2003)   | Miguel Puchades-Navarro <br> José Casas-Pardo |
-| **Economía de la cultura y consumo cultural** (2008--) | Transición vía propiedad intelectual $\to$ participación cultural e industrias creativas y *big data* : *European Journal of Law and Economics* (2008) · *Journal of Cultural Economics* (2011, 2018) · *Poetics* (2020, 2025) · *Empirical Economics* (2023) | Manuel Cuadrado-García <br> María Caballer-Tarazona <br> María Luisa Palma-Martos |
+| **Economía computacional** <br> (1995–2003) | Tesis doctoral "Simulación y Detección de Caos Macroeconómico" (1996) · Capítulos en *Mathematics with Vision* (CMP, 1995) e *Innovations in Mathematics* (CMP, 1997) · *Journal of Macroeconomics* (1998) | José V. Paz-García |
+| **Elección pública** <br> (1998–2010) | Capítulos en *Methods and Moral in Constitutional Economics. Essays in Honour of James M. Buchanan* (Springer, 2001) y en *Constitutional Economics and Public Institutions* (Edward Elgar, 2013) · *CIRIEC-España* (2000) · *Constitutional Political Economy* (2001) · *Computational Economics* (2003)   | Miguel Puchades-Navarro <br> José Casas-Pardo |
+| **Economía de la cultura y consumo cultural** <br > (2008--) | Transición vía propiedad intelectual $\to$ participación cultural e industrias creativas y *big data* : *European Journal of Law and Economics* (2008) · *Journal of Cultural Economics* (2011, 2018) · *Poetics* (2020, 2025) · *Empirical Economics* (2023) | Manuel Cuadrado-García <br> María Caballer-Tarazona <br> María Luisa Palma-Martos |
 
 
 
