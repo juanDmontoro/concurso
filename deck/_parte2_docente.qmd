@@ -1,5 +1,12 @@
 # Técnicas avanzadas de predicción en negocios {background-color="#2D6A7A"}
 
+:::{.notes}
+La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+
+La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
+
+:::
+
 ## Grado en inteligencia y analítica de negocios: BIA {.shrink}
 
 &nbsp; 
@@ -46,13 +53,13 @@ La asignatura busca formar profesionales con conocimientos de métodos computaci
 ::::
 
 ::: {.notes}
-La asignatura Técnicas Avanzadas de Predicción en Negocios, es obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
-La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
-El grado en BIA se imparte en la Facultat d'Economia y cuenta anualmente con cincuenta plazas de nueva ingreso (el grado con el acceso más restringido de los ofertados). Su objetivo es formar profesionales capaces de convertir los datos en decisiones empresariales, combinando competencias tecnológicas y cuantitativas con una sólida visión de negocio.
+El grado en BIA se imparte en la Facultat d'Economia y cuenta anualmente con cincuenta plazas de nueva ingreso. Se trata del grado con un elevado ratio de demanda (2.8 solicitudes en primera opción por plaza ofertada) y la tercera mayor nota de corte de todos los grados  ofrecidos por la facultad.
 
-La asignatura a la que hace referencia esta propuesta se integra dentro de la materia Herramientas y Técnicas del Análisis de Datos.
+Su objetivo es formar profesionales capaces de convertir los datos en decisiones empresariales, combinando competencias tecnológicas y cuantitativas con una sólida visión de negocio.
+
+La asignatura de esta propuesta se integra dentro de la materia Herramientas y Técnicas del Análisis de Datos.
 :::
 
 
@@ -73,11 +80,11 @@ La asignatura a la que hace referencia esta propuesta se integra dentro de la ma
 | Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP, recomendación |
 
 ::: {.notes}
+Se trata de una materia que engloba siete asignaturas cuya información básica se muestra tabulada.
 
+Es en tercer curso cuando los estudiantes llegan a Técnicas Avanzadas de Predicción tras haber cursado Minería de Datos en Negocios y las dos asignaturas de predicción, con datos transversales y temporales. 
 
-La materia engloba siete asignaturas, cuya información básica se muetsra tabulada.
-
-Es en tercer curso cuando los estudiantes llegan a Técnicas Avanzadas de Predicción en Negocios (tras haber cursado en segundo curso Minería de Datos en Negocios y las dos asignaturas de predicción, con datos transversales y temporales). El curso cubre diversos estimadores paramétricos y no paramétricos y diferencia entre predicción y explicación con el objetivo de utilizar técnicas de aprendizaje estadístico para la estimación de parámetros estructurales.
+El curso cubre diversos estimadores paramétricos y no paramétricos y diferencia entre predicción y explicación con el objetivo de utilizar técnicas de aprendizaje estadístico para la estimación de parámetros estructurales.
 :::
 
 
@@ -129,10 +136,10 @@ El **Tema 7** desarrolla el último objetivo mediante un caso de negocio.
 ::: {.notes}
 La ficha de la asignatura concreta su punto de partida, y muestra
 
-1. Por un lado los datos formales: carácter, ubicación, y carga docente y de trabajo.
+1. Por un lado los datos formales: carácter, ubicación, y carga docente y de trabajo.  
 2.  Por otro lado lo que la signatura asume y lo que aporta. 
 
-Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartición en una facultad de economía obliga a reconocer que muchas preguntas de negocio no son meramente predictivas, sino que tienen una naturaleza causal. El estudiantado debe aprender a identificar cuándo una pregunta exige una respuesta causal y no solo una predicción. Retomaré esta distinción al final de esta segunda parte.
+Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartición en una facultad de economía obliga a reconocer que muchas preguntas de negocio no son meramente predictivas, sino que tienen una naturaleza causal. El estudiantado debe aprender a identificar cuándo para responder una pregunta no basta solo una predicción. Retomaré esta distinción al final de esta segunda parte.
 :::
 
 
@@ -140,7 +147,7 @@ Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartici�
 
 &nbsp;
 
-| **Semanas** | **Tema** | **Práctica / hito del proyecto** |
+| **Semanas** | **Tema** | **Práctica / Entrega del proyecto** |
 |:-:|--------|-----------|
 | 1 | 1. Fundamentos | Entorno de trabajo reproducible |
 | 2–3 | 2. Selección y evaluación | Validación cruzada e hiperparámetros / S2: grupos y dataset del proyecto |
@@ -157,12 +164,11 @@ A lo largo de la asignatura utilizamos un mismo conjunto de datos como caso de e
 :::
 
 ::: {.notes}
+Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla, además muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura (y del que hablo en breve).
 
-Los contenidos de la materia, organizados en siete temas se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla, además muestra como cada tema con su práctica y con la entregas parciales de un proyecto en equipos que los estudiantes desarrollan a lo largo de la asignatura.
+El recorrido va de lo más simple a lo flexible ---el modelo lineal generalizado, ensambles, máquinas de vectores de soportes y aprendizaje profundo-- para, a continuación, cerrar con un tema final que conecta predicción y explicación.
 
-El recorrido va de lo simple a lo flexible: el modelo lineal generalizado, ensambles, máquinas de vectores de soportes y aprendizaje profundo para en un tema final, conectar predicción y explicación.
-
-Durante todas las prácticas la asignatura usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas. Eso permite comparar los modelos en un contexto común y evaluar distintos métodos según objetivo de negocio.
+Durante todas las prácticas se usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas analíticas desarrolladas. Eso permite comparar los modelos en un contexto común y evaluar distintos métodos según objetivo de negocio.
 :::
 
 
@@ -184,7 +190,10 @@ Durante todas las prácticas la asignatura usa un mismo conjunto de datos de ref
 Carga total 150 h · 60 h presenciales · 90 h no presenciales
 
 ::: {.notes}
-La carga de trabajo en aula (sesenta horas presenciales), se distribuye semanalmente en una hora de teoría (presentación del problema, los conceptos y la discusión), y tres de práctica en aula de informática (con un notebook guiado, trabajo autónomo y entregas). 
+La carga de trabajo en aula (sesenta horas presenciales) se distribuye semanalmente en una hora de teoría (presentación del problema,  conceptos y discusión) y tres de práctica en aula de informática (con un cuaderno digital o notebook guiado, trabajo autónomo y entregas).
+
+Esta carga de trabajo presencial se articula en torno a una secuencia
+de aprendizaje [...]
 :::
 
 
@@ -201,7 +210,11 @@ La carga de trabajo en aula (sesenta horas presenciales), se distribuye semanalm
 Las sesiones prácticas desarrollan los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
 
 ::: {.notes}
-La secuencia que se sigue en cada tema se puede reumir en cinco pasos: pregunta relevante, exploración de los datos, comparación de métodos, formalización y decisión. Es un recorrido que va de la narrativa a lo visual, de lo visual al código y del código a lo formal. El orden es deliberado: la formalización llega cuando el estudiante ha visto el problema, ha manipulado los datos y ha comparado modelos.  Las sesiones prácticas desarrollan así los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
+[...] que se resume en cinco pasos: pregunta relevante, exploración de los datos, comparación de métodos, formalización y decisión. 
+
+Es un recorrido que va de la narrativa a lo visual, de lo visual al código y del código a lo formal. 
+
+El orden es deliberado: la formalización llega cuando el estudiante ha visto el problema, ha manipulado los datos y ha comparado modelos.  Las sesiones prácticas desarrollan así los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
 :::
 
 
@@ -225,9 +238,15 @@ La secuencia que se sigue en cada tema se puede reumir en cinco pasos: pregunta 
 :::
 
 ::: {.notes}
-Los recursos didácticos se agrupan en ocho tipos: software y entornos de trabajo, materiales expositivos y prácticos, recursos interactivos, recursos para la evaluación y para la reproducibilidad, y bibliografía.
+¿Qué recursos didácticos apoyan el aprendizaje? Los agrupo en ocho tipos: software y entornos de trabajo, materiales expositivos y prácticos, recursos interactivos, recursos para la evaluación y para la reproducibilidad, y bibliografía.
 
-Una de las decisiones más relevantes del curso es la elección del software. A pesar de que el alumnado llega con una formación amplia en `R`, la asignatura se desarrolla en `Python`, utilizando `scikit-learn`, `Keras` y `DoubleML`. Las razones son tanto profesionales como docentes: `Python` ofrece librerías de referencia para métodos avanzados, es una herramienta ampliamente utilizada en la industria de datos y permite trabajar en la nube a través de Google Colab, sin instalaciones locales. Además, el cambio de lenguaje persigue un objetivo fundamental: que el alumnado aprenda a transferir sus conocimientos y comprenda que cambia la herramienta, pero no el concepto.
+Una de las decisiones más relevantes del curso es la elección del software y entorno. A pesar de que el alumnado llega con una formación amplia en `R`, la asignatura se desarrolla en `Python`, utilizando las librerias `scikit-learn`, `Keras` y `DoubleML`. Las razones son tanto profesionales como docentes: 
+
+1. `Python` ofrece librerías de referencia para métodos avanzados,  
+2. es una herramienta ampliamente utilizada en la industria de datos y
+3. permite trabajar en la nube a través de Google Colab, sin instalaciones locales.  
+
+Además, el cambio de lenguaje persigue un objetivo fundamental: que el alumnado **aprenda a transferir sus conocimientos y comprenda que cambia la herramienta, pero no el concepto**.
 :::
 
 ## Evaluación
@@ -244,9 +263,9 @@ Los pesos, las rúbricas y las condiciones de recuperación se publican al inici
 
 
 ::: {.notes}
-La práctica y la evaluación continua tienen un peso sutantivo en la evaluación y dentro de esta el proyecto final con defensa oral supone un treinta y cinco por ciento de la nota. El examen final escrito supone el veinticinco por ciento de la nota (donde se exige un mínimo de cinco sobre diez). 
+El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaco el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
 
-El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través del proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y el mínimo evita que una buena nota de proyecto compense la falta de base.
+El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y fijar un mínimo de 5 evita que una buena nota de proyecto compense la falta de base.
 :::
 # Proyecto final {background-color="#2D6A7A"}
 
@@ -256,12 +275,14 @@ El diseño responde a la metodología: si el aprendizaje se produce mayoritariam
 
 ![](figures/fig_timeline_proyecto.svg){width="88%" fig-alt="Línea temporal del proyecto: grupos y dataset en la semana 2, EDA en la 4, baseline GLM en la 6, ensambles en la 8, hito intermedio con retroalimentación en la 10, extensión causal con DoubleML en la 13 y defensa oral en la 15"}
 
-- Grupos de 3--4 alumnos, dataset y problema propios elegidos en la semana 2; cada hito utiliza el contenido desarrollado durante esas semanas
+- Grupos de 3--4 alumnos, dataset y problema propios elegidos en la semana 2; cada entrega se basa en el contenido desarrollado durante esas semanas
 - El hito de la S13 permite formular una pregunta causal sobre los propios datos y responderla con `DoubleML` (o justificar por qué los supuestos no lo permiten, respuesta igual de valiosa)
 - Entrega final: **repositorio reproducible + memoria + defensa oral** 
 
 ::: {.notes}
-El desarrollo del proyecto se organiza a lo largo de una serie de entregas parciales o hitos durante el cuatrimestre. Los grupos, de tres o cuatro estudiantes, eligen en la semana dos su propio conjunto de datos y el problema al que responde. A partir de ahí el trabajo en evoluciona en paralelo con las prácticas: hacia la mitad del cuatrimestre hay una  entrega con retroalimentación y en la semana trece, como aspecto opcional, se puede formular una extensión causal al modelo predictivo. La entrega de la memoria, el respositorio y la presentación tienen lugar en la semana quince. 
+¿Cómo se desarrolla el proyecto en grupos? Este se organiza a lo largo de una serie de entregas parciales  durante todo el cuatrimestre. 
+
+Los grupos, de tres o cuatro estudiantes, eligen en la semana dos su propio conjunto de datos y el problema al que responde. A partir de ahí el trabajo evoluciona en paralelo con las prácticas: hacia la mitad del cuatrimestre hay una  entrega con retroalimentación y en la semana trece, como aspecto opcional, se puede formular una extensión causal al modelo predictivo. La entrega de la memoria, el respositorio y la presentación tienen lugar en la semana quince. 
 
 Es importante señalar que durante todo el recorrido el uso de inteligencia artificial está permitido, declarado y auditado. La entrega final, repositorio reproducible, memoria y defensa oral, se califica con una rúbrica.
 :::
@@ -279,7 +300,7 @@ Es importante señalar que durante todo el recorrido el uso de inteligencia arti
 | **Defensa oral individual (30%)** | 10' grupo + preguntas individuales | Cada miembro explica y modifica en vivo cualquier parte del código | Cada miembro explica las partes que firmó | Un miembro no sabe explicar código propio |
 
 ::: {.notes}
-La rúbrica contempla cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Importante mencionar que la defensa oral individual pesa un treinta por ciento.
+Esta contempla cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Es importante mencionar que la defensa oral individual pesa un treinta por ciento de la nota del proyecto.
 
 La última pieza del proyecto es la política de uso de inteligencia artificial.
 :::
@@ -328,15 +349,19 @@ La última pieza del proyecto es la política de uso de inteligencia artificial.
 ::::
 
 ::: {.notes}
-La política de inteligencia artificial se resume en tres conceptos: la IA está permitida, debe ser declarada y es auditada. Los estudiantes pueden usar libremente asistentes para programar, depurar y redactar, con un uso crítico y responsable. A cambio hay una obligación: el registro completo de los prompts, no una selección, se entrega como apéndice del proyecto y de las entregas relevantes. Y ese registro se evalúa: se cruza con el código y con la memoria buscando coherencia entre el proceso declarado y el trabajo entregado. La transparencia se valora positivamente; cuando el resultado no puede explicarse suficientemente a partir del proceso documentado, será necesario examinar con mayor profundidad cómo se ha elaborado.
+En un trabajo que exige, entre otras cosas,  programación, es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no ignorarlo. 
 
-Además, hay tres verificaciones que la inteligencia artificial no puede suplantar: la defensa oral individual, la participación en el aula, que exige presencialidad, y el examen presencial. En lugar de prohibir una herramienta que muy probablemente van a usar en su trabajo, la asignatura permite usarla, exige declararla y se comprueba que el estudiante domina lo que entrega.
+Los estudiantes pueden usar libremente asistentes o agentes para programar, depurar y redactar, con un uso crítico y responsable. A cambio hay una obligación: el registro completo de los prompts, no una selección, se entrega como apéndice del proyecto y de las entregas relevantes. 
+
+Y ese registro se evalúa: se cruza con el código y con la memoria buscando coherencia entre el proceso declarado y el trabajo entregado. La transparencia se valora positivamente; cuando el resultado no puede explicarse suficientemente a partir del proceso documentado, será necesario examinarlo con mayor profundidad.
+
+Además, hay tres verificaciones que la inteligencia artificial no sustituye: la defensa oral individual, la participación en el aula, que exige presencialidad, y el examen escrito. En lugar de prohibir una herramienta que muy probablemente van a usar, la asignatura permite usarla, exige declararla y se comprueba que el estudiante domina lo que entrega.
 :::
 
 # Tema 7. Predicción y efectos causales {.compact background-color="#2D6A7A"}
 
-:::{.notes}
-Finalizo la propuesta docente presentando brevemente el Tema 7, que empieza con una decisión de negocio: los alumnos ya están familiarizados con el concepto de abandono (o *churn*) y su predicción. En este tema partimos del marco predictivo (la modelización del *riesgo de abandono*) para estimar parámetros estructurales.
+::: {.notes}
+Finalizo la propuesta docente presentando brevemente el Tema 7, que empieza con una decisión de negocio: los alumnos están familiarizados con la problemática que el abandono de clientes  (o *churn*) supone para las empresas. El problema lo conocen desde el merco predictivo. En este tema partimos de este (la modelización del *riesgo de abandono*) para ir un paso más allá y estimar parámetros estructurales.
 :::
 
 ## Riesgo de abandono y estrategia de retención de clientes {.compact .shrink}
@@ -392,14 +417,16 @@ La diferencia entre ambos criterios fue de **4,1 puntos porcentuales**.
 :::
 
 ::: {.notes}
+Comenzamos con una pregunta práctica: ante la posibilidad de abandono, ¿a quién dirigir una campaña de retención de clientes? Para ello formulamos dos reglas alternativas: 
 
-Comenzamos con una pregunta práctica: ante la posibilidad de abandono, ¿a quién dirigir una campaña de retención de clientes? Para ello formulamos dos reglas alternativas: la regla RISK que aconseja actúar sobre los clientes con mayor probabilidad de abandono, un problema predictivo; la regla LIFT, que propone actuar sobre aquellos para los que la intervención produce una mayor reducción de esa probabilidad. Este segundo es un problema de inferencia causal (exige conocer la respuesta de los clientes ante un estado de cosas que no observamos).
+1. La primera basada en el **riesgo de abandono** (**RISK**) aconseja actúar sobre los clientes con mayor probabilidad de abandono, un problema predictivo; 
+2. La segunda (**LIFT**) supone actuar sobre aquellos para los que la intervención produce una mayor reducción de ese riesgo. Es este un problema de inferencia causal (exige conocer la respuesta de los clientes ante un estado de cosas que no observamos).
 
-El experimento que detalla Ascarza permite comparar ambas: en el, un operador de telefonía móvil de prepago asignó al azar a doce mil clientes inactivos un SMS con crédito adicional condicionado a una recarga, y observó si la línea seguía activa treinta días después. Se trata de un experimento aleatorio controlado.
+En el aula ilustramos esta diferencia con el experimento de Ascarza (2018), en el que un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga, y observó si treinta días después la línea seguía activa. 
 
-Usando los datos del experimento la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes con cada regla (mayor probabilidad de abandono/mayor sensibilidad) y observa el resultado en términos de disminución del abandono. Muestra como seleccionar por riesgo reduce el abandono en menos de dos puntos; seleccionar por sensibilidad a la intervención lo reduce en seis: cuatro  puntos porcentuales de diferencia.
+Usando los datos experimentales la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes por riesgo y sensibilidad y observa la disminución de la tasa de abandono. Los resultados muestran como seleccionar por sensibilidad a la intervención resulta más efectivo.
 
-El mensaje central: predecir el riesgo de abandono no responde por sí solo a la pregunta de gestión, a qué clientes debemos dirigirnos; para eso hay que estimar el efecto causal de la intervención. La pregunta que sigue es cómo estimar ese efecto en un contexto no experimental, con datos observacionales.
+El mensaje central es claro: el ejercicio predictivo implementado no responde por si solo a la pregunta de negocio; para eso hay que estimar el efecto causal. La siguiente cuestión es cómo estimar ese efecto en un contexto no experimental, con datos observacionales.
 :::
 
 
@@ -444,10 +471,13 @@ $$D= m(X)+\eta$$
 ::::
 
 ::: {.notes}
-Traducimos el contexto a un modelo: el objetivo es estimar el efecto de la intervención $D$ sobre la respuesta $y$ (parámetro $\tau$) que además depende de un conjunto de variables
-X. Además, con datos observacionales puede haber confusión si la selección en el tratamiento se ve afectada $X$, de ahí que incorporemos este proceso a través de la función $m$.
+Si nos movemos del contexto al modelo el objetivo es estimar el efecto que una intervención $D$ tiene sobre la respuesta $y$ (el parámetro $\tau$) asumiendo que y depende de un conjunto de variables auxiliares X. 
 
-El grafo visualiza el mecanismo generador de datos y **el objetivo del tema es incorporar técnicas de aprendizaje máquina para la estimación de tau** ¿Por qué? Tres razones: elevada dimensionalidad de X, la  inclusión de datos no tabulares (como texto o imágenes) o posible complejidad de $g$ o $m$ que podemos aproximar a través de modelos flexibles sin la necesidad de especificarlos.
+Si trabajamos con datos observacionales hemos de considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$, de ahí que incorporemos este proceso a través de la función $m$.
+
+El grafo visualiza el mecanismo generador de datos y explicita **el objetivo del tema: la incorporación técnicas de aprendizaje máquina para la estimación de tau** 
+
+ML, ¿por qué? Tres motivos: elevada dimensionalidad de X, el uso de datos no tabulares (texto o imágenes) o la complejidad de $g$ o $m$ (no linealidad, interacciones) que podemos aproximar a través de modelos flexibles sin la necesidad de especificarlos.
 :::
 
 
@@ -498,11 +528,15 @@ $\tilde{y}=y-\hat{g}(X)$;
 ::::
 
 ::: {.notes}
-Un posible enfoque parte de aprender de los datos un modelo flexible para $g$, eliminar esa variabilidad de la respuesta (residualizar la respuesta restando esa predicción) y recuperar $\tau$ con una regresión del residuo de la respuesta sobre el tratamiento.
+Una aproximación ingenua para estimar $\tau$ mediante aprendizaje estadístico podría plantearse del siguiente modo:  
 
-Esta aplicación se enfrenta a dos problemas. El primer problema es el **sesgo de regularización**. Los modelos de aprendizaje automático regularizan los predictores, de forma explícita o implícita, y seleccionan las variables por su capacidad predictiva. Un control poco correlacionado con la respuesta pero relevante para explicar el tratamiento puede quedar atenuado o fuera del modelo. En ese caso la segunda etapa atribuye a $\tau$ parte de la relación de ese control con $D$ introduciendo un sesgo de variable omitida. 
+1. Aprendemos  de los datos un modelo flexible para $g$;  
+2. Usamos éste para eliminar la variabilidad debida a $X$ de la respuesta: la residualizamos restándole la parte de su variación explicada por $X$  
+3. Recuperamos $\tau$ con una regresión del residuo de la respuesta sobre el tratamiento.
 
-El segundo problema es el sesgo por sobreajuste al entrenar y predecir  sobre las mismas observaciones: los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona, de modo que la estimación de $\tau$ y su error estándar dejan de ser fiables.
+Esta aplicación se enfrenta a dos problemas. Por un lado los modelos de aprendizaje automático regularizan los predictores, de forma explícita o implícita, y seleccionan las variables por su capacidad predictiva. Un control poco correlacionado con la respuesta pero relevante para explicar el tratamiento puede quedar atenuado o fuera del modelo. En ese caso la segunda etapa atribuye al efecto $\tau$ parte de la relación de ese control con $D$ introduciendo un **sesgo de variable omitida** que en este caso se denomina **sesgo por regularización**. 
+
+El segundo problema es el **sesgo por sobreajuste** si entrenamos y predecimos sobre las mismas observaciones. Los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona, de modo que la estimación de $\tau$ y su error estándar dejan de ser fiables.
 :::
 
 ## Double (Debiased) Machine Learning {.shrink}
@@ -535,15 +569,12 @@ Estimador de efecto causal en dos etapas
 :::
 
 ::: {.notes}
+El esquema de la trasparencia (derecha) resume la lógica completa del contenido del tema 7. La aplicación
+ingenua del aprendizaje estadístico introduce los sesgos. El método denominado aprendizaje máquina doble (o double machine learning) los soluciona  a través de  la ortogonalización del tratamiento (la denominada regresión de residuos sobre residuos a la Frisch–Waugh–Lovell) y el cross-fitting (predicciones fuera de la muestra de entrenamiento, para el segundo). La combinación de ambas constituye produce un estimador **raíz de n** consistente con inferencia válida.
 
-El esquema de la derecha resume la lógica completa del enfoque `DoubleMachineLearning`. La aplicación
- ingenua del aprendizaje estadístico introduce los sesgos que 
- DML soluciona  a través de  la ortogonalización (o regresión de residuos sobre residuos a la Frisch–Waugh–Lovell usando modelos flexibles para el primero), y el cross-fitting (predicciones fuera de la muestra de entrenamiento, para el segundo). La combinación de ambas constituye Double Machine Learning: un estimador raíz de n consistente con inferencia válida.
-
-En la práctica los estudiantes ver el 
-Double Machine Learning como un estimador en dos etapas: 
-1. En la primera etapa se entrenan dos funciones, g para la respuesta y m para el tratamiento, y se generan  versiones residualizadas de ambos (respuesta y tratamiento). El proceso separa las observaciones con las que se entrena de aquellas sobre las que se predice. 
-2. En la segunda etapa se estima la regresión del residuo de y sobre el residuo de D: la pendiente es tau.
+En la práctica los estudiantes ven  Double Machine Learning como un estimador en dos etapas: 
+1. En la primera etapa se entrenan dos funciones auxiliares, g  y m, que se utilizan para generar  versiones residualizadas de  respuesta y tratamiento. En este proceso se separan las observaciones con las que se entrena de aquellas sobre las que se predice. 
+2. En la segunda etapa se estima la regresión del residuo de y sobre el residuo de D recuperando el parámetro tau.
 :::
 
 
@@ -598,8 +629,11 @@ dml.sensitivity_analysis()
 ::::
 
 ::: {.notes}
+Los alumnos implementan la teoría en una práctica (destinada a evaluar el impacto de una campaña de emailing) utilizando los datos públicos de Hillstrom: sesenta y cuatro mil clientes asignados al azar a un email (el control no recibe email), con visitas, compras y gasto observados durante dos semanas. 
 
-La práctica (a quién enviar una campaña de emailing) parte de datos públicos (Hillstrom): sesenta y cuatro mil clientes asignados al azar a un email de productos de hombre, un email de productos de mujer o un control sin email, con visitas, compras y gasto observados durante dos semanas. Los estudiantes estiman el efecto promedio de la intervención y comparan reglas de priorización. En la etapa final introducimos selección observacional en la asignación y validamos la capacidad de DoubleML de recuperar el tamaño del efecto frente al resultado experimental, que aquí conocemos.
+Los estudiantes estiman el efecto promedio de la intervención y comparan reglas de priorización. 
+
+En una fase final introducimos selección observacional en la asignación y validamos la capacidad de DoubleML de recuperar el tamaño del efecto frente al resultado experimental, que aquí conocemos.
 :::
 
 ## Nivel y alcance del Tema 7
@@ -632,7 +666,7 @@ No se evalúan demostraciones asintóticas ni el desarrollo formal de la ortogon
 ::: {.notes}
 Cierro esta parte con una mención al nivel y el alcance del Tema 7, porque conviene ser explícito sobre qué se pide a estudiantes de tercero de grado. El límite: no se evalúan demostraciones ni  desarrollo formal. 
 
-Lo que sí se evalúa: distinguir predicción e intervención; reconocer los dos sesgos mediante simulación; aplicar ortogonalización y cross-fitting; estimar un efecto e interpretar su intervalo de confianza; y discutir supuestos y límites.
+Se evalúa la capacidad para distinguir entre predicción e intervención, identificar sesgos mediante simulación, aplicar ortogonalización y cross-fitting, realizar estimación e inferencia y valorar los supuestos y límites del análisis.
 
 Ese nivel es coherente con el objetvo de la asignatura: formar profesionales capaces de usar métodos computacionales y modelos predictivos en economía y negocios tanto para predecir como para explicar.
 :::
