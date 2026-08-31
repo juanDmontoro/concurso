@@ -36,7 +36,7 @@ En la primera etapa (de formación y estabilización) defiendo la tesis doctoral
 
 La segunda etapa (de orientación internacional) comienza con la adscripción al área de Métodos Cuantitativos en 2007 concentrando la coordinación del título de ADE/GEDE, el proyecto ATLANTIS de la UE y la fundación y vicepresidencia de IMBRA. 
 
-En la tercera, desde 2016, de consolidación y liderazgo, obtengo  la evaluación positiva del sexenio de transferencia y tercer y cuarto sexenio de investigación, dirijo el grupo de investigación CREAMARKT y el grupo consolidado de innovación docente.
+En la tercera, desde 2016, de consolidación y liderazgo, obtengo  la evaluación positiva del tercer y cuarto sexenio de investigación, dirijo el grupo de investigación CREAMARKT y el grupo consolidado de innovación docente MULTIATC.
 
 :::
 
@@ -67,11 +67,11 @@ Empiezo por la investigación.
 ::: {.notes}
 La tabla ordena la trayectoria investigadora en tres etapas, con los trabajos representativos y los principales coautores. 
 
-La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico (dirigida por el profesor José Vicente Paz) que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
+La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico (dirigida por el profesor José Vicente Paz que obtuvo la calificación de sobresaliente cum laude) que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
 La segunda, de 1998 a 2010, incorpora la teoría de la elección pública con diversos trabajos junto a los profesores Miguel Puchades-Navarro y José Casas-Pardo: artículos publicados en CIRIEC-España, Constitutional Political Economy, Computational Economics y  capítulos en el homenaje al nobel James Buchanan en Springer o en el libro **Constitutional Economics and Public Institutions** en  Edward Elgar. 
 
-La tercera, desde 2008, se orienta a la economía de la cultura y el consumo cultural. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto al profesor Manuel Cuadrado-García, y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
+La tercera etapa, desde 2008, se orienta a la economía de la cultura y el consumo cultural. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto al profesor Manuel Cuadrado-García, y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
 :::
 
 
@@ -118,7 +118,7 @@ Destaco el artículo de 2011 en el Journal of Cultural Economics al tratarse del
 
 Un segundo bloque lo constituyen los artículos publicados en Poetics, primer cuartil de sociología y referencia en sociología de la cultura: en 2020 (festivales de música como *gatekeepers*) y 2025 (análisis de la literatura sobre consumo cultural y diversidad). 
 
-Finalmente, la publicación en 2021 en el International Journal of Consumer Studies (primer cuartil de business) que revisa veinte años de investigación sobre consumo de música y supone una sistematización de la investigación en el campo y define la agenda de investigación en adelante.
+Finalmente, la publicación en 2021 en el International Journal of Consumer Studies (primer cuartil de business) que revisa y ssistematiza veinte años de estudios sobre consumo de música y define la agenda futura de investigación.
 :::
 
 
@@ -161,7 +161,6 @@ La figura ordena las comunicaciones a congresos, la mayor parte internacionales,
 
 En ella se observa una recurrencia y vigencia de la participación  en las conferencias de las principales asociaciones científicas del ámbito de economía de la cultura y gestión cultural (como AIMAC, ACEI o  IMBRA). 
 
-Mención aparte, marcada en rojo, la participación en AIMAC 2007 donde copresidí el comité científico.
 :::
 
 ## Proyectos de I+D+i en convocatoria pública
@@ -252,8 +251,8 @@ En total he realizado seis estancias oficiales de investigación, que muestro en
 |---------------|---------|------------|---|:------------:|
 | *Segmentación y exhibición cinematográfica: un análisis del mercado español basado en clases latentes* | Desamparados Lluch Tormos | CEU San Pablo (Madrid) | 2017 | Sobresaliente *cum laude* · Tesis doctoral con mención internacional · **Premio Fundación SGAE de Investigación 2018** |
 | *Analyzing the effect of the expanded servicescape on visitors' satisfaction and loyalty in museums* | Piergiacomo Mion Dalle Carbonare | Università Bocconi  (Milán) | 2022 | Sobresaliente *cum laude* · Tesis doctoral con mención internacional  |
-| *Estudio de los determinantes, percepción y valoración del consumidor de música clásica: una aproximación multidisciplinar* | Ariadna Martin Alfaro | Conservatorio Profesional de Música (Las Palmas de Gran Canaria) | en curso | — |
-| *Consumer engagement and market structuring in the contemporary art ecosystem: visitor behavior and responses to citywide interventions* | Giuliano Picchi | MIT (Cambridge, MA) | en curso | — |
+| *Estudio de los determinantes, percepción y valoración del consumidor de música clásica: una aproximación multidisciplinar* | Ariadna Martin  | Conservatorio Profesional de Música (Las Palmas de Gran Canaria) | en curso | JCR en revisión |
+| *Consumer engagement and market structuring in the contemporary art ecosystem: visitor behavior and responses to citywide interventions* | Giuliano Picchi | MIT (Cambridge, MA) | en curso | Ponencia AIMAC2026 |
 
 
 

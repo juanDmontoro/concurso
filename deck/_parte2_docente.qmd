@@ -139,7 +139,7 @@ La ficha de la asignatura concreta su punto de partida, y muestra
 1. Por un lado los datos formales: carácter, ubicación, y carga docente y de trabajo.  
 2.  Por otro lado lo que la signatura asume y lo que aporta. 
 
-Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartición en una facultad de economía obliga a reconocer que muchas preguntas de negocio no son meramente predictivas, sino que tienen una naturaleza causal. El estudiantado debe aprender a identificar cuándo para responder una pregunta no basta solo una predicción. Retomaré esta distinción al final de esta segunda parte.
+Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartición en una facultad de economía obliga a reconocer que muchas preguntas de negocio no son meramente predictivas, sino que tienen una naturaleza causal. El estudiantado debe aprender a identificar cuándo para responder una pregunta no basta solo una predicción. 
 :::
 
 
@@ -164,7 +164,7 @@ A lo largo de la asignatura utilizamos un mismo conjunto de datos como caso de e
 :::
 
 ::: {.notes}
-Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla, además muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura (y del que hablo en breve).
+Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla, además muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
 
 El recorrido va de lo más simple a lo flexible ---el modelo lineal generalizado, ensambles, máquinas de vectores de soportes y aprendizaje profundo-- para, a continuación, cerrar con un tema final que conecta predicción y explicación.
 
