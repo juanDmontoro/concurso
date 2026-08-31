@@ -57,9 +57,9 @@ Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 22 & 2134 & 15,2\\
 2 · Propuesta docente & 15 min & 17 & 19 & 2204 & 15,7\\
-3 · Propuesta investigadora & 20 min & 25 & 27 & 4828 & 34,5\\
+3 · Propuesta investigadora & 20 min & 24 & 26 & 3628 & 25,9\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{61} & \textbf{68} & \textbf{9166} & \textbf{65,5}\\
+\textbf{Total} & \textbf{50 min} & \textbf{60} & \textbf{67} & \textbf{7966} & \textbf{56,9}\\
 \bottomrule
 \end{tabular}
 
@@ -401,272 +401,223 @@ Ese nivel es coherente con el objetvo de la asignatura: formar profesionales cap
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,34,5 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Presento la propuesta de investigación *Creative Collaborations*, que estudia la formación de colaboraciones entre artistas en la música grabada. La pregunta que organiza toda la exposición es fácil de formular: en la producción en las industrias culturales ¿que factores están asociados con la propensión a colaborar?
+\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,25,9 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Presento la propuesta de investigación *Creative Collaborations*, que estudia la formación de colaboraciones entre artistas en la música grabada. La pregunta que organiza toda la exposición es fácil de formular: en la producción en las industrias culturales ¿qué factores están asociados con la propensión a colaborar?
 
 \medskip
 
-\guionmarca{\marcaslide{37}{Esquema}} La exposición sigue seis bloques. Empiezo por la motivación, la pregunta, el marco conceptual y la contribución de este trabajo. A continuación presento los datos y, en particular, cómo medimos la proximidad estética entre dos artistas y cómo describimos la red de colaboraciones previa. El tercer bloque es el análisis empírico: el diseño del conjunto de riesgo, la estrategia de estimación y el resultado sobre la forma de la relación entre similitud estética y colaboración. El cuarto pasa del análisis de la asociación dentro 
-de la muestra a la capacidad para ordenar colaboraciones en un año que el modelo no ha visto. Siguen una sección de comprobaciones para calibrar la sensibilidad de los hallazgos y cierra resultados, límites y extensiones.
+\guionmarca{\marcaslide{37}{Esquema}} La exposición sigue seis bloques. Empiezo por la motivación, la pregunta y la contribución. A continuación presento los datos y, en particular, cómo medimos la proximidad estética entre dos artistas. El tercer bloque es el análisis empírico: el diseño, la estimación y el resultado sobre la forma. El cuarto pasa de la asociación dentro de la muestra a la capacidad para ordenar colaboraciones en un año que el modelo no ha visto. Siguen las comprobaciones de sensibilidad y cierra resultados, límites y extensiones.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{INTRODUCCIÓN}\smallskip \marcaslide{38}{¿Se ha convertido la música en una actividad colaborativa?}} A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard Hot 100 correspondían a colaboraciones. Entre 2016 y 2020 esa misma tasa asciende al 40%. La colaboración pasa de ser una anomalía entre los grandes éxitos a una práctica habitual en la producción cultural. Lo que parece observarse es un cambio de régimen que emerge en paralelo a la digitalización de la música y que se asienta en un nuevo equilibrio (elevada tasa de colaboración presente en los éxitos) con la implantación de un modelo de negocio en la industria basado en el acceso, no en la propiedad (el streaming).
+\guionmarca{\marcaseccion{INTRODUCCIÓN}\smallskip \marcaslide{38}{¿Se ha convertido la música en una actividad colaborativa?}} A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard Hot 100 correspondían a colaboraciones. Entre 2016 y 2020 esa misma tasa asciende al 40%. La colaboración pasa de ser una anomalía entre los grandes éxitos a una práctica habitual. Lo que parece observarse es un cambio de régimen que emerge en paralelo a la digitalización de la música y que se asienta con la implantación de un modelo de negocio basado en el acceso, no en la propiedad (el streaming).
 
-El interés económico del fenómeno va más allá de la suma de créditos en una producción cultural: supone investigar los incentivos que llevan a combinar temporalmente competencias o recursos físico y simbólicos (identidades estéticas), reputación y acceso a públicos. Por limitaciones de tiempo, soslayaré el sustrato teórico que subyace al ejercicio empírico de esta propuesta.
+El interés económico del fenómeno va más allá de la suma de créditos: supone investigar los incentivos que llevan a combinar temporalmente competencias o recursos, identidades estéticas, reputación y acceso a públicos. Por limitaciones de tiempo, soslayaré el sustrato teórico que subyace al ejercicio empírico.
 
-
-No obstante introduzco un apunte: la creación de equipos creativos, en campos tan dispares como aquellos orientados a la producción cultural o en la academia (equipos científicos), se da una tensión entre similitud entre los participantes (que puede facilitar coordinación o compatibilidad) y la distancia (que puede aportar novedad y complementariedad). Y este es uno de los aspectos centrales que estudiamos en esta propuesta.
-
-\medskip
-
-\guionmarca{\marcaslide{39}{Colaboraciones: un emparejamiento multidimensional}} Comienzo fijando la unidad de análisis: Considero pares de artistas activos en un mismo año en las listas globales de Spotify, y el evento  a modelizar es una primera colaboración artista principal y artista invitado (lead y feature). El objetivo es distinguir a las parejas que forman una colaboración por primera vez de las muchas que podrían haberlo hecho y no lo hicieron.
-
-Entendemos esa formación como un emparejamiento en el que intervienen varias dimensiones a la vez. 
-
-1. Dimensión estética: cuánto se parecen dos artistas en un espacio que generamos a partir de la percepción que la audiencia tiene de su producción anterior. 
-
-2. Proximidad cultural, territorial e institucional: compartir escena, coincidir en el país registrado, haber pasado por los mismos sellos pueden ayudar a formar el emparejamiento.
- 
-3. Actividad y trayectoria profesional: el nivel de experiencia de los dos, lo simétrico que es el par y el tiempo que llevan expuestos a una oportunidad conjunta. 
-
-4. Cierra la topología de la red previa de colaboraciones: la existencia de socios compartidos, la centralidad, la alcanzabilidad y distancia entre ambos en esa red.
-
-La estética es la dimensión focal porque sobre ella se formulan dos hipótesis en competencia con implicaciones observables distintas.  
-- Por un lado la existencia de una distancia estética óptima (la compatibilidad facilita el trabajo conjunto y la diferencia aporta novedad) lleva a la propensión a colaborar a crecer con la similitud para disminuir después. 
-- Si lo que opera es un umbral de compatibilidad, la distancia estética es una barrera que, alcanzado suficiente terreno común, se inactiva. La proximidad excesiva no se penaliza.
+No obstante introduzco un apunte: en la creación de equipos creativos se da una tensión entre la similitud entre los participantes, que puede facilitar coordinación o compatibilidad, y la distancia, que puede aportar novedad y complementariedad. Y este es uno de los aspectos centrales de esta propuesta.
 
 \medskip
 
-\guionmarca{\marcaslide{40}{Marco conceptual}} La idea de colaboración conecta la economía de la cultura con la formación de equipos y redes. Aquí convergen dos literaturas. La primera estudia las consecuencias de colaborar, y en música la evidencia es clara: la literatura muestra que los *featurings* elevan la demanda de *streaming* (McKenzie y coautores) y que los duetos sobreviven más tiempo en listas, Kaimann y coautores. 
+\guionmarca{\marcaslide{39}{Colaboraciones: un emparejamiento multidimensional}} Comienzo fijando la unidad de análisis: considero pares de artistas activos en un mismo año en las listas globales de Spotify, y el evento a modelizar es una primera colaboración artista principal–artista invitado (lead y feature). El objetivo es distinguir a las parejas que forman una colaboración por primera vez de las muchas que podrían haberlo hecho y no lo hicieron.
+
+Entendemos esa formación como un emparejamiento en el que intervienen varias dimensiones a la vez: la estética, es decir, cuánto se parecen dos artistas en un espacio generado a partir de la percepción que la audiencia tiene de su producción anterior; la proximidad cultural, territorial e institucional; la actividad y trayectoria profesional de ambos; y la topología de la red previa de colaboraciones.
+
+La estética es la dimensión focal porque sobre ella se formulan dos hipótesis en competencia. Si existe una distancia estética óptima, la propensión a colaborar crece con la similitud para disminuir después. Si lo que opera es un umbral de compatibilidad, la distancia estética es una barrera que, alcanzado suficiente terreno común, se inactiva: la proximidad excesiva no se penaliza.
+
+\medskip
+
+\guionmarca{\marcaslide{40}{Marco conceptual}} La idea de colaboración conecta la economía de la cultura con la formación de equipos y redes. Aquí convergen dos literaturas. La primera estudia las consecuencias de colaborar, y en música la evidencia es clara: los *featurings* elevan la demanda de *streaming* y los duetos sobreviven más tiempo en listas.
 
 La segunda estudia la formación de vínculos, que puede ordenarse en tres familias: basados en la similitud; basados en lazos previos, socios comunes y posición en la red; y por proximidad geográfica e institucional.
 
-Una cuestión con larga tradición es la tensión entre similitud y complementariedad. La literatura distingue compatibilidad (rasgos similares que facilitan el trabajo conjunto) de complementariedad (recursos distintos que crean valor al combinarse) que suele resolverse en un óptimo interior: en la academia encontramos conceptos como la distancia cognitiva óptima o la existencia de una U invertida en el solapamiento temático.
+Una cuestión con larga tradición es la tensión entre similitud y complementariedad. La literatura distingue compatibilidad de complementariedad, y la tensión suele resolverse en un óptimo interior.
 
-En música, la evidencia sobre distancia óptima es mayoritariamente sobre resultados (éxito). Los pocos trabajos que estudian la formación en música se ciñen a una escena o un género, sin medida explícita de similitud y sin considerar la población completa de pares en riesgo. Esa es la brecha que cubre este trabajo.
+En música, la evidencia sobre distancia óptima es mayoritariamente sobre resultados. Los pocos trabajos que estudian la formación se ciñen a una escena o un género, sin medida explícita de similitud y sin considerar la población completa de pares en riesgo. Esa es la brecha que cubre este trabajo.
 
 \medskip
 
-\guionmarca{\marcaslide{41}{Contribución: medición y contraste de la afinidad estética}} La aportación central del trabajo versa sobre la afinidad estética su medición y su impacto asimétrico. Desde un punto de vista más amplio, la contribución se articula en torno a cuatro elementos. 
+\guionmarca{\marcaslide{41}{Contribución: medición y contraste de la afinidad estética}} La aportación central del trabajo versa sobre la afinidad estética, su medición y su impacto asimétrico. La contribución se articula en torno a cuatro elementos.
 
-El primero es la integración en un único modelo de la homofilia estética, cultural, geográfica e institucional y por actividad junto a la estructura de la red previa. De este modo se estima la forma de la relación estética manteniendo constantes otras proximidades y oportunidades.
+El primero es la integración en un único modelo de las distintas homofilias junto a la estructura de la red previa: así se estima la forma de la relación estética manteniendo constantes otras proximidades y oportunidades.
 
-El segundo es la utilización de un enfoque derivado del procesamiento del lenguaje natural para la medición del espacio estético.  Cada artista se representa con un vector de etiquetas generadas por los usuarios de dos redes sociales en música. Para evitar la fuga de información, solo se utilizan etiquetas asociadas a pistas o álbumes publicados antes del resultado que se pretende predecir.
+El segundo es un enfoque derivado del procesamiento del lenguaje natural para la medición del espacio estético. Cada artista se representa con un vector de etiquetas generadas por los usuarios y, para evitar la fuga de información, solo se utilizan etiquetas asociadas a lanzamientos anteriores al resultado que se pretende predecir.
 
-El tercero es el análisis utilizado para medir la relación  proximidad estética-propensión a colaborar. Aquí se combinan especificaciones alternativas: partimos de una forma cuadrática (habitual en la literatura) pero se implementa un test de forma prespecificado para determinar si existe  reversión de signo (óptimo interior). 
+El tercero es el análisis de la relación proximidad estética–propensión a colaborar: partimos de una forma cuadrática, habitual en la literatura, pero se implementa un test de forma prespecificado para determinar si existe reversión de signo.
 
-El cuarto es el diseño de la investigación y su validación: el evento que se modeliza es la primera colaboración principal–invitado; se estima sobre el conjunto de riesgo completo sin muestrear negativos; la inferencia admite dependencia arbitraria entre díadas que comparten artista; y descomponemos la aportación de cada bloque dentro y fuera de muestra.
+El cuarto es el diseño de la investigación y su validación: se estima sobre el conjunto de riesgo completo sin muestrear negativos, la inferencia admite dependencia arbitraria entre díadas que comparten artista y descomponemos la aportación de cada bloque dentro y fuera de muestra.
 
 Todo ello exige combinar fuentes que midan resultados, percepciones y relaciones.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{DATOS Y ANÁLISIS EXPLORATORIO}\smallskip \marcaslide{42}{Fuentes de datos}} El trabajo utiliza tres fuentes de datos:
+\guionmarca{\marcaseccion{DATOS Y ANÁLISIS EXPLORATORIO}\smallskip \marcaslide{42}{Fuentes de datos}} El trabajo utiliza tres fuentes de datos.
 
-La primera son las **listas globales semanales de Spotify**, de septiembre de 2013 a diciembre de 2025, con los metadatos de pista, álbum y artista del API de Spotify. Las listas devuelven el registro de colaboraciones con el detalle de créditos: para cada pista colaborativa devuelven el artista principal (*lead*) y el invitado (*feature*). Tras limpiar los datos quedan 12.688 combinaciones pista–artista y 2.878 artistas.
+La primera son las listas globales semanales de Spotify, de septiembre de 2013 a diciembre de 2025, con sus metadatos del API de Spotify. Las listas devuelven el registro de colaboraciones con el detalle de créditos: para cada pista colaborativa, el artista principal (*lead*) y el invitado (*feature*).
 
-La segunda las **etiquetas que los usuarios asignan** a temas/álbumes de los artistas en la muestra en las redes sociales Last.fm y MusicBrainz. Utilizamos las etiquetas  fechadas por lanzamiento (singles o álbum): 794.309 filas de etiquetas para 2.402 artistas, que cubre el 83,5% de la muestra de artistas. 
+La segunda, las etiquetas que los usuarios asignan a temas y álbumes en Last.fm y MusicBrainz. Utilizamos las etiquetas fechadas por lanzamiento, que cubren el 83,5% de la muestra de artistas.
 
-La tercera son los **metadatos de MusicBrainz**: ofrecen información sobre tipo de entidad, país, género asignado (cuando el artista es una persona) y año del primer lanzamiento. A ellos se añade el historial de sellos, construido con los créditos de álbum observados en las listas hasta el año anterior.
+La tercera son los metadatos de MusicBrainz: tipo de entidad, país, género asignado y año del primer lanzamiento. A ellos se añade el historial de sellos, construido con los créditos de álbum observados en las listas hasta el año anterior.
 
-La cuestión decisiva es cómo convertir las etiquetas generadas por los usuarios en una medida de proximidad estética.
-
-\medskip
-
-\guionmarca{\marcaslide{43}{Proximidad estética}} Cada artista se representa como un vector en el espacio de etiquetas, de forma que su perfil en el año t acumula las etiquetas de todos sus lanzamientos fechados estrictamente antes de t: el perfil es acumulativo y está retardado por construcción. 
-
-La **proximidad entre dos artistas** se mide mediante la similitud del coseno, es decir, el coseno del ángulo entre los vectores que los representan en el espacio estético definido por la audiencia.
-
-La figura muestra una proyección ilustrativa colapsada a dos dimensiones hipotéticas, si bien las medidas de similaridad son reales. Bad Bunny y J Balvin comparten buena parte del vocabulario con que se les describe y el coseno del ángulo que forman es 0,82; Bad Bunny y Ed Sheeran apenas comparten etiquetas lo que se traduce en una similitud del coseno de 0,07.
-
-Junto a la proximidad estética, incorporamos la proximidad derivada de la posición estructural de los artistas en la red de colaboraciones. La existencia de colaboraciones previas y el número de vecinos comunes son dos manifestaciones de esta proximidad estructural que pueden favorecer una nueva colaboración.
+La cuestión decisiva es cómo convertir esas etiquetas en una medida de proximidad estética.
 
 \medskip
 
-\guionmarca{\marcaslide{44}{Composición de la red}} Representamos la naturaleza relacional de los datos mediante un grafo que refleja los vínculos de colaboración entre artistas. Esta red evoluciona entre 2015 y 2024, y en la modelización se persigue capturar si la posición  en la red predice la propensión a colaborar, una vez consideradas otras medidas de proximidad.
+\guionmarca{\marcaslide{43}{Proximidad estética}} Cada artista se representa como un vector en el espacio de etiquetas: su perfil en el año t acumula las etiquetas de todos sus lanzamientos fechados estrictamente antes de t, de modo que es acumulativo y está retardado por construcción.
 
-La composición visual de la red ayuda a entender por qué la dimensión estética y la topología deben medirse por separado. La figura (que no es la red completa) representa el 5% superior de la distribución de la centralidad. En ella se aprecia un núcleo denso ocupado por nodos que pertenecen a dos escenas diferenciadas, la latina y la anglófona, con un número reducido de artistas puente entre ambas.
+La proximidad entre dos artistas se mide mediante la similitud del coseno entre los vectores que los representan en el espacio estético definido por la audiencia.
 
-El grafo, siendo una herramienta descriptiva, sugiere la existencia de una  segmentación cultural en la estructura relacional: la existencia de conexiones se puede interpretar tanto por proximidad (estética, cultural o geográfica) como por ubicación en el grafo, p.e. el caso de conexiones que se cierran por vecinos compartidos o la existencia de intermediarios (o brokers) que actúan de puente entre escenas. 
+La figura muestra una proyección ilustrativa en dos dimensiones, si bien las medidas de similitud son reales: Bad Bunny y J Balvin comparten buena parte del vocabulario y su coseno es 0,82; Bad Bunny y Ed Sheeran apenas comparten etiquetas y su similitud es 0,07.
 
-La pregunta que cabe plantearse es qué señal específica aportan las diferentes medidas de proximidad y la posición estructural en el grafo para explicar o predecir las colaboraciones.
+Junto a la proximidad estética, incorporamos la derivada de la posición estructural en la red de colaboraciones: las colaboraciones previas y los vecinos comunes son dos manifestaciones que pueden favorecer una nueva colaboración.
 
 \medskip
 
-\guionmarca{\marcaslide{45}{El modelo de formación}} **Decidir qué cuenta como colaboración** determina el estimando. El trabajo se adscribe al estándar fijado en la literatura empírica en grafos al separar formación de una conexión nueva de  repetición de un vínculo que ya existía. Modelizarlas juntas es modelizar procesos distintos de ahí. Esta presentación se centra en el modelo de formación (aunque en paralelo se ha explorado un modelo que incorpora formación y repeticiones).
+\guionmarca{\marcaslide{44}{Composición de la red}} Representamos los datos mediante un grafo de vínculos de colaboración que evoluciona entre 2015 y 2024. En la modelización se persigue capturar si la posición en la red predice la propensión a colaborar, una vez consideradas otras medidas de proximidad.
 
+La composición visual de la red ayuda a entender por qué la dimensión estética y la topología deben medirse por separado. La figura, que no es la red completa, representa el 5% superior de la distribución de la centralidad: un núcleo denso con dos escenas diferenciadas, la latina y la anglófona, y un número reducido de artistas puente entre ambas.
 
-La **defición de riesgo** es sensible al rol: la respuesta es positiva si el par colabora en el año t cuando uno es el principal (lead) y el otro el invitado (feature) en una pista que entra en listas. En el evento de formación se exige además que no hubiera ningún lazo previo entre ambos, de ningún tipo. 
+El grafo, siendo una herramienta descriptiva, sugiere una segmentación cultural en la estructura relacional: las conexiones se pueden interpretar tanto por proximidad (estética, cultural o geográfica) como por ubicación en el grafo.
 
-**El resultado agregado** para primeras colaboraciones suma 1064 eventos (frente a los 1.811 cuando incluimos además repetición). En ambos casos estamos ante **un evento con un elevado desequilibrio entre clases**: para el modelo de formación la tasa observada es de 26,9 casos por cada 100.000 pares. Ello condiciona el diseño y la inferencia.
+La pregunta que cabe plantearse es qué señal específica aportan las diferentes medidas de proximidad y la posición estructural para explicar o predecir las colaboraciones.
 
-Una vez definido el evento, construimos el conjunto completo de oportunidades plausibles.
+\medskip
+
+\guionmarca{\marcaslide{45}{El modelo de formación}} Decidir qué cuenta como colaboración determina el estimando. El trabajo se adscribe al estándar fijado en la literatura empírica en grafos al separar la formación de una conexión nueva de la repetición de un vínculo que ya existía: modelizarlas juntas es modelizar procesos distintos. Esta presentación se centra en el modelo de formación.
+
+La definición de riesgo es sensible al rol: la respuesta es positiva si el par colabora en el año t cuando uno es el principal y el otro el invitado en una pista que entra en listas. En el evento de formación se exige además que no hubiera ningún lazo previo entre ambos, de ningún tipo.
+
+El resultado agregado para primeras colaboraciones suma 1.064 eventos. Estamos ante un evento con un elevado desequilibrio entre clases: la tasa observada es de 26,9 casos por cada 100.000 pares. Ello condiciona el diseño y la inferencia.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{ANÁLISIS EMPÍRICO}\smallskip \marcaslide{46}{Diseño: conjunto de riesgo y resultado}} El modelo se estima sobre el conjunto de riesgo completo que incluye a todos los pares susceptibles de colaborar en cada año, sin muestreo negativos. Esto aporta una ventaja interpretativa: los coeficientes describen cómo se **distinguen las colaboraciones realizadas** de la población de pares que podían haber colaborado y no lo hicieron.
+\guionmarca{\marcaseccion{ANÁLISIS EMPÍRICO}\smallskip \marcaslide{46}{Diseño: conjunto de riesgo y resultado}} El modelo se estima sobre el conjunto de riesgo completo, sin muestreo de negativos. Esto aporta una ventaja interpretativa: los coeficientes describen cómo se distinguen las colaboraciones realizadas de la población de pares que podían haber colaborado y no lo hicieron.
 
-La decisión central es quién está en riesgo. Un par pertenece al conjunto de riesgo en t si la colaboración era una posibilidad realista: los dos artistas debutaron en listas antes de t y cada uno publicó una pista que entró en listas en los tres años previos. La ventana de tres años excluye ceros poco plausibles aunque se  complementa con una ventana de cinco años y sin salida como análisis de sensibilidad de los resultados.
-
-El panel de estimación tiene 3.756.411 díadas-año, 1.064 eventos de formación y 2.256 artistas entre 2015 y 2024.
+La decisión central es quién está en riesgo. Un par pertenece al conjunto de riesgo en t si la colaboración era una posibilidad realista: los dos artistas debutaron en listas antes de t y cada uno publicó una pista en listas en los tres años previos. La ventana de tres años excluye ceros poco plausibles y se complementa con una ventana de cinco años y sin salida como análisis de sensibilidad.
 
 \medskip
 
-\guionmarca{\marcaslide{47}{Estimación}} Para la estimación se recurre a dos herramientas. El logit es el modelo explicativo: modeliza la probabilidad de formación condicionada a la red del año anterior, a las características  del par e incluye efectos fijos de año.  Permite hacer inferencia sobre una forma que se especifica
-de forma explícita. 
+\guionmarca{\marcaslide{47}{Estimación}} Para la estimación se recurre a dos herramientas. El logit es el modelo explicativo: modeliza la probabilidad de formación condicionada a la red del año anterior y a las características del par, incluye efectos fijos de año y permite hacer inferencia sobre una forma que se especifica de forma explícita.
 
-XGBoost, un conjunto de árboles potenciados, se utiliza como  referencia predictiva: captura interacciones y no linealidades sin necesidad de especificarlas y  permite cuantificar la señal predictiva de las diferentes variables (o grupos de variables) cuando no imponemos forma funcional. Se trata de una referencia flexible.
+XGBoost, un conjunto de árboles potenciados, se utiliza como referencia predictiva: captura interacciones y no linealidades sin necesidad de especificarlas y permite cuantificar la señal predictiva de las variables cuando no imponemos forma funcional.
 
-La tabla muestra algunos detalles de ambos ejercicios. Cabe señalar que la inferencia del modelo logit utiliza los errores estándar diádicos de Aronow y Samii, un estimador de tipo sandwich que admite una dependencia arbitraria entre díadas que comparten un artista.
+Cabe señalar que la inferencia del modelo logit utiliza los errores estándar diádicos de Aronow y Samii, un estimador de tipo sandwich que admite una dependencia arbitraria entre díadas que comparten un artista.
 
-Una última cuestión metodológica. Los modelos exponenciales de grafos aleatorios son la opción natural para modelizar datos relacionales. ¿Por qué entonces usar modelos de clasificación? La elección responde a dos razones: **la inviabilidad computacional** del ERGM, dada la escala de la red, y el distinto objeto de análisis. Mientras el ERGM modeliza la **distribución conjunta de la red**, este trabajo modeliza cada díada condicionada a la red en $t-1$, asumiendo independencia condicional entre díadas.
-
-\medskip
-
-\guionmarca{\marcaslide{48}{Especificaciones: bloques de variables y modelos anidados}} Definidas respuesta y modelos, pasamos a las diferentes especificaciones. Para ello introducimos las variables en cuatro bloques:
-
-1. El bloque de red que incluye las características estructurales del grafo retardado con variables que capturan la posición estructural de los nodos. 
-
-2. El bloque de la dimensión estética incorpora la proximidad (similitud del coseno) y su cuadrado; además se incluyen medidas de  posición que describen tipicidad y afinidad de la identidad estética de un artista con el resto de artistas. Se controla además por la cobertura de las etiquetas de usuarios. 
-
-3. El bloque de actividad incluye temas en listas y años de actividad acumulados hasta $t$, así como la duración de la elegibilidad conjunta discretizada, que controla el tiempo de exposición conjunta al riesgo. 
-
-4. Un bloque final recoge otras proximidades y atributos como escena, país, tipo de artista, identidad de género e historia común de sellos discográficos.
-
-Todas las variables de nodo (artista) entran como media del par (mide el nivel) y como diferencia absoluta (mide asimetría).
-
-**Se estiman tres modelos anidados**:  
-
-1. `Completo`, que incluye todos los bloques;  
-2. `Solo red`, excluye todos los bloques a excepción de la topología;  
-3. y `Sin red`, excluyendo la topología.
+Una última cuestión metodológica. Los modelos exponenciales de grafos aleatorios son la opción natural para modelizar datos relacionales; ¿por qué entonces usar modelos de clasificación? Por dos razones: la inviabilidad computacional del ERGM, dada la escala de la red, y el distinto objeto de análisis: la distribución conjunta de la red frente a cada díada condicionada a la red en t−1, asumiendo independencia condicional entre díadas.
 
 \medskip
 
-\guionmarca{\marcaslide{49}{Resultado base: especificación cuadrática}} Comenzamos analizando los resultados de la estimación base para el modelo de formación. La tabla muestra los coeficientes estimados para las diferentes especificaciones. Huyo del exceso de detalle y paso a analizar un subconjunto de los coeficientes estimados.
+\guionmarca{\marcaslide{48}{Especificaciones: bloques de variables y modelos anidados}} Definidas respuesta y modelos, introducimos las variables en cuatro bloques. El bloque de red recoge la posición estructural de los nodos en el grafo retardado. El bloque estético incorpora la proximidad (similitud del coseno) y su cuadrado, medidas de posición que describen la tipicidad de la identidad estética y controles de cobertura de las etiquetas. El bloque de actividad incluye temas en listas y años de actividad acumulados, así como la duración de la elegibilidad conjunta, que controla el tiempo de exposición conjunta al riesgo. Y un bloque final recoge otras proximidades y atributos.
+
+Todas las variables de nodo entran como media del par, que mide el nivel, y como diferencia absoluta, que mide asimetría.
+
+Se estiman tres modelos anidados: Completo, Solo red y Sin red.
 
 \medskip
 
-\guionmarca{\marcaslide{50}{Resultado base: magnitudes comparables}} Para comparar las magnitudes entre variables medidas en escalas distintas, expresamos cada coeficiente como un multiplicador de la tasa de formación: cuánto se multiplica la tasa cuando el predictor aumenta en una desviación estándar, para variables continuas, o cuando pasa de ausente a presente, en binarias. Como la colaboración es un evento raro, en torno a 28 por cada cien mil pares-año, la *odds ratio* coincide en la práctica con la razón de tasas. la lectura debe realizarse en términos de asociaciones estadísticas y no como mecanismos que impliquen efectos.
-
-Así por ejemplo, en el bloque de red, una desviación estándar adicional de grado medio multiplica la tasa por 3,18 y la proximidad geodésica por 1,92, mientras que la asimetría de grado la reduce a 0,60: la formación favorece a pares visibles y próximos, pero de popularidad pareja. El índice de Jaccard ilustra un problema de significación sustantiva: su coeficiente es estadísticamente preciso, pero una desviación estándar deja la tasa prácticamente donde invariable.
-
-En el bloque estético, los términos lineal y cuadrático de la similitud deben leerse conjuntamente lo que hacemos a continuación. El resto sí admite lectura directa: acercarse una desviación estándar al centroide reduce la tasa  y una mayor diferencia de posición dentro del par la eleva: este resultado combina distintividad frente al centro y posiciones no idénticas entre los miembros.
-
-Proximidad cultural e institucional son importantes: compartir escena o el historial de sellos multiplican la tasa. La actividad media en listas suma aunque las diferencias de actividad restan: en este sentido la mayor probabilidad se asocia con pares activos con niveles de actividad similares. Finalmente la elegibilidad conjunta muestra la progresión más clara de la figura: acumular años de exposición sin colaborar se asocia a una reducción de la propensión lo que bien por oportunidad no realizada o bien por implausibilidad de la colaboración.
+\guionmarca{\marcaslide{49}{Resultado base: especificación cuadrática}} Comenzamos analizando los resultados de la estimación base para el modelo de formación. Huyo del exceso de detalle y paso a analizar un subconjunto de los coeficientes estimados.
 
 \medskip
 
-\guionmarca{\marcaslide{51}{Robustez del óptimo interior}} A continuación se analiza la supervivencia de la distancia estética óptima cuando se modifica la muestra utilizada en la estimación o la definición de la respuesta. La pregunta clave es si ese máximo es un rasgo del comportamiento de los agentes a la hora de formar vínculos o un artefacto de los datos.
+\guionmarca{\marcaslide{50}{Resultado base: magnitudes comparables}} Para comparar las magnitudes entre variables medidas en escalas distintas, expresamos cada coeficiente como un multiplicador de la tasa de formación: cuánto se multiplica la tasa cuando el predictor aumenta en una desviación estándar o, en binarias, cuando pasa de ausente a presente. La lectura debe realizarse en términos de asociaciones estadísticas y no como mecanismos que impliquen efectos.
 
-Para responderla cruzamos dos decisiones del diseño:
-1. La definición de la respuesta: incluimos todos los pares o solo pares artista principal–artista invitado (sensible al rol)
-2. El conjunto de riesgo: consideramos ventanas de tres y cinco años para determinar si un artista está activo, además del escenario sin salida, en el que un artista permanece en el conjunto de riesgo después de su primera entrada en listas.
+Así, en el bloque de red, una desviación estándar adicional de grado medio multiplica la tasa por 3,18 y la proximidad geodésica por 1,92, mientras que la asimetría de grado la reduce a 0,60: la formación favorece a pares visibles y próximos, pero de popularidad pareja. El índice de Jaccard ilustra un problema de significación sustantiva: su coeficiente es estadísticamente preciso, pero una desviación estándar deja la tasa prácticamente invariable.
 
-El resultado muestra que la forma cuadrática se mantiene en los escenarios comparados. Para la definición sensible al rol, el máximo implícito apenas cambia al pasar de la ventana sin salida a tres y cinco años: 0,635, 0,637 y 0,630. No añadimos una fila completa para `aw5` porque este documento solo conserva su máximo; faltan el desglose de coeficientes, el intervalo, el percentil, el tamaño muestral y los eventos. En todas las especificaciones completas, el máximo continúa situado en la cola alta de la distribución de similitud.
+En el bloque estético, los términos lineal y cuadrático de la similitud deben leerse conjuntamente, lo que hacemos a continuación. El resto sí admite lectura directa: acercarse una desviación estándar al centroide reduce la tasa y una mayor diferencia de posición dentro del par la eleva.
+
+Proximidad cultural e institucional son importantes: compartir escena o el historial de sellos multiplican la tasa. La actividad media en listas suma aunque las diferencias de actividad restan. Finalmente, la elegibilidad conjunta muestra la progresión más clara de la figura: acumular años de exposición sin colaborar se asocia a una reducción de la propensión, bien por oportunidad no realizada, bien por implausibilidad de la colaboración.
 
 \medskip
 
-\guionmarca{\marcaslide{52}{Versiones de la proximidad estética}} Las diferentes especificaciones sugieren la existencia de un óptimo interior. No obstante Un óptimo interior en la cola superior de la distribución es compatible no solo con una reversión de la asociación de la proximidad estética sino con una saturación de la misma. Por ello se analiza la relación postulada con especificaciones flexibles. En concreto recurrimos a tres estrategias:  
+\guionmarca{\marcaslide{51}{Versiones de la proximidad estética}} El modelo base sugiere la existencia de un óptimo interior. No obstante, un óptimo interior en la cola superior de la distribución es compatible no solo con una reversión de la asociación sino con una saturación de la misma. Por ello se analiza la relación postulada con tres especificaciones flexibles.
 
-1. La primera, consiste en **discretizar la métrica de similitud** estética y analizar las tasas de formación observadas por tramo, sin ningún ajuste funcional.  
-2. La segunda consiste en ajustar un **función polinómica flexible a tramos** (un *spline* cúbico) que da una curva de perfil suave que se adapta a los datos.  
-3. La tercera es un test confirmatorio de reversión de signo, basado en el enfoque de dos líneas de Simonsohn. Se particionan los datos en dos submuestras: en una se localiza un punto de ruptura (el máximo en la relación similitud--propensión a colaborar); en la otra se estima la pendiente anterior y posterior. Solo se confirma un óptimo interior si la pendiente cambia de positiva a negativa.  
+La primera consiste en discretizar la métrica de similitud estética y analizar las tasas de formación observadas por tramo, sin ningún ajuste funcional. La segunda, en ajustar un *spline* cúbico que da una curva de perfil suave que se adapta a los datos. La tercera es un test confirmatorio de reversión de signo, basado en el enfoque de dos líneas de Simonsohn: se particionan los datos en dos submuestras; en una se localiza el punto de ruptura y, en la otra, se estiman las pendientes anterior y posterior. Solo se confirma un óptimo interior si la pendiente cambia de positiva a negativa.
 
 > **RESERVAR**: Evaluamos las propiedades de este último  por simulación, con paneles calibrados al número de eventos y a la distribución de similitud de nuestra muestra. Para 200 replicas, cuando el perfil verdadero crece y se aplana, el test confirma falsamente un óptimo interior en el 0,5% de los casos; frente a un óptimo interior lo detecta en el 79% de las simulaciones.
 
 \medskip
 
-\guionmarca{\marcaslide{53}{Proximidad estética y colaboraciones: especificación flexible}} La figura muestra directamente la forma que sí respaldan los datos. La curva es el *spline* prespecificado sobre el modelo Completo y los puntos son las tasas de colaboración observadas en la versión  discretizada de la variable de similitud estética. 
+\guionmarca{\marcaslide{52}{Proximidad estética y colaboraciones: especificación flexible}} La figura muestra directamente la forma que sí respaldan los datos.
 
-Ambas apuntan en la misma dirección: la tasa de formación sube con fuerza desde similitudes bajas hasta aproximadamente 0,3 o 0,4 para aplanarse después. Ningún tramo dentro del soporte tiene una tasa inferior a los anteriores; el *spline* no se gira hacia abajo en ningún punto del rango respaldado y los dos tramos más altos, con pocas observaciones de formación, quedan por encima de las tasas intermedias, no por debajo.
+Curva y puntos apuntan en la misma dirección: la tasa de formación sube con fuerza desde similitudes bajas hasta aproximadamente 0,3 o 0,4 para aplanarse después. Ningún tramo dentro del soporte tiene una tasa inferior a los anteriores y el *spline* no se gira hacia abajo en ningún punto del rango respaldado.
 
-El contraste confirma la subida anterior pero no una caída posterior. La pendiente tras el máximo obtenida por remuestreo de las particiones devuelve valores positivos con intervalos que incluyen cero lo que sugiere un crecimiento y aplanamiento, sin reversión confirmada.
-
-\needspace{2\baselineskip}
-\bigskip
-
-\guionmarca{\marcaseccion{ANÁLISIS PREDICTIVO}\smallskip \marcaslide{54}{Capacidad predictiva por bloques}} En el ejercicio predictivo se estiman los dos modelos (logit y xgbm) con datos de 2015 a 2023 y se predice una sola vez en 2024, de modo que el modelo evaluado nunca ha visto el año de evaluación. En 2024 hay 64 eventos de formación de 490.000 (modelo logit) o 526.000 (para xgbm) puntuadas según el modelo, una tasa base de 0,12 a 0,13 por mil. La diferencia viene porque el logit se entrena para el conjunto de casos completos y XGBoost para todos los pares, gracias al tratamiento nativo de los valores ausentes.
-
-La tabla muestra que el área bajo la curva de precisión-recall del mejor modelo multiploca la tasa base aproximadamente por 18 (logit) y por 14 (en el de XGBoost). 
-
-Al seleccionar los 10.000 casos con mayor puntuación, el modelo completo recupera el 42% de los eventos con el logit y el 31% con XGBoost. Comparado con una clasificación aleatoria esto representa una mejora (o lift) de 20 y 16, respectivamente, valores pueden interpretarse como la mejora relativa tanto de la precisión como de la sensibilidad. No obstante, no conviene comparar directamente el lift de ambos modelos, debido a las diferencias entre sus muestras de entrenamiento. 
-
-También se presenta el lift para las 500 primeras predicciones positivas, aunque debe interpretarse con cautela, ya que se calcula sobre un extremo del ranking que contiene pocos eventos positivos.
-
-Un primer resultado de este ejercicio es la limitada aportación a la capacidad predictiva fuera de muestra del bloque de predictores de red frente al bloque no-red. Los bloques estético, de actividad y demás atributos contienen la mayor parte de la señal predictiva observable.
-
-\medskip
-
-\guionmarca{\marcaslide{55}{Constraste no paramétrico de la forma funcional}} Además, el ejercicio predictivo permite analizar la forma del perfil estético sin imponer una especificación funcional. Para ello, se emplean los valores de shapley que descomponen la predicción del modelo en las contribuciones de sus distintos predictores. El gráfico de dependencia representa, para cada par artista-año, la contribución de la similitud estética al puntaje predicho, expresada en la escala de log-odds. Los resultados corresponden al conjunto de prueba de 2024.
-
-El patrón es consistente con el hallazgo del ejercicio de discretización y el *spline*: la contribución sube con fuerza por debajo de una similitud de 0,3, se aplana desde aproximadamente 0,4 y no muestra un declive claro en la parte alta.
+El contraste confirma la subida anterior pero no una caída posterior. La pendiente tras el máximo, obtenida por remuestreo de las particiones, devuelve valores positivos con intervalos que incluyen cero, lo que sugiere un crecimiento y aplanamiento, sin reversión confirmada.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{SENSIBILIDAD DE LOS RESULTADOS}} Se ha evaluado la sensibilidad de las estimaciones ante distintos escenarios, entre ellos, cambios en la definición del resultado, el cálculo de errores estándar mediante remuestreo de nodos y enfoques alternativos para proyectar a los artistas en el espacio de etiquetas. Los resultados centrales se mantienen robustos ante estas variaciones.
+\guionmarca{\marcaseccion{ANÁLISIS PREDICTIVO}\smallskip \marcaslide{53}{Capacidad predictiva por bloques}} En el ejercicio predictivo se estiman los dos modelos con datos de 2015 a 2023 y se predice una sola vez en 2024, de modo que el modelo evaluado nunca ha visto el año de evaluación. En 2024 hay 64 eventos de formación sobre unas 490.000 o 526.000 díadas puntuadas, una tasa base de 0,12 a 0,13 por mil. La diferencia viene de que el logit se entrena sobre el conjunto de casos completos y XGBoost sobre todos los pares.
 
-En este bloque introduzco dos ejercicios: la corrección del sesgo asociado a la baja frecuencia del evento, mediante la penalización de Firth y el control de la heterogeneidad no observada, mediante un logit condicional.
+El área bajo la curva de precisión-recall del mejor modelo multiplica la tasa base aproximadamente por 18 con el logit y por 14 con XGBoost.
 
-\medskip
+Al seleccionar los 10.000 casos con mayor puntuación, el modelo completo recupera el 42% de los eventos con el logit y el 31% con XGBoost, una mejora (o lift) de 20 y 16 respecto a una clasificación aleatoria. No conviene comparar directamente el lift de ambos modelos, debido a las diferencias entre sus muestras de entrenamiento; y el lift de las 500 primeras predicciones debe interpretarse con cautela, ya que se calcula sobre un extremo del ranking con pocos eventos positivos.
 
-\guionmarca{\marcaslide{56}{Corrección de sesgo de Firth}} Dada la baja frecuencia del evento analizado, se presenta
-a continuación un modelo logit con corrección de Firth, basado en una verosimilitud penalizada que reduce el sesgo y mitiga posibles problemas de separación.
-
-\medskip
-
-\guionmarca{\marcaslide{57}{Firth: el patrón apenas se mueve}} Aquí no dividimos el coeficiente de Firth por un error estándar propio. Representamos la diferencia entre Firth y el logit base, dividida por el error estándar robusto diádico del logit base. De este modo, una unidad significa que la estimación se ha desplazado tanto como un error estándar del modelo de referencia.
-
-Los cocientes se calculan con los valores redondeados que aparecen en las tablas de la presentación y se muestran con dos decimales.
-
-La escala muestra una superposición casi total. El mayor movimiento de toda la tabla corresponde al índice de Jaccard: 0,176 unidades del coeficiente, equivalentes a aproximadamente 0,23 errores estándar del logit base. Ninguna variable cambia de signo.
-
-Esta es una medida descriptiva de estabilidad de las estimaciones puntuales, no un contraste formal entre estimadores. No disponemos del error estándar de la diferencia ni de la covarianza entre ambas estimaciones. La conclusión defendible es que la corrección de Firth cambia muy poco el patrón estimado en esta muestra.
+Un primer resultado es la limitada aportación fuera de muestra del bloque de predictores de red: los bloques estético, de actividad y demás atributos contienen la mayor parte de la señal predictiva observable.
 
 \medskip
 
-\guionmarca{\marcaslide{58}{Logit condicional}} Para controlar la posible heterogeneidad no observada debida a artistas principales, aplicamos un diseño de elección emparejada que, en cada estrato artista(principal)-año, compara los colaboradores elegidos con todos los candidatos elegibles. El análisis incluye 641 estratos, 545.149 pares-año y 1.064 eventos. Las variables de red se omiten porque no varían dentro del estrato. Dado que la muestra solo incluye artistas con alguna colaboración, los coeficientes se interpretan por su dirección y no se comparan en magnitud con los de los modelos anteriores.
+\guionmarca{\marcaslide{54}{Constraste no paramétrico de la forma funcional}} Además, el ejercicio predictivo permite analizar la forma del perfil estético sin imponer una especificación funcional. Se emplean los valores de Shapley, que descomponen la predicción del modelo en las contribuciones de sus distintos predictores: el gráfico de dependencia representa la contribución de la similitud estética al puntaje predicho, en la escala de log-odds, sobre el conjunto de prueba de 2024.
+
+El patrón es consistente con la discretización y el *spline*: la contribución sube con fuerza por debajo de una similitud de 0,3, se aplana desde aproximadamente 0,4 y no muestra un declive claro en la parte alta.
+
+\needspace{2\baselineskip}
+\bigskip
+
+\guionmarca{\marcaseccion{SENSIBILIDAD DE LOS RESULTADOS}} Se ha evaluado la sensibilidad de las estimaciones ante distintos escenarios: cambios en la definición del resultado, errores estándar por remuestreo de nodos y enfoques alternativos para proyectar a los artistas en el espacio de etiquetas. Los resultados centrales se mantienen robustos ante estas variaciones.
+
+En este bloque introduzco dos ejercicios: la corrección del sesgo asociado a la baja frecuencia del evento, mediante la penalización de Firth, y el control de la heterogeneidad no observada, mediante un logit condicional.
 
 \medskip
 
-\guionmarca{\marcaslide{59}{Logit condicional: dos excepciones en un patrón estable}} La figura aplica la misma unidad a las diferencias entre el logit condicional y el modelo base. Para cada término, restamos la estimación base a la condicional y dividimos por el error estándar robusto diádico del logit base. Un valor positivo indica que el coeficiente condicional es mayor; no implica necesariamente una asociación positiva, porque también puede representar que un coeficiente negativo se acerca a cero.
+\guionmarca{\marcaslide{55}{Corrección de sesgo de Firth}} Dada la baja frecuencia del evento analizado, se presenta a continuación un modelo logit con corrección de Firth, basado en una verosimilitud penalizada que reduce el sesgo y mitiga posibles problemas de separación.
 
-Los cocientes se calculan con los valores redondeados de las tablas y se muestran con una cifra decimal.
+\medskip
 
-Las variables de red no se estiman: dentro de cada estrato artista principal por año quedan absorbidas. Los círculos identifican los coeficientes que conservan el signo y los diamantes los que lo cambian. Hay dos diamantes: el Jaccard de sellos pasa de 0,636 a -0,240 y los sellos compartidos pasan de -0,167 a 0,084. Son términos imprecisos en ambos modelos, por lo que estos cambios señalan inestabilidad de las medidas institucionales, no una reversión sustantiva concluyente. La forma estética, la actividad, la carrera y la elegibilidad conservan su dirección, aunque algunos coeficientes se desplazan varios errores estándar del modelo base.
+\guionmarca{\marcaslide{56}{Firth: el patrón apenas se mueve}} Representamos la diferencia entre Firth y el logit base, dividida por el error estándar robusto diádico del logit base: una unidad significa que la estimación se ha desplazado tanto como un error estándar del modelo de referencia. Los cocientes se calculan con los valores redondeados de las tablas.
 
-Esos desplazamientos no deben interpretarse como evidencia de que los efectos aumentan o disminuyen. El logit condicional compara al socio elegido con los candidatos de un mismo artista principal y año, usa otra muestra y responde a otro estimando. La normalización permite ver qué partes del patrón direccional sobreviven; no hace equivalentes las magnitudes sustantivas de ambos modelos.
+La escala muestra una superposición casi total. El mayor movimiento corresponde al índice de Jaccard: 0,176 unidades del coeficiente, equivalentes a aproximadamente 0,23 errores estándar del logit base. Ninguna variable cambia de signo.
+
+Esta es una medida descriptiva de estabilidad de las estimaciones puntuales, no un contraste formal entre estimadores. La conclusión defendible es que la corrección de Firth cambia muy poco el patrón estimado en esta muestra.
+
+\medskip
+
+\guionmarca{\marcaslide{57}{Logit condicional}} Para controlar la posible heterogeneidad no observada debida a artistas principales, aplicamos un diseño de elección emparejada que, en cada estrato artista principal–año, compara los colaboradores elegidos con todos los candidatos elegibles. Las variables de red se omiten porque no varían dentro del estrato. Dado que la muestra solo incluye artistas con alguna colaboración, los coeficientes se interpretan por su dirección y no se comparan en magnitud con los de los modelos anteriores.
+
+\medskip
+
+\guionmarca{\marcaslide{58}{Logit condicional: dos excepciones en un patrón estable}} La figura aplica la misma unidad a las diferencias entre el logit condicional y el modelo base. Un valor positivo indica que el coeficiente condicional es mayor; no implica necesariamente una asociación positiva, porque puede representar un coeficiente negativo que se acerca a cero.
+
+Hay dos diamantes: el Jaccard de sellos pasa de 0,636 a -0,240 y los sellos compartidos pasan de -0,167 a 0,084. Son términos imprecisos en ambos modelos, por lo que estos cambios señalan inestabilidad de las medidas institucionales, no una reversión sustantiva concluyente. La forma estética, la actividad, la carrera y la elegibilidad conservan su dirección, aunque algunos coeficientes se desplazan varios errores estándar del modelo base.
+
+Esos desplazamientos no deben interpretarse como evidencia de que los efectos aumentan o disminuyen: el logit condicional compara al socio elegido con los candidatos de un mismo artista principal y año, usa otra muestra y responde a otro estimando.
 
 Con esta cautela, la comprobación respalda una consistencia cualitativa de las asociaciones centrales, pero no de todos los términos institucionales, al controlar la heterogeneidad no observada del artista principal.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{CONCLUSIONES}\smallskip \marcaslide{60}{Proximidad, posición y oportunidad en la formación}} **La formación de colaboraciones se concentran por afinidad, acceso relacional y oportunidad reciente.**
+\guionmarca{\marcaseccion{CONCLUSIONES}\smallskip \marcaslide{59}{Proximidad, posición y oportunidad en la formación}} **La formación de colaboraciones se concentra por afinidad, acceso relacional y oportunidad reciente.**
 
 Todos los resultados pueden interpretarse en un mismo mapa de calor. En horizontal, la afinidad estética; en vertical, la cercanía en la red retardada. Cada casilla muestra un múltiplo del par de referencia: dos artistas sin camino entre sí, sin afinidad y con la oportunidad recién abierta.
 
-Si observamos el rol de la afinidad, llegar  al punto de saturación multiplica la tasa por doce veces; estar a dos pasos en la red, por unas cinco; si se dan ambas la tasa queda sesenta y cinco veces por encima de la referencia.  A la derecha incorporamos la exposición: una oportunidad de colaboración de siete años o más no realizada reduce todas las tasas para combinaciones (x0.18).
+Llegar al punto de saturación de la afinidad multiplica la tasa por doce; estar a dos pasos en la red, por unas cinco; si se dan ambas, la tasa queda sesenta y cinco veces por encima de la referencia. A la derecha incorporamos la exposición: una oportunidad de siete años o más no realizada reduce todas las tasas (x0,18).
 
-Los otros tres mapas cambian la tercera dimensión. Alejar al par del centroide estético reduce la formación: dos décimas más lo dejan en poco más de la mitad. Compartir escena idiomática e historial de sello amplifica la formación multiplicando casi por cinco. Y diez pistas más de catálogo lo mueve un cuarenta por ciento: el volumen no reordena.
+Los otros tres mapas cambian la tercera dimensión. Alejar al par del centroide estético reduce la formación: dos décimas más lo dejan en poco más de la mitad. Compartir escena idiomática e historial de sello amplifica la formación multiplicando casi por cinco. Y diez pistas más de catálogo lo mueven un cuarenta por ciento: el volumen no reordena.
 
-En conjunto, los datos son consistentes con un modelo de  colaboración que se asocia a la operativa conjunta de  proximidad (estética, cultural e institucional) y oportunidades (definidas por las conexiones pre-existentes. Bajo esta interpretación la estética funciona como condición de compatibilidad, mientras cultura, instituciones, actividad y red estructuran qué emparejamientos llegan a materializarse.
+En conjunto, los datos son consistentes con un modelo de colaboración asociado a la operativa conjunta de proximidad (estética, cultural e institucional) y oportunidades definidas por las conexiones preexistentes: la estética funciona como condición de compatibilidad, mientras cultura, instituciones, actividad y red estructuran qué emparejamientos llegan a materializarse.
 
 \medskip
 
-\guionmarca{\marcaslide{61}{Limitaciones y extensiones}} Cierro con cuatro limitaciones.
+\guionmarca{\marcaslide{60}{Limitaciones y extensiones}} Cierro con cuatro limitaciones.
 
-La primera es de interpretación: todo lo mostrado son asociaciones condicionales a la red del año anterior, no efectos causales. La identificación del efecto causal aquí es compleja, y una posible vía pasa por ejercicios de estimación y calibración del modelo.
+La primera es de interpretación: todo lo mostrado son asociaciones condicionales a la red del año anterior, no efectos causales. La identificación del efecto causal aquí es compleja.
 
-La segunda es la ausencia de colaboraciones entre pares con elevada similitud: con solo ocho eventos por encima de una similitud de 0,90, no puedo descartar una penalización en la similitud extrema. Es deseable la incorporación de  información adicional.
+La segunda es la ausencia de colaboraciones entre pares con elevada similitud: con solo ocho eventos por encima de una similitud de 0,90, no puedo descartar una penalización en la similitud extrema.
 
-La tercera es lo que queda fuera: la población se limita a artistas activos en listas globales, el acceso a las listas no se modeliza y la colaboración fuera de ellas se recoge solo en parte; además, etiquetas y escena incorporan ruido, y el sello es un único canal institucional. Como extensión natural se puede tratar de incorporar resultados fechados fuera de las listas y explorar mejores medidas institucionales.
+La tercera es lo que queda fuera: la población se limita a artistas activos en listas globales, el acceso a las listas no se modeliza y la colaboración fuera de ellas se recoge solo en parte; además, etiquetas y escena incorporan ruido, y el sello es un único canal institucional.
 
-Finalmente la adecuación del modelo: simulaciones preliminares reproducen el volumen de nuevos vínculos, pero no su concentración en determinados nodos, quedando dependencia residual entre díadas. En este punto es necesario auditar la simulación y evaluar la independencia condicional, en la línea de Almquist y Butts.
+Finalmente, la adecuación del modelo: simulaciones preliminares reproducen el volumen de nuevos vínculos, pero no su concentración en determinados nodos, quedando dependencia residual entre díadas. En este punto es necesario auditar la simulación y evaluar la independencia condicional, en la línea de Almquist y Butts.
 
 \needspace{2\baselineskip}
 \bigskip
