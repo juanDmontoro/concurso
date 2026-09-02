@@ -15,6 +15,11 @@ están dentro de divs de contenido (callouts, columnas): solo los encabezados
 con la pila de divs limpia son slides o secciones reales, de modo que cada
 nota se atribuye a la slide que de verdad se proyecta.
 
+Además de los ficheros de parte, el script lee las notas de orador de los
+divisores «Parte N de 3» del maestro (``presentacion_ejercicio.qmd``), como
+la entradilla protocolaria de la Parte 1: encabezan su parte en el guion y
+sus palabras cuentan en la tabla y en los minutos estimados.
+
 Solo lectura sobre los ``.qmd``; el único fichero que escribe es el guion.
 
 Uso (desde ``0_ejercicio/deck``):
@@ -31,6 +36,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from extraer_notas import ATTR_BLOCK, FENCE_CODE, FENCE_DIV, HEADING, PARTES, PPM, limpiar_titulo, minutos
+
+MAESTRO = "presentacion_ejercicio.qmd"
 
 
 @dataclass
@@ -125,6 +132,24 @@ def recorrer(ruta: Path) -> list[Item]:
     return items
 
 
+DIVISOR = re.compile(r"\[Parte (\d+) de 3\]")
+
+
+def notas_divisores(ruta: Path) -> dict[int, list[str]]:
+    """Notas de orador de los divisores «Parte N de 3» del deck maestro.
+
+    El maestro puede añadir notas propias a sus divisores de parte (p. ej.
+    la entradilla protocolaria de la Parte 1), que no viven en ningún
+    fichero de parte. Devuelve {número de parte: notas}.
+    """
+    notas: dict[int, list[str]] = {}
+    for item in recorrer(ruta):
+        m = DIVISOR.search(item.titulo)
+        if m and item.notas:
+            notas[int(m.group(1))] = item.notas
+    return notas
+
+
 # ---------------------------------------------------------------------------
 # Emisión del .qmd
 # ---------------------------------------------------------------------------
@@ -204,7 +229,7 @@ format:
 """
 
 
-def redactar(partes_items: list[list[Item]]) -> str:
+def redactar(partes_items: list[list[Item]], entradillas: list[list[str]]) -> str:
     out: list[str] = []
     add = out.append
 
@@ -232,11 +257,11 @@ def redactar(partes_items: list[list[Item]]) -> str:
     add("Parte & Asignado & Slides & Notas & Palabras & $\\approx$ min\\\\")
     add("\\midrule")
     tot_slides = tot_notas = tot_pal = 0
-    for (titulo, tiempo, _fichero), items in zip(PARTES, partes_items):
+    for (titulo, tiempo, _fichero), items, entr in zip(PARTES, partes_items, entradillas):
         visibles = [x for x in items if not x.oculta]
         slides = [x for x in visibles if x.tipo == "slide"]
-        notas = sum(len(x.notas) for x in visibles)
-        pal = sum(x.palabras for x in visibles)
+        notas = sum(len(x.notas) for x in visibles) + len(entr)
+        pal = sum(x.palabras for x in visibles) + sum(len(t.split()) for t in entr)
         tot_slides += len(slides)
         tot_notas += notas
         tot_pal += pal
@@ -296,15 +321,22 @@ def redactar(partes_items: list[list[Item]]) -> str:
             add(nota)
         add("")
 
-    for (titulo_parte, tiempo, _fichero), items in zip(PARTES, partes_items):
+    for (titulo_parte, tiempo, _fichero), items, entr in zip(PARTES, partes_items, entradillas):
         visibles = [x for x in items if not x.oculta]
-        pal = sum(x.palabras for x in visibles)
+        pal = sum(x.palabras for x in visibles) + sum(len(t.split()) for t in entr)
         rotulo, nombre = (s.strip() for s in titulo_parte.split("·", 1))
         pendientes.append(
             f"\\marcaparte{{{rotulo.upper()}}}{{{titulo_tex(nombre)}}}"
             f"{{{tiempo} · $\\approx$\\,{minutos(pal).replace('.', ',')} min a {PPM} ppm}}"
         )
         rango = "parte"
+        # Nota del divisor del maestro (entradilla): abre la parte, anclada
+        # a la marca de parte, antes de la primera slide.
+        if entr:
+            volcar(entr[0])
+            for extra in entr[1:]:
+                add(extra)
+                add("")
         for item in visibles:
             if item.tipo == "seccion":
                 pendientes.append(f"\\marcaseccion{{{titulo_tex(item.titulo).upper()}}}")
@@ -355,17 +387,24 @@ def main() -> None:
             raise SystemExit(f"No encuentro {ruta}: ejecuta el script desde 0_ejercicio/deck.")
         partes_items.append(recorrer(ruta))
 
-    salida = base / args.salida
-    salida.write_text(redactar(partes_items), encoding="utf-8")
+    maestro = base / MAESTRO
+    por_parte = notas_divisores(maestro) if maestro.exists() else {}
+    if not maestro.exists():
+        print(f"aviso: no encuentro {maestro}; guion sin notas de divisores")
+    entradillas = [por_parte.get(n, []) for n in range(1, len(PARTES) + 1)]
 
-    for (titulo, _tiempo, fichero), items in zip(PARTES, partes_items):
+    salida = base / args.salida
+    salida.write_text(redactar(partes_items, entradillas), encoding="utf-8")
+
+    for (titulo, _tiempo, fichero), items, entr in zip(PARTES, partes_items, entradillas):
         visibles = [x for x in items if not x.oculta]
         slides = [x for x in visibles if x.tipo == "slide"]
         sin_nota = [x for x in slides if not x.notas]
-        pal = sum(x.palabras for x in visibles)
+        pal = sum(x.palabras for x in visibles) + sum(len(t.split()) for t in entr)
+        divisor = f" (+{len(entr)} nota de divisor)" if entr else ""
         print(
             f"  {fichero}: {len(slides)} slides visibles ({len(sin_nota)} sin nota), "
-            f"{sum(len(x.notas) for x in visibles)} notas, {pal} palabras, "
+            f"{sum(len(x.notas) for x in visibles)} notas{divisor}, {pal} palabras, "
             f"≈{minutos(pal)} min"
         )
     print(f"escrito {salida}")

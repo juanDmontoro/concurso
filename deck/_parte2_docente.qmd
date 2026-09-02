@@ -629,13 +629,14 @@ dml.sensitivity_analysis()
 ::::
 
 ::: {.notes}
-Los alumnos implementan la teoría en una práctica (destinada a evaluar el impacto de una campaña de emailing) utilizando los datos públicos de Hillstrom: sesenta y cuatro mil clientes asignados al azar a un email (el control no recibe email), con visitas, compras y gasto observados durante dos semanas. 
 
-Los estudiantes estiman el efecto promedio de la intervención y comparan reglas de priorización. 
+Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
 
-En una fase final introducimos selección observacional en la asignación y validamos la capacidad de DoubleML de recuperar el tamaño del efecto frente al resultado experimental, que aquí conocemos.
+No se exigen demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción e intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y límites del análisis.
 :::
 
+
+:::{.content-hidden}
 ## Nivel y alcance del Tema 7
 
 &nbsp;
@@ -669,6 +670,7 @@ Cierro esta parte con una mención al nivel y el alcance del Tema 7, porque conv
 Se evalúa la capacidad para distinguir entre predicción e intervención, identificar sesgos mediante simulación, aplicar ortogonalización y cross-fitting, realizar estimación e inferencia y valorar los supuestos y límites del análisis.
 
 Ese nivel es coherente con el objetvo de la asignatura: formar profesionales capaces de usar métodos computacionales y modelos predictivos en economía y negocios tanto para predecir como para explicar.
+:::
 :::
 
 <!-- Generado por scripts/sync_partes.py desde propuesta_docente.qmd — NO EDITAR;

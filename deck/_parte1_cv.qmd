@@ -67,7 +67,7 @@ Empiezo por la investigación.
 ::: {.notes}
 La tabla ordena la trayectoria investigadora en tres etapas, con los trabajos representativos y los principales coautores. 
 
-La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico (dirigida por el profesor José Vicente Paz que obtuvo la calificación de sobresaliente cum laude) que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
+La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
 La segunda, de 1998 a 2010, incorpora la teoría de la elección pública con diversos trabajos junto a los profesores Miguel Puchades-Navarro y José Casas-Pardo: artículos publicados en CIRIEC-España, Constitutional Political Economy, Computational Economics y  capítulos en el homenaje al nobel James Buchanan en Springer o en el libro **Constitutional Economics and Public Institutions** en  Edward Elgar. 
 
@@ -118,7 +118,7 @@ Destaco el artículo de 2011 en el Journal of Cultural Economics al tratarse del
 
 Un segundo bloque lo constituyen los artículos publicados en Poetics, primer cuartil de sociología y referencia en sociología de la cultura: en 2020 (festivales de música como *gatekeepers*) y 2025 (análisis de la literatura sobre consumo cultural y diversidad). 
 
-Finalmente, la publicación en 2021 en el International Journal of Consumer Studies (primer cuartil de business) que revisa y ssistematiza veinte años de estudios sobre consumo de música y define la agenda futura de investigación.
+Finalmente, la publicación en 2021 en el International Journal of Consumer Studies (primer cuartil de business) que revisa y sistematiza veinte años de estudios sobre consumo de música y define la agenda futura de investigación.
 :::
 
 
