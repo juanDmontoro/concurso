@@ -56,10 +56,10 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
-2 · Propuesta docente & 15 min & 15 & 17 & 1938 & 13,8\\
+2 · Propuesta docente & 15 min & 15 & 17 & 1890 & 13,5\\
 3 · Propuesta investigadora & 20 min & 22 & 24 & 3214 & 23,0\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{56} & \textbf{64} & \textbf{7083} & \textbf{50,6}\\
+\textbf{Total} & \textbf{50 min} & \textbf{56} & \textbf{64} & \textbf{7035} & \textbf{50,2}\\
 \bottomrule
 \end{tabular}
 
@@ -246,13 +246,13 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,13,8 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN EN NEGOCIOS}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,13,5 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN EN NEGOCIOS}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
 La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
 \medskip
 
-\guionmarca{\marcaslide{20}{Grado en inteligencia y analítica de negocios: BIA}} El grado en BIA se imparte en la Facultat d'Economia y cuenta anualmente con cincuenta plazas de nueva ingreso. Se trata del grado con un elevado ratio de demanda (2.8 solicitudes en primera opción por plaza ofertada) y la tercera mayor nota de corte de todos los grados  ofrecidos por la facultad.
+\guionmarca{\marcaslide{20}{Grado en inteligencia y analítica de negocios: BIA}} El grado en BIA se imparte en la Facultat d'Economia y cuenta anualmente con cincuenta plazas de nueva ingreso. Se trata del grado con un elevado ratio de demanda y la tercera mayor nota de corte de todos los grados  ofrecidos por la facultat.
 
 Su objetivo es formar profesionales capaces de convertir los datos en decisiones empresariales, combinando competencias tecnológicas y cuantitativas con una sólida visión de negocio.
 
@@ -277,9 +277,9 @@ Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartici�
 
 \medskip
 
-\guionmarca{\marcaslide{23}{Contenidos y planificación}} Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla, además muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
+\guionmarca{\marcaslide{23}{Contenidos y planificación}} Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
 
-El recorrido va de lo más simple a lo flexible ---el modelo lineal generalizado, ensambles, máquinas de vectores de soportes y aprendizaje profundo-- para, a continuación, cerrar con un tema final que conecta predicción y explicación.
+El recorrido va de lo más simple a lo flexible y cierra con un tema final que conecta predicción y explicación.
 
 Durante todas las prácticas se usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas analíticas desarrolladas. Eso permite comparar los modelos en un contexto común y evaluar distintos métodos según objetivo de negocio.
 
@@ -294,7 +294,7 @@ de aprendizaje [...]
 
 \guionmarca{\marcaslide{25}{Metodología docente: secuencia de aprendizaje}} [...] que se resume en cinco pasos: pregunta relevante, exploración de los datos, comparación de métodos, formalización y decisión. 
 
-Es un recorrido que va de la narrativa a lo visual, de lo visual al código y del código a lo formal. 
+Es un recorrido que va de la narrativa a lo visual, de lo visual a la implementación y del código a lo formal. 
 
 El orden es deliberado: la formalización llega cuando el estudiante ha visto el problema, ha manipulado los datos y ha comparado modelos.  Las sesiones prácticas desarrollan así los contenidos de la teoría y producen evidencias de aprendizaje durante todo el cuatrimestre.
 
@@ -312,7 +312,7 @@ Además, el cambio de lenguaje persigue un objetivo fundamental: que el alumnado
 
 \medskip
 
-\guionmarca{\marcaslide{27}{Evaluación}} El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaco el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
+\guionmarca{\marcaslide{27}{Evaluación}} El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaca el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
 
 El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y fijar un mínimo de 5 evita que una buena nota de proyecto compense la falta de base.
 
@@ -323,28 +323,28 @@ El diseño responde a la metodología: si el aprendizaje se produce mayoritariam
 
 Los grupos, de tres o cuatro estudiantes, eligen en la semana dos su propio conjunto de datos y el problema al que responde. A partir de ahí el trabajo evoluciona en paralelo con las prácticas: hacia la mitad del cuatrimestre hay una  entrega con retroalimentación y en la semana trece, como aspecto opcional, se puede formular una extensión causal al modelo predictivo. La entrega de la memoria, el respositorio y la presentación tienen lugar en la semana quince. 
 
-Es importante señalar que durante todo el recorrido el uso de inteligencia artificial está permitido, declarado y auditado. La entrega final, repositorio reproducible, memoria y defensa oral, se califica con una rúbrica.
+Es importante señalar que durante todo el recorrido el uso de inteligencia artificial está permitido, declarado y auditado. La entrega final, repositorio reproducible, memoria y defensa oral, se califica con una rúbrica[...]
 
 \medskip
 
-\guionmarca{\marcaslide{29}{Rúbrica del proyecto}} Esta contempla cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Es importante mencionar que la defensa oral individual pesa un treinta por ciento de la nota del proyecto.
+\guionmarca{\marcaslide{29}{Rúbrica del proyecto}} [...] que contempla cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Es importante mencionar que la defensa oral individual pesa un treinta por ciento de la nota del proyecto.
 
 La última pieza del proyecto es la política de uso de inteligencia artificial.
 
 \medskip
 
-\guionmarca{\marcaslide{30}{Uso de inteligencia artificial}} En un trabajo que exige, entre otras cosas,  programación, es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no ignorarlo. 
+\guionmarca{\marcaslide{30}{Uso de inteligencia artificial}} En un trabajo que exige, entre otras cosas,  programación, es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no prohibirlo o ignorarlo. 
 
 Los estudiantes pueden usar libremente asistentes o agentes para programar, depurar y redactar, con un uso crítico y responsable. A cambio hay una obligación: el registro completo de los prompts, no una selección, se entrega como apéndice del proyecto y de las entregas relevantes. 
 
 Y ese registro se evalúa: se cruza con el código y con la memoria buscando coherencia entre el proceso declarado y el trabajo entregado. La transparencia se valora positivamente; cuando el resultado no puede explicarse suficientemente a partir del proceso documentado, será necesario examinarlo con mayor profundidad.
 
-Además, hay tres verificaciones que la inteligencia artificial no sustituye: la defensa oral individual, la participación en el aula, que exige presencialidad, y el examen escrito. En lugar de prohibir una herramienta que muy probablemente van a usar, la asignatura permite usarla, exige declararla y se comprueba que el estudiante domina lo que entrega.
+Además, hay tres verificaciones que la inteligencia artificial no sustituye: la defensa oral individual, la participación en el aula, que exige presencialidad, y el examen escrito.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{TEMA 7. PREDICCIÓN Y EFECTOS CAUSALES}} Finalizo la propuesta docente presentando brevemente el Tema 7, que empieza con una decisión de negocio: los alumnos están familiarizados con la problemática que el abandono de clientes  (o *churn*) supone para las empresas. El problema lo conocen desde el merco predictivo. En este tema partimos de este (la modelización del *riesgo de abandono*) para ir un paso más allá y estimar parámetros estructurales.
+\guionmarca{\marcaseccion{TEMA 7. PREDICCIÓN Y EFECTOS CAUSALES}} Finalizo la propuesta docente presentando brevemente el Tema 7, que empieza con una decisión de negocio: los alumnos están familiarizados con la problemática que el abandono de clientes  supone para las empresas. Un problema que conocen desde un marco predictivo. En este tema partimos de la modelización del *riesgo de abandono* para ir un paso más allá y estimar parámetros estructurales.
 
 \medskip
 
@@ -361,9 +361,9 @@ El mensaje central es claro: el ejercicio predictivo implementado no responde po
 
 \medskip
 
-\guionmarca{\marcaslide{32}{Aprendizaje automático para la estimación de efectos causales}} Si nos movemos del contexto al modelo el objetivo es estimar el efecto que una intervención $D$ tiene sobre la respuesta $y$ (el parámetro $\tau$) asumiendo que y depende de un conjunto de variables auxiliares X. 
+\guionmarca{\marcaslide{32}{Aprendizaje automático para la estimación de efectos causales}} Si nos movemos del contexto al modelo, el objetivo es estimar el efecto que una intervención $D$ tiene sobre la respuesta $y$ (el parámetro $\tau$) asumiendo que y depende a su vez de un conjunto de variables auxiliares X. 
 
-Si trabajamos con datos observacionales hemos de considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$, de ahí que incorporemos este proceso a través de la función $m$.
+Frecuentemente trabajamos con datos observacionales: entonces hemos de considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$, de ahí que incorporemos este proceso a través de la función $m$.
 
 El grafo visualiza el mecanismo generador de datos y explicita **el objetivo del tema: la incorporación técnicas de aprendizaje máquina para la estimación de tau** 
 
@@ -371,15 +371,23 @@ ML, ¿por qué? Tres motivos: elevada dimensionalidad de X, el uso de datos no t
 
 \medskip
 
-\guionmarca{\marcaslide{33}{De la aplicación \emph{naive} al Double Machine Learning}} La aplicación ingenua del aprendizaje automático a este problema consiste en aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. Falla por dos motivos. Los modelos de aprendizaje automático regularizan y seleccionan las variables por su capacidad para predecir la respuesta: un control poco correlacionado con $y$ pero relevante para explicar $D$ queda atenuado o fuera del modelo, y la segunda etapa atribuye a $\tau$ parte de su relación con el tratamiento. Es un sesgo de variable omitida que aquí se denomina sesgo de regularización. Además, si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona: es el sesgo por sobreajuste.
+\guionmarca{\marcaslide{33}{De la aplicación \emph{naive} al Double Machine Learning}} La aplicación ingenua del aprendizaje automático a este problema consiste en aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. 
 
-Double Machine Learning corrige ambos. La ortogonalización residualiza también el tratamiento con la función auxiliar $m$ que ya aparecía en el grafo y regresa residuos sobre residuos, a la Frisch–Waugh–Lovell. El cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. La combinación produce un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
+La aproximación falla por dos motivos:  
+1. Los modelos de aprendizaje automático regularizan y seleccionan las variables por su capacidad para predecir la respuesta: un control poco correlacionado con $y$ pero relevante para explicar $D$ queda atenuado o fuera del modelo, y la segunda etapa atribuye a $\tau$ parte de su relación con el tratamiento. Es un sesgo de variable omitida que aquí se denomina **sesgo de regularización**.   
+2. Además, si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona: es el **sesgo por sobreajuste**.
+
+Double Machine Learning corrige ambos. 
+
+- La ortogonalización residualiza también el tratamiento con las predicciones de la función auxiliar $m$.  
+- El cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. 
+- La combinación produce un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
 
 \medskip
 
 \guionmarca{\marcaslide{34}{Práctica con datos reales}} Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
 
-No se exigen demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción e intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y límites del análisis.
+La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción de  intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y por tanto límites del análisis.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}

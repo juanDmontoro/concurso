@@ -1285,7 +1285,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Herramientas y Técnicas del Análisis de Datos}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={Herramientas y Técnicas del Análisis de Datos}, rightrule=.15mm, bottomrule=.15mm]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1304,9 +1304,8 @@ de la IA.
 
 \note{El grado en BIA se imparte en la Facultat d'Economia y cuenta
 anualmente con cincuenta plazas de nueva ingreso. Se trata del grado con
-un elevado ratio de demanda (2.8 solicitudes en primera opción por plaza
-ofertada) y la tercera mayor nota de corte de todos los grados ofrecidos
-por la facultad.
+un elevado ratio de demanda y la tercera mayor nota de corte de todos
+los grados ofrecidos por la facultat.
 
 Su objetivo es formar profesionales capaces de convertir los datos en
 decisiones empresariales, combinando competencias tecnológicas y
@@ -1348,8 +1347,8 @@ GLM, no linealidad, validación, regularización, KNN \\ \lightrowrule
 Predicción con Datos Temporales & 2 (2) & Predicción & Componentes,
 alisado, ARIMA, evaluación por horizonte \\ \lightrowrule
 \textbf{Técnicas Avanzadas de Predicción en Negocios} & \textbf{3 (1)} &
-\textbf{Predicción} & \textbf{Ensambles, redes neuronales, SVM,
-predicción vs.~explicación} \\ \lightrowrule
+\textbf{Predicción} & \textbf{GLMs, ensambles, redes neuronales, SVM,
+predicción y explicación} \\ \lightrowrule
 Datos Espaciales y Espacio-Temporales & 3 (2) & Modelización espacial &
 Exploración espacial, \emph{kriging}, modelos espaciales, predicción con
 incertidumbre \\ \lightrowrule
@@ -1485,7 +1484,7 @@ extensión causal} \\ \lightrowrule
 15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={El conjunto de datos de referencia}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={El conjunto de datos de referencia}, rightrule=.15mm, bottomrule=.15mm]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1497,15 +1496,13 @@ características de los datos.
 \end{tcolorbox}
 
 \note{Los contenidos, organizados en siete temas, se distribuyen a lo
-largo de las quince semanas del cuatrimestre. La tabla, además muestra
-la conexión de cada tema con su práctica y con la entregas parciales de
-un proyecto en equipo que los estudiantes desarrollan a lo largo de la
+largo de las quince semanas del cuatrimestre. La tabla muestra la
+conexión de cada tema con su práctica y con la entregas parciales de un
+proyecto en equipo que los estudiantes desarrollan a lo largo de la
 asignatura.
 
-El recorrido va de lo más simple a lo flexible ---el modelo lineal
-generalizado, ensambles, máquinas de vectores de soportes y aprendizaje
-profundo-- para, a continuación, cerrar con un tema final que conecta
-predicción y explicación.
+El recorrido va de lo más simple a lo flexible y cierra con un tema
+final que conecta predicción y explicación.
 
 Durante todas las prácticas se usa un mismo conjunto de datos de
 referencia, sobre el que se aplican todas las técnicas analíticas
@@ -1575,8 +1572,8 @@ producen evidencias de aprendizaje durante todo el cuatrimestre.
 exploración de los datos, comparación de métodos, formalización y
 decisión.
 
-Es un recorrido que va de la narrativa a lo visual, de lo visual al
-código y del código a lo formal.
+Es un recorrido que va de la narrativa a lo visual, de lo visual a la
+implementación y del código a lo formal.
 
 El orden es deliberado: la formalización llega cuando el estudiante ha
 visto el problema, ha manipulado los datos y ha comparado modelos. Las
@@ -1680,7 +1677,7 @@ inicio del curso.
 
 \note{El último hito en el diseño de la asignatura es la evaluación,
 donde, dada su naturaleza, la práctica y la evaluación continua tienen
-un peso sustantivo. Dentro de esta destaco el proyecto final con defensa
+un peso sustantivo. Dentro de esta destaca el proyecto final con defensa
 oral que supone un treinta y cinco por ciento de la nota. Por otro lado
 un examen final escrito pondera el veinticinco por ciento de la nota
 final.
@@ -1710,7 +1707,7 @@ buena nota de proyecto compense la falta de base.}
 \item
   El hito de la S13 permite formular una pregunta causal sobre los
   propios datos y responderla con \texttt{DoubleML} (o justificar por
-  qué los supuestos no lo permiten, respuesta igual de valiosa)
+  qué los supuestos no lo permiten)
 \item
   Entrega final: \textbf{repositorio reproducible + memoria + defensa
   oral}
@@ -1730,7 +1727,7 @@ tienen lugar en la semana quince.
 Es importante señalar que durante todo el recorrido el uso de
 inteligencia artificial está permitido, declarado y auditado. La entrega
 final, repositorio reproducible, memoria y defensa oral, se califica con
-una rúbrica.}
+una rúbrica{[}\ldots{]}}
 \end{frame}
 
 \begin{frame}[shrink]{Rúbrica del proyecto}
@@ -1763,10 +1760,10 @@ una rúbrica.}
 & pregunta orientada a toma decisiones susceptible de respuesta
 empírica; limitaciones de los datos discutidas & Pregunta clara, EDA
 correcto & Dataset sin justificar; pregunta ambigua; EDA ausente \\ \lightrowrule
-\textbf{Pipeline reproducible (20\%)} & Repositorio, entorno, ejecución
-& reproduce todo desde datos crudos, entorno versionado & Reproducible
-con intervención menor documentada & No reproduce; preprocesado fuera
-del pipeline (fuga) \\ \lightrowrule
+\textbf{Proyecto reproducible (20\%)} & Repositorio, entorno, ejecución
+(\emph{pipeline}) & Reproduce todo desde datos crudos, entorno
+versionado & Reproducible con intervención menor documentada & No
+reproduce; preprocesado fuera del pipeline (fuga) \\ \lightrowrule
 \textbf{Modelización (25\%)} & Modelo base → ensambles → SVM → DL;
 comparación & Comparación honesta en test común; selección justificada &
 \(\geq\) 3 familias comparadas correctamente; métricas incompletas & Sin
@@ -1781,10 +1778,10 @@ del código & Cada miembro explica las partes que firmó & Un miembro no
 sabe explicar código propio \\ \lightrowrule
 \end{longtable}
 
-\note{Esta contempla cinco dimensiones con su peso, lo que se observa en
-cada una y los descriptores de tres niveles: excelente, apto y no apto.
-Es importante mencionar que la defensa oral individual pesa un treinta
-por ciento de la nota del proyecto.
+\note{{[}\ldots{]} que contempla cinco dimensiones con su peso, lo que
+se observa en cada una y los descriptores de tres niveles: excelente,
+apto y no apto. Es importante mencionar que la defensa oral individual
+pesa un treinta por ciento de la nota del proyecto.
 
 La última pieza del proyecto es la política de uso de inteligencia
 artificial.}
@@ -1843,7 +1840,7 @@ artificial.}
 \note{En un trabajo que exige, entre otras cosas, programación, es del
 todo irreal tratar de evitar que el alumnado se apoye en herramientas de
 inteligencia artificial. La respuesta debe ser integrar y supervisar su
-uso, no ignorarlo.
+uso, no prohibirlo o ignorarlo.
 
 Los estudiantes pueden usar libremente asistentes o agentes para
 programar, depurar y redactar, con un uso crítico y responsable. A
@@ -1859,10 +1856,7 @@ necesario examinarlo con mayor profundidad.
 
 Además, hay tres verificaciones que la inteligencia artificial no
 sustituye: la defensa oral individual, la participación en el aula, que
-exige presencialidad, y el examen escrito. En lugar de prohibir una
-herramienta que muy probablemente van a usar, la asignatura permite
-usarla, exige declararla y se comprueba que el estudiante domina lo que
-entrega.}
+exige presencialidad, y el examen escrito.}
 \end{frame}
 
 \section{Tema 7. Predicción y efectos
@@ -1870,11 +1864,10 @@ causales}\label{tema-7.-predicciuxf3n-y-efectos-causales}
 
 \note{Finalizo la propuesta docente presentando brevemente el Tema 7,
 que empieza con una decisión de negocio: los alumnos están
-familiarizados con la problemática que el abandono de clientes (o
-\emph{churn}) supone para las empresas. El problema lo conocen desde el
-merco predictivo. En este tema partimos de este (la modelización del
-\emph{riesgo de abandono}) para ir un paso más allá y estimar parámetros
-estructurales.}
+familiarizados con la problemática que el abandono de clientes supone
+para las empresas. Un problema que conocen desde un marco predictivo. En
+este tema partimos de la modelización del \emph{riesgo de abandono} para
+ir un paso más allá y estimar parámetros estructurales.}
 
 \begin{frame}[shrink]{Riesgo de abandono y estrategia de retención de
 clientes}
@@ -1914,7 +1907,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Experimentos aleatorios controlados: el patrón de referencia}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={Experimentos aleatorios controlados: el patrón de referencia}, rightrule=.15mm, bottomrule=.15mm]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -2039,15 +2032,15 @@ Con \textbf{datos observacionales} \(\to\) posible confusión en \(X\):
 \end{column}
 \end{columns}
 
-\note{Si nos movemos del contexto al modelo el objetivo es estimar el
+\note{Si nos movemos del contexto al modelo, el objetivo es estimar el
 efecto que una intervención \(D\) tiene sobre la respuesta \(y\) (el
-parámetro \(\tau\)) asumiendo que y depende de un conjunto de variables
-auxiliares X.
+parámetro \(\tau\)) asumiendo que y depende a su vez de un conjunto de
+variables auxiliares X.
 
-Si trabajamos con datos observacionales hemos de considerar la
-posibilidad de confusión si la selección al tratamiento se ve afectada
-las variables \(X\), de ahí que incorporemos este proceso a través de la
-función \(m\).
+Frecuentemente trabajamos con datos observacionales: entonces hemos de
+considerar la posibilidad de confusión si la selección al tratamiento se
+ve afectada las variables \(X\), de ahí que incorporemos este proceso a
+través de la función \(m\).
 
 El grafo visualiza el mecanismo generador de datos y explicita
 \textbf{el objetivo del tema: la incorporación técnicas de aprendizaje
@@ -2113,24 +2106,34 @@ sobreajuste}.
 
 \note{La aplicación ingenua del aprendizaje automático a este problema
 consiste en aprender un modelo flexible para \(g\), residualizar la
-respuesta y regresar ese residuo sobre el tratamiento. Falla por dos
-motivos. Los modelos de aprendizaje automático regularizan y seleccionan
-las variables por su capacidad para predecir la respuesta: un control
-poco correlacionado con \(y\) pero relevante para explicar \(D\) queda
+respuesta y regresar ese residuo sobre el tratamiento.
+
+La aproximación falla por dos motivos:\\
+1. Los modelos de aprendizaje automático regularizan y seleccionan las
+variables por su capacidad para predecir la respuesta: un control poco
+correlacionado con \(y\) pero relevante para explicar \(D\) queda
 atenuado o fuera del modelo, y la segunda etapa atribuye a \(\tau\)
 parte de su relación con el tratamiento. Es un sesgo de variable omitida
-que aquí se denomina sesgo de regularización. Además, si se entrena y se
-predice sobre las mismas observaciones, los residuos absorben parte del
-efecto causal y la varianza residual del tratamiento se distorsiona: es
-el sesgo por sobreajuste.
+que aquí se denomina \textbf{sesgo de regularización}.\\
+2. Además, si se entrena y se predice sobre las mismas observaciones,
+los residuos absorben parte del efecto causal y la varianza residual del
+tratamiento se distorsiona: es el \textbf{sesgo por sobreajuste}.
 
-Double Machine Learning corrige ambos. La ortogonalización residualiza
-también el tratamiento con la función auxiliar \(m\) que ya aparecía en
-el grafo y regresa residuos sobre residuos, a la Frisch--Waugh--Lovell.
-El cross-fitting separa las observaciones con las que se entrena de
-aquellas sobre las que se predice. La combinación produce un estimador
-raíz de \(n\) consistente con inferencia válida, que los estudiantes
-implementan con DoubleML como un estimador en dos etapas.}
+Double Machine Learning corrige ambos.
+
+\begin{itemize}
+\tightlist
+\item
+  La ortogonalización residualiza también el tratamiento con las
+  predicciones de la función auxiliar \(m\).\\
+\item
+  El cross-fitting separa las observaciones con las que se entrena de
+  aquellas sobre las que se predice.
+\item
+  La combinación produce un estimador raíz de \(n\) consistente con
+  inferencia válida, que los estudiantes implementan con DoubleML como
+  un estimador en dos etapas.
+\end{itemize}}
 \end{frame}
 
 \begin{frame}[fragile,shrink]{Práctica con datos reales}
@@ -2201,10 +2204,10 @@ de trabajo ya conocido de los temas predictivos, estiman el efecto
 promedio, comparan reglas de priorización y, tras introducir selección
 observacional, evalúan si DoubleML recupera el efecto conocido.
 
-No se exigen demostraciones ni desarrollos formales. Se evalúa la
-capacidad para distinguir entre predicción e intervención, identificar
-sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y
-valorar los supuestos y límites del análisis.}
+La evaluación no exige demostraciones ni desarrollos formales. Se evalúa
+la capacidad para distinguir entre predicción de intervención,
+identificar sesgos, aplicar ortogonalización y cross-fitting, realizar
+inferencia y valorar los supuestos y por tanto límites del análisis.}
 \end{frame}
 
 \begin{frame}
@@ -2326,7 +2329,7 @@ entre artistas activos en las listas globales de Spotify:
   alcanzabilidad y distancia en la red previa de colaboraciones.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Proximidad estética: un aspecto recurrente en la literatura}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={Proximidad estética: un aspecto recurrente en la literatura}, rightrule=.15mm, bottomrule=.15mm]
 
 El trabajo propone dos hipótesis en competencia sobre la afinidad en
 mercados culturales:
@@ -2540,7 +2543,7 @@ Filas de etiquetas & 794.309 \\ \lightrowrule
   de sellos.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Por qué etiquetas y no géneros de plataforma}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={Por qué etiquetas y no géneros de plataforma}, rightrule=.15mm, bottomrule=.15mm]
 
 Los géneros de Spotify solo cubren 981 de 2.878 artistas (aprox. 34\%);
 las etiquetas reflejan la percepción de la audiencia y cubren el 83,5\%
@@ -2689,7 +2692,7 @@ estructura de la red para explicar o predecir las colaboraciones.}
   (28,3 por cada 100.000).
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Definición de la respuesta a modelizar}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={Definición de la respuesta a modelizar}, rightrule=.15mm, bottomrule=.15mm]
 
 Para un par \((i,j)\) del conjunto de riesgo, \(y^F_{ij,t}=1\) si en
 \(t\) hay una colaboración principal--invitado en una pista del corpus y
@@ -2789,7 +2792,7 @@ Elecciones basadas en datos & Ninguna tras la especificación paramétrica
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={¿Por qué no un ERGM? \(\to\) Almquist y Butts (2014)}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={¿Por qué no un ERGM? \(\to\) Almquist y Butts (2014)}, rightrule=.15mm, bottomrule=.15mm]
 
 \begin{enumerate}
 \item
@@ -2862,7 +2865,7 @@ identidad de género (si individuo), país registrado e historia de sellos
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Nota}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, opacitybacktitle=0.6, breakable, arc=.35mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacityback=0, colback=white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toptitle=1mm, titlerule=0mm, title={Nota}, rightrule=.15mm, bottomrule=.15mm]
 
 \textbf{Tres modelos anidados}: Completo (los cuatro bloques) · Solo red
 (topología) · Sin red (estética, actividad y atributos). Las
