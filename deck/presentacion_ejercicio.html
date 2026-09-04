@@ -3592,10 +3592,10 @@ display:block!important;
 <h2>El modelo de formación</h2>
 <p> </p>
 <ul>
-<li><strong>Resultado sensible al rol</strong>: el evento es la primera colaboración del par como artista <strong>principal</strong> y artista <strong>invitado</strong> (<em>lead–feature</em>) en una pista que entra en listas.</li>
-<li><strong>Formación</strong>: exige inexistencia de lazos previos entre ambos; las repeticiones se estudian aparte (el resultado agregado suma 1.811 eventos frente a 1.064 de formación).</li>
-<li><strong>Pares invitado–invitado</strong>: no cuentan como vínculo (pero se excluyen de negativos).</li>
-<li><strong>Un evento raro</strong>: 26,9 formaciones por cada 100.000 pares-año (IC 95% [25,3; 28,5]).</li>
+<li><strong>Resultado sensible al rol</strong>: el evento es una colaboración del par como artista <strong>principal</strong> e <strong>invitado</strong> (<em>lead–feature</em>) en una pista del corpus lanzada en <span class="math inline">\(t\)</span>.</li>
+<li><strong>Formación</strong>: exige inexistencia de lazos previos; las repeticiones se estudian aparte (1.811 eventos agregados frente a 1.064 de formación).</li>
+<li><strong>Pares invitado–invitado</strong>: no son eventos del resultado principal ni se codifican como negativos.</li>
+<li><strong>Un evento raro</strong>: 1.064 formaciones entre 3.756.411 díadas-año (28,3 por cada 100.000).</li>
 </ul>
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
@@ -3603,15 +3603,12 @@ display:block!important;
 <p><strong>Definición de la respuesta a modelizar</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="math inline">\(y^F_{ij,t} = 1\)</span> si el par <span class="math inline">\((i, j)\)</span> aparece por primera vez como principal e invitado en el año <span class="math inline">\(t\)</span>, sin lazo previo de ningún tipo entre ambos.</p>
+<p>Para un par <span class="math inline">\((i,j)\)</span> del conjunto de riesgo, <span class="math inline">\(y^F_{ij,t}=1\)</span> si en <span class="math inline">\(t\)</span> hay una colaboración principal–invitado en una pista del corpus y no existe ningún lazo previo entre ambos.</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>Antes de especificar el modelo, debemos definir qué cuenta como colaboración y, por tanto, como resultado positivo.</p>
-<p>Siguiendo la literatura empírica sobre redes, distinguimos entre la formación de un vínculo y la repetición de uno existente, pues responden a procesos distintos. Esta presentación se centra en la formación.</p>
-<p>El resultado es positivo si dos artistas colaboran en el año <span class="math inline">\(t\)</span>, uno como principal y otro como invitado, en una pista que entra en las listas. Para considerarla una primera colaboración, exigimos además que no exista ningún vínculo previo entre ellos.</p>
-<p>Con esta definición identificamos 1.064 eventos, equivalentes a 26,9 por cada 100.000 pares. Este fuerte desequilibrio entre clases condiciona el diseño y la inferencia.</p>
+<p>Esta diapositiva define el resultado, que se etiqueta después de construir el conjunto de riesgo. Primero identificamos colaboraciones principal–invitado en pistas del corpus lanzadas en <span class="math inline">\(t\)</span>; para la formación exigimos además ausencia de cualquier lazo previo. Los pares invitado–invitado no son eventos de este resultado ni se codifican como negativos, aunque sí cuentan en la red y en el historial de vínculos. Tras aplicar elegibilidad y filtros de estimación quedan 1.064 eventos en 3.756.411 díadas-año: 28,3 por cada 100.000. La rareza condiciona el diseño y la inferencia.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -3628,15 +3625,14 @@ display:block!important;
 <h2>Diseño: conjunto de riesgo</h2>
 <p> </p>
 <ul>
-<li><strong>Conjunto de riesgo completo</strong>: todos los pares no ordenados en riesgo en el año <span class="math inline">\(t\)</span> (sin muestreo de negativos).</li>
-<li><strong>Quién está en riesgo</strong>: un par pertenece al conjunto de riesgo en <span class="math inline">\(t\)</span> solo si la colaboración es una posibilidad realista —ambos artistas debutaron en listas antes de <span class="math inline">\(t\)</span> y cada uno ha publicado una pista en listas en los tres años previos.</li>
-<li><strong>Variantes de sensibilidad</strong>: ventana de cinco años y sin salida (reportadas como sensibilidad).</li>
-<li><strong>Dimensión</strong>: 3.756.411 díadas-año de estimación, 1.064 eventos de formación, 2.256 artistas (2015–2024).</li>
+<li><strong>Todos los pares elegibles</strong>: se incluyen todas las parejas no ordenadas de artistas elegibles; no se muestrean negativos.</li>
+<li><strong>Quién es elegible (aw3)</strong>: cada artista tenía antes de <span class="math inline">\(t\)</span> algún lanzamiento incluido en el corpus y al menos uno fechado entre <span class="math inline">\(t-3\)</span> y <span class="math inline">\(t-1\)</span>. Si uno no cumple, la colaboración observada queda fuera.</li>
+<li><strong>Cobertura (2016–2024)</strong>: aw3 excluye 1.457 de 2.481 primeras colaboraciones <em>lead–feature</em> observadas (58,7%); aw0 elimina la ventana, pero mantiene la entrada antes de <span class="math inline">\(t\)</span> y todavía excluye 1.374 (55,4%). Recupera solo 83 casos (3,35 pp); aw5 se estima aparte.</li>
+<li><strong>Muestra estimada (2015–2024)</strong>: 3.756.411 díadas-año, 1.064 formaciones y 2.256 artistas.</li>
 </ul>
 <aside class="notes">
-<p>Definido el resultado positivo, debemos delimitar el conjunto de riesgo: los pares que podían haber colaborado, tanto si lo hicieron como si no.</p>
-<p>El modelo se estima sobre el conjunto de riesgo completo, sin muestreo de negativos. Así, los coeficientes comparan las colaboraciones observadas con todos los pares que podían haber colaborado, pero no lo hicieron.</p>
-<p>Un par está en riesgo en el año <span class="math inline">\(t\)</span> si ambos artistas debutaron en las listas antes de ese año y publicaron al menos una pista en ellas durante los tres años anteriores. Esta ventana excluye negativos poco plausibles. Como análisis de sensibilidad, se añade una ventana de cinco años y otra sin salida.</p>
+<p>El conjunto se fija con información hasta <span class="math inline">\(t-1\)</span>, antes de etiquetar el resultado. Se generan todos los pares elegibles, sin muestrear ceros. Si un artista no cumple, la colaboración observada queda fuera del panel, no se convierte en cero. El reloj es el año de lanzamiento de una pista del corpus.</p>
+<p>En 2016–2024, aw3 excluye 1.457 de 2.481 primeras colaboraciones <em>lead–feature</em> (58,7%). aw0 elimina la ventana, pero mantiene la entrada anterior a <span class="math inline">\(t\)</span>: todavía excluye 1.374 (55,4%) y recupera solo 83. La proporción anual de participantes que debuta en <span class="math inline">\(t\)</span> oscila entre 41,3% y 53,8%.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;

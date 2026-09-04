@@ -303,44 +303,36 @@ Esta estructura sugiere que la proximidad estética no agota la lógica de las c
 
 &nbsp;
 
-- **Resultado sensible al rol**: el evento es la primera colaboración del par como artista **principal** y artista **invitado** (*lead–feature*) en una pista que entra en listas.
-- **Formación**: exige inexistencia de lazos previos entre ambos; las repeticiones se estudian aparte (el resultado agregado suma 1.811 eventos frente a 1.064 de formación).
-- **Pares invitado–invitado**: no cuentan como vínculo (pero se excluyen de negativos).
-- **Un evento raro**: 26,9 formaciones por cada 100.000 pares-año (IC 95% [25,3; 28,5]).
+- **Resultado sensible al rol**: el evento es una colaboración del par como artista **principal** e **invitado** (*lead–feature*) en una pista del corpus lanzada en $t$.
+- **Formación**: exige inexistencia de lazos previos; las repeticiones se estudian aparte (1.811 eventos agregados frente a 1.064 de formación).
+- **Pares invitado–invitado**: no son eventos del resultado principal ni se codifican como negativos.
+- **Un evento raro**: 1.064 formaciones entre 3.756.411 díadas-año (28,3 por cada 100.000).
 
 ::: {.callout-note icon="false"}
 
 # Definición de la respuesta a modelizar
-$y^F_{ij,t} = 1$ si el par $(i, j)$ aparece por primera vez como principal e invitado en el año $t$, sin lazo previo de ningún tipo entre ambos.
+Para un par $(i,j)$ del conjunto de riesgo, $y^F_{ij,t}=1$ si en $t$ hay una colaboración principal–invitado en una pista del corpus y no existe ningún lazo previo entre ambos.
 :::
 
 ::: {.notes}
 
-Antes de especificar el modelo, debemos definir qué cuenta como colaboración y, por tanto, como resultado positivo.
-
-Siguiendo la literatura empírica sobre redes, distinguimos entre la formación de un vínculo y la repetición de uno existente, pues responden a procesos distintos. Esta presentación se centra en la formación.
-
-El resultado es positivo si dos artistas colaboran en el año $t$, uno como principal y otro como invitado, en una pista que entra en las listas. Para considerarla una primera colaboración, exigimos además que no exista ningún vínculo previo entre ellos.
-
-Con esta definición identificamos 1.064 eventos, equivalentes a 26,9 por cada 100.000 pares. Este fuerte desequilibrio entre clases condiciona el diseño y la inferencia.
+Esta diapositiva define el resultado, que se etiqueta después de construir el conjunto de riesgo. Primero identificamos colaboraciones principal–invitado en pistas del corpus lanzadas en $t$; para la formación exigimos además ausencia de cualquier lazo previo. Los pares invitado–invitado no son eventos de este resultado ni se codifican como negativos, aunque sí cuentan en la red y en el historial de vínculos. Tras aplicar elegibilidad y filtros de estimación quedan 1.064 eventos en 3.756.411 díadas-año: 28,3 por cada 100.000. La rareza condiciona el diseño y la inferencia.
 :::
 
 ## Diseño: conjunto de riesgo
 
 &nbsp;
 
-- **Conjunto de riesgo completo**: todos los pares no ordenados en riesgo en el año $t$ (sin muestreo de negativos).
-- **Quién está en riesgo**: un par pertenece al conjunto de riesgo en $t$ solo si la colaboración es una posibilidad realista ---ambos artistas debutaron en listas antes de $t$ y cada uno ha publicado una pista en listas en los tres años previos.
-- **Variantes de sensibilidad**: ventana de cinco años y sin salida (reportadas como sensibilidad).
-- **Dimensión**: 3.756.411 díadas-año de estimación, 1.064 eventos de formación, 2.256 artistas (2015–2024).
+- **Todos los pares elegibles**: se incluyen todas las parejas no ordenadas de artistas elegibles; no se muestrean negativos.
+- **Quién es elegible (aw3)**: cada artista tenía antes de $t$ algún lanzamiento incluido en el corpus y al menos uno fechado entre $t-3$ y $t-1$. Si uno no cumple, la colaboración observada queda fuera.
+- **Cobertura (2016–2024)**: aw3 excluye 1.457 de 2.481 primeras colaboraciones *lead–feature* observadas (58,7%); aw0 elimina la ventana, pero mantiene la entrada antes de $t$ y todavía excluye 1.374 (55,4%). Recupera solo 83 casos (3,35 pp); aw5 se estima aparte.
+- **Muestra estimada (2015–2024)**: 3.756.411 díadas-año, 1.064 formaciones y 2.256 artistas.
 
 ::: {.notes}
 
-Definido el resultado positivo, debemos delimitar el conjunto de riesgo: los pares que podían haber colaborado, tanto si lo hicieron  como si no.
+El conjunto se fija con información hasta $t-1$, antes de etiquetar el resultado. Se generan todos los pares elegibles, sin muestrear ceros. Si un artista no cumple, la colaboración observada queda fuera del panel, no se convierte en cero. El reloj es el año de lanzamiento de una pista del corpus.
 
-El modelo se estima sobre el conjunto de riesgo completo, sin muestreo de negativos. Así, los coeficientes comparan las colaboraciones observadas con todos los pares que podían haber colaborado, pero no lo hicieron.
-
-Un par está en riesgo en el año $t$ si ambos artistas debutaron en las listas antes de ese año y publicaron al menos una pista en ellas durante los tres años anteriores. Esta ventana excluye negativos poco plausibles. Como análisis de sensibilidad, se añade una ventana de cinco años y otra sin salida.
+En 2016–2024, aw3 excluye 1.457 de 2.481 primeras colaboraciones *lead–feature* (58,7%). aw0 elimina la ventana, pero mantiene la entrada anterior a $t$: todavía excluye 1.374 (55,4%) y recupera solo 83. La proporción anual de participantes que debuta en $t$ oscila entre 41,3% y 53,8%.
 :::
 
 # Análisis empírico {background-color="#2D6A7A"}

@@ -57,9 +57,9 @@ Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
 2 · Propuesta docente & 15 min & 16 & 18 & 2098 & 15,0\\
-3 · Propuesta investigadora & 20 min & 22 & 24 & 3256 & 23,3\\
+3 · Propuesta investigadora & 20 min & 22 & 24 & 3214 & 23,0\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{57} & \textbf{65} & \textbf{7285} & \textbf{52,0}\\
+\textbf{Total} & \textbf{50 min} & \textbf{57} & \textbf{65} & \textbf{7243} & \textbf{51,7}\\
 \bottomrule
 \end{tabular}
 
@@ -399,7 +399,7 @@ No se exigen demostraciones ni desarrollos formales. Se evalúa la capacidad par
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,23,3 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, que estudia la formación de colaboraciones entre artistas en la música grabada. La pregunta que organiza la exposición: en la producción en las industrias culturales ¿qué factores están asociados con la decisión de colaborar?
+\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,23,0 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, que estudia la formación de colaboraciones entre artistas en la música grabada. La pregunta que organiza la exposición: en la producción en las industrias culturales ¿qué factores están asociados con la decisión de colaborar?
 
 \medskip
 
@@ -479,21 +479,13 @@ Esta estructura sugiere que la proximidad estética no agota la lógica de las c
 
 \medskip
 
-\guionmarca{\marcaslide{44}{El modelo de formación}} Antes de especificar el modelo, debemos definir qué cuenta como colaboración y, por tanto, como resultado positivo.
-
-Siguiendo la literatura empírica sobre redes, distinguimos entre la formación de un vínculo y la repetición de uno existente, pues responden a procesos distintos. Esta presentación se centra en la formación.
-
-El resultado es positivo si dos artistas colaboran en el año $t$, uno como principal y otro como invitado, en una pista que entra en las listas. Para considerarla una primera colaboración, exigimos además que no exista ningún vínculo previo entre ellos.
-
-Con esta definición identificamos 1.064 eventos, equivalentes a 26,9 por cada 100.000 pares. Este fuerte desequilibrio entre clases condiciona el diseño y la inferencia.
+\guionmarca{\marcaslide{44}{El modelo de formación}} Esta diapositiva define el resultado, que se etiqueta después de construir el conjunto de riesgo. Primero identificamos colaboraciones principal–invitado en pistas del corpus lanzadas en $t$; para la formación exigimos además ausencia de cualquier lazo previo. Los pares invitado–invitado no son eventos de este resultado ni se codifican como negativos, aunque sí cuentan en la red y en el historial de vínculos. Tras aplicar elegibilidad y filtros de estimación quedan 1.064 eventos en 3.756.411 díadas-año: 28,3 por cada 100.000. La rareza condiciona el diseño y la inferencia.
 
 \medskip
 
-\guionmarca{\marcaslide{45}{Diseño: conjunto de riesgo}} Definido el resultado positivo, debemos delimitar el conjunto de riesgo: los pares que podían haber colaborado, tanto si lo hicieron  como si no.
+\guionmarca{\marcaslide{45}{Diseño: conjunto de riesgo}} El conjunto se fija con información hasta $t-1$, antes de etiquetar el resultado. Se generan todos los pares elegibles, sin muestrear ceros. Si un artista no cumple, la colaboración observada queda fuera del panel, no se convierte en cero. El reloj es el año de lanzamiento de una pista del corpus.
 
-El modelo se estima sobre el conjunto de riesgo completo, sin muestreo de negativos. Así, los coeficientes comparan las colaboraciones observadas con todos los pares que podían haber colaborado, pero no lo hicieron.
-
-Un par está en riesgo en el año $t$ si ambos artistas debutaron en las listas antes de ese año y publicaron al menos una pista en ellas durante los tres años anteriores. Esta ventana excluye negativos poco plausibles. Como análisis de sensibilidad, se añade una ventana de cinco años y otra sin salida.
+En 2016–2024, aw3 excluye 1.457 de 2.481 primeras colaboraciones *lead–feature* (58,7%). aw0 elimina la ventana, pero mantiene la entrada anterior a $t$: todavía excluye 1.374 (55,4%) y recupera solo 83. La proporción anual de participantes que debuta en $t$ oscila entre 41,3% y 53,8%.
 
 \needspace{2\baselineskip}
 \bigskip
