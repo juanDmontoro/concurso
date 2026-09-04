@@ -482,102 +482,49 @@ ML, ¿por qué? Tres motivos: elevada dimensionalidad de X, el uso de datos no t
 
 
 
-## Aplicación *naive* de métodos de aprendizaje automático
+## De la aplicación *naive* al Double Machine Learning {.shrink}
 
 &nbsp;
 
-
 :::: {.columns}
-
-::: {.column width="30%"}
-
----
-
-**Problema 1**
-
-Los modelos de aprendizaje automático regularizan (de forma explícita o implícita) los predictores $\to$ *sesgo de regularización*.
+::: {.column width="38%"}
 
 ---
 
-**Problema 2**
+**Aplicación *naive***
 
-Utilizar el mismo conjunto de datos para estimar una función y realizar predicciones $\to$ *sesgo por sobreajuste*.
+1. Aprender $\hat{g}$ y residualizar la respuesta: $\tilde{y}=y-\hat{g}(X)$.
+2. Regresión de $\tilde{y}$ sobre $D$.
+
+$\hat{g}$ selecciona controles por su capacidad de predecir $y$, no $D$ $\to$ **sesgo de regularización**.
+
+Mismos datos para entrenar y predecir $\to$ **sesgo por sobreajuste**.
+
+---
+
+**Double Machine Learning**
+
+1. Aprender $\hat{g}$ **y** $\hat{m}$; residualizar respuesta y tratamiento con *cross-fitting*: $\tilde{y}=y-\hat{g}(X)$, $\tilde{D}=D-\hat{m}(X)$.
+2. Regresión de $\tilde{y}$ sobre $\tilde{D}$: $\tilde{y}=\tau\tilde{D}+\epsilon$.
 
 ---
 
 :::
 
-::: {.column width="5%"}
+::: {.column width="4%"}
 :::
 
-::: {.column width="65%"}
-Aproximación ingenua para la estimación de $\tau$ en
-$$y=\tau D+g(X)+\epsilon,$$
-
-1. Aprender de los datos un modelo flexible $\hat{g}$;
-2. Obtener una versión residualizada de la respuesta 
-$\tilde{y}=y-\hat{g}(X)$;
-3. Recuperar el efecto $\tau$ por la regresión de $\tilde{y}$ sobre $D$.
-
-**Sesgo de regularización**: la estimación $\hat{g}$   selecciona variables $X$ por su capacidad para **predecir $y$** pudiendo atenuar/eliminar un control $x^*$ poco correlacionado con $y$ (pero muy relevante para explicar $D$). En este caso el modelo de segunda etapa atribuirá parte de la relación de $x^*$ con $D$  a $\tau$  $\to$ **sesgo por variable omitida**.
-
-**Sesgo por sobreajuste**: entrenamiento y predicción sobre las mismas observaciones atenúa parte del efecto causal (lo absorben los residuos de $y$) y aumenta la varianza resiual del tratamiento $\to$ la estimación de $\tau$ y su error estándar dejan de ser fiables.
-
+::: {.column width="58%"}
+![](figures/fig_esquema_dml.svg){width="100%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
 :::
 
 ::::
 
 ::: {.notes}
-Una aproximación ingenua para estimar $\tau$ mediante aprendizaje estadístico podría plantearse del siguiente modo:  
+La aplicación ingenua del aprendizaje automático a este problema consiste en aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. Falla por dos motivos. Los modelos de aprendizaje automático regularizan y seleccionan las variables por su capacidad para predecir la respuesta: un control poco correlacionado con $y$ pero relevante para explicar $D$ queda atenuado o fuera del modelo, y la segunda etapa atribuye a $\tau$ parte de su relación con el tratamiento. Es un sesgo de variable omitida que aquí se denomina sesgo de regularización. Además, si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona: es el sesgo por sobreajuste.
 
-1. Aprendemos  de los datos un modelo flexible para $g$;  
-2. Usamos éste para eliminar la variabilidad debida a $X$ de la respuesta: la residualizamos restándole la parte de su variación explicada por $X$  
-3. Recuperamos $\tau$ con una regresión del residuo de la respuesta sobre el tratamiento.
-
-Esta aplicación se enfrenta a dos problemas. Por un lado los modelos de aprendizaje automático regularizan los predictores, de forma explícita o implícita, y seleccionan las variables por su capacidad predictiva. Un control poco correlacionado con la respuesta pero relevante para explicar el tratamiento puede quedar atenuado o fuera del modelo. En ese caso la segunda etapa atribuye al efecto $\tau$ parte de la relación de ese control con $D$ introduciendo un **sesgo de variable omitida** que en este caso se denomina **sesgo por regularización**. 
-
-El segundo problema es el **sesgo por sobreajuste** si entrenamos y predecimos sobre las mismas observaciones. Los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona, de modo que la estimación de $\tau$ y su error estándar dejan de ser fiables.
+Double Machine Learning corrige ambos. La ortogonalización residualiza también el tratamiento con la función auxiliar $m$ que ya aparecía en el grafo y regresa residuos sobre residuos, a la Frisch–Waugh–Lovell. El cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. La combinación produce un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
 :::
-
-## Double (Debiased) Machine Learning {.shrink}
-
-&nbsp;
-
-:::{.columns}
-:::{.column width="30%"}
-
----
-
-Estimador de efecto causal en dos etapas
-
-- Primera etapa
-  1. Entrenar funciones $\hat{g}$ y $\hat{m}$ para respuesta y tratamiento. 
-  2. Generar versiones residualizadas  
-  $\tilde{y}=y-\hat{g}(X)$ y $\tilde{D}=D-\hat{m}(X)$ (separando entrenamiento/predicción)
-- Segunda etapa: estimar la regresión $\tilde{y}=\tau \tilde{D}+\epsilon$
-
----
-
-:::
-
-:::{.column width="5%"}
-:::
-
-:::{.column width="65%"}
-![](figures/fig_esquema_dml.svg){width="80%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
-:::
-:::
-
-::: {.notes}
-El esquema de la trasparencia (derecha) resume la lógica completa del contenido del tema 7. La aplicación
-ingenua del aprendizaje estadístico introduce los sesgos. El método denominado aprendizaje máquina doble (o double machine learning) los soluciona  a través de  la ortogonalización del tratamiento (la denominada regresión de residuos sobre residuos a la Frisch–Waugh–Lovell) y el cross-fitting (predicciones fuera de la muestra de entrenamiento, para el segundo). La combinación de ambas constituye produce un estimador **raíz de n** consistente con inferencia válida.
-
-En la práctica los estudiantes ven  Double Machine Learning como un estimador en dos etapas: 
-1. En la primera etapa se entrenan dos funciones auxiliares, g  y m, que se utilizan para generar  versiones residualizadas de  respuesta y tratamiento. En este proceso se separan las observaciones con las que se entrena de aquellas sobre las que se predice. 
-2. En la segunda etapa se estima la regresión del residuo de y sobre el residuo de D recuperando el parámetro tau.
-:::
-
-
 
 
 ## Práctica con datos reales {.shrink}

@@ -56,10 +56,10 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
-2 · Propuesta docente & 15 min & 16 & 18 & 2098 & 15,0\\
+2 · Propuesta docente & 15 min & 15 & 17 & 1938 & 13,8\\
 3 · Propuesta investigadora & 20 min & 22 & 24 & 3214 & 23,0\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{57} & \textbf{65} & \textbf{7243} & \textbf{51,7}\\
+\textbf{Total} & \textbf{50 min} & \textbf{56} & \textbf{64} & \textbf{7083} & \textbf{50,6}\\
 \bottomrule
 \end{tabular}
 
@@ -246,7 +246,7 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,15,0 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN EN NEGOCIOS}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,13,8 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN EN NEGOCIOS}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
 La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
@@ -371,28 +371,13 @@ ML, ¿por qué? Tres motivos: elevada dimensionalidad de X, el uso de datos no t
 
 \medskip
 
-\guionmarca{\marcaslide{33}{Aplicación \emph{naive} de métodos de aprendizaje automático}} Una aproximación ingenua para estimar $\tau$ mediante aprendizaje estadístico podría plantearse del siguiente modo:  
+\guionmarca{\marcaslide{33}{De la aplicación \emph{naive} al Double Machine Learning}} La aplicación ingenua del aprendizaje automático a este problema consiste en aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. Falla por dos motivos. Los modelos de aprendizaje automático regularizan y seleccionan las variables por su capacidad para predecir la respuesta: un control poco correlacionado con $y$ pero relevante para explicar $D$ queda atenuado o fuera del modelo, y la segunda etapa atribuye a $\tau$ parte de su relación con el tratamiento. Es un sesgo de variable omitida que aquí se denomina sesgo de regularización. Además, si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona: es el sesgo por sobreajuste.
 
-1. Aprendemos  de los datos un modelo flexible para $g$;  
-2. Usamos éste para eliminar la variabilidad debida a $X$ de la respuesta: la residualizamos restándole la parte de su variación explicada por $X$  
-3. Recuperamos $\tau$ con una regresión del residuo de la respuesta sobre el tratamiento.
-
-Esta aplicación se enfrenta a dos problemas. Por un lado los modelos de aprendizaje automático regularizan los predictores, de forma explícita o implícita, y seleccionan las variables por su capacidad predictiva. Un control poco correlacionado con la respuesta pero relevante para explicar el tratamiento puede quedar atenuado o fuera del modelo. En ese caso la segunda etapa atribuye al efecto $\tau$ parte de la relación de ese control con $D$ introduciendo un **sesgo de variable omitida** que en este caso se denomina **sesgo por regularización**. 
-
-El segundo problema es el **sesgo por sobreajuste** si entrenamos y predecimos sobre las mismas observaciones. Los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona, de modo que la estimación de $\tau$ y su error estándar dejan de ser fiables.
+Double Machine Learning corrige ambos. La ortogonalización residualiza también el tratamiento con la función auxiliar $m$ que ya aparecía en el grafo y regresa residuos sobre residuos, a la Frisch–Waugh–Lovell. El cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. La combinación produce un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
 
 \medskip
 
-\guionmarca{\marcaslide{34}{Double (Debiased) Machine Learning}} El esquema de la trasparencia (derecha) resume la lógica completa del contenido del tema 7. La aplicación
-ingenua del aprendizaje estadístico introduce los sesgos. El método denominado aprendizaje máquina doble (o double machine learning) los soluciona  a través de  la ortogonalización del tratamiento (la denominada regresión de residuos sobre residuos a la Frisch–Waugh–Lovell) y el cross-fitting (predicciones fuera de la muestra de entrenamiento, para el segundo). La combinación de ambas constituye produce un estimador **raíz de n** consistente con inferencia válida.
-
-En la práctica los estudiantes ven  Double Machine Learning como un estimador en dos etapas: 
-1. En la primera etapa se entrenan dos funciones auxiliares, g  y m, que se utilizan para generar  versiones residualizadas de  respuesta y tratamiento. En este proceso se separan las observaciones con las que se entrena de aquellas sobre las que se predice. 
-2. En la segunda etapa se estima la regresión del residuo de y sobre el residuo de D recuperando el parámetro tau.
-
-\medskip
-
-\guionmarca{\marcaslide{35}{Práctica con datos reales}} Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
+\guionmarca{\marcaslide{34}{Práctica con datos reales}} Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
 
 No se exigen demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción e intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y límites del análisis.
 
@@ -403,12 +388,12 @@ No se exigen demostraciones ni desarrollos formales. Se evalúa la capacidad par
 
 \medskip
 
-\guionmarca{\marcaslide{36}{Esquema}} La exposición sigue seis bloques. Empiezo por la motivación, la pregunta y la contribución. A continuación presento los datos y, en particular, cómo medimos la proximidad estética entre dos artistas. El tercer bloque es el análisis empírico: el diseño, la estimación y  resultados. El cuarto pasa de la asociación dentro de la muestra a la capacidad para ordenar colaboraciones en un año que el modelo no ha visto. Siguen las comprobaciones de sensibilidad y cierra conclusiones, límites y extensiones.
+\guionmarca{\marcaslide{35}{Esquema}} La exposición sigue seis bloques. Empiezo por la motivación, la pregunta y la contribución. A continuación presento los datos y, en particular, cómo medimos la proximidad estética entre dos artistas. El tercer bloque es el análisis empírico: el diseño, la estimación y  resultados. El cuarto pasa de la asociación dentro de la muestra a la capacidad para ordenar colaboraciones en un año que el modelo no ha visto. Siguen las comprobaciones de sensibilidad y cierra conclusiones, límites y extensiones.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{INTRODUCCIÓN}\smallskip \marcaslide{37}{¿Se ha convertido la música en una actividad colaborativa?}} El gráfico muestra el porcentaje de colaboraciones en listas anuales de éxitos de música (Billboard Hot 100 y tramos de este) e ilustra la pregunta que se formula.
+\guionmarca{\marcaseccion{INTRODUCCIÓN}\smallskip \marcaslide{36}{¿Se ha convertido la música en una actividad colaborativa?}} El gráfico muestra el porcentaje de colaboraciones en listas anuales de éxitos de música (Billboard Hot 100 y tramos de este) e ilustra la pregunta que se formula.
 
 A comienzos de los setenta del siglo pasado, menos del 3% de las entradas anuales correspondían a colaboraciones. Entre 2016 y 2020 esa misma tasa asciende al 40%. La colaboración ha pasado de ser una anomalía entre los grandes éxitos a una práctica habitual. Lo que parece observarse es un cambio de régimen que emerge en paralelo a la digitalización de la música y que se asienta con la implantación de un modelo de negocio basado en el acceso, no en la propiedad (el streaming).
 
@@ -418,7 +403,7 @@ No obstante introduzco un apunte: en la creación de equipos creativos se da una
 
 \medskip
 
-\guionmarca{\marcaslide{38}{Colaboraciones: un emparejamiento multidimensional}} Comienzo por definir la unidad de análisis: pares de artistas activos en un mismo año en las listas globales de Spotify. El evento modelizado es su primera colaboración como artista principal y artista invitado (lead y feature). El objetivo es distinguir a las parejas que forman una colaboración por primera vez de las muchas que podrían haberlo hecho y no lo hicieron.
+\guionmarca{\marcaslide{37}{Colaboraciones: un emparejamiento multidimensional}} Comienzo por definir la unidad de análisis: pares de artistas activos en un mismo año en las listas globales de Spotify. El evento modelizado es su primera colaboración como artista principal y artista invitado (lead y feature). El objetivo es distinguir a las parejas que forman una colaboración por primera vez de las muchas que podrían haberlo hecho y no lo hicieron.
 
 Se interpreta esa formación como un emparejamiento en el que intervienen varias dimensiones: la estética, es decir, cuánto se parecen dos artistas en un espacio generado a partir de la percepción que tiene la audiencia; cultural (por escena o lengua), geográfica e institucional. Otros atributos son la actividad y trayectoria profesional de ambos; y la posición estructural en la red de colaboraciones.
 
@@ -426,7 +411,7 @@ El trabajo plantea dos hipótesis contrapuestas sobre la dimensión estética (c
 
 \medskip
 
-\guionmarca{\marcaslide{39}{Marco conceptual}} La idea de colaboración conecta la economía de la cultura con la formación de equipos y redes. Aquí convergen dos líneas. La primera estudia las consecuencias de colaborar, y en música la evidencia es clara: los *featurings* elevan la demanda de *streaming* y los duetos sobreviven más tiempo en listas.
+\guionmarca{\marcaslide{38}{Marco conceptual}} La idea de colaboración conecta la economía de la cultura con la formación de equipos y redes. Aquí convergen dos líneas. La primera estudia las consecuencias de colaborar, y en música la evidencia es clara: los *featurings* elevan la demanda de *streaming* y los duetos sobreviven más tiempo en listas.
 
 La segunda estudia la formación de vínculos, que puede ordenarse en tres familias: basados en algún tipo de similitud; basados en conectividad por posición en la red; y finalmente por proximidad geográfica e institucional.
 
@@ -436,7 +421,7 @@ En el caso de la música, la evidencia sobre distancia óptima es mayoritariamen
 
 \medskip
 
-\guionmarca{\marcaslide{40}{Contribución: medición y contraste de la afinidad estética}} La aportación central del trabajo es el análisis de la afinidad estética, su medición y su relación no lineal con la colaboración. Esta aportación se articula en cuatro elementos.
+\guionmarca{\marcaslide{39}{Contribución: medición y contraste de la afinidad estética}} La aportación central del trabajo es el análisis de la afinidad estética, su medición y su relación no lineal con la colaboración. Esta aportación se articula en cuatro elementos.
 
 Integración en un único modelo de las distintas formas de proximidad y la estructura de la red previa, lo que permite analizar la relación estética manteniendo constantes otras afinidades y oportunidades de colaboración.
 
@@ -451,7 +436,7 @@ Para ello, combinamos fuentes sobre resultados, percepciones y relaciones.
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{DATOS Y ANÁLISIS EXPLORATORIO}\smallskip \marcaslide{41}{Fuentes de datos}} El trabajo utiliza tres fuentes de datos.
+\guionmarca{\marcaseccion{DATOS Y ANÁLISIS EXPLORATORIO}\smallskip \marcaslide{40}{Fuentes de datos}} El trabajo utiliza tres fuentes de datos.
 
 Por un lado, las listas globales semanales de Spotify, de septiembre de 2013 a diciembre de 2025, enriquecidas con metadatos de su API. Estos permiten identificar, para cada pista colaborativa, al artista principal (lead) y al invitado (feature).
 
@@ -463,7 +448,7 @@ La cuestión decisiva es cómo convertir esas etiquetas en una medida de proximi
 
 \medskip
 
-\guionmarca{\marcaslide{42}{Proximidad estética}} Cada artista se representa como un vector en el espacio de etiquetas: su perfil en el año t acumula las etiquetas de todos sus lanzamientos fechados estrictamente antes de t, de modo que es acumulativo y está retardado por construcción.
+\guionmarca{\marcaslide{41}{Proximidad estética}} Cada artista se representa como un vector en el espacio de etiquetas: su perfil en el año t acumula las etiquetas de todos sus lanzamientos fechados estrictamente antes de t, de modo que es acumulativo y está retardado por construcción.
 
 La proximidad entre dos artistas se mide mediante la similitud del coseno entre los vectores que los representan en el espacio estético definido por la audiencia.
 
@@ -473,24 +458,24 @@ Junto a la proximidad estética, la red de colaboraciones permite incorporar una
 
 \medskip
 
-\guionmarca{\marcaslide{43}{Composición de la red}} Las colaboraciones se representan mediante un grafo que evoluciona entre 2015 y 2024. La figura muestra el 5 % de los artistas con mayor centralidad: un núcleo denso, dos escenas culturalmente diferenciadas, la latina y la anglófona, y unos pocos artistas que actúan como puente.
+\guionmarca{\marcaslide{42}{Composición de la red}} Las colaboraciones se representan mediante un grafo que evoluciona entre 2015 y 2024. La figura muestra el 5 % de los artistas con mayor centralidad: un núcleo denso, dos escenas culturalmente diferenciadas, la latina y la anglófona, y unos pocos artistas que actúan como puente.
 
 Esta estructura sugiere que la proximidad estética no agota la lógica de las colaboraciones: también pueden importar la pertenencia a una misma escena (la dimensión cultural) y la posición de cada artista en la red. El grafo es solo descriptivo, pero permite plantear la pregunta que guía el análisis: qué señal aporta cada forma de proximidad y qué añade la estructura de la red para explicar o predecir las colaboraciones.
 
 \medskip
 
-\guionmarca{\marcaslide{44}{El modelo de formación}} Esta diapositiva define el resultado, que se etiqueta después de construir el conjunto de riesgo. Primero identificamos colaboraciones principal–invitado en pistas del corpus lanzadas en $t$; para la formación exigimos además ausencia de cualquier lazo previo. Los pares invitado–invitado no son eventos de este resultado ni se codifican como negativos, aunque sí cuentan en la red y en el historial de vínculos. Tras aplicar elegibilidad y filtros de estimación quedan 1.064 eventos en 3.756.411 díadas-año: 28,3 por cada 100.000. La rareza condiciona el diseño y la inferencia.
+\guionmarca{\marcaslide{43}{El modelo de formación}} Esta diapositiva define el resultado, que se etiqueta después de construir el conjunto de riesgo. Primero identificamos colaboraciones principal–invitado en pistas del corpus lanzadas en $t$; para la formación exigimos además ausencia de cualquier lazo previo. Los pares invitado–invitado no son eventos de este resultado ni se codifican como negativos, aunque sí cuentan en la red y en el historial de vínculos. Tras aplicar elegibilidad y filtros de estimación quedan 1.064 eventos en 3.756.411 díadas-año: 28,3 por cada 100.000. La rareza condiciona el diseño y la inferencia.
 
 \medskip
 
-\guionmarca{\marcaslide{45}{Diseño: conjunto de riesgo}} El conjunto se fija con información hasta $t-1$, antes de etiquetar el resultado. Se generan todos los pares elegibles, sin muestrear ceros. Si un artista no cumple, la colaboración observada queda fuera del panel, no se convierte en cero. El reloj es el año de lanzamiento de una pista del corpus.
+\guionmarca{\marcaslide{44}{Diseño: conjunto de riesgo}} El conjunto se fija con información hasta $t-1$, antes de etiquetar el resultado. Se generan todos los pares elegibles, sin muestrear ceros. Si un artista no cumple, la colaboración observada queda fuera del panel, no se convierte en cero. El reloj es el año de lanzamiento de una pista del corpus.
 
 En 2016–2024, aw3 excluye 1.457 de 2.481 primeras colaboraciones *lead–feature* (58,7%). aw0 elimina la ventana, pero mantiene la entrada anterior a $t$: todavía excluye 1.374 (55,4%) y recupera solo 83. La proporción anual de participantes que debuta en $t$ oscila entre 41,3% y 53,8%.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{ANÁLISIS EMPÍRICO}\smallskip \marcaslide{46}{Estimación}} Definida la respuesta binaria, colaboraciones realizadas y no realizadas, recurrimos a dos modelos de clasificación.
+\guionmarca{\marcaseccion{ANÁLISIS EMPÍRICO}\smallskip \marcaslide{45}{Estimación}} Definida la respuesta binaria, colaboraciones realizadas y no realizadas, recurrimos a dos modelos de clasificación.
 
 El primero es un logit con finalidad explicativa. Modeliza la probabilidad de formación del vínculo condicionada a la red del año anterior y a las características del par, incorpora efectos fijos de año y permite hacer inferencia sobre una forma funcional explícita. La inferencia utiliza los errores estándar diádicos de Aronow y Samii, de tipo sandwich, que admiten dependencia arbitraria entre díadas que comparten un artista.
 
@@ -500,7 +485,7 @@ Queda una última cuestión metodológica. Si los modelos exponenciales de grafo
 
 \medskip
 
-\guionmarca{\marcaslide{47}{Especificaciones: bloques de variables y modelos anidados}} Se introducen cuatro bloques de variables explicativas.
+\guionmarca{\marcaslide{46}{Especificaciones: bloques de variables y modelos anidados}} Se introducen cuatro bloques de variables explicativas.
 
 El bloque de red recoge la posición estructural de los artistas en el grafo retardado. El estético incluye la proximidad, medida mediante la similitud del coseno y su cuadrado; la tipicidad de la identidad estética; y controles de cobertura de las etiquetas. El bloque de actividad incorpora el número de temas en listas, los años de actividad acumulados y la duración de la elegibilidad conjunta, que mide la exposición compartida al riesgo. El último bloque reúne otras proximidades y atributos.
 
@@ -510,11 +495,11 @@ Se estiman tres modelos anidados: Completo, Solo red y Sin red.
 
 \medskip
 
-\guionmarca{\marcaslide{48}{Resultado base: especificación cuadrática}} Comenzamos analizando los resultados de la estimación base para el modelo de formación. Huyo del exceso de detalle y paso a analizar un subconjunto de los coeficientes estimados.
+\guionmarca{\marcaslide{47}{Resultado base: especificación cuadrática}} Comenzamos analizando los resultados de la estimación base para el modelo de formación. Huyo del exceso de detalle y paso a analizar un subconjunto de los coeficientes estimados.
 
 \medskip
 
-\guionmarca{\marcaslide{49}{Resultado base: magnitudes comparables}} Para comparar variables medidas en escalas distintas, expresamos cada coeficiente como un multiplicador de la tasa de formación: el cambio asociado a un aumento de una desviación estándar o, en las variables binarias, al paso de ausente a presente. Los resultados reflejan asociaciones estadísticas, no efectos causales.
+\guionmarca{\marcaslide{48}{Resultado base: magnitudes comparables}} Para comparar variables medidas en escalas distintas, expresamos cada coeficiente como un multiplicador de la tasa de formación: el cambio asociado a un aumento de una desviación estándar o, en las variables binarias, al paso de ausente a presente. Los resultados reflejan asociaciones estadísticas, no efectos causales.
 
 En el bloque de red, una desviación estándar adicional de grado medio multiplica la tasa por 3,18 y la proximidad geodésica, por 1,92, mientras que la asimetría de grado la reduce a 0,60. La formación es más frecuente entre pares visibles y próximos, pero con niveles de popularidad similares. El índice de Jaccard ilustra la diferencia entre significación estadística y sustantiva: aunque su coeficiente se estima con precisión, una desviación estándar apenas modifica la tasa.
 
@@ -524,7 +509,7 @@ Las proximidades cultural e institucional también presentan asociaciones positi
 
 \medskip
 
-\guionmarca{\marcaslide{50}{Versiones de la proximidad estética}} El modelo base sugiere un óptimo interior. Sin embargo, al situarse en la cola superior de la distribución, puede reflejar tanto una reversión de la asociación como su saturación. Para distinguir entre ambas, analizamos la relación mediante tres especificaciones flexibles.
+\guionmarca{\marcaslide{49}{Versiones de la proximidad estética}} El modelo base sugiere un óptimo interior. Sin embargo, al situarse en la cola superior de la distribución, puede reflejar tanto una reversión de la asociación como su saturación. Para distinguir entre ambas, analizamos la relación mediante tres especificaciones flexibles.
 
 La primera discretiza la similitud estética y compara las tasas de formación observadas por tramos, sin imponer una forma funcional. La segunda ajusta un spline cúbico, que permite obtener una curva suave adaptada a los datos. La tercera aplica un test confirmatorio de reversión basado en el enfoque de las dos líneas de Simonsohn: una submuestra determina el punto de ruptura y otra estima las pendientes a ambos lados. El óptimo solo se confirma si la pendiente pasa de positiva a negativa.
 
@@ -532,7 +517,7 @@ La primera discretiza la similitud estética y compara las tasas de formación o
 
 \medskip
 
-\guionmarca{\marcaslide{51}{Proximidad estética y colaboraciones: especificación flexible}} La figura muestra la forma respaldada por los datos.
+\guionmarca{\marcaslide{50}{Proximidad estética y colaboraciones: especificación flexible}} La figura muestra la forma respaldada por los datos.
 
 Los puntos y la curva apuntan en la misma dirección: la tasa de formación aumenta con fuerza desde niveles bajos de similitud hasta aproximadamente 0,3–0,4 y después se aplana. Ningún tramo presenta una tasa inferior a los anteriores, y el spline no desciende dentro del rango respaldado por los datos.
 
@@ -541,7 +526,7 @@ El contraste confirma el aumento inicial, pero no la caída posterior. Las pendi
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{ANÁLISIS PREDICTIVO}\smallskip \marcaslide{52}{Capacidad predictiva por bloques}} En el ejercicio predictivo, ambos modelos se entrenan con datos de 2015 a 2023 y se evalúan una sola vez en 2024, un año no observado durante la estimación. En 2024 se registran 64 eventos entre unas 490.000 díadas en el logit y 526.000 en XGBoost, lo que supone una tasa base de 0,12–0,13 por mil. La diferencia se debe a que el logit utiliza casos completos y XGBoost, todos los pares.
+\guionmarca{\marcaseccion{ANÁLISIS PREDICTIVO}\smallskip \marcaslide{51}{Capacidad predictiva por bloques}} En el ejercicio predictivo, ambos modelos se entrenan con datos de 2015 a 2023 y se evalúan una sola vez en 2024, un año no observado durante la estimación. En 2024 se registran 64 eventos entre unas 490.000 díadas en el logit y 526.000 en XGBoost, lo que supone una tasa base de 0,12–0,13 por mil. La diferencia se debe a que el logit utiliza casos completos y XGBoost, todos los pares.
 
 El área bajo la curva de precisión-recall del mejor modelo multiplica la tasa base por 18 en el logit y por 14 en XGBoost.
 
@@ -551,7 +536,7 @@ El principal resultado es la limitada aportación adicional fuera de muestra de 
 
 \medskip
 
-\guionmarca{\marcaslide{53}{Constraste no paramétrico de la forma funcional}} Además, el ejercicio predictivo permite analizar el perfil estético sin imponer una forma funcional. Para ello, empleamos valores de Shapley, que descomponen la predicción entre los distintos predictores. El gráfico de dependencia muestra la aportación de la similitud estética al puntaje predicho, en escala de log-odds, para el conjunto de prueba de 2024.
+\guionmarca{\marcaslide{52}{Constraste no paramétrico de la forma funcional}} Además, el ejercicio predictivo permite analizar el perfil estético sin imponer una forma funcional. Para ello, empleamos valores de Shapley, que descomponen la predicción entre los distintos predictores. El gráfico de dependencia muestra la aportación de la similitud estética al puntaje predicho, en escala de log-odds, para el conjunto de prueba de 2024.
 
 El patrón coincide con la discretización y el spline: la aportación aumenta con fuerza hasta una similitud de 0,3, se aplana a partir de 0,4 y no muestra un descenso claro en la parte alta.
 
@@ -566,11 +551,11 @@ Aquí presento solo una comprobación adicional: una estimación con penalizaci�
 
 \medskip
 
-\guionmarca{\marcaslide{54}{Corrección de sesgo de Firth}} La escasa diferencia entre las estimaciones puntuales del logit convencional y del modelo de Firth indica que los resultados no están condicionados por el posible sesgo asociado a la rareza del evento.
+\guionmarca{\marcaslide{53}{Corrección de sesgo de Firth}} La escasa diferencia entre las estimaciones puntuales del logit convencional y del modelo de Firth indica que los resultados no están condicionados por el posible sesgo asociado a la rareza del evento.
 
 \medskip
 
-\guionmarca{\marcaslide{55}{Modelo logit con corrección Firth}} Representamos la diferencia entre Firth y el logit base, dividida por el error estándar robusto diádico del logit base: una unidad significa que la estimación se ha desplazado tanto como un error estándar del modelo de referencia. Los cocientes se calculan con los valores redondeados de las tablas.
+\guionmarca{\marcaslide{54}{Modelo logit con corrección Firth}} Representamos la diferencia entre Firth y el logit base, dividida por el error estándar robusto diádico del logit base: una unidad significa que la estimación se ha desplazado tanto como un error estándar del modelo de referencia. Los cocientes se calculan con los valores redondeados de las tablas.
 
 La escala muestra una superposición casi total. El mayor movimiento corresponde al índice de Jaccard: 0,176 unidades del coeficiente, equivalentes a aproximadamente 0,23 errores estándar del logit base. Ninguna variable cambia de signo.
 
@@ -579,7 +564,7 @@ La escasa diferencia entre el logit convencional y el modelo de Firth no aporta 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{CONCLUSIONES}\smallskip \marcaslide{56}{Proximidad, posición y oportunidad en la formación}} Los resultados se resumen en un mismo mapa de calor. El eje horizontal representa la afinidad estética y el vertical, la cercanía en la red retardada. Cada casilla muestra un múltiplo respecto al par de referencia: dos artistas sin conexión previa, sin afinidad y con una oportunidad recién abierta.
+\guionmarca{\marcaseccion{CONCLUSIONES}\smallskip \marcaslide{55}{Proximidad, posición y oportunidad en la formación}} Los resultados se resumen en un mismo mapa de calor. El eje horizontal representa la afinidad estética y el vertical, la cercanía en la red retardada. Cada casilla muestra un múltiplo respecto al par de referencia: dos artistas sin conexión previa, sin afinidad y con una oportunidad recién abierta.
 
 Alcanzar el punto de saturación de la afinidad multiplica la tasa por doce; encontrarse a dos pasos en la red, por cinco; y la combinación de ambos factores, por sesenta y cinco. Una oportunidad no realizada durante siete años o más reduce estas tasas en un 82 %.
 
@@ -589,7 +574,7 @@ En conjunto, los resultados muestran que la colaboración se asocia con la proxi
 
 \medskip
 
-\guionmarca{\marcaslide{57}{Limitaciones y extensiones}} Cierro con cuatro limitaciones.
+\guionmarca{\marcaslide{56}{Limitaciones y extensiones}} Cierro con cuatro limitaciones.
 
 La primera es de interpretación: todo lo mostrado son asociaciones condicionales a la red del año anterior, no efectos causales. La identificación del efecto causal aquí es compleja.
 

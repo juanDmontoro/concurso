@@ -1285,7 +1285,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={Herramientas y Técnicas del Análisis de Datos}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Herramientas y Técnicas del Análisis de Datos}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1485,7 +1485,7 @@ extensión causal} \\ \lightrowrule
 15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={El conjunto de datos de referencia}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={El conjunto de datos de referencia}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1914,7 +1914,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={Experimentos aleatorios controlados: el patrón de referencia}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Experimentos aleatorios controlados: el patrón de referencia}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -2059,153 +2059,78 @@ datos no tabulares (texto o imágenes) o la complejidad de \(g\) o \(m\)
 flexibles sin la necesidad de especificarlos.}
 \end{frame}
 
-\begin{frame}{Aplicación \emph{naive} de métodos de aprendizaje
-automático}
-\phantomsection\label{aplicaciuxf3n-naive-de-muxe9todos-de-aprendizaje-automuxe1tico}
+\begin{frame}[shrink]{De la aplicación \emph{naive} al Double Machine
+Learning}
+\phantomsection\label{de-la-aplicaciuxf3n-naive-al-double-machine-learning}
 ~
 
 \begin{columns}[T]
-\begin{column}{0.3\linewidth}
+\begin{column}{0.38\linewidth}
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Problema 1}
-
-Los modelos de aprendizaje automático regularizan (de forma explícita o
-implícita) los predictores \(\to\) \emph{sesgo de regularización}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\textbf{Problema 2}
-
-Utilizar el mismo conjunto de datos para estimar una función y realizar
-predicciones \(\to\) \emph{sesgo por sobreajuste}.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-\end{column}
-
-\begin{column}{0.05\linewidth}
-\end{column}
-
-\begin{column}{0.65\linewidth}
-Aproximación ingenua para la estimación de \(\tau\) en
-\[y=\tau D+g(X)+\epsilon,\]
+\textbf{Aplicación \emph{naive}}
 
 \begin{enumerate}
 \tightlist
 \item
-  Aprender de los datos un modelo flexible \(\hat{g}\);
+  Aprender \(\hat{g}\) y residualizar la respuesta:
+  \(\tilde{y}=y-\hat{g}(X)\).
 \item
-  Obtener una versión residualizada de la respuesta
-  \(\tilde{y}=y-\hat{g}(X)\);
-\item
-  Recuperar el efecto \(\tau\) por la regresión de \(\tilde{y}\) sobre
-  \(D\).
+  Regresión de \(\tilde{y}\) sobre \(D\).
 \end{enumerate}
 
-\textbf{Sesgo de regularización}: la estimación \(\hat{g}\) selecciona
-variables \(X\) por su capacidad para \textbf{predecir \(y\)} pudiendo
-atenuar/eliminar un control \(x^*\) poco correlacionado con \(y\) (pero
-muy relevante para explicar \(D\)). En este caso el modelo de segunda
-etapa atribuirá parte de la relación de \(x^*\) con \(D\) a \(\tau\)
-\(\to\) \textbf{sesgo por variable omitida}.
+\(\hat{g}\) selecciona controles por su capacidad de predecir \(y\), no
+\(D\) \(\to\) \textbf{sesgo de regularización}.
 
-\textbf{Sesgo por sobreajuste}: entrenamiento y predicción sobre las
-mismas observaciones atenúa parte del efecto causal (lo absorben los
-residuos de \(y\)) y aumenta la varianza resiual del tratamiento \(\to\)
-la estimación de \(\tau\) y su error estándar dejan de ser fiables.
-\end{column}
-\end{columns}
+Mismos datos para entrenar y predecir \(\to\) \textbf{sesgo por
+sobreajuste}.
 
-\note{Una aproximación ingenua para estimar \(\tau\) mediante
-aprendizaje estadístico podría plantearse del siguiente modo:
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Double Machine Learning}
 
 \begin{enumerate}
 \tightlist
 \item
-  Aprendemos de los datos un modelo flexible para \(g\);\\
+  Aprender \(\hat{g}\) \textbf{y} \(\hat{m}\); residualizar respuesta y
+  tratamiento con \emph{cross-fitting}: \(\tilde{y}=y-\hat{g}(X)\),
+  \(\tilde{D}=D-\hat{m}(X)\).
 \item
-  Usamos éste para eliminar la variabilidad debida a \(X\) de la
-  respuesta: la residualizamos restándole la parte de su variación
-  explicada por \(X\)\\
-\item
-  Recuperamos \(\tau\) con una regresión del residuo de la respuesta
-  sobre el tratamiento.
+  Regresión de \(\tilde{y}\) sobre \(\tilde{D}\):
+  \(\tilde{y}=\tau\tilde{D}+\epsilon\).
 \end{enumerate}
 
-Esta aplicación se enfrenta a dos problemas. Por un lado los modelos de
-aprendizaje automático regularizan los predictores, de forma explícita o
-implícita, y seleccionan las variables por su capacidad predictiva. Un
-control poco correlacionado con la respuesta pero relevante para
-explicar el tratamiento puede quedar atenuado o fuera del modelo. En ese
-caso la segunda etapa atribuye al efecto \(\tau\) parte de la relación
-de ese control con \(D\) introduciendo un \textbf{sesgo de variable
-omitida} que en este caso se denomina \textbf{sesgo por regularización}.
-
-El segundo problema es el \textbf{sesgo por sobreajuste} si entrenamos y
-predecimos sobre las mismas observaciones. Los residuos absorben parte
-del efecto causal y la varianza residual del tratamiento se distorsiona,
-de modo que la estimación de \(\tau\) y su error estándar dejan de ser
-fiables.}
-\end{frame}
-
-\begin{frame}[shrink]{Double (Debiased) Machine Learning}
-\phantomsection\label{double-debiased-machine-learning}
-~
-
-\begin{columns}[T]
-\begin{column}{0.3\linewidth}
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Estimador de efecto causal en dos etapas
-
-\begin{itemize}
-\tightlist
-\item
-  Primera etapa
-
-  \begin{enumerate}
-  \tightlist
-  \item
-    Entrenar funciones \(\hat{g}\) y \(\hat{m}\) para respuesta y
-    tratamiento.
-  \item
-    Generar versiones residualizadas\\
-    \(\tilde{y}=y-\hat{g}(X)\) y \(\tilde{D}=D-\hat{m}(X)\) (separando
-    entrenamiento/predicción)
-  \end{enumerate}
-\item
-  Segunda etapa: estimar la regresión
-  \(\tilde{y}=\tau \tilde{D}+\epsilon\)
-\end{itemize}
-
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 \end{column}
 
-\begin{column}{0.05\linewidth}
+\begin{column}{0.04\linewidth}
 \end{column}
 
-\begin{column}{0.65\linewidth}
-\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_esquema_dml.pdf}
+\begin{column}{0.58\linewidth}
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_esquema_dml.pdf}
 \end{column}
 \end{columns}
 
-\note{El esquema de la trasparencia (derecha) resume la lógica completa
-del contenido del tema 7. La aplicación ingenua del aprendizaje
-estadístico introduce los sesgos. El método denominado aprendizaje
-máquina doble (o double machine learning) los soluciona a través de la
-ortogonalización del tratamiento (la denominada regresión de residuos
-sobre residuos a la Frisch--Waugh--Lovell) y el cross-fitting
-(predicciones fuera de la muestra de entrenamiento, para el segundo). La
-combinación de ambas constituye produce un estimador \textbf{raíz de n}
-consistente con inferencia válida.
+\note{La aplicación ingenua del aprendizaje automático a este problema
+consiste en aprender un modelo flexible para \(g\), residualizar la
+respuesta y regresar ese residuo sobre el tratamiento. Falla por dos
+motivos. Los modelos de aprendizaje automático regularizan y seleccionan
+las variables por su capacidad para predecir la respuesta: un control
+poco correlacionado con \(y\) pero relevante para explicar \(D\) queda
+atenuado o fuera del modelo, y la segunda etapa atribuye a \(\tau\)
+parte de su relación con el tratamiento. Es un sesgo de variable omitida
+que aquí se denomina sesgo de regularización. Además, si se entrena y se
+predice sobre las mismas observaciones, los residuos absorben parte del
+efecto causal y la varianza residual del tratamiento se distorsiona: es
+el sesgo por sobreajuste.
 
-En la práctica los estudiantes ven Double Machine Learning como un
-estimador en dos etapas: 1. En la primera etapa se entrenan dos
-funciones auxiliares, g y m, que se utilizan para generar versiones
-residualizadas de respuesta y tratamiento. En este proceso se separan
-las observaciones con las que se entrena de aquellas sobre las que se
-predice. 2. En la segunda etapa se estima la regresión del residuo de y
-sobre el residuo de D recuperando el parámetro tau.}
+Double Machine Learning corrige ambos. La ortogonalización residualiza
+también el tratamiento con la función auxiliar \(m\) que ya aparecía en
+el grafo y regresa residuos sobre residuos, a la Frisch--Waugh--Lovell.
+El cross-fitting separa las observaciones con las que se entrena de
+aquellas sobre las que se predice. La combinación produce un estimador
+raíz de \(n\) consistente con inferencia válida, que los estudiantes
+implementan con DoubleML como un estimador en dos etapas.}
 \end{frame}
 
 \begin{frame}[fragile,shrink]{Práctica con datos reales}
@@ -2401,7 +2326,7 @@ entre artistas activos en las listas globales de Spotify:
   alcanzabilidad y distancia en la red previa de colaboraciones.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={Proximidad estética: un aspecto recurrente en la literatura}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Proximidad estética: un aspecto recurrente en la literatura}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 El trabajo propone dos hipótesis en competencia sobre la afinidad en
 mercados culturales:
@@ -2615,7 +2540,7 @@ Filas de etiquetas & 794.309 \\ \lightrowrule
   de sellos.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={Por qué etiquetas y no géneros de plataforma}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Por qué etiquetas y no géneros de plataforma}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 Los géneros de Spotify solo cubren 981 de 2.878 artistas (aprox. 34\%);
 las etiquetas reflejan la percepción de la audiencia y cubren el 83,5\%
@@ -2764,7 +2689,7 @@ estructura de la red para explicar o predecir las colaboraciones.}
   (28,3 por cada 100.000).
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={Definición de la respuesta a modelizar}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Definición de la respuesta a modelizar}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 Para un par \((i,j)\) del conjunto de riesgo, \(y^F_{ij,t}=1\) si en
 \(t\) hay una colaboración principal--invitado en una pista del corpus y
@@ -2864,7 +2789,7 @@ Elecciones basadas en datos & Ninguna tras la especificación paramétrica
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={¿Por qué no un ERGM? \(\to\) Almquist y Butts (2014)}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={¿Por qué no un ERGM? \(\to\) Almquist y Butts (2014)}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \item
@@ -2937,7 +2862,7 @@ identidad de género (si individuo), país registrado e historia de sellos
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, coltitle=black, toptitle=1mm, bottomrule=.15mm, breakable, opacitybacktitle=0.6, leftrule=.75mm, opacityback=0, colback=white, titlerule=0mm, rightrule=.15mm, arc=.35mm, left=2mm, colframe=quarto-callout-note-color-frame, toprule=.15mm, title={Nota}, colbacktitle=quarto-callout-note-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, bottomrule=.15mm, rightrule=.15mm, toprule=.15mm, breakable, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, opacitybacktitle=0.6, coltitle=black, title={Nota}, bottomtitle=1mm, toptitle=1mm, titlerule=0mm]
 
 \textbf{Tres modelos anidados}: Completo (los cuatro bloques) · Solo red
 (topología) · Sin red (estética, actividad y atributos). Las
