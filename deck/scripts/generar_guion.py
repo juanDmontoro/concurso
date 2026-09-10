@@ -6,8 +6,10 @@ Recorre los tres ficheros de parte del deck unificado (``_parte1_cv.qmd``,
 de ensayo para leer en papel: la prosa de las notas de orador fluye de
 principio a fin (14 pt, doble espacio, sin encabezados), con un margen
 izquierdo ancho donde una marca indica en cada momento la slide proyectada y,
-cuando toca, el cambio de parte o de sección. Las slides de reserva
-(``.content-hidden``) quedan fuera; las slides visibles sin nota aparecen como
+cuando toca, el cambio de parte o de sección. Solo entran las slides que se
+proyectan: quedan fuera las de reserva (``.content-hidden``) y las que el deck
+fuente ha desactivado dentro de comentarios HTML (``<!-- ... -->``, como el
+archivo de reservas de la Parte 3); las slides visibles sin nota aparecen como
 marca atenuada «(sin nota)».
 
 A diferencia de ``extraer_notas.py``, el parser ignora los encabezados que
@@ -59,6 +61,21 @@ def es_envoltorio(attrs: str) -> bool:
     return ".content-hidden" in attrs or "content-visible" in attrs
 
 
+COMENTARIO_HTML = re.compile(r"<!--.*?-->", re.DOTALL)
+
+
+def sin_comentarios_html(texto: str) -> str:
+    """Vacía los comentarios HTML (``<!-- ... -->``), también los multilínea.
+
+    Pandoc los trata como HTML crudo: no se proyectan en RevealJS ni llegan a
+    Beamer, así que las slides y notas que contienen no existen para el
+    guion. Como en HTML, los comentarios no anidan: cada ``<!--`` se cierra
+    con el primer ``-->`` que le sigue. Se conservan los saltos de línea para
+    que el resto del fichero mantenga su numeración.
+    """
+    return COMENTARIO_HTML.sub(lambda m: "\n" * m.group(0).count("\n"), texto)
+
+
 def recorrer(ruta: Path) -> list[Item]:
     """Devuelve las slides/secciones reales de un .qmd, en orden, con sus notas."""
     items: list[Item] = []
@@ -69,7 +86,8 @@ def recorrer(ruta: Path) -> list[Item]:
     nota_oculta = False
     buffer: list[str] = []
 
-    for linea in ruta.read_text(encoding="utf-8").splitlines():
+    texto = sin_comentarios_html(ruta.read_text(encoding="utf-8"))
+    for linea in texto.splitlines():
         if FENCE_CODE.match(linea):
             en_codigo = not en_codigo
             if dentro_notas:
