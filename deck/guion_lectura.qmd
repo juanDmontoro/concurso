@@ -57,9 +57,9 @@ Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
 2 · Propuesta docente & 15 min & 15 & 17 & 1890 & 13,5\\
-3 · Propuesta investigadora & 20 min & 20 & 22 & 2824 & 20,2\\
+3 · Propuesta investigadora & 20 min & 20 & 22 & 2829 & 20,2\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6645} & \textbf{47,5}\\
+\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6650} & \textbf{47,5}\\
 \bottomrule
 \end{tabular}
 
@@ -517,20 +517,20 @@ Compartir escena y sello muestran asociación positiva. Po otro lado, la activid
 
 \medskip
 
-\guionmarca{\marcaslide{47}{¿Máximo o punto de saturación?}} La forma cuadrática de la similitud estética sitúa un máximo implícito en 0,64, que se ubica en el percentil 95 de la similitud observada: una zona con pocos eventos. En este caso la forma estimada es compatible tanto con 
-un crecimiento que se estabiliza como con un descenso que, dada la escasez de información, los datos no permiten identificar con precisión.
+\guionmarca{\marcaslide{47}{¿Máximo o punto de saturación?}} La especificación cuadrática sitúa un máximo implícito en 0,64, aproximadamente en el percentil 95 de la similitud observada: una zona con pocos eventos. La parábola impone un descenso después de ese máximo; debemos comprobar si los datos respaldan esa caída o un crecimiento que se aplana.
 
-Para ver que hipótesis apoyan los datos, se utiliza:  
-1. Un enfoque exploratorio (discretizando la similitud y ajustando un spline flexible).  
-2. Una prueba prespecificada con división de la muestra: utilizamos una mitad para localizar el posible máximo y la otra para estimar las pendientes a ambos lados. Solo confirmamos un máximo interior si la pendiente es positiva antes del punto y negativa después. El procedimiento se validó previamente mediante simulaciones.
+Para distinguir ambas hipótesis, utilizamos:  
+
+1. Un análisis exploratorio con dos logit alternativos: uno con similitud por tramos y otro con un spline flexible.
+2. Una prueba prespecificada con división de la muestra: una mitad localiza el posible máximo y la otra estima el aumento acumulado anterior y la pendiente posterior. Solo confirmamos un máximo interior si el aumento previo es positivo y la pendiente posterior negativa, ambos estadísticamente significativos. El procedimiento se validó previamente mediante simulaciones.
 
 \medskip
 
-\guionmarca{\marcaslide{48}{Proximidad estética y colaboraciones: especificación flexible}} El spline muestra un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. Los puntos resumen las tasas por intervalos de similitud que no muestran un descenso claro a niveles altos (sí una mayor imprecisión). 
+\guionmarca{\marcaslide{48}{Proximidad estética y colaboraciones: especificación flexible}} La curva predicha por el logit con spline muestra un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. Los puntos representan tasas ajustadas por intervalos, sin un descenso claro y con mayor imprecisión en la parte alta.
 
-El contraste de reversión muestra antes del punto de ruptura una pendiente es positiva (intervalo de confianza excluye cero). Tras este, la pendiente es positiva, pero el intervalo es amplio y abarca pendientes negativas, nulas y positivas. 
+El contraste identifica un aumento acumulado positivo antes del punto de ruptura, con un intervalo que excluye cero. Después, la pendiente media del bootstrap es positiva, pero su intervalo es amplio e incluye valores negativos, nulos y positivos.
 
-**En consecuencia, no se confirma el patrón de subida y caída requerido para identificar un máximo interior; los resultados son compatibles con una estabilización del crecimiento.**
+**No se confirma el patrón de subida y caída requerido para identificar un máximo interior. Los resultados son compatibles con un crecimiento que se modera, aunque la incertidumbre no permite descartar una caída en la cola.**
 
 \needspace{2\baselineskip}
 \bigskip
