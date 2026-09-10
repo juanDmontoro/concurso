@@ -57,9 +57,9 @@ Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
 2 · Propuesta docente & 15 min & 15 & 17 & 1890 & 13,5\\
-3 · Propuesta investigadora & 20 min & 20 & 22 & 2828 & 20,2\\
+3 · Propuesta investigadora & 20 min & 20 & 22 & 2773 & 19,8\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6649} & \textbf{47,5}\\
+\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6594} & \textbf{47,1}\\
 \bottomrule
 \end{tabular}
 
@@ -392,8 +392,7 @@ La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la ca
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,20,2 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural. Más concretamente,  y la pregunta que se formula es qué distingue a dos artistas que llegan a trabajar juntos de los muchos pares que podrían haberlo hecho.
-Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural. Más concretamente, la pregunta que se formula es qué distingue a dos artistas que llegan a trabajar juntos de los muchos pares que podrían haberlo hecho.
+\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,19,8 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural. Más concretamente,  la pregunta que se formula es qué distingue a dos artistas que llegan a trabajar juntos de los muchos pares que podrían haberlo hecho.
 
 \medskip
 
