@@ -57,9 +57,9 @@ Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
 2 · Propuesta docente & 15 min & 15 & 17 & 1890 & 13,5\\
-3 · Propuesta investigadora & 20 min & 20 & 22 & 2829 & 20,2\\
+3 · Propuesta investigadora & 20 min & 20 & 22 & 2828 & 20,2\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6650} & \textbf{47,5}\\
+\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6649} & \textbf{47,5}\\
 \bottomrule
 \end{tabular}
 
@@ -597,7 +597,8 @@ Segundo, la escasez de eventos en la cola de similitud extrema impide descartar 
 
 Tercero, la población está delimitada por la actividad en listas y la cobertura de metadatos; además, las etiquetas y la definición de la escena incorporan ruido, y los sellos reflejan solo un canal institucional. 
 
-Finalmente, las simulaciones reproducen el volumen de vínculos, pero no completamente su concentración. Este desajuste puede reflejar heterogeneidad, dependencia o aspectos del procedimiento de simulación, aunque no identifica una causa concreta ni demuestra sesgo en los coeficientes. Su diagnóstico continua junto con las extensiones sustantivas.
+
+Finalmente, la adecuación de la red es clave para justificar la independencia condicional del modelo diádico. El modelo base reproduce el volumen de vínculos, pero no tanto su concentración, lo que requiere reevaluar con especificación flexibles. Su diagnóstico continua junto con las extensiones sustantiva
 
 \needspace{2\baselineskip}
 \bigskip

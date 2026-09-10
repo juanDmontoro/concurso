@@ -852,7 +852,9 @@ Segundo, la escasez de eventos en la cola de similitud extrema impide descartar 
 
 Tercero, la población está delimitada por la actividad en listas y la cobertura de metadatos; además, las etiquetas y la definición de la escena incorporan ruido, y los sellos reflejan solo un canal institucional. 
 
-Finalmente, las simulaciones reproducen el volumen de vínculos, pero no completamente su concentración. Este desajuste puede reflejar heterogeneidad, dependencia o aspectos del procedimiento de simulación, aunque no identifica una causa concreta ni demuestra sesgo en los coeficientes. Su diagnóstico continua junto con las extensiones sustantivas.
+
+Finalmente, la adecuación de la red es clave para justificar la independencia condicional del modelo diádico. El modelo base reproduce el volumen de vínculos, pero no tanto su concentración, lo que requiere reevaluar con especificación flexibles. Su diagnóstico continua junto con las extensiones sustantiva
+
 :::
 
 
