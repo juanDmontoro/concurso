@@ -65,7 +65,7 @@ Empiezo por la investigación.
 
 
 ::: {.notes}
-La tabla ordena la trayectoria investigadora en tres etapas, con los trabajos representativos y los principales coautores. 
+La tabla ordena la trayectoria investigadora en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
 
 La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
@@ -518,130 +518,13 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 :::
 
 ::: {.notes}
-Cierro con una síntesis del currículum en cifras. En investigación y transferencia: cuarenta y seis artículos, treinta y seis en revistas indexadas; veintinueve capítulos; ciento dieciocho comunicaciones, noventa y dos internacionales; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
+Cierro con una síntesis del currículum en cifras. En investigación: cuarenta y seis artículos; veintinueve capítulos; ciento dieciocho comunicaciones; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
 
-En dirección y liderazgo: diecisiete cargos de gestión, concentrados en internacionalización; doce conferencias por invitación; y treinta y cinco revisiones verificadas, en el percentil noventa y uno.
+En dirección y liderazgo: dirección de cuatro proyectos, diecisiete cargos de gestión concentrados en internacionalización; y doce conferencias por invitación.
 
-En docencia: trece titulaciones en siete centros, la mitad de la docencia en inglés y la calificación de excelente en DOCENTIA.
+En docencia: trece titulaciones en siete centros, un 50% en inglés y la calificación máxima en DOCENTIA.
 
-La banda inferior muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios, junto a las responsabilidades de dirección, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
-:::
-
-<!-- ============ RESERVAS (ocultas en ambos formatos) ============ -->
-
-::: {.content-hidden}
-
-
-## {background-color="#2D6A7A" .center}
-
-&nbsp;
-
-::: {style="color:#fafafa; font-size:1.05em; font-weight:600;"}
-Una trayectoria que integra:
-:::
-
-::: {style="color:#fafafa; font-size:1.25em; font-weight:700; line-height:1.75;"}
-Investigación consolidada, con estructura estable e internacional (CREAMARKT, IMBRA)
-
-Liderazgo editorial y asociativo en el área
-
-Docencia excelente, internacional, orientada a la ciencia de datos
-
-Transferencia sostenida al sector cultural
-:::
-
-&nbsp;
-
-::: {style="color:#fafafa; font-size:1.1em;"}
-Acreditación a Catedrático de Universidad --- ANECA, 2024.
-:::
-
-::: {.notes}
-Cierre: las cuatro fortalezas del Resumen del historial académico, tal como constan en el CV presentado.
-
-[Sources]
-CV_final.qmd, Resumen (l. 134), §6.3.1.
-:::
-
-
-
-## Reserva · Otras publicaciones indexadas {.compact}
-
-&nbsp;
-
-| Trabajo | Revista, año |
-|--------|------|
-| Analyzing online search patterns of music festival tourists | *Tourism Economics*, 2021 |
-| Measuring music-genre preferences: direct and indirect methods | *Psychology of Music*, 2023 |
-| Music studies as cultural capital accumulation | *Int. J. of Music Education*, 2023 |
-| LGB's arts affinity: theater audiences based on motivations | *J. of Homosexuality*, 2022 |
-| Unveiling latent demand in the cultural industries | *Int. J. of Arts Management*, 2016 |
-| Consumption habits and content-access devices in recorded music | *Int. J. of Arts Management*, 2017 |
-| Legal origin and intellectual property rights | *Eur. J. of Law and Economics*, 2008 |
-| Dance consumption and mood changes | *Arts and the Market*, 2024 |
-| Participación y diversidad funcional en centros culturales | *Ekonomiaz*, 2025 |
-
-::: {.notes}
-[Sources]
-CV_final.qmd §2.1.
-:::
-
-
-## Reserva · Transferencia: entidades y papel {.compact}
-
-&nbsp;
-
-- **Asociación Cultural Francachela Teatro** — festival Cabanyal Íntim (caso publicado en *Marketing Culture and the Arts*).
-- **AVETID** — asociación empresarial de artes escénicas del País Valenciano.
-- **Olympia Metropolitana** — gestión de espacios escénicos.
-- **FECEMAC-CV** — centros de música autorizados y conservatorios.
-- **Centre del Carme Cultura Contemporània.**
-- **ICOM** (International Council of Museums) — proyecto "Museum 23", IP para España.
-
-13 contratos y convenios art. 83 en total; investigador principal en varios de ellos.
-
-::: {.notes}
-[Sources]
-CV_final.qmd, Resumen (l. 132), §2.4, §4.2.
-:::
-
-
-## Reserva · Quinquenios y DOCENTIA: detalle {.compact}
-
-&nbsp;
-
-| Quinquenio | Período | Observación |
-|:---:|:---:|------|
-| 1 | 1996–2001 | |
-| 2 | 2002–2006 | |
-| 3 | 2007–2011 | |
-| 4 | 2012–2016 | |
-| 5 | 2017–2021 | coincide con DOCENTIA EXCELENTE 200/200 |
-| (6) | 2021–2025 | cursos ya evaluados, media > 4,3 |
-
-DOCENTIA 2017/21 — nivel básico 100/100; nivel avanzado 100/100 (dedicación 18,5/20 · planificación 25/25 · desarrollo 35/35 · resultados 26,76/30).
-
-::: {.notes}
-[Sources]
-CV_final.qmd §3.5 (l. 2740–2788), §4.6 (l. 3521–3529).
-:::
-
-
-## Reserva · Alcance geográfico de los congresos
-
-&nbsp;
-
-![](figures/fig_mapa_congresos.svg){width="78%"}
-
-**118 comunicaciones** (92 internacionales) · **22 países** · 1995–2026 --- cinco continentes: de Kyoto a Melbourne, Bogotá y Río de Janeiro (AIMAC 2026).
-
-::: {.notes}
-Reserva por si el tribunal pregunta por el alcance geográfico de los congresos (la slide principal muestra la recurrencia por series).
-
-[Sources]
-CV_final.qmd §2.5 (l. 697–1890). Figura: scripts/fig_mapa_congresos.py, datos data/ponencias_geo.csv (agregado por país, 03-08-2026).
-:::
-
+Además se muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios y responsabilidades de liderazgo, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
 :::
 
 <!-- Generado por scripts/sync_partes.py desde presentacion_cv.qmd — NO EDITAR;

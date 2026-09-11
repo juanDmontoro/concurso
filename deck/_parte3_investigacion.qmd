@@ -17,37 +17,16 @@ Contactos previos en la red de colaboraciones, escena cultural e institucional y
 :::
 
 ::: {.notes}
-Antes del esquema, la propuesta en cuatro ideas. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar, y hoy es práctica habitual. 
+Resumo la propuesta en cuatro ideas. 
 
-Pero cada artista podría colaborar con muchos y solo lo hace con pocos: la pregunta es qué distingue a los pares que llegan a trabajar juntos. 
+1. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar.  
+2. La colaboración implica una decisión: cada artista podría colaborar con muchos y solo lo hace con pocos; la pregunta es qué distingue a los pares que llegan a trabajar juntos.  
+3. Para responderla cada artista se ubica en un espacio construido a partir de las etiquetas que su público publica en redes. Bad Bunny y J Balvin tienen un vocabulario casi idéntico (proximidad); Bad Bunny y Ed Sheeran apenas comparten palabras (distancia). 
+4. La hipótesis central es que estar cerca ayuda: de hecho Bad Bunny y J Balvin han grabado juntos varias veces. Pero, ¿y si se está demasiado cerca? ¿Hay un punto en que parecerse más ya no aporta? 
 
-Para responderla sitúo a cada artista en un mapa construido a partir de la descripción de su público. Bad Bunny y J Balvin reciben un vocabulario casi idéntico y están cerca; Bad Bunny y Ed Sheeran apenas comparten palabras y están lejos. 
-
-La hipótesis central es que estar cerca ayuda: Bad Bunny y J Balvin han grabado juntos varias veces. Pero Taylor Swift y Kendrick Lamar, que están lejos, también lo han hecho. La cuestión abierta es si hay un punto en que parecerse más ya no aporta. Todo ello junto a la red de contactos, la escena y la trayectoria.
+En la explicación entra además la red de contactos, trayectoria y otros atributos.
 :::
 
-:::{.content-hidden}
-## Esquema
-
-&nbsp;
-
-- **Motivación y pregunta económica**: selección de socios y el rol de la compatibilidad estética.
-- **Datos y diseño**: cómo observar colaboraciones y oportunidades.
-- **Resultados**: forma de la asociación, predicción y sensibilidad.
-- **Conclusiones**: aportación, límites y programa de investigación.
-
-::: {.notes}
-La presentación se estructura en cuatro partes. 
-
-- Comienzo por la motivación, la definición del problema económico y por una hipótesis sobre afinidad en un espacio estético. 
-
-- Después presento  medición y  diseño. 
-
-- Los resultados combinan inferencia y evaluación predictiva, seguidas de sus comprobaciones. 
-
-- Cierro con la aportación, sus límites y las preguntas que abre.
-:::
-:::
 
 # Motivación y pregunta económica {background-color="#2D6A7A" .roadmap-slide}
 
@@ -116,38 +95,6 @@ La revisión de la literatura conecta la economía de la cultura con la formaci�
 :::
 
 
-:::{.content-hidden}
-## Afinidad estética: ¿óptimo interior o saturación?
-
-&nbsp;
-
-**¿Qué distingue a los pares que llegan a colaborar por primera vez?** 
-
-
-| Hipótesis | Argumento | Perfil esperado de formación |
-|---|---------|------|
-| **Distancia óptima**| Una afinidad intermedia combina terreno común para coordinarse y diferenciación potencialmente valiosa | La propensión crece y después disminuye |
-| **Compatibilidad con saturación**| Un mayor terreno común facilita el encaje, con ganancias decrecientes de afinidad. | La propensión crece y después se aplana |
-
-: {tbl-colwidths="[62,38]"}
-
-&nbsp;
-
-::: {.callout-note icon="false"}
-# Formación multidimensional
-
-La afinidad estética se estudia junto a la proximidad **cultural** e **institucional**, **actividad y trayectoria** y **posición estructural en la red de colaboraciones**.
-:::
-
-::: {.notes}
-Un tema recurrente en la literatura es la existencia de una distancia óptima entre los miembros de una colaboración, que en el caso que se estudia llevamos al terreno estético. Parecerse puede facilitar coordinación y compatibilidad;  la diferenciación puede aportar novedad o permitir complementariedades (aunque la distancia estética no mide esos beneficios). La investigación analiza cómo se manifiesta esa tensión en las primeras colaboraciones observadas. 
-
-Sobre estas ideas se formulan las dos hipótesis de la tabla. Si existe una distancia óptima para formar el vínculo, tanto ausencia como exceso de similitud penalizan. Por contra, si opera una saturación, la propensión aumenta con la similitud, pero ese crecimiento se atenúa una vez alcanzado suficiente terreno común. Distinguir ambos perfiles es uno de los objetivos de la propuesta.
-
-Cabe señalar que, además de la similitud entre socios, el trabajo incorpora relaciones previas y proximidad cultural, geográfica e institucional, entre otros atributos. 
-:::
-:::
-
 
 ## Contribución: medición y contraste de la afinidad estética
 
@@ -159,7 +106,7 @@ Cabe señalar que, además de la similitud entre socios, el trabajo incorpora re
 - **Validación**: inferencia con dependencia diádica, sensibilidad y evaluación temporal de la ordenación.
 
 ::: {.notes}
-La contribución combina una pregunta sobre formación de colaboraciones en industrias culturales con un diseño de la investigación que permite contrastarla a escala amplia. El conjunto de riesgo incluye todos los pares elegibles: así, las colaboraciones realizadas se comparan con oportunidades definidas de forma explícita.
+La contribución **combina una pregunta sobre formación de colaboraciones en industrias culturales con un diseño de la investigación que permite contrastarla a escala amplia**. El conjunto de riesgo incluye todos los pares elegibles: así, las colaboraciones realizadas se comparan con oportunidades definidas de forma explícita.
 
 Además, la identidad estética se representa usando un enfoque basado en procesamiento del lenguaje natural de las etiquetas generadas por usuarios en dos redes sociales de música. 
 
@@ -261,6 +208,7 @@ Además de la proximidad estética, el trabajo incorpora la proximidad estructur
 :::
 
 
+:::{.content-hidden}
 ## Composición de la red
 
 &nbsp;
@@ -291,6 +239,20 @@ La figura ilustra por qué **afinidad cultural y cercanía relacional** deben me
 :::
 
 ::::
+
+::: {.notes}
+Visualizamos esta proximidad estructural con la representación del conjunto de datos relacionales en un grafo. La figura muestra solo el núcleo de la red acumulada hasta el 2024, el 5% de artistas con mayor grado, y ofrece una ilustración descriptiva.
+
+El grafo segmenta una escena latina y otra anglófona, con algunos artistas que conectan ambas. Esto sugiere la necesidad de separar afinidad (estética o de otro tipo) de posición en la red. Dos artistas pueden, por ejemplo, compartir espacio cultural  y, sin embargo, tener oportunidades relacionales distintas.
+:::
+:::
+
+## Composición de la red
+
+&nbsp;
+
+![](figures/fig_network_aimac.svg){width="88%" fig-alt="Subgrafo de mayor grado de la red acumulada de colaboraciones a 2024, con nodos coloreados por escena: comunidades latina y anglófona con artistas puente"}
+
 
 ::: {.notes}
 Visualizamos esta proximidad estructural con la representación del conjunto de datos relacionales en un grafo. La figura muestra solo el núcleo de la red acumulada hasta el 2024, el 5% de artistas con mayor grado, y ofrece una ilustración descriptiva.
@@ -515,7 +477,7 @@ Compartir  escena  presenta una asociación positiva. Por otro lado actividad me
 **Odds ratios e IC 95%.** Continuas: +1 desviación estándar; binarias: presencia frente a ausencia. Similitud estética y su cuadrado: contrastes separados (el otro término fijo); su lectura conjunta es la curva.
 
 ::: {.notes}
-La figura compara las asociaciones del modelo completo para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
+La figura compara las asociaciones para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
 
 En la red, la posición estructural importa: pares más conectados, más cercanos en la red y menos asimétricos son más propensos a colaborar. 
 
@@ -546,7 +508,7 @@ La especificación cuadrática sitúa un máximo implícito en 0,64, aproximadam
 
 Para distinguir ambas hipótesis, utilizamos:  
 
-1. Un análisis exploratorio con dos logit alternativos: uno con similitud por tramos y otro con un spline flexible.
+1. Un análisis exploratorio con dos logit alternativos: uno discretizando la similitud y otro con un spline flexible para la similitud.
 2. Una prueba prespecificada con división de la muestra: una mitad localiza el posible máximo y la otra estima pendientes anterior y posterior. Un máximo interior se confirma si pendientes cambian de signo. El procedimiento se validó previamente mediante simulaciones.
 :::
 
@@ -593,10 +555,11 @@ Curva: predicciones medias del logit con spline. Puntos: tasas ajustadas del log
 
 ::: {.notes}
 
-SPLINE: la curva suavizada muestra predicciones del logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
-PUNTOS: representan tasas ajustadas por intervalos; no hay descenso claro y mayor imprecisión en la parte alta.
+PUNTOS: representan tasas ajustadas por intervalos; no hay descenso aunque sí se observa mayor imprecisión en la parte alta.
 
-El contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente es positiva, pero su intervalo incluye cero.
+SPLINE: la curva suavizada muestra predicciones del modelo logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
+
+Por otro lado el contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente sigue positiva, pero su intervalo incluye cero.
 
 **No se confirma el patrón de subida y caída requerido para identificar un máximo interior. Los resultados son compatibles con un crecimiento que se modera, aunque la incertidumbre no permite descartar una caída en la cola.**
 :::
@@ -850,7 +813,7 @@ Para ello utilizo el **modelo logit de Firth** que incorpora una verosimilitud p
 
 La figura divide la diferencia entre estimaciones por el error estándar robusto del logit base. Se observa como los desplazamientos son marginales (el mayor desplazamiento corresponde al índice de Jaccard que equivale aproximadamente a 0,23 errores estándar en un predictor de escasa significación sustantiva); además todos los términos conservan su signo.
 
-Este ejercicio muestra estabilidad de estimaciones puntuales: La escasa diferencia entre el logit convencional y el modelo de Firth no aporta evidencia de un sesgo relevante asociado a la rareza del evento.
+Este ejercicio muestra estabilidad de estimaciones puntuales: **no hay evidencia de un sesgo relevante asociado a la rareza del evento**.
 
 :::
 
@@ -897,8 +860,7 @@ Más allá de su aportación metodológica, basada en el conjunto de riesgo comp
 
 En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
 
-Un resultado generalizable es que el efecto de la afinidad debe analizarse en una etapa concreta. Aunque la literatura ha identificado una distancia óptima entre artistas para el éxito de sus colaboraciones, esta no tiene por qué coincidir con la que favorece su formación. Estudiar conjuntamente el emparejamiento y el rendimiento posterior permitiría relacionar la compatibilidad para formar el equipo con la complementariedad necesaria para obtener buenos resultados.
-
+Un resultado generalizable: el análisis del efecto de la afinidad en una etapa concreta del proceso de producción cultural. **Estudiar conjuntamente emparejamiento y rendimiento posterior permitiría relacionar compatibilidad para la formación  con la complementariedad necesaria para obtener buenos resultados.**
 :::
 
 ## Alcance y límites de la evidencia {.compact}
