@@ -150,7 +150,9 @@ def recorrer(ruta: Path) -> list[Item]:
     return items
 
 
-DIVISOR = re.compile(r"\[Parte (\d+) de 3\]")
+# Divisor de parte en el maestro: `# Título {.part-divider}` (roadmap.lua le
+# añade «Parte N de 3» al renderizar; N es su orden de aparición).
+DIVISOR = re.compile(r"^#\s+(.*?)\s*\{[^{}]*\.part-divider[^{}]*\}\s*$")
 
 
 def notas_divisores(ruta: Path) -> dict[int, list[str]]:
@@ -160,11 +162,15 @@ def notas_divisores(ruta: Path) -> dict[int, list[str]]:
     la entradilla protocolaria de la Parte 1), que no viven en ningún
     fichero de parte. Devuelve {número de parte: notas}.
     """
+    titulos = [
+        m.group(1)
+        for linea in ruta.read_text(encoding="utf-8").splitlines()
+        if (m := DIVISOR.match(linea))
+    ]
     notas: dict[int, list[str]] = {}
     for item in recorrer(ruta):
-        m = DIVISOR.search(item.titulo)
-        if m and item.notas:
-            notas[int(m.group(1))] = item.notas
+        if item.tipo == "seccion" and item.titulo in titulos and item.notas:
+            notas[titulos.index(item.titulo) + 1] = item.notas
     return notas
 
 

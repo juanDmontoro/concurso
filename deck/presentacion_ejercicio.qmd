@@ -30,12 +30,78 @@ format:
         .reveal .slides section:not(#title-slide) li > p,
         .reveal .slides section:not(#title-slide) blockquote > p {font-size: 1em;}
 
+        /* Slide «Síntesis: el currículum en cifras» (Parte 1, fondo teal):
+           título en blanco y sin la regla coral. Réplica del include-in-header
+           del deck fuente (presentacion_cv.qmd), que la sincronización no copia. */
+        .reveal .slides section.sintesis h2 {border-left: 0; padding-left: 0; color: #fafafa;}
+
         /* Tablas completas de coeficientes (slides de detalle con ~40 filas,
            Parte 3): escala propia y celdas compactas para caber en 1080 px. */
         .reveal .slides section.tblfull:not(#title-slide) p,
         .reveal .slides section.tblfull:not(#title-slide) table {font-size: 0.42em; line-height: 1.2;}
         .reveal .slides section.tblfull:not(#title-slide) table td,
         .reveal .slides section.tblfull:not(#title-slide) table th {padding: 0.08em 0.5em;}
+
+        /* Tabla predictiva (Parte 3): tres cifras por celda
+           (precisión / recall / lift @10K), una tinta por métrica.
+           Réplica del include-in-header del deck fuente
+           (propuesta_investigacion.qmd), que la sincronización no copia. */
+        .reveal .pA {color: #2D6A7A; font-weight: 600;}
+        .reveal .pB {color: #C44536; font-weight: 600;}
+        .reveal .pC {color: #AE7B18; font-weight: 600;}
+        .reveal .psep {color: #9aa3a8;}
+        .reveal .predwrap {width: 78%; margin: 0 auto;}
+        .reveal .predwrap table {width: 100%;}
+        .reveal .predwrap .predlegend {
+          font-size: 0.8em; color: #6c757d; text-align: center; margin-top: 0.5em;
+        }
+
+        /* Mapa de progreso (generado por roadmap.lua). Diapositivas de
+           sección: el título h1 se oculta (sigue en el DOM para ids y
+           navegación) y el mapa es el único elemento: la sección activa
+           se identifica por el resaltado. Partes en una línea secundaria,
+           pequeña y atenuada. */
+        .reveal .slides section.roadmap-slide h1 {display: none;}
+        .reveal .slides section.roadmap-slide .roadmap {
+          font-size: 1.25em; line-height: 2; color: rgba(255,255,255,0.45);
+        }
+        .reveal .slides section.roadmap-slide .roadmap.sub {
+          margin-top: 0.1em; font-size: 0.85em; padding-left: 2em;
+        }
+        .reveal .slides section.roadmap-slide .step {
+          color: rgba(255,255,255,0.45); padding-bottom: 0.15em;
+        }
+        .reveal .slides section.roadmap-slide .step.active {
+          color: #fff; font-weight: 700; border-bottom: 3px solid #fff;
+        }
+        /* Línea de partes: en el flujo, justo encima del mapa de secciones,
+           separada de él por un filete blanco (elegido el 11-09-2026 frente
+           a otras ubicaciones y al subrayado de la parte activa). La parte
+           activa se distingue solo por la atenuación del resto. */
+        .reveal .slides section.roadmap-slide .roadmap.parts {
+          font-size: 0.5em; line-height: 2; letter-spacing: 0.14em;
+          text-transform: uppercase; margin-bottom: 1.2em;
+          padding-bottom: 0.9em; border-bottom: 2px solid rgba(255,255,255,0.75);
+        }
+        .reveal .slides section.roadmap-slide .roadmap.parts .step {
+          color: rgba(255,255,255,0.3);
+        }
+        .reveal .slides section.roadmap-slide .roadmap.parts .step.active {
+          color: rgba(255,255,255,0.75); font-weight: 600;
+          border-bottom: none; /* anula el subrayado general de .step.active */
+        }
+        /* Divisores de parte: la línea de partes sobre fondo claro,
+           con la paleta del eyebrow (teal activo, gris atenuado). */
+        .reveal .slides section.part-divider .roadmap.parts {
+          margin-top: 1.4em; font-size: 0.62em; line-height: 2;
+          letter-spacing: 0.12em; text-transform: uppercase; color: #8a9296;
+        }
+        .reveal .slides section.part-divider .step {
+          color: #8a9296; padding-bottom: 0.15em;
+        }
+        .reveal .slides section.part-divider .step.active {
+          color: #2D6A7A; font-weight: 700; border-bottom: 3px solid #2D6A7A;
+        }
 
         /* Escala tipográfica de portada, divisores y secciones.
            Jerarquía: portada/divisores (1.7em) > secciones (1.6em) >
@@ -145,15 +211,40 @@ format:
         \AtBeginEnvironment{Highlighting}{\scriptsize}
         % Divisor de parte: contenido de una página plana que replica la
         % portada metropolis (título grande + filete naranja), distinta de
-        % las páginas de sección. Se usa dentro de \begin{frame}[plain].
-        \newcommand{\partdividercontent}[2]{%
+        % las páginas de sección. Lo emite roadmap.lua (#3 = línea de partes).
+        \newcommand{\partdividercontent}[3]{%
           \vfill
           {\color{mDarkTeal}\scriptsize\bfseries\MakeUppercase{#1}\par}
           \vspace{0.7em}
           {\usebeamerfont{title}\usebeamercolor[fg]{title}#2\par}
           \vspace{0.5em}
           {\color{mLightBrown}\rule{\textwidth}{0.05em}}
+          \vspace{1.2em}
+          #3
           \vfill}
+        % Mapa de progreso en las páginas de sección: roadmap.lua define
+        % \roadmapcontent antes de cada \section y la plantilla «section
+        % page» (adaptada de la variante progressbar de metropolis) lo
+        % imprime en lugar del título, sobre la barra de progreso.
+        \newcommand{\roadmapcontent}{}
+        \makeatletter
+        \setbeamertemplate{section page}{
+          \centering
+          % 0.8\textwidth (metropolis usa 22em): el mapa cabe en una línea.
+          \begin{minipage}{0.8\textwidth}
+            \raggedright
+            \usebeamercolor[fg]{section title}
+            \usebeamerfont{section title}
+            % Sin \insertsectionhead: el mapa identifica la sección activa.
+            \roadmapcontent
+            \vspace{0.6em}
+            \usebeamertemplate*{progress bar in section page}
+            \par
+          \end{minipage}
+          \par
+          \vspace{\baselineskip}
+        }
+        \makeatother
         % Cierre «Agradecimientos»: fondo teal a página completa vía TikZ
         % dentro de un frame [plain] normal. No se usa el [standout] de
         % metropolis: con la plantilla beamer de Quarto su \begingroup
@@ -164,8 +255,16 @@ format:
 # row-rules.lua debe correr DESPUÉS de los filtros internos de Quarto
 # (centinela `quarto`): si corre antes, serializa las tablas sin procesar
 # tbl-colwidths y aparecen captions espurios y desbordes de columna.
+# roadmap.lua genera el mapa de progreso (partes › secciones) en los
+# divisores de parte (`# Título {.part-divider}` en el cuerpo) y en las
+# diapositivas de sección de ambos formatos. No poner comentarios HTML
+# sueltos en el cuerpo del maestro: Pandoc los convierte en una slide vacía.
+# fig-beamer.lua sobrescribe, solo en beamer, el ancho de figuras concretas
+# que el deck fuente dimensiona para RevealJS (tabla ANCHOS en el filtro).
 filters:
   - quarto
+  - roadmap.lua
+  - fig-beamer.lua
   - row-rules.lua
 execute:
   eval: false
@@ -174,64 +273,26 @@ execute:
   message: false
 ---
 
-::: {.content-visible when-format="revealjs"}
-
-# [Parte 1 de 3]{.part-eyebrow} Currículum {.part-divider .center}
+# Currículum {.part-divider}
 
 :::{.notes}
-Con la venia de la comisión, doy comienzo a la presentación
-del ejercicio para el concurso al cuerpo de catedráticos de universidad de la Universidad de Valencia, plaza 573. 
+Con la venia de la comisión, comienzo la presentación
+del ejercicio para el concurso al cuerpo de catedráticos de universidad convocado por la Universidad de Valencia, plaza 573. 
 
 Siguiendo las directrices de la convocatoria, presento en primer 
 lugar mi curriculum vitae.
 :::
 
-:::
-
-::: {.content-visible when-format="beamer"}
-
----
-
-```{=latex}
-\partdividercontent{Parte 1 de 3}{Currículum Vitae}
-```
-
-:::
-
 {{< include _parte1_cv.qmd >}}
 
-::: {.content-visible when-format="revealjs"}
-
-# [Parte 2 de 3]{.part-eyebrow} Propuesta docente {.part-divider .center}
-
-:::
-
-::: {.content-visible when-format="beamer"}
-
----
-
-```{=latex}
-\partdividercontent{Parte 2 de 3}{Propuesta docente}
-```
-
-:::
+# Propuesta docente {.part-divider}
 
 {{< include _parte2_docente.qmd >}}
 
-::: {.content-visible when-format="revealjs"}
+# Propuesta investigadora: *Creative collaborations* {.part-divider}
 
-# [Parte 3 de 3]{.part-eyebrow} Propuesta investigadora {.part-divider .center}
-
-:::
-
-::: {.content-visible when-format="beamer"}
-
----
-
-```{=latex}
-\partdividercontent{Parte 3 de 3}{Propuesta investigadora}
-```
-
+:::{.notes}
+Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural.
 :::
 
 {{< include _parte3_investigacion.qmd >}}

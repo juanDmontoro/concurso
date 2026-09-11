@@ -55,11 +55,11 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 \toprule
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
-1 · Currículum vitae & 15 min & 19 & 23 & 1931 & 13,8\\
-2 · Propuesta docente & 15 min & 15 & 17 & 1890 & 13,5\\
-3 · Propuesta investigadora & 20 min & 20 & 22 & 2773 & 19,8\\
+1 · Currículum vitae & 15 min & 20 & 24 & 2068 & 14,8\\
+2 · Propuesta docente & 15 min & 15 & 17 & 1815 & 13,0\\
+3 · Propuesta investigadora & 20 min & 20 & 23 & 2871 & 20,5\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{54} & \textbf{62} & \textbf{6594} & \textbf{47,1}\\
+\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6754} & \textbf{48,2}\\
 \bottomrule
 \end{tabular}
 
@@ -74,7 +74,7 @@ Leyenda del margen: **parte** (teal, con filete y tiempos), sección (teal fino)
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,13,8 min a 140 ppm}} Con la venia de la comisión, doy comienzo a la presentación
+\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,14,8 min a 140 ppm}} Con la venia de la comisión, doy comienzo a la presentación
 del ejercicio para el concurso al cuerpo de catedráticos de universidad de la Universidad de Valencia, plaza 573. 
 
 Siguiendo las directrices de la convocatoria, presento en primer 
@@ -239,20 +239,30 @@ València **Economía Creativa y Mercados Culturales** con miembros de diferente
 
 \medskip
 
-\guionmarca{\marcaslide{19}{Otras actividades de liderazgo y participación en la vida universitaria}} Cierro la presentación del currículum con otros méritos, como son la actividad académica internacional, reflejada en conferencias y seminarios por invitación y la evaluación externa de tesis doctorales y trabajos de fin de máster.
+\guionmarca{\marcaslide{19}{Otras actividades de liderazgo y participación en la vida universitaria}} Antes de la síntesis final, recojo otros méritos, como son la actividad académica internacional, reflejada en conferencias y seminarios por invitación y la evaluación externa de tesis doctorales y trabajos de fin de máster.
 
 Y las tareas con impacto social  como la organización de jornadas académico-profesionales y la divulgación de resultados de investigación. Entre estas últimas destacan la colaboración con el Observatorio Social de la Fundación ”la Caixa”, por invitación de la profesora Victoria Ateca Amestoy; o las contribuciones al blog EconomistsTalkArt de la Association for Cultural Economics International (ACEI).
+
+\medskip
+
+\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum en cifras. En investigación y transferencia: cuarenta y seis artículos, treinta y seis en revistas indexadas; veintinueve capítulos; ciento dieciocho comunicaciones, noventa y dos internacionales; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
+
+En dirección y liderazgo: diecisiete cargos de gestión, concentrados en internacionalización; doce conferencias por invitación; y treinta y cinco revisiones verificadas, en el percentil noventa y uno.
+
+En docencia: trece titulaciones en siete centros, la mitad de la docencia en inglés y la calificación de excelente en DOCENTIA.
+
+La banda inferior muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios, junto a las responsabilidades de dirección, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,13,5 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN EN NEGOCIOS}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,13,0 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
 La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
 \medskip
 
-\guionmarca{\marcaslide{20}{Grado en inteligencia y analítica de negocios: BIA}} El grado en BIA se imparte en la Facultat d'Economia y cuenta anualmente con cincuenta plazas de nueva ingreso. Se trata del grado con un elevado ratio de demanda y la tercera mayor nota de corte de todos los grados  ofrecidos por la facultat.
+\guionmarca{\marcaslide{21}{Grado en inteligencia y analítica de negocios: BIA}} El grado en BIA se imparte en la Facultat d'Economia y cuenta anualmente con cincuenta plazas de nueva ingreso. Se trata del grado con un elevado ratio de demanda y la tercera mayor nota de corte de todos los grados  ofrecidos por la facultat.
 
 Su objetivo es formar profesionales capaces de convertir los datos en decisiones empresariales, combinando competencias tecnológicas y cuantitativas con una sólida visión de negocio.
 
@@ -260,7 +270,7 @@ La asignatura de esta propuesta se integra dentro de la materia Herramientas y T
 
 \medskip
 
-\guionmarca{\marcaslide{21}{Herramientas y técnicas de análisis de datos}} Se trata de una materia que engloba siete asignaturas cuya información básica se muestra tabulada.
+\guionmarca{\marcaslide{22}{Herramientas y técnicas de análisis de datos}} Se trata de una materia que engloba siete asignaturas cuya información básica se muestra tabulada.
 
 Es en tercer curso cuando los estudiantes llegan a Técnicas Avanzadas de Predicción tras haber cursado Minería de Datos en Negocios y las dos asignaturas de predicción, con datos transversales y temporales. 
 
@@ -268,7 +278,7 @@ El curso cubre diversos estimadores paramétricos y no paramétricos y diferenci
 
 \medskip
 
-\guionmarca{\marcaslide{22}{Técnicas avanzadas de predicción en negocios}} La ficha de la asignatura concreta su punto de partida, y muestra
+\guionmarca{\marcaslide{23}{Técnicas avanzadas de predicción en negocios}} La ficha de la asignatura concreta su punto de partida, y muestra
 
 1. Por un lado los datos formales: carácter, ubicación, y carga docente y de trabajo.  
 2.  Por otro lado lo que la signatura asume y lo que aporta. 
@@ -277,7 +287,7 @@ Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartici�
 
 \medskip
 
-\guionmarca{\marcaslide{23}{Contenidos y planificación}} Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
+\guionmarca{\marcaslide{24}{Contenidos y planificación}} Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
 
 El recorrido va de lo más simple a lo flexible y cierra con un tema final que conecta predicción y explicación.
 
@@ -285,14 +295,14 @@ Durante todas las prácticas se usa un mismo conjunto de datos de referencia, so
 
 \medskip
 
-\guionmarca{\marcaslide{24}{Metodología docente: carga de trabajo}} La carga de trabajo en aula (sesenta horas presenciales) se distribuye semanalmente en una hora de teoría (presentación del problema,  conceptos y discusión) y tres de práctica en aula de informática (con un cuaderno digital o notebook guiado, trabajo autónomo y entregas).
+\guionmarca{\marcaslide{25}{Metodología docente: carga de trabajo}} La carga de trabajo en aula (sesenta horas presenciales) se distribuye semanalmente en una hora de teoría (presentación del problema,  conceptos y discusión) y tres de práctica en aula de informática (con un cuaderno digital o notebook guiado, trabajo autónomo y entregas).
 
 Esta carga de trabajo presencial se articula en torno a una secuencia
 de aprendizaje [...]
 
 \medskip
 
-\guionmarca{\marcaslide{25}{Metodología docente: secuencia de aprendizaje}} [...] que se resume en cinco pasos: pregunta relevante, exploración de los datos, comparación de métodos, formalización y decisión. 
+\guionmarca{\marcaslide{26}{Metodología docente: secuencia de aprendizaje}} [...] que se resume en cinco pasos: pregunta relevante, exploración de los datos, comparación de métodos, formalización y decisión. 
 
 Es un recorrido que va de la narrativa a lo visual, de lo visual a la implementación y del código a lo formal. 
 
@@ -300,7 +310,7 @@ El orden es deliberado: la formalización llega cuando el estudiante ha visto el
 
 \medskip
 
-\guionmarca{\marcaslide{26}{Recursos didácticos}} ¿Qué recursos didácticos apoyan el aprendizaje? Los agrupo en ocho tipos: software y entornos de trabajo, materiales expositivos y prácticos, recursos interactivos, recursos para la evaluación y para la reproducibilidad, y bibliografía.
+\guionmarca{\marcaslide{27}{Recursos didácticos}} ¿Qué recursos didácticos apoyan el aprendizaje? Los agrupo en ocho tipos: software y entornos de trabajo, materiales expositivos y prácticos, recursos interactivos, recursos para la evaluación y para la reproducibilidad, y bibliografía.
 
 Una de las decisiones más relevantes del curso es la elección del software y entorno. A pesar de que el alumnado llega con una formación amplia en `R`, la asignatura se desarrolla en `Python`, utilizando las librerias `scikit-learn`, `Keras` y `DoubleML`. Las razones son tanto profesionales como docentes: 
 
@@ -312,14 +322,14 @@ Además, el cambio de lenguaje persigue un objetivo fundamental: que el alumnado
 
 \medskip
 
-\guionmarca{\marcaslide{27}{Evaluación}} El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaca el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
+\guionmarca{\marcaslide{28}{Evaluación}} El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaca el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
 
 El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y fijar un mínimo de 5 evita que una buena nota de proyecto compense la falta de base.
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{PROYECTO FINAL}\smallskip \marcaslide{28}{Proyecto del cuatrimestre}} ¿Cómo se desarrolla el proyecto en grupos? Este se organiza a lo largo de una serie de entregas parciales  durante todo el cuatrimestre. 
+\guionmarca{\marcaseccion{PROYECTO FINAL}\smallskip \marcaslide{29}{Proyecto del cuatrimestre}} ¿Cómo se desarrolla el proyecto en grupos? Este se organiza a lo largo de una serie de entregas parciales  durante todo el cuatrimestre. 
 
 Los grupos, de tres o cuatro estudiantes, eligen en la semana dos su propio conjunto de datos y el problema al que responde. A partir de ahí el trabajo evoluciona en paralelo con las prácticas: hacia la mitad del cuatrimestre hay una  entrega con retroalimentación y en la semana trece, como aspecto opcional, se puede formular una extensión causal al modelo predictivo. La entrega de la memoria, el respositorio y la presentación tienen lugar en la semana quince. 
 
@@ -327,13 +337,13 @@ Es importante señalar que durante todo el recorrido el uso de inteligencia arti
 
 \medskip
 
-\guionmarca{\marcaslide{29}{Rúbrica del proyecto}} [...] que contempla cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Es importante mencionar que la defensa oral individual pesa un treinta por ciento de la nota del proyecto.
+\guionmarca{\marcaslide{30}{Rúbrica del proyecto}} [...] que contempla cinco dimensiones con su peso, lo que se observa en cada una y los descriptores de tres niveles: excelente, apto y no apto. Es importante mencionar que la defensa oral individual pesa un treinta por ciento de la nota del proyecto.
 
 La última pieza del proyecto es la política de uso de inteligencia artificial.
 
 \medskip
 
-\guionmarca{\marcaslide{30}{Uso de inteligencia artificial}} En un trabajo que exige, entre otras cosas,  programación, es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no prohibirlo o ignorarlo. 
+\guionmarca{\marcaslide{31}{Uso de inteligencia artificial}} En un trabajo que exige, entre otras cosas,  programación, es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no prohibirlo o ignorarlo. 
 
 Los estudiantes pueden usar libremente asistentes o agentes para programar, depurar y redactar, con un uso crítico y responsable. A cambio hay una obligación: el registro completo de los prompts, no una selección, se entrega como apéndice del proyecto y de las entregas relevantes. 
 
@@ -348,22 +358,17 @@ Además, hay tres verificaciones que la inteligencia artificial no sustituye: la
 
 \medskip
 
-\guionmarca{\marcaslide{31}{Riesgo de abandono y estrategia de retención de clientes}} Comenzamos con una pregunta práctica: ante la posibilidad de abandono, ¿a quién dirigir una campaña de retención de clientes? Para ello formulamos dos reglas alternativas: 
+\guionmarca{\marcaslide{32}{Riesgo de abandono y estrategia de retención de clientes}} Empezamos con una pregunta práctica: ante el riesgo de abandono, ¿a qué clientes dirigir una campaña de retención? Caben dos reglas. La primera, RISK, actúa sobre quienes tienen mayor probabilidad de abandonar: un problema predictivo. La segunda, LIFT, actúa sobre aquellos en quienes la intervención más reduce ese riesgo: un problema de inferencia causal, porque exige saber cómo responderían ante una situación que no observamos.
 
-1. La primera basada en el **riesgo de abandono** (**RISK**) aconseja actúar sobre los clientes con mayor probabilidad de abandono, un problema predictivo; 
-2. La segunda (**LIFT**) supone actuar sobre aquellos para los que la intervención produce una mayor reducción de ese riesgo. Es este un problema de inferencia causal (exige conocer la respuesta de los clientes ante un estado de cosas que no observamos).
+En el aula lo ilustramos con el experimento de Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según cada regla: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
 
-En el aula ilustramos esta diferencia con el experimento de Ascarza (2018), en el que un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga, y observó si treinta días después la línea seguía activa. 
-
-Usando los datos experimentales la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes por riesgo y sensibilidad y observa la disminución de la tasa de abandono. Los resultados muestran como seleccionar por sensibilidad a la intervención resulta más efectivo.
-
-El mensaje central es claro: el ejercicio predictivo implementado no responde por si solo a la pregunta de negocio; para eso hay que estimar el efecto causal. La siguiente cuestión es cómo estimar ese efecto en un contexto no experimental, con datos observacionales.
+El mensaje es claro: la predicción por sí sola no responde a la pregunta de negocio; para eso hay que estimar el efecto causal. La cuestión siguiente es cómo hacerlo sin experimento, con datos observacionales.
 
 \medskip
 
-\guionmarca{\marcaslide{32}{Aprendizaje automático para la estimación de efectos causales}} Si nos movemos del contexto al modelo, el objetivo es estimar el efecto que una intervención $D$ tiene sobre la respuesta $y$ (el parámetro $\tau$) asumiendo que y depende a su vez de un conjunto de variables auxiliares X. 
+\guionmarca{\marcaslide{33}{Aprendizaje automático para la estimación de efectos causales}} Si nos movemos del contexto al modelo, el objetivo es estimar el efecto que una intervención $D$ tiene sobre la respuesta $y$ (el parámetro $\tau$) asumiendo que y depende a su vez de un conjunto de variables auxiliares X. 
 
-Frecuentemente trabajamos con datos observacionales: entonces hemos de considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$, de ahí que incorporemos este proceso a través de la función $m$.
+Si trabajamos con datos observacionales debemos, además, considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$:  incorporamos este proceso a través de la función $m$.
 
 El grafo visualiza el mecanismo generador de datos y explicita **el objetivo del tema: la incorporación técnicas de aprendizaje máquina para la estimación de tau** 
 
@@ -371,32 +376,33 @@ ML, ¿por qué? Tres motivos: elevada dimensionalidad de X, el uso de datos no t
 
 \medskip
 
-\guionmarca{\marcaslide{33}{De la aplicación \emph{naive} al Double Machine Learning}} La aplicación ingenua del aprendizaje automático a este problema consiste en aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. 
+\guionmarca{\marcaslide{34}{De la aplicación \emph{naive} al Double Machine Learning}} La aplicación ingenua del aprendizaje automático al modelo parcialmente lineal supone aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. Falla por dos motivos.
 
-La aproximación falla por dos motivos:  
-1. Los modelos de aprendizaje automático regularizan y seleccionan las variables por su capacidad para predecir la respuesta: un control poco correlacionado con $y$ pero relevante para explicar $D$ queda atenuado o fuera del modelo, y la segunda etapa atribuye a $\tau$ parte de su relación con el tratamiento. Es un sesgo de variable omitida que aquí se denomina **sesgo de regularización**.   
-2. Además, si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona: es el **sesgo por sobreajuste**.
+El primero es el **sesgo de regularización**. El modelo selecciona las variables por su capacidad para predecir $y$: un control poco correlacionado con la respuesta pero relevante para explicar $D$ queda atenuado o fuera. Es, un **sesgo de variable omitida**.
 
-Double Machine Learning corrige ambos. 
+El segundo es el **sesgo por sobreajuste**: si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona.
 
-- La ortogonalización residualiza también el tratamiento con las predicciones de la función auxiliar $m$.  
-- El cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. 
-- La combinación produce un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
+Double Machine Learning corrige ambos. Corrige el primero, la ortogonalización residualiza también el tratamiento con la función auxiliar $m$. Corrige el segundo, el cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. El resultado es un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
 
 \medskip
 
-\guionmarca{\marcaslide{34}{Práctica con datos reales}} Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
+\guionmarca{\marcaslide{35}{Práctica con datos reales}} Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
 
 La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción de  intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y por tanto límites del análisis.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,19,8 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural. Más concretamente,  la pregunta que se formula es qué distingue a dos artistas que llegan a trabajar juntos de los muchos pares que podrían haberlo hecho.
+\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,20,5 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural.
 
 \medskip
 
-\guionmarca{\marcaslide{35}{Esquema}} La presentación se estructura en cuatro partes. 
+\guionmarca{\marcaslide{36}{De qué trata esta investigación}} Antes del esquema, la propuesta en cuatro ideas. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar, y hoy es lo habitual entre los éxitos. Pero cada artista podría colaborar con muchos y solo lo hace con pocos: la pregunta es qué distingue a los pares que llegan a trabajar juntos. Para responderla sitúo a cada artista en un mapa construido con cómo lo describe su público. Bad Bunny y J Balvin reciben un vocabulario casi idéntico y están cerca; Bad Bunny y Ed Sheeran apenas comparten palabras y están lejos. La hipótesis es que estar cerca ayuda: Bad Bunny y J Balvin han grabado juntos varias veces. Pero Taylor Swift y Kendrick Lamar, que están lejos, también lo han hecho. La cuestión abierta es si hay un punto en que parecerse más ya no aporta. Todo ello junto a la red de contactos, la escena y la trayectoria.
+
+\needspace{2\baselineskip}
+\bigskip
+
+\guionmarca{\marcaseccion{MOTIVACIÓN Y PREGUNTA ECONÓMICA}} La presentación se estructura en cuatro partes. 
 
 - Comienzo por la motivación, la definición del problema económico y por una hipótesis sobre afinidad en un espacio estético. 
 
@@ -406,10 +412,9 @@ La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la ca
 
 - Cierro con la aportación, sus límites y las preguntas que abre.
 
-\needspace{2\baselineskip}
-\bigskip
+\medskip
 
-\guionmarca{\marcaseccion{INTRODUCCIÓN}\smallskip \marcaslide{36}{La colaboración en la industria de la música}} La figura muestra la evolución del porcentaje de colaboraciones en listas anuales del Billboard 100 (además de en subtramos de la misma) y sirve como punto de partida para ilustrar la pregunta.
+\guionmarca{\marcaslide{37}{La colaboración en la industria de la música}} La figura muestra la evolución del porcentaje de colaboraciones en listas anuales del Billboard 100 (además de en subtramos de la misma) y sirve como punto de partida para ilustrar la pregunta.
 
 A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard correspondían a colaboraciones. Entre 2016 y 2020 esa tasa se sitúa en torno al 40%: la colaboración ha pasado de ser una anomalía entre los éxitos comerciales a la práctica habitual. La evolución sugiere un cambio estructural que emerge en paralelo a la digitalización de la música y se asienta con la implantación de un modelo de negocio basado en el acceso, y no en la propiedad: el streaming.
 
@@ -417,7 +422,7 @@ El interés económico de la pregunta de investigación radica en el análisis d
 
 \medskip
 
-\guionmarca{\marcaslide{37}{Marco conceptual}} La revisión de la literatura conecta la economía de la cultura con la formación de equipos y redes, en un campo en el que convergen dos líneas de investigación.   
+\guionmarca{\marcaslide{38}{Marco conceptual}} La revisión de la literatura conecta la economía de la cultura con la formación de equipos y redes, en un campo en el que convergen dos líneas de investigación.   
 
 1. La primera estudia los resultados de las colaboraciones. En música la evidencia es clara: las colaboraciones elevan la demanda de *streaming* y alargan la supervivencia en listas.  
 
@@ -429,7 +434,7 @@ El interés económico de la pregunta de investigación radica en el análisis d
 
 \medskip
 
-\guionmarca{\marcaslide{38}{Contribución: medición y contraste de la afinidad estética}} La contribución combina una pregunta sobre formación de colaboraciones en industrias culturales con un diseño de la investigación que permite contrastarla a escala amplia. El conjunto de riesgo incluye todos los pares elegibles: así, las colaboraciones realizadas se comparan con oportunidades definidas de forma explícita.
+\guionmarca{\marcaslide{39}{Contribución: medición y contraste de la afinidad estética}} La contribución combina una pregunta sobre formación de colaboraciones en industrias culturales con un diseño de la investigación que permite contrastarla a escala amplia. El conjunto de riesgo incluye todos los pares elegibles: así, las colaboraciones realizadas se comparan con oportunidades definidas de forma explícita.
 
 Además, la identidad estética se representa usando un enfoque basado en procesamiento del lenguaje natural de las etiquetas generadas por usuarios en dos redes sociales de música. 
 
@@ -440,7 +445,7 @@ Finalmente, la inferencia incorpora dependencia entre pares que comparten artist
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{DATOS Y ANÁLISIS EXPLORATORIO}\smallskip \marcaslide{39}{Fuentes de datos}} El trabajo integra tres fuentes. Las listas globales semanales de Spotify, desde septiembre de 2013 hasta diciembre de 2025, proporcionan las pistas y los créditos de colaboración. Los metadatos (extraidos del API web) permiten distinguir al artista principal de los invitados.
+\guionmarca{\marcaseccion{DATOS Y DISEÑO}\smallskip \marcaslide{40}{Fuentes de datos}} El trabajo integra tres fuentes. Las listas globales semanales de Spotify, desde septiembre de 2013 hasta diciembre de 2025, proporcionan las pistas y los créditos de colaboración. Los metadatos (extraidos del API web) permiten distinguir al artista principal de los invitados.
 
 Las etiquetas de Last.fm y MusicBrainz aportan una descripción de la identidad estética desde la audiencia. Cubren el 83,5% de los artistas del ámbito inicial pero conviene señalar que medidas alternativas, p.e. los géneros del API de Spotify, tienen una menor cobertura, aproximadamente un tercio, y proporciona una lista editorial seleccionada.
 
@@ -450,7 +455,7 @@ En tercer lugar, los metadatos de MusicBrainz añaden atributos como tipo de art
 
 \medskip
 
-\guionmarca{\marcaslide{40}{Proximidad estética}} Cada artista se representa mediante un vector de etiquetas de forma que **su perfil en el año t acumula las etiquetas asociadas a lanzamientos anteriores a t**. 
+\guionmarca{\marcaslide{41}{Proximidad estética}} Cada artista se representa mediante un vector de etiquetas de forma que **su perfil en el año t acumula las etiquetas asociadas a lanzamientos anteriores a t**. 
 
 Dos artistas se comparan por la dirección en la que apuntan sus vectores, que se articula a través del coseno de ambos (medida denominada similitud del coseno): cuanto más vocabulario comparten, mayor es su afinidad en el espacio de etiquetas de usuarios.
 
@@ -462,17 +467,17 @@ Además de la proximidad estética, el trabajo incorpora la proximidad estructur
 
 \medskip
 
-\guionmarca{\marcaslide{41}{Composición de la red}} Visualizamos esta proximidad estructural con la representación del conjunto de datos relacionales en un grafo. La figura muestra solo el núcleo de la red acumulada hasta el 2024, el 5% de artistas con mayor grado, y ofrece una ilustración descriptiva.
+\guionmarca{\marcaslide{42}{Composición de la red}} Visualizamos esta proximidad estructural con la representación del conjunto de datos relacionales en un grafo. La figura muestra solo el núcleo de la red acumulada hasta el 2024, el 5% de artistas con mayor grado, y ofrece una ilustración descriptiva.
 
 El grafo segmenta una escena latina y otra anglófona, con algunos artistas que conectan ambas. Esto sugiere la necesidad de separar afinidad (estética o de otro tipo) de posición en la red. Dos artistas pueden, por ejemplo, compartir espacio cultural  y, sin embargo, tener oportunidades relacionales distintas.
 
 \medskip
 
-\guionmarca{\marcaslide{42}{Qué cuenta como primera colaboración}} La definición del evento fija el objeto que vamos a estudiar. En el trabajo se **considera una primera colaboración cuando un artista aparece como principal y otro como invitado en una pista que entra en listas, siempre que no hubiera un lazo previo entre ambos** (se miden eventos de formación que responden a decisiones distintas de los de repetición). Los créditos entre dos invitados de una misma pista no cuentan como formación principal–invitado, pero tampoco son ceros de colaboración.
+\guionmarca{\marcaslide{43}{Qué cuenta como primera colaboración}} La definición del evento fija el objeto que vamos a estudiar. En el trabajo se **considera una primera colaboración cuando un artista aparece como principal y otro como invitado en una pista que entra en listas, siempre que no hubiera un lazo previo entre ambos** (se miden eventos de formación que responden a decisiones distintas de los de repetición). Los créditos entre dos invitados de una misma pista no cuentan como formación principal–invitado, pero tampoco son ceros de colaboración.
 
 \medskip
 
-\guionmarca{\marcaslide{43}{Diseño: el conjunto de oportunidades}} El número total de colaboraciones potenciales no es cualquier combinación imaginable. 
+\guionmarca{\marcaslide{44}{Diseño: el conjunto de oportunidades}} El número total de colaboraciones potenciales no es cualquier combinación imaginable. 
 
 **La investigación define una oportunidad observable**: los dos artistas deben haber debutado  antes del año analizado y tener un tema que aparece en listas publicado en una ventana que incluye los tres años anteriores. Además, el par debe seguir siendo elegible para una primera colaboración (no han colaborado antes).
 
@@ -483,7 +488,7 @@ Se utiliza el conjunto de riesgo completo lo que devuelve una muestra de estimac
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{ANÁLISIS EMPÍRICO}\smallskip \marcaslide{44}{Estimación}} La formación se modeliza a través de dos modelos de clasificación.
+\guionmarca{\marcaseccion{RESULTADOS · FORMA DE LA ASOCIACIÓN}\smallskip \marcaslide{45}{Estimación}} La formación se modeliza a través de dos modelos de clasificación.
 
 1. El logit estima la probabilidad de formación condicionada a la red del año anterior y a las características del par. Incluye efectos de año y permite hacer inferencia sobre una forma especificada explícitamente. Se estiman errores estándar diádicos de Aronow y Samii que admiten dependencia entre pares que comparten un artista.
 
@@ -497,7 +502,7 @@ Una alternativa sería recurrir a modelos de grafos aleatorias exponenciales per
 
 \medskip
 
-\guionmarca{\marcaslide{45}{Bloques de variables y modelos anidados}} Los predictores se organizan en cuatro bloques. La red resume la historia relacional. La estética recoge la similitud del par y la posición de cada artista en el espacio de etiquetas. Actividad y oportunidad describen producción, trayectoria y tiempo de elegibilidad conjunta. El último bloque incorpora escena, país, historia de sellos y otros atributos.
+\guionmarca{\marcaslide{46}{Bloques de variables y modelos anidados}} Los predictores se organizan en cuatro bloques. La red resume la historia relacional. La estética recoge la similitud del par y la posición de cada artista en el espacio de etiquetas. Actividad y oportunidad describen producción, trayectoria y tiempo de elegibilidad conjunta. El último bloque incorpora escena, país, historia de sellos y otros atributos.
 
 Los atributos de nodo (es decir, de artistas) entran como media del par y diferencia absoluta: así se distingue nivel y asimetría. 
 
@@ -505,36 +510,38 @@ Se estima un modelo completo y dos restricciones: solo red y sin red.
 
 \medskip
 
-\guionmarca{\marcaslide{46}{Asociaciones del modelo completo}} La figura compara asociaciones para variables seleccionadas. Muestra el cambio en ratio de odds ante un incremento de una desviación estándar en variables continuas y presencia frente a ausencia en binarias. 
+\guionmarca{\marcaslide{47}{Asociaciones del modelo completo}} La figura compara las asociaciones del modelo completo para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
 
-En la red, la posición importa: mayor grado medio y proximidad geodésica presentan asociaciones positivas, mientras que la diferencia de grado es negativa. Los pares más conectados y menos asimétricos se distinguen de otros pares elegibles. El índice de Jaccard muestra la dicotomía entre significación 
-estadística y sustantiva.
+En la red, la posición estructural importa: pares más conectados, más cercanos en la red y menos asimétricos son más propensos a colaborar. 
 
-En la posición estética, la similitud del par, con término lineal positivo y  cuadrático negativo, dibujan un óptimo interior. Además, una mayor similitud media al centroide se asocia con menor formación (si bien la asimetría en los miembros del par aumenta la formación). 
+En el espacio estético, hay un óptimo interior en la similitud del par. Además, pares que ocupan posiciones alejadas del centro del espacio de etiquetas se distinguen más que los pares situados en el centro.
 
-Compartir escena y sello muestran asociación positiva. Po otro lado, la actividad media y su asimetría, con signos opuestos asocian **pares activos y similares con una mayor probabilidad de formación**. Una exposición prolongada sin colaboración presenta una asociación negativa que puede capturar oportunidades no realizadas o emparejamientos poco plausibles.
+Las proximidades cultural e institucional suman: compartir escena y haber pasado por un mismo sello se asocian con mayor formación.
+
+En actividad y oportunidad, el perfil favorable es el de pares activos y de actividad parecida. Por contra, la exposición reduce la propensión: es una asociación que puede capturar oportunidades no realizadas o emparejamientos poco plausibles.
 
 \medskip
 
-\guionmarca{\marcaslide{47}{¿Máximo o punto de saturación?}} La especificación cuadrática sitúa un máximo implícito en 0,64, aproximadamente en el percentil 95 de la similitud observada: una zona con pocos eventos. La parábola impone un descenso después de ese máximo; debemos comprobar si los datos respaldan esa caída o un crecimiento que se aplana.
+\guionmarca{\marcaslide{48}{¿Máximo o punto de saturación?}} La especificación cuadrática sitúa un máximo implícito en 0,64, aproximadamente en el percentil 95 de la similitud observada: una zona con pocos eventos. La parábola impone un descenso después de ese máximo; debemos comprobar si los datos respaldan esa caída o un crecimiento que se aplana.
 
 Para distinguir ambas hipótesis, utilizamos:  
 
 1. Un análisis exploratorio con dos logit alternativos: uno con similitud por tramos y otro con un spline flexible.
-2. Una prueba prespecificada con división de la muestra: una mitad localiza el posible máximo y la otra estima el aumento acumulado anterior y la pendiente posterior. Solo confirmamos un máximo interior si el aumento previo es positivo y la pendiente posterior negativa, ambos estadísticamente significativos. El procedimiento se validó previamente mediante simulaciones.
+2. Una prueba prespecificada con división de la muestra: una mitad localiza el posible máximo y la otra estima pendientes anterior y posterior. Un máximo interior se confirma si pendientes cambian de signo. El procedimiento se validó previamente mediante simulaciones.
 
 \medskip
 
-\guionmarca{\marcaslide{48}{Proximidad estética y colaboraciones: especificación flexible}} La curva predicha por el logit con spline muestra un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. Los puntos representan tasas ajustadas por intervalos, sin un descenso claro y con mayor imprecisión en la parte alta.
+\guionmarca{\marcaslide{49}{Proximidad estética y colaboraciones: especificación flexible}} SPLINE: la curva suavizada muestra predicciones del logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
+PUNTOS: representan tasas ajustadas por intervalos; no hay descenso claro y mayor imprecisión en la parte alta.
 
-El contraste identifica un aumento acumulado positivo antes del punto de ruptura, con un intervalo que excluye cero. Después, la pendiente media del bootstrap es positiva, pero su intervalo es amplio e incluye valores negativos, nulos y positivos.
+El contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente es positiva, pero su intervalo incluye cero.
 
 **No se confirma el patrón de subida y caída requerido para identificar un máximo interior. Los resultados son compatibles con un crecimiento que se modera, aunque la incertidumbre no permite descartar una caída en la cola.**
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{ANÁLISIS PREDICTIVO}\smallskip \marcaslide{49}{Capacidad predictiva por bloques de variables}} El ejercicio predictivo ordena las observaciones en 2024, con tan solo 64 eventos de formación. El logit predice 489.912 pares y XGBoost 526.319, (difieren en el tratamiento de los valores faltantes lo que limita las comparaciones). En cualquier caso el área bajo la curva de precisión-recall del modelo completo multiplica la tasa base por 18 en el logit y por 14 en XGBoost.
+\guionmarca{\marcaseccion{RESULTADOS · PREDICCIÓN}\smallskip \marcaslide{50}{Capacidad predictiva por bloques de variables}} El ejercicio predictivo ordena las observaciones en 2024, con tan solo 64 eventos de formación. El logit predice 489.912 pares y XGBoost 526.319, (difieren en el tratamiento de los valores faltantes lo que limita las comparaciones). En cualquier caso el área bajo la curva de precisión-recall del modelo completo multiplica la tasa base por 18 en el logit y por 14 en XGBoost.
 
 
 La rareza del evento obliga a mirar aciertos concretos: si se seleccionan los 10.000 pares mejor puntuados, el modelo completo recupera el 42% de los eventos con el logit y el 31% con XGBoost, un lift de 20 y 16 frente al azar. 
@@ -546,18 +553,18 @@ Reserva (cifras retiradas de la tabla, 2026-09-07). AUC-ROC · AUC-PR (‰) · L
 
 \medskip
 
-\guionmarca{\marcaslide{50}{Contraste no paramétrico de la forma funcional}} El ejercicio predictivo permite analizar el perfil estético sin imponer una forma funcional. Para ello, recurrimos a los valores de Shapley, que descomponen la predicción del XGBoost en las contribuciones de los distintos predictores. El gráfico representa la contribución de la similitud estética, en escala de log-odds, para los pares evaluados en 2024.
+\guionmarca{\marcaslide{51}{Contraste no paramétrico de la forma funcional}} El ejercicio predictivo permite analizar el perfil estético sin imponer una forma funcional. Para ello, recurrimos a los valores de Shapley, que descomponen la predicción del XGBoost en las contribuciones de los distintos predictores. El gráfico representa la contribución de la similitud estética, en escala de log-odds, para los pares evaluados en 2024.
 
 El patrón sube con fuerza desde similitudes bajas y después se modera. Es consistente con el estancamiento del crecimiento del ejercicio exploratorio y constituye una comprobación descriptiva de lo aprendido por este modelo. Su utilidad aquí es mostrar que la **compatibilidad estética sigue asociada a la formación en un modelo donde no se fija de antemano una forma funcional.**
 
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{SENSIBILIDAD DE LOS RESULTADOS}} Se ha evaluado la sensibilidad de las estimaciones  a la definición de la respuesta, a diferentes ventanas de actividad, medición de etiquetas e inferencia. El patrón central sobre afinidad se mantiene. Me detengo brevemente en la corrección de sesgo debido a  la rareza del evento.
+\guionmarca{\marcaseccion{RESULTADOS · SENSIBILIDAD}} Se ha evaluado la sensibilidad de las estimaciones  a la definición de la respuesta, a diferentes ventanas de actividad, medición de etiquetas e inferencia. El patrón central sobre afinidad se mantiene. Me detengo brevemente en la corrección de sesgo debido a  la rareza del evento.
 
 \medskip
 
-\guionmarca{\marcaslide{51}{Firth: estabilidad de las estimaciones}} Para ello utilizo el **modelo logit de Firth** que incorpora una verosimilitud penalizada para reducir sesgo y mitigar problemas de separación (que en este caso no se dan). El objeto es comprobar cuánto cambia el patrón estimado en una muestra con un evento tan infrecuente.
+\guionmarca{\marcaslide{52}{Firth: estabilidad de las estimaciones}} Para ello utilizo el **modelo logit de Firth** que incorpora una verosimilitud penalizada para reducir sesgo y mitigar problemas de separación (que en este caso no se dan). El objeto es comprobar cuánto cambia el patrón estimado en una muestra con un evento tan infrecuente.
 
 La figura divide la diferencia entre estimaciones por el error estándar robusto del logit base. Se observa como los desplazamientos son marginales (el mayor desplazamiento corresponde al índice de Jaccard que equivale aproximadamente a 0,23 errores estándar en un predictor de escasa significación sustantiva); además todos los términos conservan su signo.
 
@@ -566,7 +573,7 @@ Este ejercicio muestra estabilidad de estimaciones puntuales: La escasa diferenc
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{DISCUSIÓN Y CONCLUSIONES}\smallskip \marcaslide{52}{Síntesis: afinidad, red y oportunidad}} Antes de concluir, reúno el análisis de los resultados en este mapa. En horizontal aparece la afinidad estética y en vertical la cercanía en la red previa. Los paneles comparan una oportunidad conjunta reciente y una exposición prolongada sin colaboración.
+\guionmarca{\marcaseccion{CONCLUSIONES}\smallskip \marcaslide{53}{Síntesis: afinidad, red y oportunidad}} Antes de concluir, reúno el análisis de los resultados en este mapa. En horizontal aparece la afinidad estética y en vertical la cercanía en la red previa. Los paneles comparan una oportunidad conjunta reciente y una exposición prolongada sin colaboración.
 
 La figura muestra el índice que multiplica la tasa de formación sobre un **par de referencia: sin conexión previa, sin afinidad y con una exposición reciente**. 
 
@@ -580,7 +587,7 @@ El mapa sintetiza esas asociaciones pero deja abiertas las explicaciones: puede 
 
 \medskip
 
-\guionmarca{\marcaslide{53}{Qué aporta estudiar la formación de colaboraciones}} Más allá de su aportación metodológica, basada en el conjunto de riesgo completo y en el uso de técnicas de procesamiento del lenguaje natural para medir la afinidad entre artistas, el trabajo concibe la formación de colaboraciones como una etapa diferenciada de la producción cultural e identifica los factores asociados a su realización.
+\guionmarca{\marcaslide{54}{Qué aporta estudiar la formación de colaboraciones}} Más allá de su aportación metodológica, basada en el conjunto de riesgo completo y en el uso de técnicas de procesamiento del lenguaje natural para medir la afinidad entre artistas, el trabajo concibe la formación de colaboraciones como una etapa diferenciada de la producción cultural e identifica los factores asociados a su realización.
 
 En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
 
@@ -588,7 +595,7 @@ Un resultado generalizable es que el efecto de la afinidad debe analizarse en un
 
 \medskip
 
-\guionmarca{\marcaslide{54}{Alcance y límites de la evidencia}} La interpretación está sujeta a cuatro límites. 
+\guionmarca{\marcaslide{55}{Alcance y límites de la evidencia}} La interpretación está sujeta a cuatro límites. 
 
 Primero, las estimaciones identifican asociaciones, no efectos causales. 
 

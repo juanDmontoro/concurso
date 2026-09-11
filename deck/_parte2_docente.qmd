@@ -1,4 +1,4 @@
-# Técnicas avanzadas de predicción en negocios {background-color="#2D6A7A"}
+# Técnicas avanzadas de predicción {background-color="#2D6A7A"}
 
 :::{.notes}
 La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
@@ -417,16 +417,11 @@ La diferencia entre ambos criterios fue de **4,1 puntos porcentuales**.
 :::
 
 ::: {.notes}
-Comenzamos con una pregunta práctica: ante la posibilidad de abandono, ¿a quién dirigir una campaña de retención de clientes? Para ello formulamos dos reglas alternativas: 
+Empezamos con una pregunta práctica: ante el riesgo de abandono, ¿a qué clientes dirigir una campaña de retención? Caben dos reglas. La primera, RISK, actúa sobre quienes tienen mayor probabilidad de abandonar: un problema predictivo. La segunda, LIFT, actúa sobre aquellos en quienes la intervención más reduce ese riesgo: un problema de inferencia causal, porque exige saber cómo responderían ante una situación que no observamos.
 
-1. La primera basada en el **riesgo de abandono** (**RISK**) aconseja actúar sobre los clientes con mayor probabilidad de abandono, un problema predictivo; 
-2. La segunda (**LIFT**) supone actuar sobre aquellos para los que la intervención produce una mayor reducción de ese riesgo. Es este un problema de inferencia causal (exige conocer la respuesta de los clientes ante un estado de cosas que no observamos).
+En el aula lo ilustramos con el experimento de Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según cada regla: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
 
-En el aula ilustramos esta diferencia con el experimento de Ascarza (2018), en el que un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga, y observó si treinta días después la línea seguía activa. 
-
-Usando los datos experimentales la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes por riesgo y sensibilidad y observa la disminución de la tasa de abandono. Los resultados muestran como seleccionar por sensibilidad a la intervención resulta más efectivo.
-
-El mensaje central es claro: el ejercicio predictivo implementado no responde por si solo a la pregunta de negocio; para eso hay que estimar el efecto causal. La siguiente cuestión es cómo estimar ese efecto en un contexto no experimental, con datos observacionales.
+El mensaje es claro: la predicción por sí sola no responde a la pregunta de negocio; para eso hay que estimar el efecto causal. La cuestión siguiente es cómo hacerlo sin experimento, con datos observacionales.
 :::
 
 
@@ -473,7 +468,7 @@ $$D= m(X)+\eta$$
 ::: {.notes}
 Si nos movemos del contexto al modelo, el objetivo es estimar el efecto que una intervención $D$ tiene sobre la respuesta $y$ (el parámetro $\tau$) asumiendo que y depende a su vez de un conjunto de variables auxiliares X. 
 
-Frecuentemente trabajamos con datos observacionales: entonces hemos de considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$, de ahí que incorporemos este proceso a través de la función $m$.
+Si trabajamos con datos observacionales debemos, además, considerar la posibilidad de confusión si la selección al tratamiento se ve afectada las variables $X$:  incorporamos este proceso a través de la función $m$.
 
 El grafo visualiza el mecanismo generador de datos y explicita **el objetivo del tema: la incorporación técnicas de aprendizaje máquina para la estimación de tau** 
 
@@ -491,20 +486,16 @@ ML, ¿por qué? Tres motivos: elevada dimensionalidad de X, el uso de datos no t
 
 ---
 
-**Aplicación *naive***
+**Estimación *naive* del modelo parcialmente lineal $y=\tau D + g(X)+ \epsilon$**
 
-1. Aprender $\hat{g}$ y residualizar la respuesta: $\tilde{y}=y-\hat{g}(X)$.
+1. Aprender $\hat{g}$ y residualizar la respuesta: $\tilde{y}=y-\hat{g}(X)$.  
 2. Regresión de $\tilde{y}$ sobre $D$.
-
-$\hat{g}$ selecciona controles por su capacidad de predecir $y$, no $D$ $\to$ **sesgo de regularización**.
-
-Mismos datos para entrenar y predecir $\to$ **sesgo por sobreajuste**.
 
 ---
 
 **Double Machine Learning**
 
-1. Aprender $\hat{g}$ **y** $\hat{m}$; residualizar respuesta y tratamiento con *cross-fitting*: $\tilde{y}=y-\hat{g}(X)$, $\tilde{D}=D-\hat{m}(X)$.
+1. Aprender $\hat{g}$, $\hat{m}$; residualizar respuesta y tratamiento con *cross-fitting*: $\tilde{y}=y-\hat{g}(X)$, $\tilde{D}=D-\hat{m}(X)$.
 2. Regresión de $\tilde{y}$ sobre $\tilde{D}$: $\tilde{y}=\tau\tilde{D}+\epsilon$.
 
 ---
@@ -515,23 +506,19 @@ Mismos datos para entrenar y predecir $\to$ **sesgo por sobreajuste**.
 :::
 
 ::: {.column width="58%"}
-![](figures/fig_esquema_dml.svg){width="100%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
+![](figures/fig_esquema_dml.svg){width="80%" fig-alt="Esquema: el enfoque ingenuo genera dos problemas, sesgo de regularización y sesgo de sobreajuste; sus soluciones, ortogonalización y cross-fitting, combinadas dan Double ML, estimador raíz de n consistente con inferencia válida"}
 :::
 
 ::::
 
 ::: {.notes}
-La aplicación ingenua del aprendizaje automático a este problema consiste en aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. 
+La aplicación ingenua del aprendizaje automático al modelo parcialmente lineal supone aprender un modelo flexible para $g$, residualizar la respuesta y regresar ese residuo sobre el tratamiento. Falla por dos motivos.
 
-La aproximación falla por dos motivos:  
-1. Los modelos de aprendizaje automático regularizan y seleccionan las variables por su capacidad para predecir la respuesta: un control poco correlacionado con $y$ pero relevante para explicar $D$ queda atenuado o fuera del modelo, y la segunda etapa atribuye a $\tau$ parte de su relación con el tratamiento. Es un sesgo de variable omitida que aquí se denomina **sesgo de regularización**.   
-2. Además, si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona: es el **sesgo por sobreajuste**.
+El primero es el **sesgo de regularización**. El modelo selecciona las variables por su capacidad para predecir $y$: un control poco correlacionado con la respuesta pero relevante para explicar $D$ queda atenuado o fuera. Es, un **sesgo de variable omitida**.
 
-Double Machine Learning corrige ambos. 
+El segundo es el **sesgo por sobreajuste**: si se entrena y se predice sobre las mismas observaciones, los residuos absorben parte del efecto causal y la varianza residual del tratamiento se distorsiona.
 
-- La ortogonalización residualiza también el tratamiento con las predicciones de la función auxiliar $m$.  
-- El cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. 
-- La combinación produce un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
+Double Machine Learning corrige ambos. Corrige el primero, la ortogonalización residualiza también el tratamiento con la función auxiliar $m$. Corrige el segundo, el cross-fitting separa las observaciones con las que se entrena de aquellas sobre las que se predice. El resultado es un estimador raíz de $n$ consistente con inferencia válida, que los estudiantes implementan con DoubleML como un estimador en dos etapas.
 :::
 
 

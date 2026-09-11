@@ -83,7 +83,7 @@ La tercera etapa, desde 2008, se orienta a la economía de la cultura e industri
 
 | Web of Science | Scopus | Google Scholar |
 |:---:|:---:|:---:|
-| 246 citas · h = 8 | 332 citas · h = 8 | 807 citas · h = 14 · i10 = 19 |
+| 251 citas · h = 8 | 335 citas · h = 8 | 807 citas · h = 14 · i10 = 19 |
 
 
 <!-- SDG: comprobado el 04-08-2026 con sesión UV — ni el perfil de autor ni la
@@ -428,7 +428,7 @@ Ingeniería).
 | **Proyectos docentes** | **IP de 4 proyectos docentes y de innovación** |
 | **Coordinación docente** | Unidad Docente de Estadística del área de Métodos Cuantitativos (2020/21) · Comisión delegada para la reforma de la Estadística introductoria (2016/17) · Coordinador docente del programa MOTIVEM (2021) · Coordinación de guías docentes de grado y posgrado |
 | **Grupo de innovación** | Co-responsable del grupo consolidado **GCID23-2575334** (mención 2023, renovada 2026) |
-| **Gestión de la Internacionalización** | Gestión Obtención y gestión de las ayudas **EU-US ATLANTIS** (2011–2014) · Coordinador responsable del convenio con la *Zarb School of Business*, **Hofstra University** (Nueva York, 2014–2019) · Coordinación de los intercambios de dobles titulaciones (ADE-GEDE e International Business) |
+| **Gestión de la Internacionalización** | Gestión de las ayudas **EU-US ATLANTIS** (2011–2014) · Coordinador responsable del convenio con la *Zarb School of Business*, **Hofstra University** (Nueva York, 2014–2019) · Coordinación de los intercambios de dobles titulaciones (ADE-GEDE e International Business) |
 
 
 : {tbl-colwidths="[22,78]"}
@@ -480,7 +480,7 @@ València **Economía Creativa y Mercados Culturales** con miembros de diferente
 |----|--------|
 | **Reconocimientos** | Reconocimiento de ***Poetics*** (JCR Q1) a la actividad evaluadora (2026) · Mención de **grupo consolidado** de innovación docente (2023, renovada 2026) |
 | **Premios** | Finalista a mejor ponencia, AIMAC 2013 (Universidad de los Andes, Bogotá) · **Premio Fundación SGAE de Investigación 2018** (tesis presentada por Desamparados Lluch)  |
-| **Conferencias y seminarios por invitación** | Seminario en CREED, Universiteit van Amsterdam (2001) · London School of Economics (2007) · Institut für Kulturmanagement, Universität für Musik Wien (2013) · panel "Double Degrees" (University of North Florida, 2013) · Universidad de Buenos Aires y Museo Nacional de Bellas Artes (2013) · BIME Pro (2018) · Universidad de Oviedo (2026) · Curso de verano UCLM-Almagro (2026)  |
+| **Conferencias y seminarios por invitación** | Seminario en CREED, Universiteit van Amsterdam (2001) · London School of Economics (2007) · Institut für Kulturmanagement, Universität für Musik Wien (2013) · Panel on "Double Degrees", University of North Florida (2013) · Universidad de Buenos Aires y Museo Nacional de Bellas Artes (2013) · BIME Pro (2018) · Universidad de Oviedo (2026) · Curso de verano UCLM-Almagro (2026)  |
 | **Evaluación externa** | Proyectos de tesis en Télécom ParisTech (2013), University of Applied Sciences Berlin (2015) y Stockholm University (2020) · TFM en Hannover University of Music, Drama and Media (2013) · Tesis en la Universitat de Girona (2022) |
 | **Tribunales y comisiones** | 3 tribunales de tesis doctorales · 3 comisiones de plazas de profesorado (UPV/EHU 2011, U. de Valladolid 2013, CEU 2019) |
 | **Jornadas académico-profesionales** | Organización de **5 jornadas** con el sector cultural: "Nuevas Fórmulas de Gestión en Artes Escénicas: los festivales" (2015) · "Marketing y Festivales de Artes Escénicas en Valencia" (2016) · "Diversidad, Artes Escénicas y Gestión" (2019) · "El show de Liz Dust: Diversidad y mucho más" (2020) · "Identidad, Creación y Gestión" (2021) |
@@ -489,10 +489,42 @@ València **Economía Creativa y Mercados Culturales** con miembros de diferente
 : {tbl-colwidths="[22,78]"}
 
 ::: {.notes}
-Cierro la presentación del currículum con otros méritos, como son la actividad académica internacional, reflejada en conferencias y seminarios por invitación y la evaluación externa de tesis doctorales y trabajos de fin de máster.
+Antes de la síntesis final, recojo otros méritos, como son la actividad académica internacional, reflejada en conferencias y seminarios por invitación y la evaluación externa de tesis doctorales y trabajos de fin de máster.
 
 Y las tareas con impacto social  como la organización de jornadas académico-profesionales y la divulgación de resultados de investigación. Entre estas últimas destacan la colaboración con el Observatorio Social de la Fundación ”la Caixa”, por invitación de la profesora Victoria Ateca Amestoy; o las contribuciones al blog EconomistsTalkArt de la Association for Cultural Economics International (ACEI).
 
+:::
+
+## Síntesis: el currículum en cifras {background-color="#2D6A7A" .sintesis}
+
+&nbsp;
+
+<!-- Figura pregenerada: scripts/fig_resumen_cv.py (cifras trazadas al CV en
+     los comentarios del script; citas actualizadas el 11-09-2026). Fondo teal
+     solo en RevealJS (beamer ignora background-color en los frames), de ahí la
+     figura oscura (--fondo-oscuro) para reveal y la clara para beamer; la
+     clase .sintesis quita la regla coral del h2 en reveal (CSS del YAML). -->
+
+::: {.content-visible when-format="revealjs"}
+
+![](figures/fig_resumen_cv_fondo_oscuro.svg){width="96%"}
+
+:::
+
+::: {.content-visible when-format="beamer"}
+
+![](figures/fig_resumen_cv.svg){width="96%"}
+
+:::
+
+::: {.notes}
+Cierro con una síntesis del currículum en cifras. En investigación y transferencia: cuarenta y seis artículos, treinta y seis en revistas indexadas; veintinueve capítulos; ciento dieciocho comunicaciones, noventa y dos internacionales; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
+
+En dirección y liderazgo: diecisiete cargos de gestión, concentrados en internacionalización; doce conferencias por invitación; y treinta y cinco revisiones verificadas, en el percentil noventa y uno.
+
+En docencia: trece titulaciones en siete centros, la mitad de la docencia en inglés y la calificación de excelente en DOCENTIA.
+
+La banda inferior muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios, junto a las responsabilidades de dirección, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
 :::
 
 <!-- ============ RESERVAS (ocultas en ambos formatos) ============ -->

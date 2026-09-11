@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
@@ -8,14 +9,13 @@
   aspectratio=169,
   spanish,
 ]{beamer}
+\newif\ifbibliography
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
 \beamertemplatenavigationsymbolsempty
-% Prevent slide breaks in the middle of a paragraph
-\widowpenalties 1 10000
-\raggedbottom
+% remove section numbering
 \setbeamertemplate{part page}{
   \centering
   \begin{beamercolorbox}[sep=16pt,center]{part title}
@@ -34,6 +34,9 @@
     \usebeamerfont{subsection title}\insertsubsection\par
   \end{beamercolorbox}
 }
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
 \AtBeginPart{
   \frame{\partpage}
 }
@@ -46,24 +49,23 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-
-\usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
+
 \usetheme[]{metropolis}
-\usecolortheme{default}
-\usefonttheme{professionalfonts}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\usecolortheme[]{default}
+\usefonttheme[]{professionalfonts}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -81,10 +83,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\newif\ifbibliography
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -127,8 +125,7 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 \usepackage{caption}
 % Make caption package work with longtable
@@ -151,6 +148,28 @@
 \def\fps@figure{htbp}
 \makeatother
 
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
 \AtBeginDocument{\footnotesize}
 \usepackage{etoolbox}
 \usepackage{colortbl}
@@ -165,15 +184,40 @@
 \AtBeginEnvironment{Highlighting}{\scriptsize}
 % Divisor de parte: contenido de una página plana que replica la
 % portada metropolis (título grande + filete naranja), distinta de
-% las páginas de sección. Se usa dentro de \begin{frame}[plain].
-\newcommand{\partdividercontent}[2]{%
+% las páginas de sección. Lo emite roadmap.lua (#3 = línea de partes).
+\newcommand{\partdividercontent}[3]{%
   \vfill
   {\color{mDarkTeal}\scriptsize\bfseries\MakeUppercase{#1}\par}
   \vspace{0.7em}
   {\usebeamerfont{title}\usebeamercolor[fg]{title}#2\par}
   \vspace{0.5em}
   {\color{mLightBrown}\rule{\textwidth}{0.05em}}
+  \vspace{1.2em}
+  #3
   \vfill}
+% Mapa de progreso en las páginas de sección: roadmap.lua define
+% \roadmapcontent antes de cada \section y la plantilla «section
+% page» (adaptada de la variante progressbar de metropolis) lo
+% imprime en lugar del título, sobre la barra de progreso.
+\newcommand{\roadmapcontent}{}
+\makeatletter
+\setbeamertemplate{section page}{
+  \centering
+  % 0.8\textwidth (metropolis usa 22em): el mapa cabe en una línea.
+  \begin{minipage}{0.8\textwidth}
+    \raggedright
+    \usebeamercolor[fg]{section title}
+    \usebeamerfont{section title}
+    % Sin \insertsectionhead: el mapa identifica la sección activa.
+    \roadmapcontent
+    \vspace{0.6em}
+    \usebeamertemplate*{progress bar in section page}
+    \par
+  \end{minipage}
+  \par
+  \vspace{\baselineskip}
+}
+\makeatother
 % Cierre «Agradecimientos»: fondo teal a página completa vía TikZ
 % dentro de un frame [plain] normal. No se usa el [standout] de
 % metropolis: con la plantilla beamer de Quarto su \begingroup
@@ -239,19 +283,9 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{spanish}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Concurso de acceso a Catedrático de Universidad},
   pdfauthor={Candidato: Juan de Dios Montoro Pons},
@@ -272,7 +306,14 @@ Resolución de 23 de junio de 2026 de la Universitat de València}
 
 
 \begin{frame}
-\partdividercontent{Parte 1 de 3}{Currículum Vitae}
+\partdividercontent{Parte 1 de 3}{Currículum}{{\scriptsize \mbox{\color{mDarkTeal}\bfseries Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}}
+
+\note{Con la venia de la comisión, comienzo la presentación del
+ejercicio para el concurso al cuerpo de catedráticos de universidad
+convocado por la Universidad de Valencia, plaza 573.
+
+Siguiendo las directrices de la convocatoria, presento en primer lugar
+mi curriculum vitae.}
 \end{frame}
 
 \begin{frame}{Trayectoria académica: evolución}
@@ -302,6 +343,10 @@ En la tercera, desde 2016, de consolidación y liderazgo, obtengo la
 evaluación positiva del tercer y cuarto sexenio de investigación, dirijo
 el grupo de investigación CREAMARKT y el grupo consolidado de innovación
 docente MULTIATC.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{mDarkTeal}\bfseries Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{mDarkTeal}\bfseries Investigación y transferencia}~· \mbox{\color{black!40}Docencia}~· \mbox{\color{black!40}Dirección y liderazgo}\par}}
 \end{frame}
 
 \section{Investigación y
@@ -404,7 +449,7 @@ Google Scholar
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-246 citas · h = 8 & 332 citas · h = 8 & 807 citas · h = 14 · i10 = 19 \\ \lightrowrule
+251 citas · h = 8 & 335 citas · h = 8 & 807 citas · h = 14 · i10 = 19 \\ \lightrowrule
 \end{longtable}
 
 \note{La diapositiva cuantifica la producción científica agrupada por
@@ -780,6 +825,10 @@ e industrias culturales.
 
 Con esto cierro investigación y transferencia y paso al bloque de
 docencia.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{mDarkTeal}\bfseries Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Investigación y transferencia}~· \mbox{\color{mDarkTeal}\bfseries Docencia}~· \mbox{\color{black!40}Dirección y liderazgo}\par}}
 \end{frame}
 
 \section{Docencia}\label{docencia}
@@ -990,6 +1039,10 @@ innovación educativa, que se resumen en:
 \item
   y cinco artículos más un capítulo de libro.\\
 \end{enumerate}}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{mDarkTeal}\bfseries Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Investigación y transferencia}~· \mbox{\color{black!40}Docencia}~· \mbox{\color{mDarkTeal}\bfseries Dirección y liderazgo}\par}}
 \end{frame}
 
 \section{Dirección y liderazgo}\label{direcciuxf3n-y-liderazgo}
@@ -1081,12 +1134,11 @@ programa MOTIVEM (2021) · Coordinación de guías docentes de grado y
 posgrado \\ \lightrowrule
 \textbf{Grupo de innovación} & Co-responsable del grupo consolidado
 \textbf{GCID23-2575334} (mención 2023, renovada 2026) \\ \lightrowrule
-\textbf{Gestión de la Internacionalización} & Gestión Obtención y
-gestión de las ayudas \textbf{EU-US ATLANTIS} (2011--2014) · Coordinador
-responsable del convenio con la \emph{Zarb School of Business},
-\textbf{Hofstra University} (Nueva York, 2014--2019) · Coordinación de
-los intercambios de dobles titulaciones (ADE-GEDE e International
-Business) \\ \lightrowrule
+\textbf{Gestión de la Internacionalización} & Gestión de las ayudas
+\textbf{EU-US ATLANTIS} (2011--2014) · Coordinador responsable del
+convenio con la \emph{Zarb School of Business}, \textbf{Hofstra
+University} (Nueva York, 2014--2019) · Coordinación de los intercambios
+de dobles titulaciones (ADE-GEDE e International Business) \\ \lightrowrule
 \end{longtable}
 
 \note{El liderazgo docente se constata en la \textbf{dirección
@@ -1187,10 +1239,11 @@ de los Andes, Bogotá) · \textbf{Premio Fundación SGAE de Investigación
 2018} (tesis presentada por Desamparados Lluch) \\ \lightrowrule
 \textbf{Conferencias y seminarios por invitación} & Seminario en CREED,
 Universiteit van Amsterdam (2001) · London School of Economics (2007) ·
-Institut für Kulturmanagement, Universität für Musik Wien (2013) · panel
-``Double Degrees'' (University of North Florida, 2013) · Universidad de
-Buenos Aires y Museo Nacional de Bellas Artes (2013) · BIME Pro (2018) ·
-Universidad de Oviedo (2026) · Curso de verano UCLM-Almagro (2026) \\ \lightrowrule
+Institut für Kulturmanagement, Universität für Musik Wien (2013) · Panel
+on ``Double Degrees'', University of North Florida (2013) · Universidad
+de Buenos Aires y Museo Nacional de Bellas Artes (2013) · BIME Pro
+(2018) · Universidad de Oviedo (2026) · Curso de verano UCLM-Almagro
+(2026) \\ \lightrowrule
 \textbf{Evaluación externa} & Proyectos de tesis en Télécom ParisTech
 (2013), University of Applied Sciences Berlin (2015) y Stockholm
 University (2020) · TFM en Hannover University of Music, Drama and Media
@@ -1208,8 +1261,8 @@ Gestión'' (2019) · ``El show de Liz Dust: Diversidad y mucho más''
 EconomistsTalkArt (2018, 2025) \\ \lightrowrule
 \end{longtable}
 
-\note{Cierro la presentación del currículum con otros méritos, como son
-la actividad académica internacional, reflejada en conferencias y
+\note{Antes de la síntesis final, recojo otros méritos, como son la
+actividad académica internacional, reflejada en conferencias y
 seminarios por invitación y la evaluación externa de tesis doctorales y
 trabajos de fin de máster.
 
@@ -1221,12 +1274,42 @@ Ateca Amestoy; o las contribuciones al blog EconomistsTalkArt de la
 Association for Cultural Economics International (ACEI).}
 \end{frame}
 
-\begin{frame}
-\partdividercontent{Parte 2 de 3}{Propuesta docente}
+\begin{frame}{Síntesis: el currículum en cifras}
+\phantomsection\label{suxedntesis-el-curruxedculum-en-cifras}
+~
+
+\includegraphics[width=0.96\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_resumen_cv.pdf}
+
+\note{Cierro con una síntesis del currículum en cifras. En investigación
+y transferencia: cuarenta y seis artículos, treinta y seis en revistas
+indexadas; veintinueve capítulos; ciento dieciocho comunicaciones,
+noventa y dos internacionales; siete proyectos competitivos; dieciséis
+contratos con el sector cultural, seis como investigador principal; seis
+estancias y cuatro tesis dirigidas.
+
+En dirección y liderazgo: diecisiete cargos de gestión, concentrados en
+internacionalización; doce conferencias por invitación; y treinta y
+cinco revisiones verificadas, en el percentil noventa y uno.
+
+En docencia: trece titulaciones en siete centros, la mitad de la
+docencia en inglés y la calificación de excelente en DOCENTIA.
+
+La banda inferior muestra la continuidad de la actividad evaluada:
+cuatro sexenios de investigación, uno de transferencia y cinco
+quinquenios, junto a las responsabilidades de dirección, desde la tesis
+doctoral en 1996 hasta la acreditación a catedrático en 2024.}
 \end{frame}
 
-\section{Técnicas avanzadas de predicción en
-negocios}\label{tuxe9cnicas-avanzadas-de-predicciuxf3n-en-negocios}
+\begin{frame}
+\partdividercontent{Parte 2 de 3}{Propuesta docente}{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{mDarkTeal}\bfseries Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{mDarkTeal}\bfseries Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{mDarkTeal}\bfseries Técnicas avanzadas de predicción}~· \mbox{\color{black!40}Proyecto final}~· \mbox{\color{black!40}Tema 7. Predicción y efectos causales}\par}}
+\end{frame}
+
+\section{Técnicas avanzadas de
+predicción}\label{tuxe9cnicas-avanzadas-de-predicciuxf3n}
 
 \note{La segunda parte del ejercicio desarrolla una propuesta docente
 para La asignatura Técnicas Avanzadas de Predicción en Negocios,
@@ -1285,7 +1368,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={Herramientas y Técnicas del Análisis de Datos}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={Herramientas y Técnicas del Análisis de Datos}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1371,7 +1454,7 @@ estructurales.}
 
 \begin{frame}[fragile,shrink]{Técnicas avanzadas de predicción en
 negocios}
-\phantomsection\label{tuxe9cnicas-avanzadas-de-predicciuxf3n-en-negocios-1}
+\phantomsection\label{tuxe9cnicas-avanzadas-de-predicciuxf3n-en-negocios}
 ~
 
 \begin{columns}[T]
@@ -1484,7 +1567,7 @@ extensión causal} \\ \lightrowrule
 15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={El conjunto de datos de referencia}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={El conjunto de datos de referencia}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1563,7 +1646,7 @@ aprendizaje {[}\ldots{]}}
 \phantomsection\label{metodologuxeda-docente-secuencia-de-aprendizaje}
 ~
 
-\includegraphics[width=0.64\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_metodologia.pdf}
+\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_metodologia.pdf}
 
 Las sesiones prácticas desarrollan los contenidos de la teoría y
 producen evidencias de aprendizaje durante todo el cuatrimestre.
@@ -1688,6 +1771,10 @@ mayor parte de la nota tiene que salir de ahí. El examen conserva un
 peso suficiente para comprobar que cada estudiante domina
 individualmente los conceptos, y fijar un mínimo de 5 evita que una
 buena nota de proyecto compense la falta de base.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{mDarkTeal}\bfseries Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Técnicas avanzadas de predicción}~· \mbox{\color{mDarkTeal}\bfseries Proyecto final}~· \mbox{\color{black!40}Tema 7. Predicción y efectos causales}\par}}
 \end{frame}
 
 \section{Proyecto final}\label{proyecto-final}
@@ -1857,6 +1944,10 @@ necesario examinarlo con mayor profundidad.
 Además, hay tres verificaciones que la inteligencia artificial no
 sustituye: la defensa oral individual, la participación en el aula, que
 exige presencialidad, y el examen escrito.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{mDarkTeal}\bfseries Parte 2 · Propuesta docente}\quad \mbox{\color{black!40}Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Técnicas avanzadas de predicción}~· \mbox{\color{black!40}Proyecto final}~· \mbox{\color{mDarkTeal}\bfseries Tema 7. Predicción y efectos causales}\par}}
 \end{frame}
 
 \section{Tema 7. Predicción y efectos
@@ -1907,7 +1998,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={Experimentos aleatorios controlados: el patrón de referencia}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={Experimentos aleatorios controlados: el patrón de referencia}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -1957,38 +2048,25 @@ porcentuales}.
 \end{column}
 \end{columns}
 
-\note{Comenzamos con una pregunta práctica: ante la posibilidad de
-abandono, ¿a quién dirigir una campaña de retención de clientes? Para
-ello formulamos dos reglas alternativas:
+\note{Empezamos con una pregunta práctica: ante el riesgo de abandono,
+¿a qué clientes dirigir una campaña de retención? Caben dos reglas. La
+primera, RISK, actúa sobre quienes tienen mayor probabilidad de
+abandonar: un problema predictivo. La segunda, LIFT, actúa sobre
+aquellos en quienes la intervención más reduce ese riesgo: un problema
+de inferencia causal, porque exige saber cómo responderían ante una
+situación que no observamos.
 
-\begin{enumerate}
-\tightlist
-\item
-  La primera basada en el \textbf{riesgo de abandono} (\textbf{RISK})
-  aconseja actúar sobre los clientes con mayor probabilidad de abandono,
-  un problema predictivo;
-\item
-  La segunda (\textbf{LIFT}) supone actuar sobre aquellos para los que
-  la intervención produce una mayor reducción de ese riesgo. Es este un
-  problema de inferencia causal (exige conocer la respuesta de los
-  clientes ante un estado de cosas que no observamos).
-\end{enumerate}
+En el aula lo ilustramos con el experimento de Ascarza (2018). Un
+operador de telefonía móvil asignó aleatoriamente a 12.000 clientes
+inactivos una oferta de crédito condicionada a una recarga y comprobó,
+treinta días después, si la línea seguía activa. Con esos datos, la
+autora simula una campaña dirigida al cuarenta por ciento superior de
+los clientes según cada regla: seleccionar por sensibilidad a la
+intervención reduce más el abandono que seleccionar por riesgo.
 
-En el aula ilustramos esta diferencia con el experimento de Ascarza
-(2018), en el que un operador de telefonía móvil asignó aleatoriamente a
-12.000 clientes inactivos una oferta de crédito condicionada a una
-recarga, y observó si treinta días después la línea seguía activa.
-
-Usando los datos experimentales la autora simula una campaña dirigida al
-cuarenta por ciento superior de los clientes por riesgo y sensibilidad y
-observa la disminución de la tasa de abandono. Los resultados muestran
-como seleccionar por sensibilidad a la intervención resulta más
-efectivo.
-
-El mensaje central es claro: el ejercicio predictivo implementado no
-responde por si solo a la pregunta de negocio; para eso hay que estimar
-el efecto causal. La siguiente cuestión es cómo estimar ese efecto en un
-contexto no experimental, con datos observacionales.}
+El mensaje es claro: la predicción por sí sola no responde a la pregunta
+de negocio; para eso hay que estimar el efecto causal. La cuestión
+siguiente es cómo hacerlo sin experimento, con datos observacionales.}
 \end{frame}
 
 \begin{frame}[shrink]{Aprendizaje automático para la estimación de
@@ -2037,10 +2115,10 @@ efecto que una intervención \(D\) tiene sobre la respuesta \(y\) (el
 parámetro \(\tau\)) asumiendo que y depende a su vez de un conjunto de
 variables auxiliares X.
 
-Frecuentemente trabajamos con datos observacionales: entonces hemos de
-considerar la posibilidad de confusión si la selección al tratamiento se
-ve afectada las variables \(X\), de ahí que incorporemos este proceso a
-través de la función \(m\).
+Si trabajamos con datos observacionales debemos, además, considerar la
+posibilidad de confusión si la selección al tratamiento se ve afectada
+las variables \(X\): incorporamos este proceso a través de la función
+\(m\).
 
 El grafo visualiza el mecanismo generador de datos y explicita
 \textbf{el objetivo del tema: la incorporación técnicas de aprendizaje
@@ -2061,22 +2139,17 @@ Learning}
 \begin{column}{0.38\linewidth}
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Aplicación \emph{naive}}
+\textbf{Estimación \emph{naive} del modelo parcialmente lineal
+\(y=\tau D + g(X)+ \epsilon\)}
 
 \begin{enumerate}
 \tightlist
 \item
   Aprender \(\hat{g}\) y residualizar la respuesta:
-  \(\tilde{y}=y-\hat{g}(X)\).
+  \(\tilde{y}=y-\hat{g}(X)\).\\
 \item
   Regresión de \(\tilde{y}\) sobre \(D\).
 \end{enumerate}
-
-\(\hat{g}\) selecciona controles por su capacidad de predecir \(y\), no
-\(D\) \(\to\) \textbf{sesgo de regularización}.
-
-Mismos datos para entrenar y predecir \(\to\) \textbf{sesgo por
-sobreajuste}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -2085,7 +2158,7 @@ sobreajuste}.
 \begin{enumerate}
 \tightlist
 \item
-  Aprender \(\hat{g}\) \textbf{y} \(\hat{m}\); residualizar respuesta y
+  Aprender \(\hat{g}\), \(\hat{m}\); residualizar respuesta y
   tratamiento con \emph{cross-fitting}: \(\tilde{y}=y-\hat{g}(X)\),
   \(\tilde{D}=D-\hat{m}(X)\).
 \item
@@ -2100,40 +2173,31 @@ sobreajuste}.
 \end{column}
 
 \begin{column}{0.58\linewidth}
-\includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_esquema_dml.pdf}
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_esquema_dml.pdf}
 \end{column}
 \end{columns}
 
-\note{La aplicación ingenua del aprendizaje automático a este problema
-consiste en aprender un modelo flexible para \(g\), residualizar la
-respuesta y regresar ese residuo sobre el tratamiento.
+\note{La aplicación ingenua del aprendizaje automático al modelo
+parcialmente lineal supone aprender un modelo flexible para \(g\),
+residualizar la respuesta y regresar ese residuo sobre el tratamiento.
+Falla por dos motivos.
 
-La aproximación falla por dos motivos:\\
-1. Los modelos de aprendizaje automático regularizan y seleccionan las
-variables por su capacidad para predecir la respuesta: un control poco
-correlacionado con \(y\) pero relevante para explicar \(D\) queda
-atenuado o fuera del modelo, y la segunda etapa atribuye a \(\tau\)
-parte de su relación con el tratamiento. Es un sesgo de variable omitida
-que aquí se denomina \textbf{sesgo de regularización}.\\
-2. Además, si se entrena y se predice sobre las mismas observaciones,
-los residuos absorben parte del efecto causal y la varianza residual del
-tratamiento se distorsiona: es el \textbf{sesgo por sobreajuste}.
+El primero es el \textbf{sesgo de regularización}. El modelo selecciona
+las variables por su capacidad para predecir \(y\): un control poco
+correlacionado con la respuesta pero relevante para explicar \(D\) queda
+atenuado o fuera. Es, un \textbf{sesgo de variable omitida}.
 
-Double Machine Learning corrige ambos.
+El segundo es el \textbf{sesgo por sobreajuste}: si se entrena y se
+predice sobre las mismas observaciones, los residuos absorben parte del
+efecto causal y la varianza residual del tratamiento se distorsiona.
 
-\begin{itemize}
-\tightlist
-\item
-  La ortogonalización residualiza también el tratamiento con las
-  predicciones de la función auxiliar \(m\).\\
-\item
-  El cross-fitting separa las observaciones con las que se entrena de
-  aquellas sobre las que se predice.
-\item
-  La combinación produce un estimador raíz de \(n\) consistente con
-  inferencia válida, que los estudiantes implementan con DoubleML como
-  un estimador en dos etapas.
-\end{itemize}}
+Double Machine Learning corrige ambos. Corrige el primero, la
+ortogonalización residualiza también el tratamiento con la función
+auxiliar \(m\). Corrige el segundo, el cross-fitting separa las
+observaciones con las que se entrena de aquellas sobre las que se
+predice. El resultado es un estimador raíz de \(n\) consistente con
+inferencia válida, que los estudiantes implementan con DoubleML como un
+estimador en dos etapas.}
 \end{frame}
 
 \begin{frame}[fragile,shrink]{Práctica con datos reales}
@@ -2211,38 +2275,75 @@ inferencia y valorar los supuestos y por tanto límites del análisis.}
 \end{frame}
 
 \begin{frame}
-\partdividercontent{Parte 3 de 3}{Propuesta investigadora}
-\end{frame}
-
-\section{Creative collaborations: Aesthetic Proximity and the Formation
-of Joint Production in
-Music}\label{creative-collaborations-aesthetic-proximity-and-the-formation-of-joint-production-in-music}
+\partdividercontent{Parte 3 de 3}{Propuesta investigadora: \emph{Creative collaborations}}{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}}
 
 \note{Cierro el ejercicio presentando la propuesta de investigación
 \emph{Creative Collaborations}, cuyo objeto es el análisis de los
 factores asociados a la formación de colaboraciones en la producción
-cultural. Más concretamente, la pregunta que se formula es qué distingue
-a dos artistas que llegan a trabajar juntos de los muchos pares que
-podrían haberlo hecho.}
+cultural.}
+\end{frame}
 
-\begin{frame}{Esquema}
-\phantomsection\label{esquema}
+\begin{frame}{De qué trata esta investigación}
+\phantomsection\label{de-quuxe9-trata-esta-investigaciuxf3n}
 ~
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Motivación y pregunta económica}: selección de socios y el rol
-  de la compatibilidad estética.
-\item
-  \textbf{Datos y diseño}: cómo observar colaboraciones y oportunidades.
-\item
-  \textbf{Resultados}: forma de la asociación, predicción y
-  sensibilidad.
-\item
-  \textbf{Conclusiones}: aportación, límites y programa de
-  investigación.
-\end{itemize}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7800}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Colaborar} & Dos artistas graban juntos una canción, el fenómeno
+\emph{feat.}: \textbf{Bad Bunny y J Balvin}, \textbf{Taylor Swift y
+Kendrick Lamar}. Hoy es una práctica frecuente. \\ \lightrowrule
+\textbf{Elección} & Cada artista podría colaborar con cientos de otros y
+solo lo hace con unos pocos. ¿Qué distingue a los pares que llegan a
+trabajar juntos? \\ \lightrowrule
+\textbf{Proximidad estética} & En redes sociales el público describe a
+cada artista con etiquetas (palabras): géneros, estilos, estados de
+ánimo. \textbf{Bad Bunny y J Balvin} son etiquetados con un vocabulario
+similar (\emph{cercanos}). \textbf{Taylor Swift y kendrick Lamar} apenas
+comparten (\emph{distantes}). \\ \lightrowrule
+\textbf{La hipótesis} & Estar cerca facilita el encaje: Bad Bunny y J
+Balvin han grabado juntos en varias ocasiones. Pero también colaboran
+artistas lejanos: Taylor Swift y Kendrick Lamar. ¿Hay un punto a partir
+del cual parecerse más ya no suma, o incluso resta? \\ \lightrowrule
+\end{longtable}
+
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={Y no solo la dimensión estética}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
+
+Contactos previos en la red de colaboraciones, escena cultural e
+institucional y trayectoria de cada artista. Datos: quién colabora con
+quién en las listas globales de Spotify, 2013--2025.
+
+\end{tcolorbox}
+
+\note{Antes del esquema, la propuesta en cuatro ideas. Colaborar es
+grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y
+Kendrick Lamar, y hoy es práctica habitual.
+
+Pero cada artista podría colaborar con muchos y solo lo hace con pocos:
+la pregunta es qué distingue a los pares que llegan a trabajar juntos.
+
+Para responderla sitúo a cada artista en un mapa construido a partir de
+la descripción de su público. Bad Bunny y J Balvin reciben un
+vocabulario casi idéntico y están cerca; Bad Bunny y Ed Sheeran apenas
+comparten palabras y están lejos.
+
+La hipótesis central es que estar cerca ayuda: Bad Bunny y J Balvin han
+grabado juntos varias veces. Pero Taylor Swift y Kendrick Lamar, que
+están lejos, también lo han hecho. La cuestión abierta es si hay un
+punto en que parecerse más ya no aporta. Todo ello junto a la red de
+contactos, la escena y la trayectoria.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{mDarkTeal}\bfseries Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{black!40}Conclusiones}\par}}
+\end{frame}
+
+\section{Motivación y pregunta
+económica}\label{motivaciuxf3n-y-pregunta-econuxf3mica}
 
 \note{La presentación se estructura en cuatro partes.
 
@@ -2258,9 +2359,6 @@ podrían haberlo hecho.}
 \item
   Cierro con la aportación, sus límites y las preguntas que abre.
 \end{itemize}}
-\end{frame}
-
-\section{Introducción}\label{introducciuxf3n}
 
 \begin{frame}{La colaboración en la industria de la música}
 \phantomsection\label{la-colaboraciuxf3n-en-la-industria-de-la-muxfasica}
@@ -2405,10 +2503,13 @@ Finalmente, la inferencia incorpora dependencia entre pares que
 comparten artista y la evaluación predictiva se usa para analizar la
 asociación que los diferentes bloques de variables capturan fuera de
 muestra.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{mDarkTeal}\bfseries Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{black!40}Conclusiones}\par}}
 \end{frame}
 
-\section{Datos y análisis
-exploratorio}\label{datos-y-anuxe1lisis-exploratorio}
+\section{Datos y diseño}\label{datos-y-diseuxf1o}
 
 \begin{frame}[fragile]{Fuentes de datos}
 \phantomsection\label{fuentes-de-datos}
@@ -2450,7 +2551,7 @@ Con etiquetas fechadas & 2.402 \\ \lightrowrule
   artistas e historial de sellos.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={Por qué etiquetas y no géneros de plataforma}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={Por qué etiquetas y no géneros de plataforma}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 Las etiquetas por lanzamiento cubren el \textbf{83,5\% de los artistas}.
 Los géneros de Spotify cubren aproximadamente el \textbf{34\%}.
@@ -2628,7 +2729,7 @@ colaboración.}
   tras el debut.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={Evento raro}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={Evento raro}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 Se identifican con 1.064 eventos de formación elegibles sobre 3.756.411
 pares-año: \textbf{28,3 formaciones por cada 100.000 pares-año de
@@ -2653,9 +2754,16 @@ Se utiliza el conjunto de riesgo completo lo que devuelve una muestra de
 estimación con 1.064 eventos sobre 3.756.411 pares-año: aproximadamente
 28,3 por cada 100.000. La rareza del evento condiciona la inferencia y
 la interpretación predictiva.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
+\vspace{0.2em}
+\hspace{1.5em}{\normalsize \mbox{\color{mDarkTeal}\bfseries Forma de la asociación}~· \mbox{\color{black!40}Predicción}~· \mbox{\color{black!40}Sensibilidad}\par}}
 \end{frame}
 
-\section{Análisis empírico}\label{anuxe1lisis-empuxedrico}
+\section{Resultados · Forma de la
+asociación}\label{resultados-forma-de-la-asociaciuxf3n}
 
 \begin{frame}{Estimación}
 \phantomsection\label{estimaciuxf3n}
@@ -2691,7 +2799,7 @@ métricas \\ \lightrowrule
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={¿Por qué no un ERGM?}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={¿Por qué no un ERGM?}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 \begin{enumerate}
 \item
@@ -2776,7 +2884,7 @@ Mismo género del artista · Índice Jaccard de sellos · Sellos compartidos
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, left=2mm, leftrule=.75mm, arc=.35mm, coltitle=black, bottomtitle=1mm, toprule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, titlerule=0mm, title={Nota}, rightrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, colback=white, arc=.35mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, breakable, title={Nota}, toptitle=1mm, rightrule=.15mm, toprule=.15mm, opacityback=0]
 
 \textbf{Tres modelos anidados}: Completo (los cuatro bloques) · Solo red
 (topología) · Sin red (estética, actividad y atributos). Las
@@ -2809,27 +2917,25 @@ binarias: presencia frente a ausencia. Similitud estética y su cuadrado:
 contrastes separados (el otro término fijo); su lectura conjunta es la
 curva.
 
-\note{La figura compara asociaciones para variables seleccionadas.
-Muestra el cambio en ratio de odds ante un incremento de una desviación
-estándar en variables continuas y presencia frente a ausencia en
-binarias.
+\note{La figura compara las asociaciones del modelo completo para
+variables seleccionadas. Cada punto es el cambio en la ratio de odds
+ante un aumento de una desviación estándar en las variables continuas, o
+presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja
+cada bloque?
 
-En la red, la posición importa: mayor grado medio y proximidad geodésica
-presentan asociaciones positivas, mientras que la diferencia de grado es
-negativa. Los pares más conectados y menos asimétricos se distinguen de
-otros pares elegibles. El índice de Jaccard muestra la dicotomía entre
-significación estadística y sustantiva.
+En la red, la posición estructural importa: pares más conectados, más
+cercanos en la red y menos asimétricos son más propensos a colaborar.
 
-En la posición estética, la similitud del par, con término lineal
-positivo y cuadrático negativo, dibujan un óptimo interior. Además, una
-mayor similitud media al centroide se asocia con menor formación (si
-bien la asimetría en los miembros del par aumenta la formación).
+En el espacio estético, hay un óptimo interior en la similitud del par.
+Además, pares que ocupan posiciones alejadas del centro del espacio de
+etiquetas se distinguen más que los pares situados en el centro.
 
-Compartir escena y sello muestran asociación positiva. Po otro lado, la
-actividad media y su asimetría, con signos opuestos asocian
-\textbf{pares activos y similares con una mayor probabilidad de
-formación}. Una exposición prolongada sin colaboración presenta una
-asociación negativa que puede capturar oportunidades no realizadas o
+Las proximidades cultural e institucional suman: compartir escena y
+haber pasado por un mismo sello se asocian con mayor formación.
+
+En actividad y oportunidad, el perfil favorable es el de pares activos y
+de actividad parecida. Por contra, la exposición reduce la propensión:
+es una asociación que puede capturar oportunidades no realizadas o
 emparejamientos poco plausibles.}
 \end{frame}
 
@@ -2873,11 +2979,9 @@ Para distinguir ambas hipótesis, utilizamos:
   por tramos y otro con un spline flexible.
 \item
   Una prueba prespecificada con división de la muestra: una mitad
-  localiza el posible máximo y la otra estima el aumento acumulado
-  anterior y la pendiente posterior. Solo confirmamos un máximo interior
-  si el aumento previo es positivo y la pendiente posterior negativa,
-  ambos estadísticamente significativos. El procedimiento se validó
-  previamente mediante simulaciones.
+  localiza el posible máximo y la otra estima pendientes anterior y
+  posterior. Un máximo interior se confirma si pendientes cambian de
+  signo. El procedimiento se validó previamente mediante simulaciones.
 \end{enumerate}}
 \end{frame}
 
@@ -2921,24 +3025,29 @@ del logit con similitud por tramos (intervalos de confianza diádicos).
 \end{column}
 \end{columns}
 
-\note{La curva predicha por el logit con spline muestra un crecimiento
-marcado de la tasa de formación desde niveles bajos de similitud y una
-moderación posterior. Los puntos representan tasas ajustadas por
-intervalos, sin un descenso claro y con mayor imprecisión en la parte
-alta.
+\note{SPLINE: la curva suavizada muestra predicciones del logit con
+spline con un crecimiento marcado de la tasa de formación desde niveles
+bajos de similitud y una moderación posterior. PUNTOS: representan tasas
+ajustadas por intervalos; no hay descenso claro y mayor imprecisión en
+la parte alta.
 
-El contraste identifica un aumento acumulado positivo antes del punto de
-ruptura, con un intervalo que excluye cero. Después, la pendiente media
-del bootstrap es positiva, pero su intervalo es amplio e incluye valores
-negativos, nulos y positivos.
+El contraste identifica un pendiente positiva antes del punto de ruptura
+con un intervalo que excluye cero. Después, la pendiente es positiva,
+pero su intervalo incluye cero.
 
 \textbf{No se confirma el patrón de subida y caída requerido para
 identificar un máximo interior. Los resultados son compatibles con un
 crecimiento que se modera, aunque la incertidumbre no permite descartar
 una caída en la cola.}}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
+\vspace{0.2em}
+\hspace{1.5em}{\normalsize \mbox{\color{black!40}Forma de la asociación}~· \mbox{\color{mDarkTeal}\bfseries Predicción}~· \mbox{\color{black!40}Sensibilidad}\par}}
 \end{frame}
 
-\section{Análisis predictivo}\label{anuxe1lisis-predictivo}
+\section{Resultados · Predicción}\label{resultados-predicciuxf3n}
 
 \begin{frame}{Capacidad predictiva por bloques de variables}
 \phantomsection\label{capacidad-predictiva-por-bloques-de-variables}
@@ -3033,10 +3142,15 @@ exploratorio y constituye una comprobación descriptiva de lo aprendido
 por este modelo. Su utilidad aquí es mostrar que la
 \textbf{compatibilidad estética sigue asociada a la formación en un
 modelo donde no se fija de antemano una forma funcional.}}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
+\vspace{0.2em}
+\hspace{1.5em}{\normalsize \mbox{\color{black!40}Forma de la asociación}~· \mbox{\color{black!40}Predicción}~· \mbox{\color{mDarkTeal}\bfseries Sensibilidad}\par}}
 \end{frame}
 
-\section{Sensibilidad de los
-resultados}\label{sensibilidad-de-los-resultados}
+\section{Resultados · Sensibilidad}\label{resultados-sensibilidad}
 
 \note{Se ha evaluado la sensibilidad de las estimaciones a la definición
 de la respuesta, a diferentes ventanas de actividad, medición de
@@ -3069,9 +3183,13 @@ signo.
 Este ejercicio muestra estabilidad de estimaciones puntuales: La escasa
 diferencia entre el logit convencional y el modelo de Firth no aporta
 evidencia de un sesgo relevante asociado a la rareza del evento.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{mDarkTeal}\bfseries Conclusiones}\par}}
 \end{frame}
 
-\section{Discusión y conclusiones}\label{discusiuxf3n-y-conclusiones}
+\section{Conclusiones}\label{conclusiones}
 
 \begin{frame}{Síntesis: afinidad, red y oportunidad}
 \phantomsection\label{suxedntesis-afinidad-red-y-oportunidad}
