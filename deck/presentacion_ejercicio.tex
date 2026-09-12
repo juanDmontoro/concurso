@@ -1,5 +1,4 @@
 % Options for packages loaded elsewhere
-% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
@@ -9,13 +8,14 @@
   aspectratio=169,
   spanish,
 ]{beamer}
-\newif\ifbibliography
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
 \beamertemplatenavigationsymbolsempty
-% remove section numbering
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
 \setbeamertemplate{part page}{
   \centering
   \begin{beamercolorbox}[sep=16pt,center]{part title}
@@ -34,9 +34,6 @@
     \usebeamerfont{subsection title}\insertsubsection\par
   \end{beamercolorbox}
 }
-% Prevent slide breaks in the middle of a paragraph
-\widowpenalties 1 10000
-\raggedbottom
 \AtBeginPart{
   \frame{\partpage}
 }
@@ -49,23 +46,24 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
+
+\usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
+  \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-
 \usetheme[]{metropolis}
-\usecolortheme[]{default}
-\usefonttheme[]{professionalfonts}
-\ifPDFTeX\else
-  % xetex/luatex font selection
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -83,6 +81,10 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -125,7 +127,8 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
-\usepackage{longtable,booktabs,array}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 \usepackage{caption}
 % Make caption package work with longtable
@@ -147,28 +150,6 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
-
-
-
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
-
-
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-
-
- 
-
 
 \AtBeginDocument{\footnotesize}
 \usepackage{etoolbox}
@@ -283,9 +264,19 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
+\urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Concurso de acceso a Catedrático de Universidad},
   pdfauthor={Candidato: Juan de Dios Montoro Pons},
@@ -487,7 +478,7 @@ Citas (WoS · Scopus · GS)
 \bottomrule\noalign{}
 \endlastfoot
 \textbf{Live and prerecorded popular music consumption} & \emph{J. of
-Cultural Economics}, 2011 & JCR \textbf{Q2} (Economics) & 44 · 54 ·
+Cultural Economics}, 2011 & JCR \textbf{Q2} (Economics) & 45 · 54 ·
 124 \\ \lightrowrule
 \textbf{Religiosity and cultural consumption} & \emph{Int. J. of
 Consumer Studies}, 2018 & JCR \textbf{Q1} (Business) & 23 · 27 · 40 \\ \lightrowrule
@@ -495,7 +486,7 @@ Consumer Studies}, 2018 & JCR \textbf{Q1} (Business) & 23 · 27 · 40 \\ \lightr
 research} & \emph{Int. J. of Consumer Studies}, 2021 & JCR \textbf{Q1}
 (Business) & 20 · 25 · 37 \\ \lightrowrule
 \textbf{Analyzing online search patterns of music festival tourists} &
-\emph{Tourism Economics}, 2021 & JCR \textbf{Q1} (Economics) & 7 · 8 ·
+\emph{Tourism Economics}, 2021 & JCR \textbf{Q1} (Economics) & 8 · 8 ·
 12 \\ \lightrowrule
 \textbf{Music festivals as mediators and their influence on consumer
 awareness} & \emph{Poetics}, 2020 & JCR \textbf{Q1} (Sociology) & 4 · 6
@@ -505,10 +496,10 @@ sector} & \emph{J. of Cultural Economics}, 2018 & JCR \textbf{Q2}
 (Economics) & 6 · 7 · 15 \\ \lightrowrule
 \textbf{Assessing complementarities between live performances and
 YouTube video streaming} & \emph{Empirical Economics}, 2023 & JCR
-\textbf{Q2} (Economics) & 2 · 3 · 8 \\ \lightrowrule
+\textbf{Q2} (Economics) & 3 · 4 · 8 \\ \lightrowrule
 \textbf{Arts and cultural consumption and diversity research: a
 bibliometric analysis} & \emph{Poetics}, 2025 & JCR \textbf{Q1}
-(Sociology) & -- · 1 · 3 \\ \lightrowrule
+(Sociology) & 1 · 2 · 3 \\ \lightrowrule
 \end{longtable}
 
 \note{Destaco el artículo de 2011 en el Journal of Cultural Economics al
@@ -1368,7 +1359,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={Herramientas y Técnicas del Análisis de Datos}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={Herramientas y Técnicas del Análisis de Datos}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1565,7 +1556,7 @@ extensión causal} \\ \lightrowrule
 15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={El conjunto de datos de referencia}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={El conjunto de datos de referencia}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1996,7 +1987,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={Experimentos aleatorios controlados: el patrón de referencia}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={Experimentos aleatorios controlados: el patrón de referencia}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -2308,7 +2299,7 @@ artistas lejanos: Taylor Swift y Kendrick Lamar. ¿Hay un punto a partir
 del cual parecerse más ya no suma, o incluso resta? \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={Y no solo la dimensión estética}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={Y no solo la dimensión estética}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 Contactos previos en la red de colaboraciones, escena cultural e
 institucional y trayectoria de cada artista. Datos: quién colabora con
@@ -2555,7 +2546,7 @@ Con etiquetas fechadas & 2.402 \\ \lightrowrule
   artistas e historial de sellos.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={Por qué etiquetas y no géneros de plataforma}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={Por qué etiquetas y no géneros de plataforma}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 Las etiquetas por lanzamiento cubren el \textbf{83,5\% de los artistas}.
 Los géneros de Spotify cubren aproximadamente el \textbf{34\%}.
@@ -2705,7 +2696,7 @@ colaboración.}
   tras el debut.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={Evento raro}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={Evento raro}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 Se identifican con 1.064 eventos de formación elegibles sobre 3.756.411
 pares-año: \textbf{28,3 formaciones por cada 100.000 pares-año de
@@ -2775,7 +2766,7 @@ métricas \\ \lightrowrule
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={¿Por qué no un ERGM?}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={¿Por qué no un ERGM?}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 \begin{enumerate}
 \item
@@ -2860,7 +2851,7 @@ Mismo género del artista · Índice Jaccard de sellos · Sellos compartidos
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, left=2mm, bottomrule=.15mm, toptitle=1mm, title={Nota}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, breakable, titlerule=0mm, leftrule=.75mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, opacityback=0, bottomtitle=1mm, arc=.35mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, title={Nota}, coltitle=black, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, toprule=.15mm, toptitle=1mm, titlerule=0mm, leftrule=.75mm, rightrule=.15mm, arc=.35mm, left=2mm, opacityback=0]
 
 \textbf{Tres modelos anidados}: Completo (los cuatro bloques) · Solo red
 (topología) · Sin red (estética, actividad y atributos). Las

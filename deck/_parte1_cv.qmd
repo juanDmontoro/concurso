@@ -104,14 +104,14 @@ De ese conjunto selecciono ocho publicaciones por su relevancia.
 
 | Trabajo | Revista, año | Indicios | Citas (WoS · Scopus · GS) |
 |----------|-------|----|:----:|
-| **Live and prerecorded popular music consumption**  | *J. of Cultural Economics*, 2011 | JCR **Q2** (Economics) | 44 · 54 · 124 |
+| **Live and prerecorded popular music consumption**  | *J. of Cultural Economics*, 2011 | JCR **Q2** (Economics) | 45 · 54 · 124 |
 | **Religiosity and cultural consumption**  | *Int. J. of Consumer Studies*, 2018 | JCR **Q1** (Business) | 23 · 27 · 40 |
 | **From pirates to subscribers: 20 years of music consumption research**  | *Int. J. of Consumer Studies*, 2021 | JCR **Q1** (Business) | 20 · 25 · 37 |
-| **Analyzing online search patterns of music festival tourists**  | *Tourism Economics*, 2021 | JCR **Q1** (Economics) | 7 · 8 · 12 |
+| **Analyzing online search patterns of music festival tourists**  | *Tourism Economics*, 2021 | JCR **Q1** (Economics) | 8 · 8 · 12 |
 | **Music festivals as mediators and their influence on consumer awareness** | *Poetics*, 2020 | JCR **Q1** (Sociology) | 4 · 6 · 20 |
 | **"Let's make lots of money": performance in the recorded music sector**  | *J. of Cultural Economics*, 2018 | JCR **Q2** (Economics) | 6 · 7 · 15 |
-| **Assessing complementarities between live performances and YouTube video streaming**  | *Empirical Economics*, 2023 | JCR **Q2** (Economics) | 2 · 3 · 8 |
-| **Arts and cultural consumption and diversity research: a bibliometric analysis**  | *Poetics*, 2025 | JCR **Q1** (Sociology) | -- · 1 · 3 |
+| **Assessing complementarities between live performances and YouTube video streaming**  | *Empirical Economics*, 2023 | JCR **Q2** (Economics) | 3 · 4 · 8 |
+| **Arts and cultural consumption and diversity research: a bibliometric analysis**  | *Poetics*, 2025 | JCR **Q1** (Sociology) | 1 · 2 · 3 |
 
 ::: {.notes}
 Destaco el artículo de 2011 en el Journal of Cultural Economics al tratarse del más citado del área en mi perfil, que versa sobre la complementariedad del consumo de música grabada y vivo. 

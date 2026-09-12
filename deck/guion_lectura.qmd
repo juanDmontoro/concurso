@@ -55,11 +55,11 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 \toprule
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
-1 · Currículum vitae & 15 min & 20 & 24 & 2068 & 14,8\\
-2 · Propuesta docente & 15 min & 15 & 17 & 1815 & 13,0\\
-3 · Propuesta investigadora & 20 min & 20 & 23 & 2871 & 20,5\\
+1 · Currículum vitae & 15 min & 20 & 24 & 2043 & 14,6\\
+2 · Propuesta docente & 15 min & 15 & 17 & 1789 & 12,8\\
+3 · Propuesta investigadora & 20 min & 20 & 23 & 2826 & 20,2\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6754} & \textbf{48,2}\\
+\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6658} & \textbf{47,6}\\
 \bottomrule
 \end{tabular}
 
@@ -74,8 +74,8 @@ Leyenda del margen: **parte** (teal, con filete y tiempos), sección (teal fino)
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,14,8 min a 140 ppm}} Con la venia de la comisión, doy comienzo a la presentación
-del ejercicio para el concurso al cuerpo de catedráticos de universidad de la Universidad de Valencia, plaza 573. 
+\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,14,6 min a 140 ppm}} Con la venia de la comisión, comienzo la presentación
+del ejercicio para el concurso al cuerpo de catedráticos de universidad convocado por la Universidad de Valencia, plaza 573. 
 
 Siguiendo las directrices de la convocatoria, presento en primer 
 lugar mi curriculum vitae.
@@ -99,7 +99,7 @@ Empiezo por la investigación.
 
 \medskip
 
-\guionmarca{\marcaslide{2}{Trayectoria investigadora}} La tabla ordena la trayectoria investigadora en tres etapas, con los trabajos representativos y los principales coautores. 
+\guionmarca{\marcaslide{2}{Trayectoria investigadora}} La tabla ordena la trayectoria investigadora en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
 
 La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
@@ -245,18 +245,18 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 
 \medskip
 
-\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum en cifras. En investigación y transferencia: cuarenta y seis artículos, treinta y seis en revistas indexadas; veintinueve capítulos; ciento dieciocho comunicaciones, noventa y dos internacionales; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
+\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum en cifras. En investigación: cuarenta y seis artículos; veintinueve capítulos; ciento dieciocho comunicaciones; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
 
-En dirección y liderazgo: diecisiete cargos de gestión, concentrados en internacionalización; doce conferencias por invitación; y treinta y cinco revisiones verificadas, en el percentil noventa y uno.
+En dirección y liderazgo: dirección de cuatro proyectos, diecisiete cargos de gestión concentrados en internacionalización; y doce conferencias por invitación.
 
-En docencia: trece titulaciones en siete centros, la mitad de la docencia en inglés y la calificación de excelente en DOCENTIA.
+En docencia: trece titulaciones en siete centros, un 50% en inglés y la calificación máxima en DOCENTIA.
 
-La banda inferior muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios, junto a las responsabilidades de dirección, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
+Además se muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios y responsabilidades de liderazgo, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,13,0 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,12,8 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
 La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
@@ -270,11 +270,11 @@ La asignatura de esta propuesta se integra dentro de la materia Herramientas y T
 
 \medskip
 
-\guionmarca{\marcaslide{22}{Herramientas y técnicas de análisis de datos}} Se trata de una materia que engloba siete asignaturas cuya información básica se muestra tabulada.
+\guionmarca{\marcaslide{22}{Herramientas y técnicas de análisis de datos}} Ésta engloba siete asignaturas cuya información básica se muestra tabulada.
 
 Es en tercer curso cuando los estudiantes llegan a Técnicas Avanzadas de Predicción tras haber cursado Minería de Datos en Negocios y las dos asignaturas de predicción, con datos transversales y temporales. 
 
-El curso cubre diversos estimadores paramétricos y no paramétricos y diferencia entre predicción y explicación con el objetivo de utilizar técnicas de aprendizaje estadístico para la estimación de parámetros estructurales.
+El curso cubre diversos estimadores paramétricos y no paramétricos así como la diferencia entre predicción y explicación.
 
 \medskip
 
@@ -289,7 +289,7 @@ Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartici�
 
 \guionmarca{\marcaslide{24}{Contenidos y planificación}} Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
 
-El recorrido va de lo más simple a lo flexible y cierra con un tema final que conecta predicción y explicación.
+El recorrido va de lo más simple a lo flexible y cierra con un tema final que conecta predicción y estimación de parámetros estructurales.
 
 Durante todas las prácticas se usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas analíticas desarrolladas. Eso permite comparar los modelos en un contexto común y evaluar distintos métodos según objetivo de negocio.
 
@@ -343,7 +343,7 @@ La última pieza del proyecto es la política de uso de inteligencia artificial.
 
 \medskip
 
-\guionmarca{\marcaslide{31}{Uso de inteligencia artificial}} En un trabajo que exige, entre otras cosas,  programación, es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no prohibirlo o ignorarlo. 
+\guionmarca{\marcaslide{31}{Uso de inteligencia artificial}} En un trabajo que exige, entre otras cosas,  programar es del todo irreal  tratar de evitar que el alumnado se apoye en herramientas de inteligencia artificial. La respuesta debe ser integrar y supervisar su uso, no prohibirlo o ignorarlo. 
 
 Los estudiantes pueden usar libremente asistentes o agentes para programar, depurar y redactar, con un uso crítico y responsable. A cambio hay una obligación: el registro completo de los prompts, no una selección, se entrega como apéndice del proyecto y de las entregas relevantes. 
 
@@ -362,7 +362,7 @@ Además, hay tres verificaciones que la inteligencia artificial no sustituye: la
 
 En el aula lo ilustramos con el experimento de Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según cada regla: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
 
-El mensaje es claro: la predicción por sí sola no responde a la pregunta de negocio; para eso hay que estimar el efecto causal. La cuestión siguiente es cómo hacerlo sin experimento, con datos observacionales.
+El mensaje es claro: la predicción por sí sola no responde a la pregunta de negocio; para eso hay que estimar el efecto causal.
 
 \medskip
 
@@ -393,11 +393,18 @@ La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la ca
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,20,5 min a 140 ppm}\smallskip \marcaseccion{CREATIVE COLLABORATIONS: AESTHETIC PROXIMITY AND THE FORMATION OF JOINT PRODUCTION IN MUSIC}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural.
+\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,20,2 min a 140 ppm}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural.
 
 \medskip
 
-\guionmarca{\marcaslide{36}{De qué trata esta investigación}} Antes del esquema, la propuesta en cuatro ideas. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar, y hoy es lo habitual entre los éxitos. Pero cada artista podría colaborar con muchos y solo lo hace con pocos: la pregunta es qué distingue a los pares que llegan a trabajar juntos. Para responderla sitúo a cada artista en un mapa construido con cómo lo describe su público. Bad Bunny y J Balvin reciben un vocabulario casi idéntico y están cerca; Bad Bunny y Ed Sheeran apenas comparten palabras y están lejos. La hipótesis es que estar cerca ayuda: Bad Bunny y J Balvin han grabado juntos varias veces. Pero Taylor Swift y Kendrick Lamar, que están lejos, también lo han hecho. La cuestión abierta es si hay un punto en que parecerse más ya no aporta. Todo ello junto a la red de contactos, la escena y la trayectoria.
+\guionmarca{\marcaslide{36}{De qué trata esta investigación}} Resumo la propuesta en cuatro ideas. 
+
+1. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar.  
+2. La colaboración implica una decisión: cada artista podría colaborar con muchos y solo lo hace con pocos; la pregunta es qué distingue a los pares que llegan a trabajar juntos.  
+3. Para responderla cada artista se ubica en un espacio construido a partir de las etiquetas que su público publica en redes. Bad Bunny y J Balvin tienen un vocabulario casi idéntico (proximidad); Bad Bunny y Ed Sheeran apenas comparten palabras (distancia). 
+4. La hipótesis central es que estar cerca ayuda: de hecho Bad Bunny y J Balvin han grabado juntos varias veces. Pero, ¿y si se está demasiado cerca? ¿Hay un punto en que parecerse más ya no aporta? 
+
+En la explicación entra además la red de contactos, trayectoria y otros atributos.
 
 \needspace{2\baselineskip}
 \bigskip
@@ -434,7 +441,7 @@ El interés económico de la pregunta de investigación radica en el análisis d
 
 \medskip
 
-\guionmarca{\marcaslide{39}{Contribución: medición y contraste de la afinidad estética}} La contribución combina una pregunta sobre formación de colaboraciones en industrias culturales con un diseño de la investigación que permite contrastarla a escala amplia. El conjunto de riesgo incluye todos los pares elegibles: así, las colaboraciones realizadas se comparan con oportunidades definidas de forma explícita.
+\guionmarca{\marcaslide{39}{Contribución: medición y contraste de la afinidad estética}} La contribución **combina una pregunta sobre formación de colaboraciones en industrias culturales con un diseño de la investigación que permite contrastarla a escala amplia**. El conjunto de riesgo incluye todos los pares elegibles: así, las colaboraciones realizadas se comparan con oportunidades definidas de forma explícita.
 
 Además, la identidad estética se representa usando un enfoque basado en procesamiento del lenguaje natural de las etiquetas generadas por usuarios en dos redes sociales de música. 
 
@@ -510,7 +517,7 @@ Se estima un modelo completo y dos restricciones: solo red y sin red.
 
 \medskip
 
-\guionmarca{\marcaslide{47}{Asociaciones del modelo completo}} La figura compara las asociaciones del modelo completo para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
+\guionmarca{\marcaslide{47}{Asociaciones del modelo completo}} La figura compara las asociaciones para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
 
 En la red, la posición estructural importa: pares más conectados, más cercanos en la red y menos asimétricos son más propensos a colaborar. 
 
@@ -526,15 +533,16 @@ En actividad y oportunidad, el perfil favorable es el de pares activos y de acti
 
 Para distinguir ambas hipótesis, utilizamos:  
 
-1. Un análisis exploratorio con dos logit alternativos: uno con similitud por tramos y otro con un spline flexible.
+1. Un análisis exploratorio con dos logit alternativos: uno discretizando la similitud y otro con un spline flexible para la similitud.
 2. Una prueba prespecificada con división de la muestra: una mitad localiza el posible máximo y la otra estima pendientes anterior y posterior. Un máximo interior se confirma si pendientes cambian de signo. El procedimiento se validó previamente mediante simulaciones.
 
 \medskip
 
-\guionmarca{\marcaslide{49}{Proximidad estética y colaboraciones: especificación flexible}} SPLINE: la curva suavizada muestra predicciones del logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
-PUNTOS: representan tasas ajustadas por intervalos; no hay descenso claro y mayor imprecisión en la parte alta.
+\guionmarca{\marcaslide{49}{Proximidad estética y colaboraciones: especificación flexible}} PUNTOS: representan tasas ajustadas por intervalos; no hay descenso aunque sí se observa mayor imprecisión en la parte alta.
 
-El contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente es positiva, pero su intervalo incluye cero.
+SPLINE: la curva suavizada muestra predicciones del modelo logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
+
+Por otro lado el contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente sigue positiva, pero su intervalo incluye cero.
 
 **No se confirma el patrón de subida y caída requerido para identificar un máximo interior. Los resultados son compatibles con un crecimiento que se modera, aunque la incertidumbre no permite descartar una caída en la cola.**
 
@@ -568,7 +576,7 @@ El patrón sube con fuerza desde similitudes bajas y después se modera. Es cons
 
 La figura divide la diferencia entre estimaciones por el error estándar robusto del logit base. Se observa como los desplazamientos son marginales (el mayor desplazamiento corresponde al índice de Jaccard que equivale aproximadamente a 0,23 errores estándar en un predictor de escasa significación sustantiva); además todos los términos conservan su signo.
 
-Este ejercicio muestra estabilidad de estimaciones puntuales: La escasa diferencia entre el logit convencional y el modelo de Firth no aporta evidencia de un sesgo relevante asociado a la rareza del evento.
+Este ejercicio muestra estabilidad de estimaciones puntuales: **no hay evidencia de un sesgo relevante asociado a la rareza del evento**.
 
 \needspace{2\baselineskip}
 \bigskip
@@ -591,7 +599,7 @@ El mapa sintetiza esas asociaciones pero deja abiertas las explicaciones: puede 
 
 En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
 
-Un resultado generalizable es que el efecto de la afinidad debe analizarse en una etapa concreta. Aunque la literatura ha identificado una distancia óptima entre artistas para el éxito de sus colaboraciones, esta no tiene por qué coincidir con la que favorece su formación. Estudiar conjuntamente el emparejamiento y el rendimiento posterior permitiría relacionar la compatibilidad para formar el equipo con la complementariedad necesaria para obtener buenos resultados.
+Un resultado generalizable: el análisis del efecto de la afinidad en una etapa concreta del proceso de producción cultural. **Estudiar conjuntamente emparejamiento y rendimiento posterior permitiría relacionar compatibilidad para la formación  con la complementariedad necesaria para obtener buenos resultados.**
 
 \medskip
 
