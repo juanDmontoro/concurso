@@ -55,11 +55,11 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 \toprule
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
-1 · Currículum vitae & 15 min & 20 & 24 & 2124 & 15,2\\
+1 · Currículum vitae & 15 min & 20 & 24 & 2049 & 14,6\\
 2 · Propuesta docente & 15 min & 15 & 17 & 1789 & 12,8\\
 3 · Propuesta investigadora & 20 min & 20 & 23 & 2826 & 20,2\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6739} & \textbf{48,1}\\
+\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6664} & \textbf{47,6}\\
 \bottomrule
 \end{tabular}
 
@@ -74,7 +74,7 @@ Leyenda del margen: **parte** (teal, con filete y tiempos), sección (teal fino)
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,15,2 min a 140 ppm}} Con la venia de la comisión, comienzo la presentación
+\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,14,6 min a 140 ppm}} Con la venia de la comisión, comienzo la presentación
 del ejercicio para el concurso al cuerpo de catedráticos de universidad convocado por la Universidad de Valencia, plaza 573. 
 
 Siguiendo las directrices de la convocatoria, presento en primer 
@@ -105,7 +105,7 @@ La primera, de 1995 a 2003, centrada en economía computacional, se articula en 
 
 La segunda, de 1998 a 2010, incorpora la teoría de la elección pública con diversos trabajos junto a los profesores Miguel Puchades-Navarro y José Casas-Pardo: artículos publicados en CIRIEC-España, Constitutional Political Economy, Computational Economics y  capítulos en el homenaje al nobel James Buchanan en Springer o en el libro **Constitutional Economics and Public Institutions** en  Edward Elgar. 
 
-La tercera etapa, desde 2008, se orienta a la economía de la cultura e industrias creativas. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como el artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto al profesor Manuel Cuadrado-García, y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
+La tercera etapa, desde 2008, se orienta a la economía de la cultura e industrias creativas. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como el artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto a los profesores Manuel Cuadrado-García y María José Miquel-Romero y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
 
 \medskip
 
@@ -245,13 +245,9 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 
 \medskip
 
-\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum en cifras. En investigación: cuarenta y seis artículos; veintinueve capítulos; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas. Pero más que el volumen, el impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior de su área; un impacto normalizado por campo que en el conjunto del periodo está en la media mundial y por encima de ella en cinco de los últimos diez años, con un uno coma treinta y dos en 2025; uno de cada seis artículos en el decil superior por citas de su categoría; y dos tercios de las citas recibidas desde 2021, con alcance global.
+\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum en cifras. En la producción científica, más allá de del volumen, su impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior del área; mayor parte de las citas acumuladas a partir de 2021 y con impacto normalizado en 2025 un 32% por encima de lo esperado en el campo (situación que se repite en 5 de los últimos diez años);  uno de cada seis artículos se ubica en el decil superior por citas de su categoría.
 
-En dirección y liderazgo: dirección de cuatro proyectos, diecisiete cargos de gestión concentrados en internacionalización; y doce conferencias por invitación.
-
-En docencia: trece titulaciones en siete centros, un 50% en inglés y la calificación máxima en DOCENTIA.
-
-Además se muestra la continuidad de la actividad evaluada: cuatro sexenios de investigación, uno de transferencia y cinco quinquenios y responsabilidades de liderazgo, desde la tesis doctoral en 1996 hasta la acreditación a catedrático en 2024.
+El conjunto de méritos refleja una trayectoria consolidada de liderazgo, internacionalización, docencia de excelencia y asunción continuada de responsabilidades académicas a lo largo de casi tres décadas.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
