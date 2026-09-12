@@ -394,7 +394,7 @@ Paso finalmente a abordar las dimensiones de liderazgo y gestión.
 &nbsp;
 
 | **Cargo** | **Periodo**| **Ámbito** |
-|--------|--|---------|
+|-----------|--|-----------|
 | **Coordinador de título** Graduado Europeo en Dirección de Empresas | 2010--14 | Facultat d'Economia: titulación internacional  |
 | **Representante** en la Transatlantic Bussines School Alliance | 2010--14 | Facultat d'Economia: redes internacionales |
 | **Coordinador de intercambios** del grado ADE-GEDE | 2010--14 | Vicerrectorado de Relaciones Internacionales y Cooperación, Universitat de València: dobles titulaciones |
@@ -404,9 +404,7 @@ Paso finalmente a abordar las dimensiones de liderazgo y gestión.
 | **Miembro Comisión de Intercambio de la Facultat d'Economia** | 2010–2014 | Vicedecanato de Relaciones Internacionales |
 | **Miembro de la CCA** del Máster en Ciencia de Datos |2021-- |  Escola Tècnica Superior d'Enginyeria:  posgrado en datos |
 
-&nbsp;
-
-De un total de **17 cargos y tareas de gestión** la gestión se ha concentrado mayoritariamente en el área de **internacionalización** . 
+**17 cargos y tareas de gestión**, principalmente  en **internacionalización**
 
 
 
@@ -451,7 +449,7 @@ Asimismo, he sido el **responsable del convenio de colaboración con la Zarb Sch
 | **Asociaciones** | Fundador, miembro de la junta y **vicepresidente de IMBRA** (International Music Business Research Association, Viena) · **Miembro de ACEI** · **Miembro de AIMAC** |
 | **Edición científica** | **Editor invitado** del número especial "Arts Consumption, Diversity and Inclusion", *Int. J. of Arts Management* 25(3), 2023 (JCR/SSCI) |
 | **Comités científicos** | **Copresidencia del comité científico AIMAC 2007** (València) · Presidencia de la sesión plenaria de apertura de AIMAC 2007 · Participación paneles de evaluación en 11 ediciones de AIMAC (2005–2026) ·  Miembro en **I y II Workshop en Economía y Gestión de la Cultura** (Sevilla 2009 · València 2010) y **8th International Congress on Public and Nonprofit Marketing** (IAPNM 2009, València) |
-| **Evaluación científica** | **35 revisiones verificadas** para 15 revistas (percentil 91) · reconocimiento de *Poetics* (Q1) a la actividad evaluadora (2026) |
+| **Evaluación científica** | **36 revisiones verificadas** para 15 revistas (percentil 91) · reconocimiento de *Poetics* (Q1) a la actividad evaluadora (2026) |
 
 : {tbl-colwidths="[22,78]"}
 
@@ -467,7 +465,7 @@ València **Economía Creativa y Mercados Culturales** con miembros de diferente
 
 4. Además he participado en comités académicos: copresidente del comité científico de AIMAC 2007, miembro del comité científico del Workshop en Economía y Gestión de la Cultura y del congreso de Marketing Público y No Lucrativo. Además he participado en  paneles de evaluación de numerosa conferencias académicas.
 
-5. Las tareas de evaluación científica se materializa en al menos treinta y cinco revisiones verificadas para quince journals, que me ubica en el percentil 91 de la distribución de revisores. Recientemente la revista Poetics (Q1 en sociología) reconoció esta actividad.
+5. Las tareas de evaluación científica se materializa en al menos treinta y seis revisiones verificadas para quince journals, que me ubica en el percentil 91 de la distribución de revisores. Recientemente la revista Poetics (Q1 en sociología) reconoció esta actividad.
 :::
 
 
@@ -497,10 +495,10 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 
 ## Síntesis: el currículum en cifras {background-color="#2D6A7A" .sintesis}
 
-&nbsp;
 
 <!-- Figura pregenerada: scripts/fig_resumen_cv.py (cifras trazadas al CV en
-     los comentarios del script; citas actualizadas el 11-09-2026). Fondo teal
+     los comentarios del script; bloque «Impacto científico» con Scopus y WoS
+     consultados el 12-09-2026, ver data/scopus_impact.md). Fondo teal
      solo en RevealJS (beamer ignora background-color en los frames), de ahí la
      figura oscura (--fondo-oscuro) para reveal y la clara para beamer; la
      clase .sintesis quita la regla coral del h2 en reveal (CSS del YAML). -->
@@ -518,7 +516,7 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 :::
 
 ::: {.notes}
-Cierro con una síntesis del currículum en cifras. En investigación: cuarenta y seis artículos; veintinueve capítulos; ciento dieciocho comunicaciones; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas.
+Cierro con una síntesis del currículum en cifras. En investigación: cuarenta y seis artículos; veintinueve capítulos; siete proyectos competitivos; dieciséis contratos con el sector cultural, seis como investigador principal; seis estancias y cuatro tesis dirigidas. Pero más que el volumen, el impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior de su área; un impacto normalizado por campo que en el conjunto del periodo está en la media mundial y por encima de ella en cinco de los últimos diez años, con un uno coma treinta y dos en 2025; uno de cada seis artículos en el decil superior por citas de su categoría; y dos tercios de las citas recibidas desde 2021, con alcance global.
 
 En dirección y liderazgo: dirección de cuatro proyectos, diecisiete cargos de gestión concentrados en internacionalización; y doce conferencias por invitación.
 
