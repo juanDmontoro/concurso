@@ -251,7 +251,7 @@ El grafo segmenta una escena latina y otra anglófona, con algunos artistas que 
 
 &nbsp;
 
-![](figures/fig_network_aimac.svg){width="88%" fig-alt="Subgrafo de mayor grado de la red acumulada de colaboraciones a 2024, con nodos coloreados por escena: comunidades latina y anglófona con artistas puente"}
+![](figures/fig_network_aimac_wide.svg){fig-align="center" fig-alt="Subgrafo de mayor grado de la red acumulada de colaboraciones a 2024, con nodos coloreados por escena: comunidades latina y anglófona con artistas puente"}
 
 
 ::: {.notes}
