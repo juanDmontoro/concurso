@@ -4,10 +4,10 @@
 
 | | |
 |---|---|
-| **Colaborar** | Dos artistas graban juntos una canción, el fenómeno *feat.*: **Bad Bunny y J Balvin**, **Taylor Swift y Kendrick Lamar**. Hoy es una práctica frecuente. |
+| **Colaboración** | Dos artistas graban juntos una canción, el fenómeno *feat.*: **Bad Bunny y J Balvin**, **Taylor Swift y Kendrick Lamar**. Hoy es una práctica frecuente. |
 | **Elección** | Cada artista podría colaborar con cientos de otros y solo lo hace con unos pocos. ¿Qué distingue a los pares que llegan a trabajar juntos? |
 | **Proximidad estética** | En redes sociales el público describe a cada artista con etiquetas (palabras): géneros, estilos, estados de ánimo. **Bad Bunny y J Balvin** son etiquetados con un vocabulario similar (*cercanos*). **Taylor Swift y kendrick Lamar** apenas comparten (*distantes*). |
-| **La hipótesis** | Estar cerca facilita el encaje: Bad Bunny y J Balvin han grabado juntos en varias ocasiones. Pero también colaboran artistas lejanos: Taylor Swift y Kendrick Lamar. ¿Hay un punto a partir del cual parecerse más ya no suma, o incluso resta? |
+| **Hipótesis** | Estar cerca facilita el encaje: Bad Bunny y J Balvin han grabado juntos en varias ocasiones. Pero también colaboran artistas lejanos: Taylor Swift y Kendrick Lamar. ¿Hay un punto a partir del cual parecerse más ya no suma, o incluso resta? |
 
 : {tbl-colwidths="[22,78]"}
 
