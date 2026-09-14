@@ -294,9 +294,9 @@ Es importante señalar que durante todo el recorrido el uso de inteligencia arti
 | **Dimensión (peso)** | **Qué se evalúa** | **Excelente (9–10)** | **Apto (5–6)** | **No apto** |
 |---|---|---|---|---|
 | **Formulación y datos (10%)** | Pregunta relevantes, dataset, EDA | pregunta orientada a toma decisiones susceptible de respuesta empírica; limitaciones de los datos discutidas | Pregunta clara, EDA correcto | Dataset sin justificar; pregunta ambigua; EDA ausente |
-| **Proyecto reproducible (20%)** | Repositorio, entorno, ejecución (*pipeline*) | Reproduce todo desde datos crudos, entorno versionado | Reproducible con intervención menor documentada | No reproduce; preprocesado fuera del pipeline (fuga) |
+| **Proyecto reproducible (15%)** | Repositorio, entorno, ejecución (*pipeline*) | Reproduce todo desde datos crudos, entorno versionado | Reproducible con intervención menor documentada | No reproduce; preprocesado fuera del pipeline (fuga) |
 | **Modelización (25%)** | Modelo base → ensambles → SVM → DL; comparación | Comparación honesta en test común; selección justificada | $\geq$ 3 familias comparadas correctamente; métricas incompletas | Sin modelo base; métricas elegidas a posteriori |
-| **Interpretación y comunicación (15%)** | Memoria, figuras, lectura de resultados | Resultados traducidos a decisión de negocio; incorpora incertidumbre  | Interpretación correcta de métricas y efectos | Lectura mecánica o errónea de las salidas |
+| **Interpretación y comunicación (20%)** | Memoria, figuras, lectura de resultados | Resultados traducidos a decisión de negocio; incorpora incertidumbre  | Interpretación correcta de métricas y efectos | Lectura mecánica o errónea de las salidas |
 | **Defensa oral individual (30%)** | 10' grupo + preguntas individuales | Cada miembro explica y modifica en vivo cualquier parte del código | Cada miembro explica las partes que firmó | Un miembro no sabe explicar código propio |
 
 ::: {.notes}
