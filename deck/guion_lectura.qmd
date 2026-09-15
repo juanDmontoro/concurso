@@ -56,10 +56,10 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
 1 · Currículum vitae & 15 min & 20 & 24 & 2049 & 14,6\\
-2 · Propuesta docente & 15 min & 15 & 17 & 1789 & 12,8\\
-3 · Propuesta investigadora & 20 min & 20 & 23 & 2826 & 20,2\\
+2 · Propuesta docente & 15 min & 15 & 17 & 1759 & 12,6\\
+3 · Propuesta investigadora & 20 min & 20 & 23 & 2791 & 19,9\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6664} & \textbf{47,6}\\
+\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6599} & \textbf{47,1}\\
 \bottomrule
 \end{tabular}
 
@@ -99,7 +99,7 @@ Empiezo por la investigación.
 
 \medskip
 
-\guionmarca{\marcaslide{2}{Trayectoria investigadora}} La tabla ordena la trayectoria investigadora en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
+\guionmarca{\marcaslide{2}{Trayectoria investigadora}} La tabla ordena la investigación en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
 
 La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
@@ -109,7 +109,7 @@ La tercera etapa, desde 2008, se orienta a la economía de la cultura e industri
 
 \medskip
 
-\guionmarca{\marcaslide{3}{Producción científica en cifras}} La diapositiva  cuantifica la producción científica agrupada por año y categoría junto con un resumen de los índices bibliométricos. Un análisis de estos muestra una investigación con una serie ascendente de citas (cerca del sesenta por ciento de las citas se ha recibido desde 2021) mayoritariamente externas (más del noventa por ciento) y que más allá de la academia ha tenido impacto en documentos de política pública. 
+\guionmarca{\marcaslide{3}{Producción científica en cifras}} La diapositiva  cuantifica la producción científica agrupada por año y categoría junto con un resumen de los índices bibliométricos. Un análisis de estos muestra una investigación con una serie ascendente de citas (cerca del setenta por ciento de las citas se ha recibido desde 2021) mayoritariamente externas (más del noventa por ciento) y que más allá de la academia ha tenido impacto en documentos de política pública. 
 
 De ese conjunto selecciono ocho publicaciones por su relevancia.
 
@@ -158,7 +158,7 @@ En total he realizado seis estancias en cinco centros distintos, todas con finan
 
 \guionmarca{\marcaslide{10}{Dirección de tesis doctorales}} Cierro este bloque con la dirección de tesis doctorales, con dos tesis leídas y dos en curso. Todas ellas dentro del programa de doctorado en Marketing, con mención de calidad.
 
-Las dos tesis leídas obtuvieron sobresaliente cum laude y mención internacional. La de Desamparados Lluch, de 2017, sobre segmentación y exhibición cinematográfica recibió además el Premio Fundación SGAE de Investigación de 2018. 
+Las dos tesis leídas obtuvieron sobresaliente cum laude y mención internacional. La de Desamparados Lluch Tormos, de 2017, sobre segmentación y exhibición cinematográfica recibió además el Premio Fundación SGAE de Investigación de 2018. 
 
 Las tesis en curso siguen la misma línea de investigación sobre mercados e industrias culturales. 
 
@@ -252,7 +252,7 @@ El conjunto de méritos refleja una trayectoria consolidada de liderazgo, intern
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,12,8 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,12,6 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
 La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
@@ -284,8 +284,6 @@ Si bien la predicción constituye el *leitmotiv* de la asignatura, su impartici�
 \medskip
 
 \guionmarca{\marcaslide{24}{Contenidos y planificación}} Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
-
-El recorrido va de lo más simple a lo flexible y cierra con un tema final que conecta predicción y estimación de parámetros estructurales.
 
 Durante todas las prácticas se usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas analíticas desarrolladas. Eso permite comparar los modelos en un contexto común y evaluar distintos métodos según objetivo de negocio.
 
@@ -320,7 +318,7 @@ Además, el cambio de lenguaje persigue un objetivo fundamental: que el alumnado
 
 \guionmarca{\marcaslide{28}{Evaluación}} El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaca el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
 
-El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y fijar un mínimo de 5 evita que una buena nota de proyecto compense la falta de base.
+El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. No obstante el examen garantiza que cada estudiante domina los conceptos evita que la continua compense la falta de base.
 
 \needspace{2\baselineskip}
 \bigskip
@@ -384,20 +382,20 @@ Double Machine Learning corrige ambos. Corrige el primero, la ortogonalización 
 
 \guionmarca{\marcaslide{35}{Práctica con datos reales}} Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
 
-La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción de  intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y por tanto límites del análisis.
+La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción de  intervención, identificar sesgos, aplicar DML como un estimador en dos etapas (una predictiva y otra inferencial) y valorar los supuestos y por tanto límites del análisis.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,20,2 min a 140 ppm}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural.
+\guionmarca{\marcaparte{PARTE 3 DE 3}{Propuesta investigadora}{20 min · $\approx$\,19,9 min a 140 ppm}} Cierro el ejercicio presentando la propuesta de investigación *Creative Collaborations*, cuyo objeto es el análisis de los factores asociados a la formación de colaboraciones en la producción cultural.
 
 \medskip
 
 \guionmarca{\marcaslide{36}{De qué trata esta investigación}} Resumo la propuesta en cuatro ideas. 
 
 1. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar.  
-2. La colaboración implica una decisión: cada artista podría colaborar con muchos y solo lo hace con pocos; la pregunta es qué distingue a los pares que llegan a trabajar juntos.  
-3. Para responderla cada artista se ubica en un espacio construido a partir de las etiquetas que su público publica en redes. Bad Bunny y J Balvin tienen un vocabulario casi idéntico (proximidad); Taylor Swift y Kendrick Lamar apenas comparten palabras (distancia). 
+2. La colaboración implica una decisión: con quien; nos preguntamos  qué distingue a los pares que llegan a trabajar juntos.  
+3. Para responderla cada artista se ubica en un espacio construido a partir de las etiquetas que la audiencia utiliza en redes para describir su obra. Encontramos p.e. que el público usa un vocabulario similar para etiquetar a Bad Bunny y J Balvin (proximos), mientras que Taylor Swift y Kendrick Lamar apenas comparten términos (distantes). 
 4. La hipótesis central es que estar cerca ayuda: de hecho Bad Bunny y J Balvin han grabado juntos varias veces. Pero, ¿y si se está demasiado cerca? ¿Hay un punto en que parecerse más ya no aporta? 
 
 En la explicación entra además la red de contactos, trayectoria y otros atributos.
@@ -419,7 +417,7 @@ En la explicación entra además la red de contactos, trayectoria y otros atribu
 
 \guionmarca{\marcaslide{37}{La colaboración en la industria de la música}} La figura muestra la evolución del porcentaje de colaboraciones en listas anuales del Billboard 100 (además de en subtramos de la misma) y sirve como punto de partida para ilustrar la pregunta.
 
-A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard correspondían a colaboraciones. Entre 2016 y 2020 esa tasa se sitúa en torno al 40%: la colaboración ha pasado de ser una anomalía entre los éxitos comerciales a la práctica habitual. La evolución sugiere un cambio estructural que emerge en paralelo a la digitalización de la música y se asienta con la implantación de un modelo de negocio basado en el acceso, y no en la propiedad: el streaming.
+A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard correspondían a colaboraciones. Entre 2016 y 2020 esa tasa se sitúa en torno al 40%: la colaboración ha pasado de ser una anomalía a una práctica frecuente. La evolución sugiere un cambio estructural que emerge en paralelo a la digitalización de la música y se asienta con la implantación de un modelo de negocio basado en el acceso, y no en la propiedad: el streaming.
 
 El interés económico de la pregunta de investigación radica en el análisis de los incentivos en la selección de colaboradores en industrias culturales. Colaborar permite combinar temporalmente capacidades y recursos, identidades estéticas, reputación y acceso a públicos.
 
@@ -540,7 +538,7 @@ SPLINE: la curva suavizada muestra predicciones del modelo logit con spline con 
 
 Por otro lado el contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente sigue positiva, pero su intervalo incluye cero.
 
-**No se confirma el patrón de subida y caída requerido para identificar un máximo interior. Los resultados son compatibles con un crecimiento que se modera, aunque la incertidumbre no permite descartar una caída en la cola.**
+**No se confirma el patrón de subida y caída requerido para identificar un máximo interior; los resultados son compatibles con un crecimiento que se modera.**
 
 \needspace{2\baselineskip}
 \bigskip
@@ -593,9 +591,11 @@ El mapa sintetiza esas asociaciones pero deja abiertas las explicaciones: puede 
 
 \guionmarca{\marcaslide{54}{Qué aporta estudiar la formación de colaboraciones}} Más allá de su aportación metodológica, basada en el conjunto de riesgo completo y en el uso de técnicas de procesamiento del lenguaje natural para medir la afinidad entre artistas, el trabajo concibe la formación de colaboraciones como una etapa diferenciada de la producción cultural e identifica los factores asociados a su realización.
 
-En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
+En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. 
 
-Un resultado generalizable: el análisis del efecto de la afinidad en una etapa concreta del proceso de producción cultural. **Estudiar conjuntamente emparejamiento y rendimiento posterior permitiría relacionar compatibilidad para la formación  con la complementariedad necesaria para obtener buenos resultados.**
+El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
+
+Un resultado generalizable: Estudiar conjuntamente emparejamiento y rendimiento para analizar  la compatibilidad en formación y en resultados.
 
 \medskip
 

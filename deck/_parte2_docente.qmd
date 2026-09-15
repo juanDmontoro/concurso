@@ -166,8 +166,6 @@ A lo largo de la asignatura utilizamos un mismo conjunto de datos como caso de e
 ::: {.notes}
 Los contenidos, organizados en siete temas, se distribuyen a lo largo de las quince semanas del cuatrimestre. La tabla muestra la conexión de cada tema con su práctica y con la entregas parciales de un proyecto en equipo que los estudiantes desarrollan a lo largo de la asignatura.
 
-El recorrido va de lo más simple a lo flexible y cierra con un tema final que conecta predicción y estimación de parámetros estructurales.
-
 Durante todas las prácticas se usa un mismo conjunto de datos de referencia, sobre el que se aplican todas las técnicas analíticas desarrolladas. Eso permite comparar los modelos en un contexto común y evaluar distintos métodos según objetivo de negocio.
 :::
 
@@ -265,7 +263,7 @@ Los pesos, las rúbricas y las condiciones de recuperación se publican al inici
 ::: {.notes}
 El último hito en el diseño de la asignatura es la evaluación, donde, dada su naturaleza, la práctica y la evaluación continua tienen un peso sustantivo. Dentro de esta destaca el proyecto final con defensa oral que supone un treinta y cinco por ciento de la nota. Por otro lado un examen final escrito pondera el veinticinco por ciento de la nota final. 
 
-El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. El examen conserva un peso suficiente para comprobar que cada estudiante domina individualmente los conceptos, y fijar un mínimo de 5 evita que una buena nota de proyecto compense la falta de base.
+El diseño responde a la metodología: si el aprendizaje se produce mayoritariamente en la práctica semanal y a través de un proyecto, la mayor parte de la nota tiene que salir de ahí. No obstante el examen garantiza que cada estudiante domina los conceptos evita que la continua compense la falta de base.
 :::
 # Proyecto final {background-color="#2D6A7A"}
 
@@ -574,7 +572,7 @@ dml.sensitivity_analysis()
 
 Los alumnos aplican la teoría a la evaluación de una campaña de emailing con los datos experimentales de Hillstrom. Siguiendo un flujo de trabajo ya conocido de los temas predictivos, estiman el efecto promedio, comparan reglas de priorización y, tras introducir selección observacional, evalúan si DoubleML recupera el efecto conocido. 
 
-La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción de  intervención, identificar sesgos, aplicar ortogonalización y cross-fitting, realizar inferencia y valorar los supuestos y por tanto límites del análisis.
+La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la capacidad para distinguir entre predicción de  intervención, identificar sesgos, aplicar DML como un estimador en dos etapas (una predictiva y otra inferencial) y valorar los supuestos y por tanto límites del análisis.
 :::
 
 <!-- Generado por scripts/sync_partes.py desde propuesta_docente.qmd — NO EDITAR;

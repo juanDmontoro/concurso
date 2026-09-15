@@ -65,7 +65,7 @@ Empiezo por la investigación.
 
 
 ::: {.notes}
-La tabla ordena la trayectoria investigadora en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
+La tabla ordena la investigación en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
 
 La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
@@ -92,7 +92,7 @@ interfaz (sin faceta SDG). Si se quiere la línea, obtenerla vía SciVal o
 etiquetas ODS de cada documento. -->
 
 ::: {.notes}
-La diapositiva  cuantifica la producción científica agrupada por año y categoría junto con un resumen de los índices bibliométricos. Un análisis de estos muestra una investigación con una serie ascendente de citas (cerca del sesenta por ciento de las citas se ha recibido desde 2021) mayoritariamente externas (más del noventa por ciento) y que más allá de la academia ha tenido impacto en documentos de política pública. 
+La diapositiva  cuantifica la producción científica agrupada por año y categoría junto con un resumen de los índices bibliométricos. Un análisis de estos muestra una investigación con una serie ascendente de citas (cerca del setenta por ciento de las citas se ha recibido desde 2021) mayoritariamente externas (más del noventa por ciento) y que más allá de la academia ha tenido impacto en documentos de política pública. 
 
 De ese conjunto selecciono ocho publicaciones por su relevancia.
 :::
@@ -259,7 +259,7 @@ En total he realizado seis estancias en cinco centros distintos, todas con finan
 ::: {.notes}
 Cierro este bloque con la dirección de tesis doctorales, con dos tesis leídas y dos en curso. Todas ellas dentro del programa de doctorado en Marketing, con mención de calidad.
 
-Las dos tesis leídas obtuvieron sobresaliente cum laude y mención internacional. La de Desamparados Lluch, de 2017, sobre segmentación y exhibición cinematográfica recibió además el Premio Fundación SGAE de Investigación de 2018. 
+Las dos tesis leídas obtuvieron sobresaliente cum laude y mención internacional. La de Desamparados Lluch Tormos, de 2017, sobre segmentación y exhibición cinematográfica recibió además el Premio Fundación SGAE de Investigación de 2018. 
 
 Las tesis en curso siguen la misma línea de investigación sobre mercados e industrias culturales. 
 

@@ -20,8 +20,8 @@ Contactos previos en la red de colaboraciones, escena cultural e institucional y
 Resumo la propuesta en cuatro ideas. 
 
 1. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar.  
-2. La colaboración implica una decisión: cada artista podría colaborar con muchos y solo lo hace con pocos; la pregunta es qué distingue a los pares que llegan a trabajar juntos.  
-3. Para responderla cada artista se ubica en un espacio construido a partir de las etiquetas que su público publica en redes. Bad Bunny y J Balvin tienen un vocabulario casi idéntico (proximidad); Taylor Swift y Kendrick Lamar apenas comparten palabras (distancia). 
+2. La colaboración implica una decisión: con quien; nos preguntamos  qué distingue a los pares que llegan a trabajar juntos.  
+3. Para responderla cada artista se ubica en un espacio construido a partir de las etiquetas que la audiencia utiliza en redes para describir su obra. Encontramos p.e. que el público usa un vocabulario similar para etiquetar a Bad Bunny y J Balvin (proximos), mientras que Taylor Swift y Kendrick Lamar apenas comparten términos (distantes). 
 4. La hipótesis central es que estar cerca ayuda: de hecho Bad Bunny y J Balvin han grabado juntos varias veces. Pero, ¿y si se está demasiado cerca? ¿Hay un punto en que parecerse más ya no aporta? 
 
 En la explicación entra además la red de contactos, trayectoria y otros atributos.
@@ -57,7 +57,7 @@ La presentación se estructura en cuatro partes.
 
 La figura muestra la evolución del porcentaje de colaboraciones en listas anuales del Billboard 100 (además de en subtramos de la misma) y sirve como punto de partida para ilustrar la pregunta.
 
-A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard correspondían a colaboraciones. Entre 2016 y 2020 esa tasa se sitúa en torno al 40%: la colaboración ha pasado de ser una anomalía entre los éxitos comerciales a la práctica habitual. La evolución sugiere un cambio estructural que emerge en paralelo a la digitalización de la música y se asienta con la implantación de un modelo de negocio basado en el acceso, y no en la propiedad: el streaming.
+A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard correspondían a colaboraciones. Entre 2016 y 2020 esa tasa se sitúa en torno al 40%: la colaboración ha pasado de ser una anomalía a una práctica frecuente. La evolución sugiere un cambio estructural que emerge en paralelo a la digitalización de la música y se asienta con la implantación de un modelo de negocio basado en el acceso, y no en la propiedad: el streaming.
 
 El interés económico de la pregunta de investigación radica en el análisis de los incentivos en la selección de colaboradores en industrias culturales. Colaborar permite combinar temporalmente capacidades y recursos, identidades estéticas, reputación y acceso a públicos.
 
@@ -243,7 +243,7 @@ La figura ilustra por qué **afinidad cultural y cercanía relacional** deben me
 ::: {.notes}
 Visualizamos esta proximidad estructural con la representación del conjunto de datos relacionales en un grafo. La figura muestra solo el núcleo de la red acumulada hasta el 2024, el 5% de artistas con mayor grado, y ofrece una ilustración descriptiva.
 
-El grafo segmenta una escena latina y otra anglófona, con algunos artistas que conectan ambas. Esto sugiere la necesidad de separar afinidad (estética o de otro tipo) de posición en la red. Dos artistas pueden, por ejemplo, compartir espacio cultural  y, sin embargo, tener oportunidades relacionales distintas.
+El grafo segmenta una escena latina y otra anglófona, con algunos artistas que conectan ambas. Esto sugiere la pertinencia de separar afinidad (estética o de otro tipo) de posición en la red. Dos artistas pueden, por ejemplo, compartir espacio cultural  y, sin embargo, tener oportunidades relacionales distintas.
 :::
 :::
 
@@ -561,7 +561,7 @@ SPLINE: la curva suavizada muestra predicciones del modelo logit con spline con 
 
 Por otro lado el contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente sigue positiva, pero su intervalo incluye cero.
 
-**No se confirma el patrón de subida y caída requerido para identificar un máximo interior. Los resultados son compatibles con un crecimiento que se modera, aunque la incertidumbre no permite descartar una caída en la cola.**
+**No se confirma el patrón de subida y caída requerido para identificar un máximo interior; los resultados son compatibles con un crecimiento que se modera.**
 :::
 
 
@@ -858,9 +858,11 @@ El mapa sintetiza esas asociaciones pero deja abiertas las explicaciones: puede 
 ::: {.notes}
 Más allá de su aportación metodológica, basada en el conjunto de riesgo completo y en el uso de técnicas de procesamiento del lenguaje natural para medir la afinidad entre artistas, el trabajo concibe la formación de colaboraciones como una etapa diferenciada de la producción cultural e identifica los factores asociados a su realización.
 
-En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
+En los pares analizados, la evidencia es compatible con un requisito de compatibilidad estética dentro de un conjunto de oportunidades culturales y relacionales. 
 
-Un resultado generalizable: el análisis del efecto de la afinidad en una etapa concreta del proceso de producción cultural. **Estudiar conjuntamente emparejamiento y rendimiento posterior permitiría relacionar compatibilidad para la formación  con la complementariedad necesaria para obtener buenos resultados.**
+El contraste flexible evita atribuir una distancia óptima a lo que podría depender de la especificación del modelo.
+
+Un resultado generalizable: Estudiar conjuntamente emparejamiento y rendimiento para analizar  la compatibilidad en formación y en resultados.
 :::
 
 ## Alcance y límites de la evidencia {.compact}
