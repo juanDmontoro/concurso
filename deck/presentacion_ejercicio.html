@@ -1047,25 +1047,25 @@ margin-right: 0; }
 </style>
   <style>
 
-.reveal .slides section:not(#title-slide) p,
-.reveal .slides section:not(#title-slide) li,
-.reveal .slides section:not(#title-slide) blockquote,
-.reveal .slides section:not(#title-slide) table {font-size: 0.86em;}
+.reveal .slides section:not(#title-slide):not(#portada-cierre) p,
+.reveal .slides section:not(#title-slide):not(#portada-cierre) li,
+.reveal .slides section:not(#title-slide):not(#portada-cierre) blockquote,
+.reveal .slides section:not(#title-slide):not(#portada-cierre) table {font-size: 0.86em;}
 
-.reveal .slides section.compact:not(#title-slide) p,
-.reveal .slides section.compact:not(#title-slide) li,
-.reveal .slides section.compact:not(#title-slide) blockquote,
-.reveal .slides section.compact:not(#title-slide) table {font-size: 0.72em;}
+.reveal .slides section.compact:not(#title-slide):not(#portada-cierre) p,
+.reveal .slides section.compact:not(#title-slide):not(#portada-cierre) li,
+.reveal .slides section.compact:not(#title-slide):not(#portada-cierre) blockquote,
+.reveal .slides section.compact:not(#title-slide):not(#portada-cierre) table {font-size: 0.72em;}
 
-.reveal .slides section:not(#title-slide) li > p,
-.reveal .slides section:not(#title-slide) blockquote > p {font-size: 1em;}
+.reveal .slides section:not(#title-slide):not(#portada-cierre) li > p,
+.reveal .slides section:not(#title-slide):not(#portada-cierre) blockquote > p {font-size: 1em;}
 
 .reveal .slides section.sintesis h2 {border-left: 0; padding-left: 0; color: #fafafa;}
 
-.reveal .slides section.tblfull:not(#title-slide) p,
-.reveal .slides section.tblfull:not(#title-slide) table {font-size: 0.42em; line-height: 1.2;}
-.reveal .slides section.tblfull:not(#title-slide) table td,
-.reveal .slides section.tblfull:not(#title-slide) table th {padding: 0.08em 0.5em;}
+.reveal .slides section.tblfull:not(#title-slide):not(#portada-cierre) p,
+.reveal .slides section.tblfull:not(#title-slide):not(#portada-cierre) table {font-size: 0.42em; line-height: 1.2;}
+.reveal .slides section.tblfull:not(#title-slide):not(#portada-cierre) table td,
+.reveal .slides section.tblfull:not(#title-slide):not(#portada-cierre) table th {padding: 0.08em 0.5em;}
 
 .reveal .pA {color: #2D6A7A; font-weight: 600;}
 .reveal .pB {color: #C44536; font-weight: 600;}
@@ -1115,15 +1115,18 @@ color: #8a9296; padding-bottom: 0.15em;
 color: #2D6A7A; font-weight: 700; border-bottom: 3px solid #2D6A7A;
 }
 
-.reveal .slides #title-slide h1 {
+.reveal .slides #title-slide h1,
+.reveal .slides #portada-cierre h1 {
 font-size: 1.7em;
 line-height: 1.15;
 }
-.reveal .slides #title-slide p.subtitle {
+.reveal .slides #title-slide p.subtitle,
+.reveal .slides #portada-cierre p.subtitle {
 font-size: 1.15em;
 line-height: 1.35;
 }
-.reveal .slides #title-slide p.subtitle .subtitle-detail {
+.reveal .slides #title-slide p.subtitle .subtitle-detail,
+.reveal .slides #portada-cierre p.subtitle .subtitle-detail {
 display: block;
 
 font-size: 0.78em;
@@ -1131,13 +1134,16 @@ color: #6c757d;
 margin-top: 0.55em;
 }
 
-.reveal .slides #title-slide .quarto-title-author-name {
+.reveal .slides #title-slide .quarto-title-author-name,
+.reveal .slides #portada-cierre .quarto-title-author-name {
 font-size: 1.15em !important;
 }
-.reveal .slides #title-slide .quarto-title-affiliation {
+.reveal .slides #title-slide .quarto-title-affiliation,
+.reveal .slides #portada-cierre .quarto-title-affiliation {
 font-size: 0.9em !important;
 }
-.reveal .slides #title-slide p.date {
+.reveal .slides #title-slide p.date,
+.reveal .slides #portada-cierre p.date {
 font-size: 0.85em;
 }
 
@@ -4673,14 +4679,19 @@ La exclusión responde a la entrada de artistas nuevos sin historial previo en e
 <section id="agradecimientos" class="title-slide slide level1 center closing-thanks" data-background-color="#2D6A7A">
 <h1>Agradecimientos</h1>
 <script>
-// Portada final: clona la portada generada por Quarto y la añade como
-// última slide. Conserva la id #title-slide para heredar todos sus
-// estilos (portada y clon comparten reglas; getElementById y la
-// navegación por hash siguen resolviendo a la portada original).
+// Portada de cierre: clona la portada generada por Quarto y la inserta
+// justo ANTES de «Agradecimientos» (los agradecimientos van después del
+// turno de preguntas; la portada queda en pantalla durante ellas).
+// El clon recibe un id propio (portada-cierre): si conservara
+// #title-slide, la navegación por hash de Reveal (hash + history) lo
+// resolvería a la portada original y saltaría al inicio al llegar a él.
+// Los estilos se heredan por la clase .title-slide (gemelos de #title-slide
+// en _theme.scss) y por las reglas #portada-cierre del include-in-header.
 window.addEventListener("load", function () {
   var deck = window.Reveal;
   var slides = document.querySelector(".reveal .slides");
   var title = document.getElementById("title-slide");
+  var thanks = slides.querySelector("section.closing-thanks");
   if (!deck || !slides || !title) return;
   var append = function () {
     var clone = title.cloneNode(true);
@@ -4688,14 +4699,21 @@ window.addEventListener("load", function () {
     // como «future»: al insertarse es siempre la última slide, y sin
     // esa clase quedaría visible superpuesto a la slide actual. La
     // navegación posterior reasigna past/present/future normalmente.
+    clone.id = "portada-cierre";
     clone.classList.remove("past", "present");
-    clone.classList.add("future");
+    clone.classList.add("future", "title-slide");
     clone.removeAttribute("hidden");
     clone.setAttribute("aria-hidden", "true");
     clone.style.display = "none";
-    slides.appendChild(clone);
+    if (thanks) { slides.insertBefore(clone, thanks); } else { slides.appendChild(clone); }
     deck.sync();
     deck.layout();
+    // title-slide.js oculta el pie solo cuando el id es title-slide;
+    // este oyente (registrado después, así que gana) lo extiende al clon.
+    deck.on("slidechanged", function (ev) {
+      var id = ev.currentSlide && ev.currentSlide.id;
+      document.body.classList.toggle("is-title-slide", id === "title-slide" || id === "portada-cierre");
+    });
   };
   if (deck.isReady && deck.isReady()) { append(); } else { deck.on("ready", append); }
 });
