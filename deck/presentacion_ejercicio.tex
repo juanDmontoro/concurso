@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
@@ -8,14 +9,13 @@
   aspectratio=169,
   spanish,
 ]{beamer}
+\newif\ifbibliography
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
 \beamertemplatenavigationsymbolsempty
-% Prevent slide breaks in the middle of a paragraph
-\widowpenalties 1 10000
-\raggedbottom
+% remove section numbering
 \setbeamertemplate{part page}{
   \centering
   \begin{beamercolorbox}[sep=16pt,center]{part title}
@@ -34,6 +34,9 @@
     \usebeamerfont{subsection title}\insertsubsection\par
   \end{beamercolorbox}
 }
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
 \AtBeginPart{
   \frame{\partpage}
 }
@@ -46,24 +49,23 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-
-\usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
+
 \usetheme[]{metropolis}
-\usecolortheme{default}
-\usefonttheme{professionalfonts}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\usecolortheme[]{default}
+\usefonttheme[]{professionalfonts}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -81,10 +83,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\newif\ifbibliography
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -127,8 +125,7 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 \usepackage{caption}
 % Make caption package work with longtable
@@ -150,6 +147,28 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \AtBeginDocument{\footnotesize}
 \usepackage{etoolbox}
@@ -264,19 +283,9 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{spanish}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Concurso de acceso a Catedrático de Universidad},
   pdfauthor={Candidato: Juan de Dios Montoro Pons},
@@ -1349,7 +1358,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={Herramientas y Técnicas del Análisis de Datos}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={Herramientas y Técnicas del Análisis de Datos}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1546,7 +1555,7 @@ extensión causal} \\ \lightrowrule
 15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={El conjunto de datos de referencia}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={El conjunto de datos de referencia}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1973,7 +1982,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={Experimentos aleatorios controlados: el patrón de referencia}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={Experimentos aleatorios controlados: el patrón de referencia}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -2287,7 +2296,7 @@ Lamar}. ¿Hay un punto a partir del cual parecerse más ya no suma, o
 incluso resta? \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={Y no solo la dimensión estética}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={Y no solo la dimensión estética}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 Contactos previos en la red de colaboraciones, escena cultural e
 institucional y trayectoria de cada artista. Datos: quién colabora con
@@ -2322,11 +2331,10 @@ atributos.}
 
 \gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
 \vspace{0.8em}
-{\large \mbox{\color{mDarkTeal}\bfseries Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{black!40}Conclusiones}\par}}
+{\large \mbox{\color{mDarkTeal}\bfseries Motivación y contexto}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{black!40}Conclusiones}\par}}
 \end{frame}
 
-\section{Motivación y pregunta
-económica}\label{motivaciuxf3n-y-pregunta-econuxf3mica}
+\section{Motivación y contexto}\label{motivaciuxf3n-y-contexto}
 
 \note{La presentación se estructura en cuatro partes.
 
@@ -2489,7 +2497,7 @@ muestra.}
 
 \gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
 \vspace{0.8em}
-{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{mDarkTeal}\bfseries Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{black!40}Conclusiones}\par}}
+{\large \mbox{\color{black!40}Motivación y contexto}~· \mbox{\color{mDarkTeal}\bfseries Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{black!40}Conclusiones}\par}}
 \end{frame}
 
 \section{Datos y diseño}\label{datos-y-diseuxf1o}
@@ -2534,7 +2542,7 @@ Con etiquetas fechadas & 2.402 \\ \lightrowrule
   artistas e historial de sellos.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={Por qué etiquetas y no géneros de plataforma}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={Por qué etiquetas y no géneros de plataforma}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 Las etiquetas por lanzamiento cubren el \textbf{83,5\% de los artistas}.
 Los géneros de Spotify cubren aproximadamente el \textbf{34\%}.
@@ -2686,7 +2694,7 @@ colaboración.}
   tras el debut.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={Evento raro}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={Evento raro}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 Se identifican con 1.064 eventos de formación elegibles sobre 3.756.411
 pares-año: \textbf{28,3 formaciones por cada 100.000 pares-año de
@@ -2711,16 +2719,7 @@ Se utiliza el conjunto de riesgo completo lo que devuelve una muestra de
 estimación con 1.064 eventos sobre 3.756.411 pares-año: aproximadamente
 28,3 por cada 100.000. La rareza del evento condiciona la inferencia y
 la interpretación predictiva.}
-
-\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
-\vspace{0.8em}
-{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
-\vspace{0.2em}
-\hspace{1.5em}{\normalsize \mbox{\color{mDarkTeal}\bfseries Forma de la asociación}~· \mbox{\color{black!40}Predicción}~· \mbox{\color{black!40}Sensibilidad}\par}}
 \end{frame}
-
-\section{Resultados · Forma de la
-asociación}\label{resultados-forma-de-la-asociaciuxf3n}
 
 \begin{frame}{Estimación}
 \phantomsection\label{estimaciuxf3n}
@@ -2756,7 +2755,7 @@ métricas \\ \lightrowrule
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={¿Por qué no un ERGM?}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={¿Por qué no un ERGM?}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 \begin{enumerate}
 \item
@@ -2841,7 +2840,7 @@ Mismo género del artista · Índice Jaccard de sellos · Sellos compartidos
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, title={Nota}, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, rightrule=.15mm, leftrule=.75mm, bottomrule=.15mm, opacitybacktitle=0.6, toprule=.15mm, breakable, toptitle=1mm, arc=.35mm, left=2mm, colback=white]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, colback=white, breakable, bottomrule=.15mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, opacityback=0, bottomtitle=1mm, toprule=.15mm, title={Nota}, arc=.35mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, toptitle=1mm]
 
 \textbf{Tres modelos anidados}: Completo (los cuatro bloques) · Solo red
 (topología) · Sin red (estética, actividad y atributos). Las
@@ -2861,7 +2860,15 @@ Los atributos de nodo (es decir, de artistas) entran como media del par
 y diferencia absoluta: así se distingue nivel y asimetría.
 
 Se estima un modelo completo y dos restricciones: solo red y sin red.}
+
+\gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
+\vspace{0.8em}
+{\large \mbox{\color{black!40}Motivación y contexto}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
+\vspace{0.2em}
+\hspace{1.5em}{\normalsize \mbox{\color{mDarkTeal}\bfseries Modelo base}~· \mbox{\color{black!40}Predicción}~· \mbox{\color{black!40}Sensibilidad}\par}}
 \end{frame}
+
+\section{Resultados · Modelo base}\label{resultados-modelo-base}
 
 \begin{frame}{Asociaciones del modelo completo}
 \phantomsection\label{asociaciones-del-modelo-completo}
@@ -2998,9 +3005,9 @@ crecimiento que se modera.}}
 
 \gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
 \vspace{0.8em}
-{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
+{\large \mbox{\color{black!40}Motivación y contexto}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
 \vspace{0.2em}
-\hspace{1.5em}{\normalsize \mbox{\color{black!40}Forma de la asociación}~· \mbox{\color{mDarkTeal}\bfseries Predicción}~· \mbox{\color{black!40}Sensibilidad}\par}}
+\hspace{1.5em}{\normalsize \mbox{\color{black!40}Modelo base}~· \mbox{\color{mDarkTeal}\bfseries Predicción}~· \mbox{\color{black!40}Sensibilidad}\par}}
 \end{frame}
 
 \section{Resultados · Predicción}\label{resultados-predicciuxf3n}
@@ -3101,9 +3108,9 @@ modelo donde no se fija de antemano una forma funcional.}}
 
 \gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
 \vspace{0.8em}
-{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
+{\large \mbox{\color{black!40}Motivación y contexto}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{mDarkTeal}\bfseries Resultados}~· \mbox{\color{black!40}Conclusiones}\par}
 \vspace{0.2em}
-\hspace{1.5em}{\normalsize \mbox{\color{black!40}Forma de la asociación}~· \mbox{\color{black!40}Predicción}~· \mbox{\color{mDarkTeal}\bfseries Sensibilidad}\par}}
+\hspace{1.5em}{\normalsize \mbox{\color{black!40}Modelo base}~· \mbox{\color{black!40}Predicción}~· \mbox{\color{mDarkTeal}\bfseries Sensibilidad}\par}}
 \end{frame}
 
 \section{Resultados · Sensibilidad}\label{resultados-sensibilidad}
@@ -3141,7 +3148,7 @@ hay evidencia de un sesgo relevante asociado a la rareza del evento}.}
 
 \gdef\roadmapcontent{{\scriptsize \mbox{\color{black!40}Parte 1 · Currículum}\quad \mbox{\color{black!40}Parte 2 · Propuesta docente}\quad \mbox{\color{mDarkTeal}\bfseries Parte 3 · Propuesta investigadora: Creative collaborations}\par}
 \vspace{0.8em}
-{\large \mbox{\color{black!40}Motivación y pregunta económica}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{mDarkTeal}\bfseries Conclusiones}\par}}
+{\large \mbox{\color{black!40}Motivación y contexto}~· \mbox{\color{black!40}Datos y diseño}~· \mbox{\color{black!40}Resultados}~· \mbox{\color{mDarkTeal}\bfseries Conclusiones}\par}}
 \end{frame}
 
 \section{Conclusiones}\label{conclusiones}

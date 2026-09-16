@@ -28,7 +28,7 @@ En la explicación entra además la red de contactos, trayectoria y otros atribu
 :::
 
 
-# Motivación y pregunta económica {background-color="#2D6A7A" .roadmap-slide}
+# Motivación y contexto {background-color="#2D6A7A" .roadmap-slide}
 
 ::: {.roadmap}
 [Motivación y contexto]{.step .active} · [Datos y diseño]{.step} · [Resultados]{.step} · [Conclusiones]{.step}
@@ -118,7 +118,7 @@ Finalmente, la inferencia incorpora dependencia entre pares que comparten artist
 # Datos y diseño {background-color="#2D6A7A" .roadmap-slide}
 
 ::: {.roadmap}
-[Motivación y pregunta económica]{.step} · [Datos y diseño]{.step .active} · [Resultados]{.step} · [Conclusiones]{.step}
+[Motivación y contexto]{.step} · [Datos y diseño]{.step .active} · [Resultados]{.step} · [Conclusiones]{.step}
 :::
 
 ## Fuentes de datos
@@ -304,18 +304,6 @@ Se utiliza el conjunto de riesgo completo lo que devuelve una muestra de estimac
 
 :::
 
-
-
-# Resultados · Forma de la asociación {background-color="#2D6A7A" .roadmap-slide}
-
-::: {.roadmap}
-[Motivación y pregunta económica]{.step} · [Datos y diseño]{.step} · [Resultados]{.step .active} · [Conclusiones]{.step}
-:::
-
-::: {.roadmap .sub}
-[Forma de la asociación]{.step .active} · [Predicción]{.step} · [Sensibilidad]{.step}
-:::
-
 ## Estimación
 
 &nbsp;
@@ -388,87 +376,19 @@ Los atributos de nodo (es decir, de artistas) entran como media del par y difere
 Se estima un modelo completo y dos restricciones: solo red y sin red. 
 :::
 
-:::{.content-hidden}
-## Resultado base: especificación cuadrática {.tblfull .shrink}
 
-**Logit de formación, tres modelos anidados; est. (EE diádicos Aronow–Samii)**
+# Resultados · Modelo base {background-color="#2D6A7A" .roadmap-slide}
 
-| Término | Completo | Solo red | Sin red |
-|---|---|---|---|
-| **Topología de red** | | | |
-| Vecinos comunes | -0,134 (0,121) | 0,002 (0,122) | — |
-| Índice Jaccard  | -1,839 (0,779)\* | -1,947 (0,879)\* | — |
-| Adamic–Adar | 1,246 (0,335)\*\*\* | 1,228 (0,348)\*\*\* | — |
-| *Preferential attachment* | -0,005 (0,001)\*\*\* | -0,004 (0,001)\*\*\* | — |
-| Alcanzabilidad | -0,693 (0,188)\*\*\* | -1,127 (0,196)\*\*\* | — |
-| Proximidad geodésica | 4,684 (0,596)\*\*\* | 6,955 (0,579)\*\*\* | — |
-| Grado (media) | 0,207 (0,024)\*\*\* | 0,210 (0,024)\*\*\* | — |
-| Grado (dif. abs.) | -0,057 (0,011)\*\*\* | -0,058 (0,009)\*\*\* | — |
-| **Estética y posición** | | | |
-| Similitud estética | 5,119 (0,589)\*\*\* | — | 6,428 (0,644)\*\*\* |
-| Similitud estética² | -4,021 (0,712)\*\*\* | — | -4,941 (0,768)\*\*\* |
-| Similitud al centroide (media) | -2,648 (0,606)\*\*\* | — | -3,526 (0,730)\*\*\* |
-| Similitud al centroide (dif. abs.) | 1,522 (0,439)\*\*\* | — | 1,509 (0,463)\*\* |
-| Entropía de etiquetas (media) | -0,192 (0,144) | — | -0,136 (0,161) |
-| Entropía de etiquetas (dif. abs.) | -0,278 (0,080)\*\*\* | — | -0,221 (0,081)\*\* |
-| Tamaño del vocabulario (media) | 0,014 (0,003)\*\*\* | — | 0,013 (0,003)\*\*\* |
-| Tamaño del vocabulario (dif. abs.) | -0,006 (0,001)\*\*\* | — | -0,006 (0,001)\*\*\* |
-| Sin etiquetas: un artista | -2,062 (0,918)\* | — | -1,966 (1,004) |
-| Sin etiquetas: ambos | -1,414 (1,169) | — | -1,586 (1,242) |
-| **Actividad y oportunidad** | | | |
-| Pistas acumuladas (media) | 0,033 (0,011)\*\* | — | 0,051 (0,012)\*\*\* |
-| Pistas acumuladas (dif. abs.) | -0,014 (0,005)\*\* | — | -0,013 (0,004)\*\* |
-| Carrera (media) | -0,068 (0,016)\*\*\* | — | -0,053 (0,016)\*\* |
-| Carrera (dif. abs.) | 0,000 (0,008) | — | -0,006 (0,008) |
-| Elegibilidad conjunta 2–3 años | -0,554 (0,114)\*\*\* | — | -0,291 (0,110)\*\* |
-| Elegibilidad conjunta 4–6 años | -0,936 (0,169)\*\*\* | — | -0,310 (0,197) |
-| Elegibilidad conjunta 7+ años | -1,730 (0,292)\*\*\* | — | -1,586 (0,380)\*\*\* |
-| **Otras proximidades y atributos** | | | |
-| Misma escena | 1,043 (0,169)\*\*\* | — | 1,183 (0,193)\*\*\* |
-| Mismo país | 0,055 (0,108) | — | 0,272 (0,133)\* |
-| Mismo tipo de artista | 0,415 (0,141)\*\* | — | 0,576 (0,159)\*\*\* |
-| Mismo género del artista | -0,010 (0,097) | — | 0,056 (0,107) |
-| Jaccard de sellos (retardado) | 0,636 (0,368) | — | -0,997 (0,465)\* |
-| Sellos compartidos (retardado) | -0,167 (0,112) | — | -0,015 (0,148) |
-| Algún sello común (retardado) | 0,523 (0,184)\*\* | — | 1,435 (0,212)\*\*\* |
-| Efectos fijos de año | sí | sí | sí |
-| Díadas-año · eventos | 3.756.411 · 1.064 | ídem | ídem |
-
-: {tbl-colwidths="[34,22,22,22]"}
-
-::: {style="font-size:0.82em; color:#6c757d;"}
-\* p<0,05; \*\* p<0,01; \*\*\* p<0,001.
+::: {.roadmap}
+[Motivación y contexto]{.step} · [Datos y diseño]{.step} · [Resultados]{.step .active} · [Conclusiones]{.step}
 :::
 
-::: {.notes}
-
-Esta es la estimación base del modelo de formación con sus tres variantes anidadas. La tabla completa queda como referencia; la figura siguiente resume los coeficientes relevantes en una escala comparable.
-
+::: {.roadmap .sub}
+[Modelo base]{.step .active} · [Predicción]{.step} · [Sensibilidad]{.step}
 :::
 
 
-## Resultado base: lectura gráfica {.compact}
 
-&nbsp;
-
-![](figures/fig_coef_dotwhisker_base.svg){width="84%" fig-align="center" fig-alt="Gráfico de puntos e intervalos del 95% para coeficientes seleccionados del logit de formación, modelo Completo: bloques de red, estética, actividad y atributos, cada uno con su color"}
-
-::: {style="font-size:0.8em; color:#6c757d;"}
-Coeficientes seleccionados del modelo de formación. Escalas no comparables entre variables.
-:::
-
-
-:::{.notes}
-Los resultados muestran que el bloque de red es conjuntamente informativo (el contraste de wald rechaza el modelo restringido) y proximidad y centralidad se asocian a la formación de colaboraciones. 
-
-La proximidad geodésica muestra como los pares que ya estaban cerca en la red previa tienen una propensión mucho mayor a conectar directamente. El grado medio (una medida de popularidad) también es positivo en línea con un mecanismo de formación vinculado a la visibilidad si bien la asimetría en la centralidad penaliza: es decir, la formación de vínculos favorece a pares con miembros más populares. 
-
-La forma cuadrática en la proximidad estética reproduce un patrón de U-invertida: término lineal positivo y cuadrático negativo sitúan el máximo en una similitud de 0.637. No obstante el óptimo se ubica  en el percentil 94.8 del soporte,  una región con pocos pares y eventos lo que exige auditar el resultado. 
-
-Compartir  escena  presenta una asociación positiva. Por otro lado actividad media y su asimetría sugieren que pares activos y con niveles de actividad similares se asocian a una mayor propensión a colaborar. El solapamiento de carreras en listas (las variables elegibilidad conjunta) muestran coeficientes negativos y crecientes en lo que podríamos denominar un **efecto oportunidad no realizada**: pares que llevan años coexistiendo sin colaborar tienen cada vez menos probabilidad de hacerlo.
-:::
-
-:::
 
 ## Asociaciones del modelo completo {.compact}
 
@@ -570,11 +490,11 @@ Por otro lado el contraste identifica un pendiente positiva antes del punto de r
 # Resultados · Predicción {background-color="#2D6A7A" .roadmap-slide}
 
 ::: {.roadmap}
-[Motivación y pregunta económica]{.step} · [Datos y diseño]{.step} · [Resultados]{.step .active} · [Conclusiones]{.step}
+[Motivación y contexto]{.step} · [Datos y diseño]{.step} · [Resultados]{.step .active} · [Conclusiones]{.step}
 :::
 
 ::: {.roadmap .sub}
-[Forma de la asociación]{.step} · [Predicción]{.step .active} · [Sensibilidad]{.step}
+[Modelo base]{.step} · [Predicción]{.step .active} · [Sensibilidad]{.step}
 :::
 
 ## Capacidad predictiva por bloques de variables
@@ -660,7 +580,7 @@ El patrón sube con fuerza desde similitudes bajas y después se modera. Es cons
 :::
 
 ::: {.roadmap .sub}
-[Forma de la asociación]{.step} · [Predicción]{.step} · [Sensibilidad]{.step .active}
+[Modelo base]{.step} · [Predicción]{.step} · [Sensibilidad]{.step .active}
 :::
 
 
@@ -822,7 +742,7 @@ Este ejercicio muestra estabilidad de estimaciones puntuales: **no hay evidencia
 # Conclusiones {background-color="#2D6A7A" .roadmap-slide}
 
 ::: {.roadmap}
-[Motivación y pregunta económica]{.step} · [Datos y diseño]{.step} · [Resultados]{.step} · [Conclusiones]{.step .active}
+[Motivación y contexto]{.step} · [Datos y diseño]{.step} · [Resultados]{.step} · [Conclusiones]{.step .active}
 :::
 
 ## Síntesis: afinidad, red y oportunidad {.compact}

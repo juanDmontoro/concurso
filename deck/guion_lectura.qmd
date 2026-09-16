@@ -403,7 +403,7 @@ En la explicación entra además la red de contactos, trayectoria y otros atribu
 \needspace{2\baselineskip}
 \bigskip
 
-\guionmarca{\marcaseccion{MOTIVACIÓN Y PREGUNTA ECONÓMICA}} La presentación se estructura en cuatro partes. 
+\guionmarca{\marcaseccion{MOTIVACIÓN Y CONTEXTO}} La presentación se estructura en cuatro partes. 
 
 - Comienzo por la motivación, la definición del problema económico y por una hipótesis sobre afinidad en un espacio estético. 
 
@@ -486,10 +486,9 @@ La ventana de actividad de tres años reduce la presencia de pares con oportunid
 
 Se utiliza el conjunto de riesgo completo lo que devuelve una muestra de estimación con 1.064 eventos sobre 3.756.411 pares-año: aproximadamente 28,3 por cada 100.000. La rareza del evento condiciona la inferencia y la interpretación predictiva.
 
-\needspace{2\baselineskip}
-\bigskip
+\medskip
 
-\guionmarca{\marcaseccion{RESULTADOS · FORMA DE LA ASOCIACIÓN}\smallskip \marcaslide{45}{Estimación}} La formación se modeliza a través de dos modelos de clasificación.
+\guionmarca{\marcaslide{45}{Estimación}} La formación se modeliza a través de dos modelos de clasificación.
 
 1. El logit estima la probabilidad de formación condicionada a la red del año anterior y a las características del par. Incluye efectos de año y permite hacer inferencia sobre una forma especificada explícitamente. Se estiman errores estándar diádicos de Aronow y Samii que admiten dependencia entre pares que comparten un artista.
 
@@ -509,9 +508,10 @@ Los atributos de nodo (es decir, de artistas) entran como media del par y difere
 
 Se estima un modelo completo y dos restricciones: solo red y sin red.
 
-\medskip
+\needspace{2\baselineskip}
+\bigskip
 
-\guionmarca{\marcaslide{47}{Asociaciones del modelo completo}} La figura compara las asociaciones para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
+\guionmarca{\marcaseccion{RESULTADOS · MODELO BASE}\smallskip \marcaslide{47}{Asociaciones del modelo completo}} La figura compara las asociaciones para variables seleccionadas. Cada punto es el cambio en la ratio de odds ante un aumento de una desviación estándar en las variables continuas, o presencia frente a ausencia en las binarias. ¿Qué perfil de par dibuja cada bloque?
 
 En la red, la posición estructural importa: pares más conectados, más cercanos en la red y menos asimétricos son más propensos a colaborar. 
 
