@@ -267,7 +267,7 @@ El grafo segmenta una escena latina y otra anglófona, con algunos artistas que 
 
 - **Evento**: primera colaboración principal–invitado en una pista que entra en listas.
 - **Formación**: exige ausencia de lazos previos entre ambos artistas (también los observados fuera de listas).
-- **Pares invitado–invitado**: no cuentan como evento; tampoco como negativos.
+- **Pares invitado–invitado**: no cuentan como evento (tampoco como negativos). Asimismo, cualquier posible colaboración **principal-invitado** posterior no es un evento de **formación**. 
 
 
 ::: {.notes}

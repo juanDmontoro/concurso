@@ -72,10 +72,10 @@ La asignatura de esta propuesta se integra dentro de la materia Herramientas y T
 | Asignatura | Curso (cuatr.) | Ámbito | Aportación principal |
 |---------|:-:|----|---------|
 | Minería de Datos en Negocios | 2 (1)| Exploración | Segmentación, reducción de dimensión, reglas de asociación, árboles |
-| Muestreo y Encuestas | 3 (2) | Obtención de información | Diseño muestral, cuestionarios, sesgos, datos faltantes e imputación |
 | Predicción con Datos Transversales | 2 (1) | Predicción | Regresión, GLM, no linealidad, validación, regularización, KNN |
 | Predicción con Datos Temporales | 2 (2) | Predicción | Componentes, alisado, ARIMA, evaluación por horizonte |
 | **Técnicas Avanzadas de Predicción en Negocios** | **3 (1)** |**Predicción** | **GLMs, ensambles, redes neuronales, SVM, predicción y explicación** |
+| Muestreo y Encuestas | 3 (2) | Obtención de información | Diseño muestral, cuestionarios, sesgos, datos faltantes e imputación |
 | Datos Espaciales y Espacio-Temporales | 3 (2) | Modelización espacial | Exploración espacial, *kriging*, modelos espaciales, predicción con incertidumbre |
 | Datos No Estructurados | 4 (1) | Analítica de datos no tabulares | Captura web y redes sociales, texto, imágenes, NLP, recomendación |
 

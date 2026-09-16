@@ -194,16 +194,16 @@ Se muestran los proyectos en convocatoria pública, con la entidad financiadora,
 
 | Entidad | Objeto   | Años | Participación |
 |--------|--------------|:-:|---|
-| AVETID | Estudio de públicos del Festival Tercera Setmana | 2017–18 | equipo | 
+| Sociedad Española de Radiodifusión (SER) | Organización y programación de un evento de música, cultura y ocio | 2012–13 | equipo |
+| FECEMAC-CV | Indicadores de rendimiento y satisfacción en gestión de la educación musical | 2014–15 | equipo |
+| Olympia Metropolitana | Actividades del centenario del Teatro Olympia | 2015–16 | equipo |
 | Francachela Teatro | Plan de patrocinio y premios del festival | 2018–19 | IP |
-| AVETID | Estudio de públicos Tercera Setmana, 2ª edición | 2018–19 | equipo | 
-| EXTREMUS Danza | Evaluación de proyecto artístico de inclusión social  | 2019–20 | equipo | 
-| Francachela Teatro | Plan de patrocinio y premios del festival | 2020–21 | IP | 
-| Olympia Metropolitana | Estudio de públicos en contexto teatral  | 2021–22 | IP | 
-| A más Soluciones Culturales | Distribución en artes escénicas | 2021–22 | IP | 
-| Generalitat Valenciana | Perfil y experiencia del visitante del CCCC  | 2022–23 | IP | 
-| ICOM International | SENTOMUS, museums visitors research | 2023–24 | IP | 
-| BIOPARC València | Estudio de visitantes | 2023–24 | equipo | 
+| AVETID | Estudio de públicos Tercera Setmana, 2ª edición | 2018–19 | equipo |
+| Francachela Teatro | Plan de patrocinio y premios del festival | 2020–21 | IP |
+| Olympia Metropolitana | Estudio de públicos en contexto teatral | 2021–22 | IP |
+| A más Soluciones Culturales | Distribución en artes escénicas | 2021–22 | IP |
+| Generalitat Valenciana | Perfil y experiencia del visitante del CCCC | 2022–23 | IP |
+| ICOM International | SENTOMUS, museums visitors research | 2023–24 | IP |
 
 &nbsp;
 
@@ -213,7 +213,7 @@ Total: 16 contratos/convenios  con el tejido cultural desde 2012 · IP en 6 · A
 ::: {.notes}
 El segundo pilar para la financiación de la actividad investigadora ha venido de la transferencia con el sector cultural.
 
-La dispositiva muestra los diez contratos y convenios más recientes con el tejido cultural. En total son dieciséis desde 2012, seis de ellos como investigador principal, una actividad que está reconocida con el sexenio de transferencia del periodo 2012–2017.
+La diapositiva muestra una selección de diez contratos y convenios con el tejido cultural, desde el periodo del sexenio hasta hoy. En total son dieciséis desde 2012, seis de ellos como investigador principal, una actividad que está reconocida con el sexenio de transferencia del periodo 2012–2017.
 
 Es importante señalar que la transferencia forma parte de la investigación: estos convenios generan datos y preguntas que acaban en publicaciones, como es el caso del artículo de 2022 en el Journal of Homosexuality, segundo cuartil JCR, cuyo origen es el convenio con Francachela Teatro.
 :::
