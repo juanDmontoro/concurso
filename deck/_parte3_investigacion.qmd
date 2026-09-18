@@ -1,4 +1,4 @@
-## De qué trata esta investigación
+## Resumen de la propuesta en cuatro ideas  
 
 &nbsp;
 
@@ -12,7 +12,7 @@
 : {tbl-colwidths="[22,78]"}
 
 ::: {.callout-note icon="false"}
-# Y no solo la dimensión estética
+# Variables adicionales
 Contactos previos en la red de colaboraciones, escena cultural e institucional y trayectoria de cada artista. Datos: quién colabora con quién en las listas globales de Spotify, 2013–2025.
 :::
 
@@ -47,7 +47,7 @@ La presentación se estructura en cuatro partes.
 
 :::
 
-## La colaboración en la industria de la música
+## Colaboración en la industria de la música
 
 &nbsp;
 
@@ -421,7 +421,7 @@ Las distinguimos mediante tres procedimientos:
 
 - **Intervalos de similitud**: tasas ajustadas sin imponer una curva cuadrática.  
 - **Spline cúbico natural**: perfil flexible con regla de nudos prespecificada.  
-- **Reversión de signo**: localizar el punto de ruptura y estimar las pendientes en mitades separadas de la muestra. **Criterio confirmatorio**: subida anterior y caída posterior.  
+- **Reversión de signo**: localizar un máximo y estimar la pendiente en mitades separadas de la muestra. **Criterio confirmatorio**: subida anterior y caída posterior.  
 
 ::: {.notes}
 La especificación cuadrática sitúa un máximo implícito en 0,64, aproximadamente en el percentil 95 de la similitud observada: una zona con pocos eventos. La parábola impone un descenso después de ese máximo; debemos comprobar si los datos respaldan esa caída o un crecimiento que se aplana.
@@ -433,6 +433,59 @@ Para distinguir ambas hipótesis, utilizamos:
 :::
 
 
+## Proximidad estética y colaboraciones: especificación flexible
+
+&nbsp;
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+
+
+| Resultado | Media |  [2,5%, 97,5%] |
+|:---|---:|:---|
+| $b$ | 0,670 | [0,373; 0,763] |
+| $D_{\mathrm{pre}}$ | 2,132 | [1,177; 3,206] |
+| $\beta_{\mathrm{post}}$ | 2,496 | [-2,763; 8,586] |
+
+**Contraste de reversión**:
+Subida anterior y pendiente posterior imprecisa. No se confirma la reversión
+
+
+
+
+
+
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+![](figures/fig_shape_spline_bins.svg){width="92%" fig-alt="Tasa de formación por tramo de similitud estética y spline g-computado con bandas de confianza; la curva sube y se aplana sin caer"}
+
+::: {style="font-size:0.8em; color:#6c757d;"}
+Curva: predicciones medias del logit con spline. Puntos: tasas ajustadas del logit con similitud por tramos (intervalos de confianza diádicos).
+:::
+:::
+
+::::
+
+::: {.notes}
+
+PUNTOS: representan tasas ajustadas por intervalos; no hay descenso aunque sí se observa mayor imprecisión en la parte alta.
+
+SPLINE: la curva suavizada muestra predicciones del modelo logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
+
+Por otro lado el contraste identifica el ascenso previo si bien, el intervalo por bootstrap de la pendiente posterior incluye cero.
+
+**No se confirma el patrón de subida y caída requerido para identificar un máximo interior; los resultados son compatibles con un crecimiento que se modera.**
+:::
+
+
+::::{.content-hidden}
 ## Proximidad estética y colaboraciones: especificación flexible
 
 &nbsp;
@@ -483,7 +536,7 @@ Por otro lado el contraste identifica un pendiente positiva antes del punto de r
 
 **No se confirma el patrón de subida y caída requerido para identificar un máximo interior; los resultados son compatibles con un crecimiento que se modera.**
 :::
-
+::::
 
 
 

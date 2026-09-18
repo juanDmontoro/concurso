@@ -415,9 +415,9 @@ La diferencia entre ambos criterios fue de **4,1 puntos porcentuales**.
 :::
 
 ::: {.notes}
-Empezamos con una pregunta práctica: ante el riesgo de abandono, ¿a qué clientes dirigir una campaña de retención? Caben dos reglas. La primera, RISK, actúa sobre quienes tienen mayor probabilidad de abandonar: un problema predictivo. La segunda, LIFT, actúa sobre aquellos en quienes la intervención más reduce ese riesgo: un problema de inferencia causal, porque exige saber cómo responderían ante una situación que no observamos.
+**Empezamos con una pregunta práctica: ante el riesgo de abandono, ¿a qué clientes dirigir una campaña de retención?** 
 
-En el aula lo ilustramos con el experimento de Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según cada regla: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
+Se ilustra en el aula con el experimento reportado en Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según probabilidad de abandono y sensibilidad a la intervención: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
 
 El mensaje es claro: la predicción por sí sola no responde a la pregunta de negocio; para eso hay que estimar el efecto causal.
 :::

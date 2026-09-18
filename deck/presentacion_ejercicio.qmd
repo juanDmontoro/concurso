@@ -189,7 +189,7 @@ format:
     code-overflow: wrap
     highlight-style: solarized
     embed-resources: true
-    footer: "Concurso de méritos 78/2026 · Juan de Dios Montoro Pons"
+    footer: "Concurso de méritos · plaza 573--78/2026  (Universitat de València) · Candidato: Juan de Dios Montoro Pons"
     transition: fade
     transition-speed: fast
     fig-align: center
@@ -309,6 +309,29 @@ Cierro el ejercicio presentando la propuesta de investigación *Creative Collabo
 
 # Agradecimientos {background-color="#2D6A7A" .center .closing-thanks}
 
+:::{.notes}
+Y con esto finalizo el ejercicio, y quedo a disposición de la comisión para cuantas
+preguntas y valoraciones deseen formular. Gracias
+:::
+
+<!-- El {.notes} de arriba se traslada a la portada de cierre (ver script);
+     el de abajo es el de «Agradecimientos». Mantener este orden. -->
+
+:::{.notes}
+Quiero agradecer en primer lugar a la comisión, por su tiempo y disponibilidad y las valoraciones y aportaciones formuladas.
+
+También a mis colaboradores más estrechos, que ya he nombrado durante la exposición: hemos compartido trabajo, esfuerzo, viajes pero sobre todo afecto y risas. Además quiero mencionar 
+a aquellos que me han ayudado a lo largo de mi trayectoria académica como Roberto Escuder, Pepe Jordán, Vicente Jaime, Segundo Bru o Gloria Berenguer, entre otros.
+
+También a Cristina Pardo y Fran Morillas del área de Métodos, y Ana Zorio, de Contabilidad, todos de la facultad de Economia, con quienes he compartido asignaturas o trabajo y conversaciones a lo largo de estos años.
+
+De mi etapa en la Oficina Internacional, una mención especial a Pilar Saurí y María Ángeles Gómez, dos personas que hacían fácil lo que no lo era.
+
+Y en el plano internacional, he tenido la suerte de cruzarme con gente muy generosa: Peter Tschmuck y Dagmar Abfalter en Viena; Peter Schmidt y Ulrich Krüger en Bremen; Mike Rosier en Hertfordshire; Rebecca Porterfield en Wilmington; Gioia Bales en Hofstra; Jeff Michelman en Jacksonville; Francois Colbert en HEC-Montreal, y Mercedes Coca, Lourdes Hernández y Nick Byrne en LSE.
+
+A todos, muchas gracias.
+:::
+
 ```{=html}
 <script>
 // Portada de cierre: clona la portada generada por Quarto y la inserta
@@ -337,6 +360,10 @@ window.addEventListener("load", function () {
     clone.removeAttribute("hidden");
     clone.setAttribute("aria-hidden", "true");
     clone.style.display = "none";
+    // Notas de orador de la portada de cierre: se escriben en el primer
+    // {.notes} de «Agradecimientos» y se trasladan aquí al clon.
+    var notes = thanks && thanks.querySelector("aside.notes");
+    if (notes) { clone.appendChild(notes); }
     if (thanks) { slides.insertBefore(clone, thanks); } else { slides.appendChild(clone); }
     deck.sync();
     deck.layout();
@@ -350,25 +377,6 @@ window.addEventListener("load", function () {
   if (deck.isReady && deck.isReady()) { append(); } else { deck.on("ready", append); }
 });
 </script>
-```
-
-:::
-
-::: {.content-visible when-format="beamer"}
-
----
-
-```{=latex}
-\titlepage
-```
-
-## {.plain}
-
-```{=latex}
-\begin{tikzpicture}[remember picture,overlay]
-  \fill[SlateTealDeck] (current page.south west) rectangle (current page.north east);
-  \node at (current page.center) {\usebeamerfont{title}\color{white}Agradecimientos};
-\end{tikzpicture}
 ```
 
 :::

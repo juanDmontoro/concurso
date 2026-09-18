@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
@@ -8,14 +9,13 @@
   aspectratio=169,
   spanish,
 ]{beamer}
+\newif\ifbibliography
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
 \beamertemplatenavigationsymbolsempty
-% Prevent slide breaks in the middle of a paragraph
-\widowpenalties 1 10000
-\raggedbottom
+% remove section numbering
 \setbeamertemplate{part page}{
   \centering
   \begin{beamercolorbox}[sep=16pt,center]{part title}
@@ -34,6 +34,9 @@
     \usebeamerfont{subsection title}\insertsubsection\par
   \end{beamercolorbox}
 }
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
 \AtBeginPart{
   \frame{\partpage}
 }
@@ -46,24 +49,23 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-
-\usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
+
 \usetheme[]{metropolis}
-\usecolortheme{default}
-\usefonttheme{professionalfonts}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\usecolortheme[]{default}
+\usefonttheme[]{professionalfonts}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -81,10 +83,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\newif\ifbibliography
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -127,8 +125,7 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 \usepackage{caption}
 % Make caption package work with longtable
@@ -150,6 +147,28 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \AtBeginDocument{\footnotesize}
 \usepackage{etoolbox}
@@ -264,19 +283,9 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{spanish}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Concurso de acceso a Catedrático de Universidad},
   pdfauthor={Candidato: Juan de Dios Montoro Pons},
@@ -307,8 +316,8 @@ Siguiendo las directrices de la convocatoria, presento en primer lugar
 mi curriculum vitae.}
 \end{frame}
 
-\begin{frame}{Trayectoria académica: evolución}
-\phantomsection\label{trayectoria-acaduxe9mica-evoluciuxf3n}
+\begin{frame}{Trayectoria académica}
+\phantomsection\label{trayectoria-acaduxe9mica}
 ~
 
 \includegraphics[width=0.96\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_timeline.pdf}
@@ -359,7 +368,7 @@ Empiezo por la investigación.}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-Etapa
+Línea
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Trabajos representativos
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -389,8 +398,8 @@ Cuadrado-García María José Miquel-Romero María Caballer-Tarazona María
 Luisa Palma-Martos \\ \lightrowrule
 \end{longtable}
 
-\note{La tabla ordena la investigación en tres etapas con algún
-solapamiento, los trabajos representativos y los principales coautores.
+\note{La tabla ordena las líneas de investigación, los trabajos
+representativos y los principales coautores.
 
 La primera, de 1995 a 2003, centrada en economía computacional, se
 articula en torno a la elaboración de la tesis doctoral sobre simulación
@@ -407,7 +416,7 @@ Political Economy, Computational Economics y capítulos en el homenaje al
 nobel James Buchanan en Springer o en el libro \textbf{Constitutional
 Economics and Public Institutions} en Edward Elgar.
 
-La tercera etapa, desde 2008, se orienta a la economía de la cultura e
+La tercera línea, desde 2008, se orienta a la economía de la cultura e
 industrias creativas. La transición entre estas dos últimas viene de la
 investigación sobre propiedad intelectual, con resultados como el
 artículo de 2008 en el European Journal of Law and Economics. Los
@@ -709,11 +718,8 @@ dieciséis desde 2012, seis de ellos como investigador principal, una
 actividad que está reconocida con el sexenio de transferencia del
 periodo 2012--2017.
 
-Es importante señalar que la transferencia forma parte de la
-investigación: estos convenios generan datos y preguntas que acaban en
-publicaciones, como es el caso del artículo de 2022 en el Journal of
-Homosexuality, segundo cuartil JCR, cuyo origen es el convenio con
-Francachela Teatro.}
+En un camino de ida y vuelta, parte de esa transferencia se ha traducido
+a su vez en resultados de investigación.}
 \end{frame}
 
 \begin{frame}{Estancias de investigación}
@@ -799,8 +805,8 @@ satisfaction and loyalty in museums} & Piergiacomo Mion Dalle Carbonare
 Tesis doctoral con mención internacional \\ \lightrowrule
 \emph{Estudio de los determinantes, percepción y valoración del
 consumidor de música clásica: una aproximación multidisciplinar} &
-Ariadna Martin & Conservatorio Profesional de Música (Las Palmas de Gran
-Canaria) & en curso & JCR en revisión \\ \lightrowrule
+Ariadna Martin-Alfaro & Conservatorio Profesional de Música (Las Palmas
+de Gran Canaria) & en curso & JCR en revisión \\ \lightrowrule
 \emph{Consumer engagement and market structuring in the contemporary art
 ecosystem: visitor behavior and responses to citywide interventions} &
 Giuliano Picchi & MIT (Cambridge, MA) & en curso & Ponencia AIMAC2026 \\ \lightrowrule
@@ -970,8 +976,8 @@ máxima puntuación (200 puntos), y los informes anuales de evaluación de
 1996 a 2024.
 
 La serie temporal de la valoración media del alumnado muestra una
-tendencia ascendente, se mantiene por encima de cuatro desde 2017 y
-alcanza un máximo de 4,78 en el curso 2023--2024.}
+tendencia ascendente, se mantiene por encima de cuatro sobre cinco desde
+2017 y alcanza un máximo de 4,78 en el curso 2023--2024.}
 \end{frame}
 
 \begin{frame}[shrink]{Innovación docente}
@@ -1270,15 +1276,17 @@ Association for Cultural Economics International (ACEI).}
 \phantomsection\label{suxedntesis-el-curruxedculum-en-cifras}
 \includegraphics[width=0.96\linewidth,height=\textheight,keepaspectratio]{presentacion_ejercicio_files/mediabag/figures/fig_resumen_cv.pdf}
 
-\note{Cierro con una síntesis del currículum en cifras. En la producción
-científica, más allá de del volumen, su impacto: tres de cada cuatro
-artículos publicados en revistas del cuartil superior del área; mayor
-parte de las citas acumuladas a partir de 2021 y con impacto normalizado
-en 2025 un 32\% por encima de lo esperado en el campo (situación que se
+\note{Cierro con una síntesis del currículum. En la producción
+científica, más allá del volumen, su impacto: tres de cada cuatro
+artículos publicados en revistas del cuartil superior del área; 68\% de
+las citas acumuladas a partir de 2021, con un impacto normalizado en
+2025 un 32\% por encima de lo esperado en el campo (situación que se
 repite en 5 de los últimos diez años); uno de cada seis artículos se
-ubica en el decil superior por citas de su categoría.
+ubica en el decil superior por citas de su categoría (WoS). Una
+investigación reconocida con cuatro sexenios de investigación en el
+campo de Economía.
 
-El conjunto de méritos refleja una trayectoria consolidada de liderazgo,
+El conjunto de méritos refleja una trayectoria consolidada en liderazgo,
 internacionalización, docencia de excelencia y asunción continuada de
 responsabilidades académicas a lo largo de casi tres décadas.}
 \end{frame}
@@ -1351,7 +1359,7 @@ Para ello integra tres ámbitos:
   resultados.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={Herramientas y Técnicas del Análisis de Datos}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={Herramientas y Técnicas del Análisis de Datos}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 La asignatura \textbf{Técnicas Avanzadas de Predicción en Negocios}
 (dentro de la materia \textbf{Herramientas y Técnicas del Análisis de
@@ -1548,7 +1556,7 @@ extensión causal} \\ \lightrowrule
 15 & Evaluación & S15: defensa oral del proyecto \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={El conjunto de datos de referencia}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={El conjunto de datos de referencia}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 A lo largo de la asignatura utilizamos un mismo conjunto de datos como
 caso de estudio transversal, sobre el que aplicamos las diferentes
@@ -1975,7 +1983,7 @@ intervención.
 \end{column}
 
 \begin{column}{0.65\linewidth}
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={Experimentos aleatorios controlados: el patrón de referencia}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={Experimentos aleatorios controlados: el patrón de referencia}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 Ascarza (2018). ``Retention Futility: Targeting High-Risk Customers
 Might Be Ineffective'', \emph{Journal of Marketing Research}, 55(1),
@@ -2025,21 +2033,17 @@ porcentuales}.
 \end{column}
 \end{columns}
 
-\note{Empezamos con una pregunta práctica: ante el riesgo de abandono,
-¿a qué clientes dirigir una campaña de retención? Caben dos reglas. La
-primera, RISK, actúa sobre quienes tienen mayor probabilidad de
-abandonar: un problema predictivo. La segunda, LIFT, actúa sobre
-aquellos en quienes la intervención más reduce ese riesgo: un problema
-de inferencia causal, porque exige saber cómo responderían ante una
-situación que no observamos.
+\note{\textbf{Empezamos con una pregunta práctica: ante el riesgo de
+abandono, ¿a qué clientes dirigir una campaña de retención?}
 
-En el aula lo ilustramos con el experimento de Ascarza (2018). Un
+Se ilustra en el aula con el experimento reportado en Ascarza (2018). Un
 operador de telefonía móvil asignó aleatoriamente a 12.000 clientes
 inactivos una oferta de crédito condicionada a una recarga y comprobó,
 treinta días después, si la línea seguía activa. Con esos datos, la
 autora simula una campaña dirigida al cuarenta por ciento superior de
-los clientes según cada regla: seleccionar por sensibilidad a la
-intervención reduce más el abandono que seleccionar por riesgo.
+los clientes según probabilidad de abandono y sensibilidad a la
+intervención: seleccionar por sensibilidad a la intervención reduce más
+el abandono que seleccionar por riesgo.
 
 El mensaje es claro: la predicción por sí sola no responde a la pregunta
 de negocio; para eso hay que estimar el efecto causal.}
@@ -2260,8 +2264,8 @@ factores asociados a la formación de colaboraciones en la producción
 cultural.}
 \end{frame}
 
-\begin{frame}{De qué trata esta investigación}
-\phantomsection\label{de-quuxe9-trata-esta-investigaciuxf3n}
+\begin{frame}{Resumen de la propuesta en cuatro ideas}
+\phantomsection\label{resumen-de-la-propuesta-en-cuatro-ideas}
 ~
 
 \begin{longtable}[]{@{}
@@ -2289,7 +2293,7 @@ Lamar}. ¿Hay un punto a partir del cual parecerse más ya no suma, o
 incluso resta? \\ \lightrowrule
 \end{longtable}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={Y no solo la dimensión estética}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={Variables adicionales}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 Contactos previos en la red de colaboraciones, escena cultural e
 institucional y trayectoria de cada artista. Datos: quién colabora con
@@ -2344,8 +2348,8 @@ atributos.}
   Cierro con la aportación, sus límites y las preguntas que abre.
 \end{itemize}}
 
-\begin{frame}{La colaboración en la industria de la música}
-\phantomsection\label{la-colaboraciuxf3n-en-la-industria-de-la-muxfasica}
+\begin{frame}{Colaboración en la industria de la música}
+\phantomsection\label{colaboraciuxf3n-en-la-industria-de-la-muxfasica}
 ~
 
 \begin{figure}[H]
@@ -2535,7 +2539,7 @@ Con etiquetas fechadas & 2.402 \\ \lightrowrule
   artistas e historial de sellos.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={Por qué etiquetas y no géneros de plataforma}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={Por qué etiquetas y no géneros de plataforma}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 Las etiquetas por lanzamiento cubren el \textbf{83,5\% de los artistas}.
 Los géneros de Spotify cubren aproximadamente el \textbf{34\%}.
@@ -2689,7 +2693,7 @@ colaboración.}
   tras el debut.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={Evento raro}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={Evento raro}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 Se identifican con 1.064 eventos de formación elegibles sobre 3.756.411
 pares-año: \textbf{28,3 formaciones por cada 100.000 pares-año de
@@ -2750,7 +2754,7 @@ métricas \\ \lightrowrule
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={¿Por qué no un ERGM?}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={¿Por qué no un ERGM?}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 \begin{enumerate}
 \item
@@ -2835,7 +2839,7 @@ Mismo género del artista · Índice Jaccard de sellos · Sellos compartidos
 
 ~
 
-\begin{tcolorbox}[enhanced jigsaw, colback=white, toprule=.15mm, colframe=quarto-callout-note-color-frame, coltitle=black, toptitle=1mm, breakable, opacityback=0, opacitybacktitle=0.6, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, title={Nota}, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, breakable, toprule=.15mm, coltitle=black, colback=white, rightrule=.15mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, toptitle=1mm, opacitybacktitle=0.6, opacityback=0, title={Nota}, titlerule=0mm, bottomrule=.15mm, left=2mm]
 
 \textbf{Tres modelos anidados}: Completo (los cuatro bloques) · Solo red
 (topología) · Sin red (estética, actividad y atributos). Las
@@ -2917,8 +2921,8 @@ Las distinguimos mediante tres procedimientos:
   \textbf{Spline cúbico natural}: perfil flexible con regla de nudos
   prespecificada.\\
 \item
-  \textbf{Reversión de signo}: localizar el punto de ruptura y estimar
-  las pendientes en mitades separadas de la muestra. \textbf{Criterio
+  \textbf{Reversión de signo}: localizar un máximo y estimar la
+  pendiente en mitades separadas de la muestra. \textbf{Criterio
   confirmatorio}: subida anterior y caída posterior.
 \end{itemize}
 
@@ -2950,26 +2954,20 @@ flexible}
 
 \begin{columns}[T]
 \begin{column}{0.3\linewidth}
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\begin{longtable}[]{@{}lrl@{}}
+\toprule\noalign{}
+Resultado & Media & {[}2,5\%, 97,5\%{]} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(b\) & 0,670 & {[}0,373; 0,763{]} \\ \lightrowrule
+\(D_{\mathrm{pre}}\) & 2,132 & {[}1,177; 3,206{]} \\ \lightrowrule
+\(\beta_{\mathrm{post}}\) & 2,496 & {[}-2,763; 8,586{]} \\ \lightrowrule
+\end{longtable}
 
-\textbf{Contraste de reversión}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Punto de ruptura}: \(b = 0{,}676\).
-\item
-  \textbf{Comportamiento antes de \(b\)}: pendiente 1,73 (IC 95\%
-  {[}1,08; 2,37{]}).
-\item
-  \textbf{Comportamiento después de \(b\)}: pendiente 2,50 (IC 95\%
-  {[}-5,21; 10,20{]}).
-\end{itemize}
-
-\textbf{Evidencia}: subida anterior y pendiente posterior imprecisa. No
-se confirma la reversión
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\textbf{Contraste de reversión}: Subida anterior y pendiente posterior
+imprecisa. No se confirma la reversión
 \end{column}
 
 \begin{column}{0.05\linewidth}
@@ -2990,9 +2988,8 @@ SPLINE: la curva suavizada muestra predicciones del modelo logit con
 spline con un crecimiento marcado de la tasa de formación desde niveles
 bajos de similitud y una moderación posterior.
 
-Por otro lado el contraste identifica un pendiente positiva antes del
-punto de ruptura con un intervalo que excluye cero. Después, la
-pendiente sigue positiva, pero su intervalo incluye cero.
+Por otro lado el contraste identifica el ascenso previo si bien, el
+intervalo por bootstrap de la pendiente posterior incluye cero.
 
 \textbf{No se confirma el patrón de subida y caída requerido para
 identificar un máximo interior; los resultados son compatibles con un
@@ -3262,18 +3259,6 @@ independencia condicional del modelo diádico. El modelo base reproduce
 el volumen de vínculos, pero no tanto su concentración, lo que requiere
 reevaluar con especificación flexibles. Su diagnóstico continua junto
 con las extensiones sustantiva}
-\end{frame}
-
-\begin{frame}
-\titlepage
-\end{frame}
-
-\begin{frame}[plain]{}
-\phantomsection\label{section}
-\begin{tikzpicture}[remember picture,overlay]
-  \fill[SlateTealDeck] (current page.south west) rectangle (current page.north east);
-  \node at (current page.center) {\usebeamerfont{title}\color{white}Agradecimientos};
-\end{tikzpicture}
 \end{frame}
 
 

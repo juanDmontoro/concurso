@@ -55,11 +55,11 @@ Guion de ensayo para leer en papel: la narrativa de las notas de orador corre si
 \toprule
 Parte & Asignado & Slides & Notas & Palabras & $\approx$ min\\
 \midrule
-1 · Currículum vitae & 15 min & 20 & 24 & 2056 & 14,7\\
-2 · Propuesta docente & 15 min & 15 & 17 & 1759 & 12,6\\
-3 · Propuesta investigadora & 20 min & 20 & 23 & 2791 & 19,9\\
+1 · Currículum vitae & 15 min & 20 & 24 & 2040 & 14,6\\
+2 · Propuesta docente & 15 min & 15 & 17 & 1719 & 12,3\\
+3 · Propuesta investigadora & 20 min & 20 & 23 & 2782 & 19,9\\
 \midrule
-\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6606} & \textbf{47,2}\\
+\textbf{Total} & \textbf{50 min} & \textbf{55} & \textbf{64} & \textbf{6541} & \textbf{46,7}\\
 \bottomrule
 \end{tabular}
 
@@ -74,7 +74,7 @@ Leyenda del margen: **parte** (teal, con filete y tiempos), sección (teal fino)
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,14,7 min a 140 ppm}} Con la venia de la comisión, comienzo la presentación
+\guionmarca{\marcaparte{PARTE 1 DE 3}{Currículum vitae}{15 min · $\approx$\,14,6 min a 140 ppm}} Con la venia de la comisión, comienzo la presentación
 del ejercicio para el concurso al cuerpo de catedráticos de universidad convocado por la Universidad de Valencia, plaza 573. 
 
 Siguiendo las directrices de la convocatoria, presento en primer 
@@ -82,7 +82,7 @@ lugar mi curriculum vitae.
 
 \medskip
 
-\guionmarca{\marcaslide{1}{Trayectoria académica: evolución}} La línea temporal resume mi trayectoria en la Universitat de València, desde la finalización de la licenciatura en Ciencias Económicas y Empresariales en 1991 hasta la acreditación a catedrático de universidad por la ANECA en octubre de 2024. 
+\guionmarca{\marcaslide{1}{Trayectoria académica}} La línea temporal resume mi trayectoria en la Universitat de València, desde la finalización de la licenciatura en Ciencias Económicas y Empresariales en 1991 hasta la acreditación a catedrático de universidad por la ANECA en octubre de 2024. 
 
 En la primera etapa (de formación y estabilización) defiendo la tesis doctoral en 1996, obtengo la plaza de ayudante en 1997 en el área de Economía Aplicada, la titularidad de escuela en 2002, y la habilitación nacional a titular de universidad en el concurso celebrado en la universidad de Alcalá de Henares en 2004 con la que accedo a la plaza en 2005. 
 
@@ -99,13 +99,13 @@ Empiezo por la investigación.
 
 \medskip
 
-\guionmarca{\marcaslide{2}{Trayectoria investigadora}} La tabla ordena la investigación en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
+\guionmarca{\marcaslide{2}{Trayectoria investigadora}} La tabla ordena las líneas de investigación, los trabajos representativos y los principales coautores. 
 
 La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
 La segunda, de 1998 a 2010, incorpora la teoría de la elección pública con diversos trabajos junto a los profesores Miguel Puchades-Navarro y José Casas-Pardo: artículos publicados en CIRIEC-España, Constitutional Political Economy, Computational Economics y  capítulos en el homenaje al nobel James Buchanan en Springer o en el libro **Constitutional Economics and Public Institutions** en  Edward Elgar. 
 
-La tercera etapa, desde 2008, se orienta a la economía de la cultura e industrias creativas. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como el artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto a los profesores Manuel Cuadrado-García y María José Miquel-Romero y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
+La tercera línea, desde 2008, se orienta a la economía de la cultura e industrias creativas. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como el artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto a los profesores Manuel Cuadrado-García y María José Miquel-Romero y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
 
 \medskip
 
@@ -147,7 +147,7 @@ Se muestran los proyectos en convocatoria pública, con la entidad financiadora,
 
 La diapositiva muestra una selección de diez contratos y convenios con el tejido cultural, desde el periodo del sexenio hasta hoy. En total son dieciséis desde 2012, seis de ellos como investigador principal, una actividad que está reconocida con el sexenio de transferencia del periodo 2012–2017.
 
-Es importante señalar que la transferencia forma parte de la investigación: estos convenios generan datos y preguntas que acaban en publicaciones, como es el caso del artículo de 2022 en el Journal of Homosexuality, segundo cuartil JCR, cuyo origen es el convenio con Francachela Teatro.
+En un camino de ida y vuelta, parte de esa transferencia se ha traducido a su vez en resultados de investigación.
 
 \medskip
 
@@ -191,7 +191,7 @@ Subrayar el peso de las clases en inglés que supone el 50% del  total con mi in
 
 \guionmarca{\marcaslide{14}{Evaluación de la docencia}} La evaluación docente, útil para revisar y mejorar nuestra actividad, se recoge aquí a través del programa DOCENTIA para 2017–2021, con la calificación de excelente en el nivel avanzado y la máxima puntuación (200 puntos), y los informes anuales de evaluación de 1996 a 2024.
 
-La serie temporal de la valoración media del alumnado muestra una tendencia ascendente, se mantiene por encima de cuatro desde 2017 y alcanza un máximo de 4,78 en el curso 2023–2024.
+La serie temporal de la valoración media del alumnado muestra una tendencia ascendente, se mantiene por encima de cuatro sobre cinco desde 2017 y alcanza un máximo de 4,78 en el curso 2023–2024.
 
 \medskip
 
@@ -245,14 +245,14 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 
 \medskip
 
-\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum en cifras. En la producción científica, más allá de del volumen, su impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior del área; mayor parte de las citas acumuladas a partir de 2021 y con impacto normalizado en 2025 un 32% por encima de lo esperado en el campo (situación que se repite en 5 de los últimos diez años);  uno de cada seis artículos se ubica en el decil superior por citas de su categoría.
+\guionmarca{\marcaslide{20}{Síntesis: el currículum en cifras}} Cierro con una síntesis del currículum. En la producción científica, más allá del volumen, su impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior del área; 68% de las citas acumuladas a partir de 2021, con un impacto normalizado en 2025 un 32% por encima de lo esperado en el campo (situación que se repite en 5 de los últimos diez años);  uno de cada seis artículos se ubica en el decil superior por citas de su categoría (WoS). Una investigación reconocida con cuatro sexenios de investigación en el campo de Economía. 
 
-El conjunto de méritos refleja una trayectoria consolidada de liderazgo, internacionalización, docencia de excelencia y asunción continuada de responsabilidades académicas a lo largo de casi tres décadas.
+El conjunto de méritos refleja una trayectoria consolidada en liderazgo, internacionalización, docencia de excelencia y asunción continuada de responsabilidades académicas a lo largo de casi tres décadas.
 
 \needspace{3\baselineskip}
 \vspace{2\baselineskip}
 
-\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,12,6 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
+\guionmarca{\marcaparte{PARTE 2 DE 3}{Propuesta docente}{15 min · $\approx$\,12,3 min a 140 ppm}\smallskip \marcaseccion{TÉCNICAS AVANZADAS DE PREDICCIÓN}} La segunda parte del ejercicio desarrolla una propuesta docente para La asignatura Técnicas Avanzadas de Predicción en Negocios, asignatura obligatoria de tercer curso del grado en Inteligencia y Analítica de Negocios (BIA por su acrónimo en inglés). 
 
 La exposición a continuación tiene tres bloques: la asignatura y su organización; el proyecto del cuatrimestre, eje de la evaluación; y el desarrollo de un Tema, predicción y efectos causales, como ejemplo de implementación.
 
@@ -352,9 +352,9 @@ Además, hay tres verificaciones que la inteligencia artificial no sustituye: la
 
 \medskip
 
-\guionmarca{\marcaslide{32}{Riesgo de abandono y estrategia de retención de clientes}} Empezamos con una pregunta práctica: ante el riesgo de abandono, ¿a qué clientes dirigir una campaña de retención? Caben dos reglas. La primera, RISK, actúa sobre quienes tienen mayor probabilidad de abandonar: un problema predictivo. La segunda, LIFT, actúa sobre aquellos en quienes la intervención más reduce ese riesgo: un problema de inferencia causal, porque exige saber cómo responderían ante una situación que no observamos.
+\guionmarca{\marcaslide{32}{Riesgo de abandono y estrategia de retención de clientes}} **Empezamos con una pregunta práctica: ante el riesgo de abandono, ¿a qué clientes dirigir una campaña de retención?** 
 
-En el aula lo ilustramos con el experimento de Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según cada regla: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
+Se ilustra en el aula con el experimento reportado en Ascarza (2018). Un operador de telefonía móvil asignó aleatoriamente a 12.000 clientes inactivos una oferta de crédito condicionada a una recarga y comprobó, treinta días después, si la línea seguía activa. Con esos datos, la autora simula una campaña dirigida al cuarenta por ciento superior de los clientes según probabilidad de abandono y sensibilidad a la intervención: seleccionar por sensibilidad a la intervención reduce más el abandono que seleccionar por riesgo.
 
 El mensaje es claro: la predicción por sí sola no responde a la pregunta de negocio; para eso hay que estimar el efecto causal.
 
@@ -391,7 +391,7 @@ La evaluación no exige demostraciones ni desarrollos formales. Se evalúa la ca
 
 \medskip
 
-\guionmarca{\marcaslide{36}{De qué trata esta investigación}} Resumo la propuesta en cuatro ideas. 
+\guionmarca{\marcaslide{36}{Resumen de la propuesta en cuatro ideas}} Resumo la propuesta en cuatro ideas. 
 
 1. Colaborar es grabar juntos una canción, como Bad Bunny y J Balvin o Taylor Swift y Kendrick Lamar.  
 2. La colaboración implica una decisión: con quien; nos preguntamos  qué distingue a los pares que llegan a trabajar juntos.  
@@ -415,7 +415,7 @@ En la explicación entra además la red de contactos, trayectoria y otros atribu
 
 \medskip
 
-\guionmarca{\marcaslide{37}{La colaboración en la industria de la música}} La figura muestra la evolución del porcentaje de colaboraciones en listas anuales del Billboard 100 (además de en subtramos de la misma) y sirve como punto de partida para ilustrar la pregunta.
+\guionmarca{\marcaslide{37}{Colaboración en la industria de la música}} La figura muestra la evolución del porcentaje de colaboraciones en listas anuales del Billboard 100 (además de en subtramos de la misma) y sirve como punto de partida para ilustrar la pregunta.
 
 A comienzos de los setenta, menos del 3% de las entradas anuales del Billboard correspondían a colaboraciones. Entre 2016 y 2020 esa tasa se sitúa en torno al 40%: la colaboración ha pasado de ser una anomalía a una práctica frecuente. La evolución sugiere un cambio estructural que emerge en paralelo a la digitalización de la música y se asienta con la implantación de un modelo de negocio basado en el acceso, y no en la propiedad: el streaming.
 
@@ -536,7 +536,7 @@ Para distinguir ambas hipótesis, utilizamos:
 
 SPLINE: la curva suavizada muestra predicciones del modelo logit con spline con un crecimiento marcado de la tasa de formación desde niveles bajos de similitud y una moderación posterior. 
 
-Por otro lado el contraste identifica un pendiente positiva antes del punto de ruptura con un intervalo que excluye cero. Después, la pendiente sigue positiva, pero su intervalo incluye cero.
+Por otro lado el contraste identifica el ascenso previo si bien, el intervalo por bootstrap de la pendiente posterior incluye cero.
 
 **No se confirma el patrón de subida y caída requerido para identificar un máximo interior; los resultados son compatibles con un crecimiento que se modera.**
 

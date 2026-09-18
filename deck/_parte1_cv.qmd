@@ -1,4 +1,4 @@
-## Trayectoria académica: evolución
+## Trayectoria académica
 
 &nbsp;
 
@@ -56,7 +56,7 @@ Empiezo por la investigación.
 
 &nbsp;
 
-| Etapa | Trabajos representativos | Principales coautores |
+| Línea | Trabajos representativos | Principales coautores |
 |-----|----------------|-------|
 | **Economía computacional** <br> (1995–2003) | Tesis doctoral "Simulación y Detección de Caos Macroeconómico" (1996) · Capítulos en *Mathematics with Vision* (CMP, 1995) e *Innovations in Mathematics* (CMP, 1997) · *Journal of Macroeconomics* (1998) | José V. Paz-García |
 | **Elección pública** <br> (1998–2010) | Capítulos en *Methods and Moral in Constitutional Economics. Essays in Honour of James M. Buchanan* (Springer, 2001) y en *Constitutional Economics and Public Institutions* (Edward Elgar, 2013) · *CIRIEC-España* (2000) · *Constitutional Political Economy* (2001) · *Computational Economics* (2003)   | Miguel Puchades-Navarro <br> José Casas-Pardo |
@@ -65,13 +65,13 @@ Empiezo por la investigación.
 
 
 ::: {.notes}
-La tabla ordena la investigación en tres etapas con algún solapamiento, los trabajos representativos y los principales coautores. 
+La tabla ordena las líneas de investigación, los trabajos representativos y los principales coautores. 
 
 La primera, de 1995 a 2003, centrada en economía computacional, se articula en torno a la elaboración de la tesis doctoral sobre simulación y detección de caos macroeconómico, dirigida por el profesor José Vicente Paz, que obtuvo la calificación de sobresaliente cum laude y que da lugar a dos capítulos en la editorial Computational Mechanics Publications y un artículo en el Journal of Macroeconomics (revista JCR). 
 
 La segunda, de 1998 a 2010, incorpora la teoría de la elección pública con diversos trabajos junto a los profesores Miguel Puchades-Navarro y José Casas-Pardo: artículos publicados en CIRIEC-España, Constitutional Political Economy, Computational Economics y  capítulos en el homenaje al nobel James Buchanan en Springer o en el libro **Constitutional Economics and Public Institutions** en  Edward Elgar. 
 
-La tercera etapa, desde 2008, se orienta a la economía de la cultura e industrias creativas. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como el artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto a los profesores Manuel Cuadrado-García y María José Miquel-Romero y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
+La tercera línea, desde 2008, se orienta a la economía de la cultura e industrias creativas. La transición entre estas dos últimas viene de la investigación sobre propiedad intelectual, con resultados como el artículo de 2008 en el European Journal of Law and Economics. Los trabajos de esta línea se realizan junto a los profesores Manuel Cuadrado-García y María José Miquel-Romero y más recientemente las profesoras  María Caballer-Tarazona y María Luisa Palma-Martos, y en ellos se exploran diversos aspectos de la participación cultural, las industrias creativas y el big data, cuyos resultados se publican en revistas como el Journal of Cultural Economics, Poetics o Empirical Economics.
 :::
 
 
@@ -215,7 +215,7 @@ El segundo pilar para la financiación de la actividad investigadora ha venido d
 
 La diapositiva muestra una selección de diez contratos y convenios con el tejido cultural, desde el periodo del sexenio hasta hoy. En total son dieciséis desde 2012, seis de ellos como investigador principal, una actividad que está reconocida con el sexenio de transferencia del periodo 2012–2017.
 
-Es importante señalar que la transferencia forma parte de la investigación: estos convenios generan datos y preguntas que acaban en publicaciones, como es el caso del artículo de 2022 en el Journal of Homosexuality, segundo cuartil JCR, cuyo origen es el convenio con Francachela Teatro.
+En un camino de ida y vuelta, parte de esa transferencia se ha traducido a su vez en resultados de investigación.
 :::
 
 
@@ -251,7 +251,7 @@ En total he realizado seis estancias en cinco centros distintos, todas con finan
 |---------------|---------|------------|---|:------------:|
 | *Segmentación y exhibición cinematográfica: un análisis del mercado español basado en clases latentes* | Desamparados Lluch Tormos | CEU San Pablo (Madrid) | 2017 | Sobresaliente *cum laude* · Tesis doctoral con mención internacional · **Premio Fundación SGAE de Investigación 2018** |
 | *Analyzing the effect of the expanded servicescape on visitors' satisfaction and loyalty in museums* | Piergiacomo Mion Dalle Carbonare | Università Bocconi  (Milán) | 2022 | Sobresaliente *cum laude* · Tesis doctoral con mención internacional  |
-| *Estudio de los determinantes, percepción y valoración del consumidor de música clásica: una aproximación multidisciplinar* | Ariadna Martin  | Conservatorio Profesional de Música (Las Palmas de Gran Canaria) | en curso | JCR en revisión |
+| *Estudio de los determinantes, percepción y valoración del consumidor de música clásica: una aproximación multidisciplinar* | Ariadna Martin-Alfaro  | Conservatorio Profesional de Música (Las Palmas de Gran Canaria) | en curso | JCR en revisión |
 | *Consumer engagement and market structuring in the contemporary art ecosystem: visitor behavior and responses to citywide interventions* | Giuliano Picchi | MIT (Cambridge, MA) | en curso | Ponencia AIMAC2026 |
 
 
@@ -351,7 +351,7 @@ Mi perfil docente se completa con la experiencia desarrollada en otras instituci
 ::: {.notes}
 La evaluación docente, útil para revisar y mejorar nuestra actividad, se recoge aquí a través del programa DOCENTIA para 2017–2021, con la calificación de excelente en el nivel avanzado y la máxima puntuación (200 puntos), y los informes anuales de evaluación de 1996 a 2024.
 
-La serie temporal de la valoración media del alumnado muestra una tendencia ascendente, se mantiene por encima de cuatro desde 2017 y alcanza un máximo de 4,78 en el curso 2023–2024.
+La serie temporal de la valoración media del alumnado muestra una tendencia ascendente, se mantiene por encima de cuatro sobre cinco desde 2017 y alcanza un máximo de 4,78 en el curso 2023–2024.
 :::
 
 
@@ -516,9 +516,9 @@ Y las tareas con impacto social  como la organización de jornadas académico-pr
 :::
 
 ::: {.notes}
-Cierro con una síntesis del currículum en cifras. En la producción científica, más allá de del volumen, su impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior del área; mayor parte de las citas acumuladas a partir de 2021 y con impacto normalizado en 2025 un 32% por encima de lo esperado en el campo (situación que se repite en 5 de los últimos diez años);  uno de cada seis artículos se ubica en el decil superior por citas de su categoría.
+Cierro con una síntesis del currículum. En la producción científica, más allá del volumen, su impacto: tres de cada cuatro artículos publicados en revistas del cuartil superior del área; 68% de las citas acumuladas a partir de 2021, con un impacto normalizado en 2025 un 32% por encima de lo esperado en el campo (situación que se repite en 5 de los últimos diez años);  uno de cada seis artículos se ubica en el decil superior por citas de su categoría (WoS). Una investigación reconocida con cuatro sexenios de investigación en el campo de Economía. 
 
-El conjunto de méritos refleja una trayectoria consolidada de liderazgo, internacionalización, docencia de excelencia y asunción continuada de responsabilidades académicas a lo largo de casi tres décadas.
+El conjunto de méritos refleja una trayectoria consolidada en liderazgo, internacionalización, docencia de excelencia y asunción continuada de responsabilidades académicas a lo largo de casi tres décadas.
 :::
 
 <!-- Generado por scripts/sync_partes.py desde presentacion_cv.qmd — NO EDITAR;
